@@ -3,4 +3,25 @@
 class_name Inventory
 extends Resource
 
-@export var items: Array[InventoryItem]
+@export var _items: Array[InventoryItem]
+
+
+func get_items() -> Array[InventoryItem]:
+	return _items.duplicate()
+
+
+func clear() -> void:
+	_items.clear()
+
+
+func has_item(item: InventoryItem) -> bool:
+	return item in _items
+
+
+func add_item(item: InventoryItem) -> void:
+	if not item in _items:
+		_items.push_back(item)
+
+
+func amount_of_items() -> int:
+	return _items.size()
