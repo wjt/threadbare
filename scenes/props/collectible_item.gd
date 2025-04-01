@@ -6,6 +6,14 @@ class_name CollectibleItem extends Node2D
 ## Overworld collectible that can be interacted with. When a player interacts
 ## with it, an [InventoryItem] is added to the [Inventory]
 
+## Wether the collectible can be seen or collected. This allows the collectible
+## to be placed in the scene even when some condition has to be met for it to
+## appear.
+@export var revealed: bool = true:
+	set(new_value):
+		revealed = new_value
+		_update_based_on_revealed()
+@export_file("*.tscn") var scene_to_go_to: String
 ## [InventoryItem] provided by this collectible when interacted with.
 @export var item: InventoryItem:
 	set(new_value):
@@ -24,6 +32,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 
 func _ready() -> void:
+	_update_based_on_revealed()
 	if Engine.is_editor_hint():
 		return
 
@@ -33,6 +42,12 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if item:
 		sprite_2d.texture = item.texture()
+
+
+## Make the collectible appear
+func reveal() -> void:
+	revealed = true
+	animation_player.play("reveal")
 
 
 ## When interacted with, the collectible will display a brief animation
@@ -48,3 +63,13 @@ func _on_interacted(_from_right: bool) -> void:
 	interact_area.end_interaction()
 
 	queue_free()
+
+	if scene_to_go_to:
+		SceneSwitcher.change_to_file_with_transition(scene_to_go_to)
+
+
+func _update_based_on_revealed() -> void:
+	if interact_area:
+		interact_area.disabled = not revealed
+	if sprite_2d:
+		sprite_2d.visible = revealed
