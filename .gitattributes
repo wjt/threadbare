@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: CC0-1.0
+
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
 *.jpg filter=lfs diff=lfs merge=lfs -text
