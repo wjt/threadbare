@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c38tkgfys3d63" path="res://scenes/ink_combat/ink_combat.gd" id="1_v7ikp"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_wrx86"]
-[ext_resource type="PackedScene" uid="uid://d1esqx2skyf1p" path="res://scenes/ink_combat/player/player.tscn" id="2_g2twj"]
 [ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/npcs/talker/talker.tscn" id="3_1qiyj"]
+[ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/player/player.tscn" id="3_v7ikp"]
 [ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/ink_combat/ink_drinker/ink_drinker.tscn" id="5_h0i4r"]
 [ext_resource type="PackedScene" uid="uid://drkv055xkrpuu" path="res://scenes/ink_combat/reward.tscn" id="6_28gg6"]
 [ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/ink_combat/inkwell/inkwell.tscn" id="6_v7ikp"]
@@ -42,8 +42,9 @@ tile_set = ExtResource("1_wrx86")
 unique_name_in_owner = true
 y_sort_enabled = true
 
-[node name="Player" parent="OnTheGround" instance=ExtResource("2_g2twj")]
+[node name="Player" parent="OnTheGround" instance=ExtResource("3_v7ikp")]
 position = Vector2(1472, 937)
+mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Player"]
 zoom = Vector2(2, 2)
