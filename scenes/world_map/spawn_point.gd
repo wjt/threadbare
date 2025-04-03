@@ -13,7 +13,7 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 
-	if GameState.current_spawn_point == owner.get_path_to(self):
+	if GameState.current_spawn_point == get_tree().current_scene.get_path_to(self):
 		move_player_to_self_position()
 
 
