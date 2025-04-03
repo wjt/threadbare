@@ -43,5 +43,6 @@ func _on_dialogue_ended(dialogue_resource: DialogueResource) -> void:
 	await super(dialogue_resource)
 
 	if _enter_quest_on_dialogue_ended:
+		GameState.start_quest()
 		SceneSwitcher.change_to_packed(quest_scene)
 		_enter_quest_on_dialogue_ended = false

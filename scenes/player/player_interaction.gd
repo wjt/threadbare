@@ -27,7 +27,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if is_interacting:
 		return
-	var interact_area: InteractArea = interact_ray.interact_area
+	var interact_area: InteractArea = interact_ray.get_interact_area()
 
 	var label_offset: Vector2 = Vector2(interact_label.size.x / 2, interact_label.size.y)
 	interact_label.position = (
@@ -41,7 +41,7 @@ func _process(_delta: float) -> void:
 		Input.is_action_just_released(&"ui_accept")
 		and not Pause.is_paused(Pause.System.PLAYER_INPUT)
 	):
-		interact_area.interaction_ended.connect(_on_interaction_ended)
+		interact_area.interaction_ended.connect(_on_interaction_ended, CONNECT_ONE_SHOT)
 		interact_area.start_interaction(interact_ray.target_position.x < 0)
 		interact_ray.enabled = false
 		interact_label.visible = false
@@ -51,6 +51,4 @@ func _process(_delta: float) -> void:
 
 
 func _on_interaction_ended() -> void:
-	var interact_area: InteractArea = interact_ray.interact_area
-	interact_area.interaction_ended.disconnect(_on_interaction_ended)
 	interact_ray.enabled = true

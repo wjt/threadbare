@@ -6,6 +6,12 @@ extends Area2D
 signal interaction_started(from_right: bool)
 signal interaction_ended
 
+const INTERACTABLE_LAYER = 6
+
+@export var disabled: bool = false:
+	set(new_value):
+		disabled = new_value
+		set_collision_layer_value(INTERACTABLE_LAYER, not disabled)
 @export var action: String = "Talk"
 
 

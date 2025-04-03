@@ -37,6 +37,7 @@ SPDX-License-Identifier = "CC0-1.0"
 path = [
     "assets/tiny-swords/**/*.png",
     "assets/tiny-swords/**/*.aseprite",
+    "assets/collectibles/*.png",
 ]
-SPDX-FileCopyrightText = "2022 Pixel Frog"
+SPDX-FileCopyrightText = "Pixel Frog"
 SPDX-License-Identifier = "CC0-1.0"
