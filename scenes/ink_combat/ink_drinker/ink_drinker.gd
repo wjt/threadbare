@@ -29,7 +29,7 @@ func _ready() -> void:
 
 
 func _on_timeout() -> void:
-	var player: FightingPlayer = get_tree().get_first_node_in_group("player")
+	var player: Player = get_tree().get_first_node_in_group("player")
 	if not is_instance_valid(player):
 		return
 	animated_sprite_2d.play(&"attack anticipation")

@@ -3,12 +3,44 @@
 class_name Player
 extends CharacterBody2D
 
+## Controls how the player can interact with the world around them.
+enum Mode {
+	## Player can explore the world, interact with items and NPCs, but is not
+	## engaged in combat. Combat actions are not available in this mode.
+	COZY,
+	## Player is engaged in combat. Player can use combat actions.
+	FIGHTING,
+}
+
+## Controls how the player can interact with the world around them.
+@export var mode: Mode = Mode.COZY:
+	set = _set_mode
 @export_range(10, 100000, 10) var walk_speed: float = 300.0
 @export_range(10, 100000, 10) var run_speed: float = 500.0
 @export_range(10, 100000, 10) var stopping_step: float = 1500.0
 @export_range(10, 100000, 10) var moving_step: float = 4000.0
 
+var last_nonzero_axis: Vector2
+
 @onready var player_interaction: PlayerInteraction = %PlayerInteraction
+@onready var player_fighting: Node2D = %PlayerFighting
+
+
+func _set_mode(new_mode: Mode) -> void:
+	mode = new_mode
+	if not is_node_ready():
+		return
+	match mode:
+		Mode.COZY:
+			player_interaction.process_mode = ProcessMode.PROCESS_MODE_INHERIT
+			player_fighting.process_mode = ProcessMode.PROCESS_MODE_DISABLED
+		Mode.FIGHTING:
+			player_interaction.process_mode = ProcessMode.PROCESS_MODE_DISABLED
+			player_fighting.process_mode = ProcessMode.PROCESS_MODE_INHERIT
+
+
+func _ready() -> void:
+	_set_mode(mode)
 
 
 func _process(delta: float) -> void:
@@ -17,6 +49,8 @@ func _process(delta: float) -> void:
 		return
 
 	var axis: Vector2 = Input.get_vector(&"ui_left", &"ui_right", &"ui_up", &"ui_down")
+	if not axis.is_zero_approx():
+		last_nonzero_axis = axis
 
 	var speed: float
 	if Input.is_action_pressed(&"running"):

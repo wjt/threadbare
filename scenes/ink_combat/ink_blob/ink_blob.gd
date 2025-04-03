@@ -83,5 +83,5 @@ func _on_body_entered(body: Node2D) -> void:
 		if inkwell.ink_color_name == ink_color_name:
 			inkwell.fill()
 			queue_free()
-	elif body.owner is FightingPlayer:
+	elif body.owner is Player:
 		can_hit_enemy = true
