@@ -180,7 +180,6 @@ curve = SubResource("Curve2D_vnsq3")
 
 [node name="Guard2-GoingInCircles" parent="StealthQuest/EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("8_lbv6i")]
 position = Vector2(1563, 101)
-velocity = Vector2(1.55449, 249.995)
 patrol_path = NodePath("../Guard2-PatrolPath")
 wait_time = 0.8
 move_speed = 250.0
@@ -200,7 +199,6 @@ curve = SubResource("Curve2D_x2hsm")
 
 [node name="Guard4-GoingBackAndForth" parent="StealthQuest/EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("8_lbv6i")]
 position = Vector2(2360, 782)
-velocity = Vector2(-199.994, 1.51329)
 patrol_path = NodePath("../Guard4-PatrolPath")
 wait_time = 0.3
 move_speed = 200.0
@@ -233,7 +231,6 @@ curve = SubResource("Curve2D_46hcm")
 
 [node name="Guard7-GoingBackAndForth" parent="StealthQuest/EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("8_lbv6i")]
 position = Vector2(4607, 990)
-velocity = Vector2(-71.1522, 70.2664)
 patrol_path = NodePath("../Guard7-PatrolPath")
 detection_area_scale = 0.7
 move_while_in_editor = true
@@ -265,7 +262,6 @@ curve = SubResource("Curve2D_ww60d")
 [node name="Guard10-RunningInCircles" parent="StealthQuest/EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("8_lbv6i")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(5751, 683)
-velocity = Vector2(-26.0135, 999.662)
 patrol_path = NodePath("../Guard10-PatrolPath")
 wait_time = 0.0
 move_speed = 1000.0
