@@ -371,15 +371,22 @@ func _is_patrol_path_closed() -> bool:
 	return first_point_position.is_equal_approx(last_point_position)
 
 
+## Resets the guard to its initial values and placement on screen so it starts
+## patrolling again as if the level just started.
+func _reset() -> void:
+	previous_patrol_point_idx = -1
+	current_patrol_point_idx = 0
+	velocity = Vector2.ZERO
+	if patrol_path:
+		global_position = _patrol_point_position(0)
+
+
 ## When the scene is saved, resets the Guard's position to the beginning of
 ## the patrol path.
 func _notification(what: int) -> void:
 	match what:
 		NOTIFICATION_EDITOR_PRE_SAVE:
-			previous_patrol_point_idx = -1
-			current_patrol_point_idx = 0
-			if patrol_path:
-				global_position = _patrol_point_position(0)
+			_reset()
 
 
 ## Function used for a tool button that either selects the current patrol_path
