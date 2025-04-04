@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cvitou84ni7qe"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cvitou84ni7qe"]
+
+[ext_resource type="FontFile" uid="uid://d05uo8wmexkd8" path="res://assets/fonts/m6x11plus.ttf" id="1_4jodi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -48,7 +50,8 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [resource]
-default_font_size = 20
+default_font = ExtResource("1_4jodi")
+default_font_size = 36
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
 Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
