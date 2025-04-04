@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cvitou84ni7qe"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cvitou84ni7qe"]
 
 [ext_resource type="FontFile" uid="uid://d05uo8wmexkd8" path="res://assets/fonts/m6x11plus.ttf" id="1_4jodi"]
+[ext_resource type="Texture2D" uid="uid://b00c4kiewn30t" path="res://assets/tiny-swords/UI/Banners/Banner_Horizontal.png" id="1_np8m2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -38,16 +39,18 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy0d5"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xtm5"]
+texture = ExtResource("1_np8m2")
+texture_margin_left = 64.0
+texture_margin_top = 64.0
+texture_margin_right = 64.0
+texture_margin_bottom = 64.0
+expand_margin_left = 48.0
+expand_margin_top = 48.0
+expand_margin_right = 48.0
+expand_margin_bottom = 32.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
 
 [resource]
 default_font = ExtResource("1_4jodi")
@@ -60,4 +63,5 @@ MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
-Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
+Panel/styles/panel = SubResource("StyleBoxTexture_0xtm5")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
