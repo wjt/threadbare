@@ -33,6 +33,7 @@ editor/new_file_template="~ start
 Elder: [[Hi|Hello|Howdy]], Storyweaver.
 => END
 "
+runtime/balloon_path="res://scenes/ui/dialogue//balloon.tscn"
 
 [display]
 
