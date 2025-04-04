@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 extends AnimationPlayer
 
-var cancellable: bool = false
+const BLOW_ANTICIPATION_TIME: float = 0.3
 
 @onready var player: Player = owner
 @onready var player_fighting: Node2D = %PlayerFighting
@@ -10,7 +10,6 @@ var cancellable: bool = false
 
 func _process(_delta: float) -> void:
 	if not player_fighting.is_fighting and current_animation != &"blow":
-		cancellable = false
 		_process_walk_idle(_delta)
 	else:
 		_process_fighting(_delta)
@@ -24,12 +23,13 @@ func _process_walk_idle(_delta: float) -> void:
 
 
 func _process_fighting(_delta: float) -> void:
-	if current_animation == &"blow" and current_animation_position > 0.3:
-		cancellable = true
-
 	if not player_fighting.is_fighting:
-		if cancellable and current_animation == &"blow" and current_animation_position <= 0.3:
+		if current_animation == &"blow" and current_animation_position <= BLOW_ANTICIPATION_TIME:
 			stop()
 		return
 
-	play(&"blow")
+	if current_animation != &"blow":
+		# Fighting animation is being played for the first time. So skip the anticipation and go
+		# directly to the action.
+		play(&"blow")
+		seek(BLOW_ANTICIPATION_TIME, false, false)
