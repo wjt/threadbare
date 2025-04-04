@@ -59,8 +59,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	visible_things.rotation = linear_velocity.angle()
 	if node_to_follow:
-		var direction: Vector2 = global_position.direction_to(node_to_follow.global_position)
-		var force: Vector2 = direction * speed
+		var direction_to_target: Vector2 = global_position.direction_to(
+			node_to_follow.global_position
+		)
+		var force: Vector2 = direction_to_target * speed
 		constant_force = force
 
 
