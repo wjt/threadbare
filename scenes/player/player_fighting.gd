@@ -18,11 +18,9 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if Pause.is_paused(Pause.System.PLAYER_INPUT):
-		is_fighting = false
-	elif Input.is_action_just_pressed(&"ui_accept"):
+	if %PlayerController.is_action_just_pressed(&"ui_accept"):
 		is_fighting = true
-	elif Input.is_action_just_released(&"ui_accept"):
+	elif %PlayerController.is_action_just_released(&"ui_accept"):
 		is_fighting = false
 
 

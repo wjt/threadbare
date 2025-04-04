@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://iu2q66clupc6"]
+[gd_scene load_steps=94 format=3 uid="uid://iu2q66clupc6"]
 
 [ext_resource type="Texture2D" uid="uid://dm0dwcbjsb743" path="res://assets/tiny-swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bwllxup305eib" path="res://scenes/player/player.gd" id="1_g2els"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://e78f8iq448e1" path="res://scenes/player/animation_player.gd" id="7_0owmy"]
 [ext_resource type="Script" uid="uid://kni2yl26matc" path="res://scenes/player/player_fighting.gd" id="7_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://deqi3gd0anesg" path="res://scenes/health_bar/health_bar.tscn" id="8_h17s1"]
+[ext_resource type="Script" uid="uid://jpf848nkaa7h" path="res://scenes/player/player_controller.gd" id="8_qek5x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -1202,3 +1203,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_qek5x")
 }
 script = ExtResource("7_0owmy")
+
+[node name="PlayerController" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_qek5x")

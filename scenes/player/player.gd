@@ -48,17 +48,13 @@ func _process(delta: float) -> void:
 		velocity = Vector2.ZERO
 		return
 
-	var axis: Vector2 = (
-		Input.get_vector(&"ui_left", &"ui_right", &"ui_up", &"ui_down")
-		if not Pause.is_paused(Pause.System.PLAYER_INPUT)
-		else Vector2.ZERO
-	)
+	var axis: Vector2 = %PlayerController.get_vector(&"ui_left", &"ui_right", &"ui_up", &"ui_down")
 
 	if not axis.is_zero_approx():
 		last_nonzero_axis = axis
 
 	var speed: float
-	if Input.is_action_pressed(&"running") and not Pause.is_paused(Pause.System.PLAYER_INPUT):
+	if %PlayerController.is_action_pressed(&"running"):
 		speed = run_speed
 	else:
 		speed = walk_speed
