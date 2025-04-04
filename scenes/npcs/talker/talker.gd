@@ -9,7 +9,7 @@ const DEFAULT_DIALOGUE: DialogueResource = preload("res://scenes/npcs/talker/def
 @export var npc_name: String
 @export var dialogue: DialogueResource = DEFAULT_DIALOGUE
 
-var _previous_look_at_side: NPC.LookAtSide
+var _previous_look_at_side: NPC.LookAtSide = NPC.LookAtSide.LEFT
 
 @onready var interact_area: InteractArea = %InteractArea
 
