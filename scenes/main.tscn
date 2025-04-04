@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://3ieahlwwqb0t" path="res://scenes/music_puzzle/clues/2.png" id="11_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://dgqq26xsu3hrf" path="res://scenes/music_puzzle/clues/3.png" id="12_jkv2x"]
 [ext_resource type="Texture2D" uid="uid://dybrvl42chyoi" path="res://scenes/music_puzzle/clues/4.png" id="13_jbj1t"]
-[ext_resource type="PackedScene" path="res://scenes/props/collectible_item.tscn" id="15_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/props/collectible_item.tscn" id="15_jbj1t"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/inventory/inventory_item.gd" id="16_muem4"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui/hud.tscn" id="17_muem4"]
 
