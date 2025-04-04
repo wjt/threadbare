@@ -74,7 +74,7 @@ func _process(delta: float) -> void:
 	move_and_slide()
 
 
-func teleport_to(tele_position: Vector2, smooth_camera: bool = false):
+func teleport_to(tele_position: Vector2, smooth_camera: bool = false) -> void:
 	var camera: Camera2D = get_viewport().get_camera_2d()
 
 	if is_instance_valid(camera):
