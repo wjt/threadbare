@@ -17,6 +17,15 @@ extends Control
 @onready var label_container: PanelContainer = %LabelContainer
 
 
+func _set(property: StringName, value: Variant) -> bool:
+	if not is_node_ready():
+		return false
+	if property == "visible":
+		label_container.visible = value
+		return true
+	return false
+
+
 func _set_label_text(new_text: String) -> void:
 	label_text = new_text
 	if not is_node_ready():
