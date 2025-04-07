@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://be17wk85qlu28" path="res://scenes/ink_combat/inkwell/inkwell.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://b2nmajpf8dlh" path="res://scenes/ink_combat/inkwell/inkwell-fill.png" id="2_vr013"]
 [ext_resource type="Texture2D" uid="uid://blqvqkijjjxu" path="res://scenes/ink_combat/inkwell/inkwell-line.png" id="3_qv00f"]
-[ext_resource type="PackedScene" uid="uid://vsvher2556ig" path="res://scenes/interact/interact_label.tscn" id="3_tu5xq"]
+[ext_resource type="PackedScene" uid="uid://yfpfno276rol" path="res://scenes/props/fixed_size_label/fixed_size_label.tscn" id="4_8v4vt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vr013"]
 atlas = ExtResource("2_vr013")
@@ -143,10 +143,12 @@ libraries = {
 }
 speed_scale = 2.0
 
-[node name="InteractLabel" parent="." instance=ExtResource("3_tu5xq")]
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-25, 29)
+
+[node name="ColorLabel" parent="Marker2D" instance=ExtResource("4_8v4vt")]
 unique_name_in_owner = true
-offset_left = -13.0
-offset_top = 21.0
-offset_right = 47.0
-offset_bottom = 59.0
-scale = Vector2(0.5, 0.5)
+offset_left = 31.0
+offset_top = 26.0
+offset_right = 131.0
+offset_bottom = 123.5

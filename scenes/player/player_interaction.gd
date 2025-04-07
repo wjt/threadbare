@@ -8,31 +8,17 @@ var is_interacting: bool:
 
 @onready var interact_ray: RayCast2D = %InteractRay
 @onready var interact_marker: Marker2D = %InteractMarker
-@onready var interact_label: InteractLabel = %InteractLabel
+@onready var interact_label: FixedSizeLabel = %InteractLabel
 
 
 func _get_is_interacting() -> bool:
 	return not interact_ray.enabled
 
 
-func _ready() -> void:
-	var current_scene: Node = get_tree().current_scene
-	var screen_overlay: CanvasLayer = current_scene.get_node_or_null("ScreenOverlay")
-	if not screen_overlay:
-		push_error("ScreenOverlay not found in current scene.")
-		return
-	interact_label.reparent(screen_overlay)
-
-
 func _process(_delta: float) -> void:
 	if is_interacting:
 		return
 	var interact_area: InteractArea = interact_ray.get_interact_area()
-
-	var label_offset: Vector2 = Vector2(interact_label.size.x / 2, interact_label.size.y)
-	interact_label.position = (
-		interact_marker.get_global_transform_with_canvas().origin - label_offset
-	)
 
 	if not interact_area:
 		interact_label.visible = false
