@@ -93,6 +93,5 @@ unique_name_in_owner = true
 position = Vector2(1464, 1220)
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
 
 [connection signal="finished" from="." to="OnTheGround/Reward" method="_on_ink_combat_finished"]

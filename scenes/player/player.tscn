@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bpu6jo4kvehlg" path="res://scenes/player/player_interaction.gd" id="3_dqkch"]
 [ext_resource type="Script" uid="uid://kqgiavjw07fx" path="res://scenes/interact/interact_ray.gd" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://qro4uo83ba8f" path="res://scenes/player/player_sprite.gd" id="3_qlg0r"]
-[ext_resource type="PackedScene" uid="uid://vsvher2556ig" path="res://scenes/interact/interact_label.tscn" id="6_75vfm"]
+[ext_resource type="PackedScene" uid="uid://yfpfno276rol" path="res://scenes/props/fixed_size_label/fixed_size_label.tscn" id="6_h17s1"]
 [ext_resource type="Script" uid="uid://e78f8iq448e1" path="res://scenes/player/animation_player.gd" id="7_0owmy"]
 [ext_resource type="Script" uid="uid://kni2yl26matc" path="res://scenes/player/player_fighting.gd" id="7_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://deqi3gd0anesg" path="res://scenes/health_bar/health_bar.tscn" id="8_h17s1"]
@@ -1145,12 +1145,19 @@ script = ExtResource("3_qhqgy")
 
 [node name="InteractMarker" type="Marker2D" parent="PlayerInteraction"]
 unique_name_in_owner = true
-position = Vector2(0, -90)
+position = Vector2(-1, -116)
 
-[node name="InteractLabel" parent="PlayerInteraction/InteractMarker" instance=ExtResource("6_75vfm")]
+[node name="InteractLabel" parent="PlayerInteraction/InteractMarker" instance=ExtResource("6_h17s1")]
 unique_name_in_owner = true
-visible = false
-label_text = "Talk"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 11.0
+offset_right = 1.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PlayerFighting" type="Node2D" parent="."]
 unique_name_in_owner = true
