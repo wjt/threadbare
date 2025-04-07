@@ -15,6 +15,12 @@ func _get_is_interacting() -> bool:
 	return not interact_ray.enabled
 
 
+func _ready() -> void:
+	var player: Player = owner
+	if player.mode == player.Mode.FIGHTING:
+		interact_label.visible = false
+
+
 func _process(_delta: float) -> void:
 	if is_interacting:
 		return
