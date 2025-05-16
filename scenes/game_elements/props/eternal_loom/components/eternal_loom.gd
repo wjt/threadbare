@@ -66,19 +66,18 @@ func _item_types_required() -> Array:
 
 func is_item_offering_possible() -> bool:
 	var items_collected: Array[InventoryItem] = GameState.items_collected()
-	return _item_types_required().all(
-		func(item_type): return _is_there_item_of_type(items_collected, item_type)
-	)
+	return _item_types_required().all(_is_there_item_of_type.bind(items_collected))
 
 
 func _consume_items_offering(items_collected: Array[InventoryItem]) -> void:
-	for item_type in _item_types_required():
-		var item = _find_first_item_of_type(items_collected, item_type)
+	for item_type: InventoryItem.ItemType in _item_types_required():
+		var item: InventoryItem = _find_first_item_of_type(items_collected, item_type)
 		GameState.remove_consumed_item(item)
 
 
 func _is_there_item_of_type(
-	items_collected: Array[InventoryItem], expected_type: InventoryItem.ItemType
+	expected_type: InventoryItem.ItemType,
+	items_collected: Array[InventoryItem],
 ) -> bool:
 	return _find_first_item_of_type(items_collected, expected_type) != null
 
