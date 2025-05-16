@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=4 uid="uid://db6vhi7s2f37c"]
+[gd_scene load_steps=77 format=4 uid="uid://db6vhi7s2f37c"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_f6lvl"]
 [ext_resource type="PackedScene" uid="uid://2rbpl811wlv1" path="res://scenes/game_elements/props/background_music/background_music.tscn" id="1_t8tj0"]
@@ -34,6 +34,10 @@
 [ext_resource type="Texture2D" uid="uid://c6sxykigjd1ls" path="res://assets/third_party/tiny-swords/Terrain/Water/Rocks/Rocks_02.png" id="23_ulxtw"]
 [ext_resource type="Texture2D" uid="uid://drfnq08l2wbgy" path="res://assets/third_party/tiny-swords/Deco/03.png" id="24_wtfsj"]
 [ext_resource type="PackedScene" uid="uid://lgu7aeqa7o3r" path="res://scenes/game_elements/props/door/door.tscn" id="25_ulxtw"]
+[ext_resource type="SpriteFrames" uid="uid://3elulifvmamm" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_blue.tres" id="27_lp8w2"]
+[ext_resource type="SpriteFrames" uid="uid://clh0qxc8buapj" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_pink.tres" id="28_h5xg2"]
+[ext_resource type="SpriteFrames" uid="uid://bkxrywxf40i1u" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_brown.tres" id="29_5i2s8"]
+[ext_resource type="SpriteFrames" uid="uid://d000bjl2xdg0g" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_green.tres" id="30_8dune"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_foy1n"]
 atlas = ExtResource("22_wtfsj")
@@ -1014,6 +1018,7 @@ debug_color = Color(0, 0, 0, 0.42)
 
 [node name="Checkpoint2" parent="Checkpoints" instance=ExtResource("11_idy4y")]
 position = Vector2(2420, 419)
+sprite_frames = ExtResource("27_lp8w2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint2"]
 position = Vector2(77, 52)
@@ -1022,6 +1027,7 @@ debug_color = Color(0, 0, 0, 0.42)
 
 [node name="Checkpoint3" parent="Checkpoints" instance=ExtResource("11_idy4y")]
 position = Vector2(2659, 1162)
+sprite_frames = ExtResource("28_h5xg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint3"]
 position = Vector2(56, 44.75)
@@ -1030,6 +1036,7 @@ debug_color = Color(0, 0, 0, 0.42)
 
 [node name="Checkpoint4" parent="Checkpoints" instance=ExtResource("11_idy4y")]
 position = Vector2(3434, 1269)
+sprite_frames = ExtResource("29_5i2s8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint4"]
 position = Vector2(5, -19)
@@ -1038,6 +1045,7 @@ debug_color = Color(0, 0, 0, 0.42)
 
 [node name="Checkpoint5" parent="Checkpoints" instance=ExtResource("11_idy4y")]
 position = Vector2(4174, 1142)
+sprite_frames = ExtResource("30_8dune")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint5"]
 position = Vector2(37, 10)
