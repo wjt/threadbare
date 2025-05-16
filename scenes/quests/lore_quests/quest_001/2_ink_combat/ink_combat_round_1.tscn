@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://c764br4tplkb2"]
+[gd_scene load_steps=26 format=4 uid="uid://c764br4tplkb2"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_wrx86"]
 [ext_resource type="Resource" uid="uid://cmhcuoms2kh1a" path="res://scenes/quests/lore_quests/quest_001/2_ink_combat/components/dialogues/ink_well.dialogue" id="2_o41k0"]
@@ -14,8 +14,14 @@
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="9_na0be"]
 [ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/shared_components/sprite_frames/storyweaver_blue.tres" id="10_hlahk"]
 [ext_resource type="SpriteFrames" uid="uid://b3r84ksew5djp" path="res://scenes/game_elements/characters/enemies/throwing_enemy/components/ink_drinker_frames_purple.tres" id="12_h7w4n"]
-[ext_resource type="SpriteFrames" uid="uid://bhamin2pby7tq" path="res://scenes/game_elements/props/projectile/components/inkblob_spriteframes.tres" id="13_gn6oy"]
+[ext_resource type="AudioStream" uid="uid://qf2d38rabx8o" path="res://assets/third_party/sounds/characters/enemies/throwing_enemy/Wings.ogg" id="13_gn6oy"]
 [ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="13_hlahk"]
+[ext_resource type="AudioStream" uid="uid://fcmjf1srys7n" path="res://assets/third_party/sounds/characters/enemies/throwing_enemy/Spit.ogg" id="14_7ekah"]
+[ext_resource type="SpriteFrames" uid="uid://bhamin2pby7tq" path="res://scenes/game_elements/props/projectile/components/inkblob_spriteframes.tres" id="15_4xy6f"]
+[ext_resource type="AudioStream" uid="uid://7jlv4wqpihl7" path="res://scenes/game_elements/props/projectile/components/blob_hit.wav" id="15_64i88"]
+[ext_resource type="PackedScene" uid="uid://clgisducnnh0a" path="res://scenes/game_elements/fx/liquid_small_splat/liquid_small_splat.tscn" id="15_q60ju"]
+[ext_resource type="PackedScene" uid="uid://b4qu6wml5gd7a" path="res://scenes/game_elements/fx/liquid_big_splat/liquid_big_splat.tscn" id="16_vkiqy"]
+[ext_resource type="PackedScene" uid="uid://bgce3qns72g3m" path="res://scenes/game_elements/fx/liquid_trail.tscn" id="17_tqepj"]
 
 [sub_resource type="Animation" id="Animation_nlryc"]
 resource_name = "goal_completed"
@@ -151,7 +157,13 @@ scale = Vector2(1.1, 1.1)
 [node name="ThrowingEnemy" parent="OnTheGround" instance=ExtResource("5_h0i4r")]
 position = Vector2(857, 300)
 sprite_frames = ExtResource("12_h7w4n")
-projectile_sprite_frames = ExtResource("13_gn6oy")
+idle_sound_stream = ExtResource("13_gn6oy")
+attack_sound_stream = ExtResource("14_7ekah")
+projectile_sprite_frames = ExtResource("15_4xy6f")
+projectile_hit_sound_stream = ExtResource("15_64i88")
+projectile_small_fx_scene = ExtResource("15_q60ju")
+projectile_big_fx_scene = ExtResource("16_vkiqy")
+projectile_trail_fx_scene = ExtResource("17_tqepj")
 
 [node name="FillingBarrel" parent="OnTheGround" instance=ExtResource("6_v7ikp")]
 position = Vector2(528, 164)
