@@ -2,12 +2,10 @@
 # SPDX-License-Identifier: MPL-2.0
 
 ~ start
-Something in this scene will throw projectiles at you.
-Your goal is to hit them toward the targets.
-Try this example first, then explore the Scene Tree in the editor.
-You can add, change, or remove things to explore how that affects the gameplay.
+Something in this scene will throw projectiles at you. The goal is to redirect them toward the targets.
+Explore the Scene Tree to add, change, or remove elements.
 => END
 
 ~ well_done
-You can add text here after the player takes the collectible.
+You can add text here after the player takes the collectible. Be creative with this one!
 => END
