@@ -1,12 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dua6mynlw2ptw"]
+[gd_scene load_steps=6 format=3 uid="uid://dua6mynlw2ptw"]
 
 [ext_resource type="Script" uid="uid://bk5ri1yoakaqp" path="res://scenes/game_elements/props/checkpoint/components/checkpoint.gd" id="1_kkoqv"]
 [ext_resource type="Script" uid="uid://0enyu5v4ra34" path="res://scenes/game_elements/props/spawn_point/components/spawn_point.gd" id="2_s5d1s"]
 [ext_resource type="SpriteFrames" uid="uid://dmg1egdoye3ns" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_purple.tres" id="4_3xcwf"]
 [ext_resource type="PackedScene" uid="uid://dutgnbiy7xalb" path="res://scenes/game_elements/props/interact_area/interact_area.tscn" id="4_cukws"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wd3ro"]
-radius = 11.4018
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3xcwf"]
 radius = 48.0
@@ -25,17 +22,6 @@ position = Vector2(0, -40)
 sprite_frames = ExtResource("4_3xcwf")
 animation = &"idle"
 autoplay = "idle"
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 16
-collision_mask = 0
-
-[node name="CollisionShape" type="CollisionShape2D" parent="StaticBody2D"]
-unique_name_in_owner = true
-position = Vector2(1, -4)
-shape = SubResource("CircleShape2D_wd3ro")
-disabled = true
-debug_color = Color(0.744429, 0.463578, 0, 0.42)
 
 [node name="InteractArea" parent="." instance=ExtResource("4_cukws")]
 unique_name_in_owner = true

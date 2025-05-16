@@ -35,9 +35,6 @@ const REQUIRED_ANIMATIONS := [&"idle", &"appear"]
 ## The sprite displayed when this checkpoint is activate.
 @onready var sprite: AnimatedSprite2D = %Sprite
 
-## The collision shape for the sprite, when this checkpoint is activated
-@onready var collision_shape: CollisionShape2D = %CollisionShape
-
 @onready var interact_area: InteractArea = %InteractArea
 
 
@@ -78,7 +75,6 @@ func activate() -> void:
 
 	sprite.visible = true
 	sprite.play(&"appear")
-	collision_shape.set_deferred(&"disabled", false)
 	interact_area.disabled = dialogue == null
 	await sprite.animation_finished
 	sprite.play(&"idle")
