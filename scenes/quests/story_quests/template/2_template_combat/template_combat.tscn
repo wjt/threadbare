@@ -43,9 +43,6 @@ position = Vector2(348, 335)
 
 [node name="ThrowingNPC" parent="OnTheGround" instance=ExtResource("11_64btt")]
 position = Vector2(857, 300)
-projectile_small_fx_scene = null
-projectile_big_fx_scene = null
-projectile_trail_fx_scene = null
 
 [node name="Target" parent="OnTheGround" instance=ExtResource("12_2eyq6")]
 position = Vector2(510, 164)
