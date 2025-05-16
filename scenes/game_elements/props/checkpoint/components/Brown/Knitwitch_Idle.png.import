@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cowpss4rhh4lo"
-path="res://.godot/imported/Knitwitch_Idle.png-b213bbc42ef1bf0aea750136e31babc2.ctex"
+uid="uid://dctktf2434xia"
+path="res://.godot/imported/Knitwitch_Idle.png-cf36417d60faef5047545608ebd2aa6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/first_party/knitwitch/Purple/Knitwitch_Idle.png"
-dest_files=["res://.godot/imported/Knitwitch_Idle.png-b213bbc42ef1bf0aea750136e31babc2.ctex"]
+source_file="res://scenes/game_elements/props/checkpoint/components/Brown/Knitwitch_Idle.png"
+dest_files=["res://.godot/imported/Knitwitch_Idle.png-cf36417d60faef5047545608ebd2aa6a.ctex"]
 
 [params]
 

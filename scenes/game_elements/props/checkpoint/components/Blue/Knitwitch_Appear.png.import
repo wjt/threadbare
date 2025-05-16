@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://benmgam31at4j"
-path="res://.godot/imported/Knitwitch_Appear.png-9f6bf2a2ed5975695322cf9e2040bb6f.ctex"
+uid="uid://cs0aa2jajjnil"
+path="res://.godot/imported/Knitwitch_Appear.png-0ff00559299b81d6acc4dfb6f199ccc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/first_party/knitwitch/Pink/Knitwitch_Appear.png"
-dest_files=["res://.godot/imported/Knitwitch_Appear.png-9f6bf2a2ed5975695322cf9e2040bb6f.ctex"]
+source_file="res://scenes/game_elements/props/checkpoint/components/Blue/Knitwitch_Appear.png"
+dest_files=["res://.godot/imported/Knitwitch_Appear.png-0ff00559299b81d6acc4dfb6f199ccc1.ctex"]
 
 [params]
 
