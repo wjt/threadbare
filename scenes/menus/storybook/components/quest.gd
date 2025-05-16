@@ -21,10 +21,10 @@ extends Resource
 
 @export_group("Advanced")
 
-## The path to the first scene of the quest. If you are following the structure of the template,
-## leave this as the default path. The path can be absolute (beginning with [code]res://[/code])
+## The path to the first scene of the quest.
+## The path can be absolute (beginning with [code]res://[/code])
 ## or relative to the folder where this quest resource is saved.
-@export_file("*.tscn") var first_scene: String = "0_intro/intro.tscn"
+@export_file("*.tscn") var first_scene: String = "0_intro_template/intro_template.tscn"
 
 
 func _to_string() -> String:

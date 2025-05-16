@@ -8,5 +8,5 @@ title = ""
 description = ""
 authors = Array[String]([])
 affiliation = ""
-first_scene = "0_intro/intro.tscn"
+first_scene = "0_intro_template/intro_template.tscn"
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
