@@ -34,16 +34,16 @@ const LOOK_AT_TURN_SPEED: float = 10.0
 
 @export_category("Sounds")
 ## Sound played when a guard's [enum State] enters DETECTING or ALERTED.
-@export var alerted_sound_stream: AudioStream = preload("uid://dgpeb1dtmfqud"):
+@export var alerted_sound_stream: AudioStream:
 	set = _set_alerted_sound_stream
 ## Sound played when a guard's moving from one point to the next.
-@export var footsteps_sound_stream: AudioStream = preload("uid://4ec6e2alns71"):
+@export var footsteps_sound_stream: AudioStream:
 	set = _set_footsteps_sound_stream
 ## Sound played continuously.
-@export var idle_sound_stream: AudioStream = preload("uid://c7om8kdork2rx"):
+@export var idle_sound_stream: AudioStream:
 	set = _set_idle_sound_stream
 ## Sound played in bursts after the guard entered [enum State] ALERTED.
-@export var alert_others_sound_stream: AudioStream = preload("uid://bwif2oo6ymiu2"):
+@export var alert_others_sound_stream: AudioStream:
 	set = _set_alert_other_sound_stream
 
 @export_category("Patrol")

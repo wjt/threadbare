@@ -43,10 +43,10 @@ const WALK_TARGET_SKIP_RANGE: float = 0.25
 @export_group("Sounds")
 
 ## Sound that plays while this enemy is not attacking
-@export var idle_sound_stream: AudioStream = preload("uid://qf2d38rabx8o"):
+@export var idle_sound_stream: AudioStream:
 	set = _set_idle_sound_stream
 ## Sound that plays when this enemy starts its attack.
-@export var attack_sound_stream: AudioStream = preload("uid://fcmjf1srys7n"):
+@export var attack_sound_stream: AudioStream:
 	set = _set_attack_sound_stream
 
 @export_group("Projectile", "projectile")
@@ -62,17 +62,20 @@ var projectile_speed: float = 30.0
 @export var projectile_follows_player: bool = false
 
 ## The projectile SpriteFrames. It should have a looping animation in autoplay.
-@export var projectile_sprite_frames: SpriteFrames = preload("uid://bhamin2pby7tq")
+@export var projectile_sprite_frames: SpriteFrames = preload("uid://b00dcfe4dtvkh")
+
+## Sound that plays when the projectile hits something.
+@export var projectile_hit_sound_stream: AudioStream
 
 ## A small visual effect used when the projectile collides with things.
-@export var projectile_small_fx_scene: PackedScene = preload("uid://clgisducnnh0a")
+@export var projectile_small_fx_scene: PackedScene
 
 ## A big visual effect used when the projectile explodes.
-@export var projectile_big_fx_scene: PackedScene = preload("uid://b4qu6wml5gd7a")
+@export var projectile_big_fx_scene: PackedScene
 
 ## A scene with a trail particles visual effect. It should contain a [class GPUParticles2D] as
 ## root node. When the projectile gets hit, the [member GPUParticles2D.amount_ratio] is set to 1.
-@export var projectile_trail_fx_scene: PackedScene = preload("uid://bgce3qns72g3m")
+@export var projectile_trail_fx_scene: PackedScene
 
 @export_group("Walking", "walking")
 
@@ -256,6 +259,7 @@ func shoot_projectile() -> void:
 	if projectile_follows_player:
 		projectile.node_to_follow = player
 	projectile.sprite_frames = projectile_sprite_frames
+	projectile.hit_sound_stream = projectile_hit_sound_stream
 	projectile.small_fx_scene = projectile_small_fx_scene
 	projectile.big_fx_scene = projectile_big_fx_scene
 	projectile.trail_fx_scene = projectile_trail_fx_scene
