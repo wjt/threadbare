@@ -120,7 +120,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 	var axis: Vector2 = Input.get_vector(&"ui_left", &"ui_right", &"ui_up", &"ui_down")
 
 	var speed: float
-	if is_running():
+	if Input.is_action_pressed(&"running"):
 		speed = run_speed
 	else:
 		speed = walk_speed
@@ -128,8 +128,13 @@ func _unhandled_input(_event: InputEvent) -> void:
 	input_vector = axis * speed
 
 
+## Returns [code]true[/code] if the player is running. When using an analogue joystick, this can be
+## [code]false[/code] even if the player is holding the "run" button, because the joystick may be
+## inclined only slightly.
 func is_running() -> bool:
-	return Input.is_action_pressed(&"running")
+	# While walking diagonally with an analogue joystick, the input vector can be fractionally
+	# greater than walk_speed, due to trigonometric/floating-point inaccuracy.
+	return input_vector.length_squared() > (walk_speed * walk_speed) + 1.0
 
 
 func _process(delta: float) -> void:
