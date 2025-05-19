@@ -53,25 +53,23 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 func _set_item(new_value: InventoryItem) -> void:
 	item = new_value
+
+	if sprite_2d:
+		sprite_2d.texture = item.get_world_texture() if item else null
+
 	_update_interact_action()
 	update_configuration_warnings()
 
 
 func _ready() -> void:
+	_set_item(item)
 	_update_based_on_revealed()
 	sprite_2d.modulate = Color.WHITE if revealed else Color.TRANSPARENT
-
-	_update_interact_action()
 
 	if Engine.is_editor_hint():
 		return
 
 	interact_area.interaction_started.connect(self._on_interacted)
-
-
-func _process(_delta: float) -> void:
-	if item:
-		sprite_2d.texture = item.get_world_texture()
 
 
 ## Make the collectible appear
