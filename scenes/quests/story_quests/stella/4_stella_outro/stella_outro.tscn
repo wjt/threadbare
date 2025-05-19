@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="1_gh28t"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_k0po6"]
-[ext_resource type="SpriteFrames" uid="uid://vwf8e1v8brdp" path="res://scenes/quests/story_quests/template/template_player_components/template_player.tres" id="3_mvic2"]
+[ext_resource type="SpriteFrames" uid="uid://bkb0lid80r1uc" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="3_veri0"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_rctxc"]
 [ext_resource type="Resource" uid="uid://qceybl5dvpcp" path="res://scenes/quests/story_quests/template/4_template_outro/template_outro_components/template_outro.dialogue" id="5_tcqqa"]
 
@@ -37,7 +37,7 @@ y_sort_enabled = true
 
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
 position = Vector2(400, 349)
-sprite_frames = ExtResource("3_mvic2")
+sprite_frames = ExtResource("3_veri0")
 animation = &"idle"
 autoplay = "idle"
 
