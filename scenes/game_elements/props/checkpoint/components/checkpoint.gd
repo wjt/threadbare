@@ -50,7 +50,7 @@ func _set_sprite_frames(new_sprite_frames: SpriteFrames) -> void:
 
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings: Array = []
-	for animation in REQUIRED_ANIMATIONS:
+	for animation: StringName in REQUIRED_ANIMATIONS:
 		if not sprite_frames.has_animation(animation):
 			warnings.append("sprite_frames is missing the following animation: %s" % animation)
 	return warnings
