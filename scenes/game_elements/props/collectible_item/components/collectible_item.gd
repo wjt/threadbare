@@ -57,7 +57,9 @@ func _set_item(new_value: InventoryItem) -> void:
 	if sprite_2d:
 		sprite_2d.texture = item.get_world_texture() if item else null
 
-	_update_interact_action()
+	if interact_area:
+		interact_area.action = "Collect " + item.type_name() if item else "Collect"
+
 	update_configuration_warnings()
 
 
@@ -105,8 +107,3 @@ func _update_based_on_revealed() -> void:
 		interact_area.disabled = not revealed
 	if sprite_2d:
 		sprite_2d.visible = revealed
-
-
-func _update_interact_action() -> void:
-	if interact_area and item:
-		interact_area.action = "Collect " + item.type_name()
