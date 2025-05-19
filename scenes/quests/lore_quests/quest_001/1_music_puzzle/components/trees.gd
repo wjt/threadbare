@@ -8,7 +8,7 @@ const ALTERNATIVE_PERCENTAGE: float = 0.4
 const ALTERNATIVE_SPRITEFRAMES = preload("uid://djwymcffy83")
 const SPRITEFRAMES = preload("uid://d36eq8tqdaxdy")
 
-@export_tool_button("Randomize Trees Appearances") var a = func():
+@export_tool_button("Randomize Trees Appearances") var _randomize = func() -> void:
 	for child in get_children():
 		child.set(
 			"sprite_frames",
