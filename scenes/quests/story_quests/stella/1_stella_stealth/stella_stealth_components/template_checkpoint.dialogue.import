@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c025q6p1owbcu"
+path="res://.godot/imported/template_checkpoint.dialogue-30e600c792a954c44780035a99149301.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/template_checkpoint.dialogue"
+dest_files=["res://.godot/imported/template_checkpoint.dialogue-30e600c792a954c44780035a99149301.tres"]
+
+[params]
+
+defaults=true

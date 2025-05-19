@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://3a6pnjrsk1y5"
+path="res://.godot/imported/template_intro.dialogue-27ff7919c18f9c343432a535de1329a0.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella/0_stella_intro/stella_intro_components/template_intro.dialogue"
+dest_files=["res://.godot/imported/template_intro.dialogue-27ff7919c18f9c343432a535de1329a0.tres"]
+
+[params]
+
+defaults=true
