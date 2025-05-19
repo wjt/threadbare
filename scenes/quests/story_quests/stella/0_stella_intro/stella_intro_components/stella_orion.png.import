@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://besttpllw6xlf"
-path="res://.godot/imported/stella_Replace image.png-97fc67996387bd250ae43c80de8eab53.ctex"
+uid="uid://dtm6xbnvtibk5"
+path="res://.godot/imported/stella_orion.png-7822cbbeccf9f151b22e2208cea1a3f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella/0_stella_intro/stella_intro_components/stella_Replace image.png"
-dest_files=["res://.godot/imported/stella_Replace image.png-97fc67996387bd250ae43c80de8eab53.ctex"]
+source_file="res://scenes/quests/story_quests/stella/0_stella_intro/stella_intro_components/stella_orion.png"
+dest_files=["res://.godot/imported/stella_orion.png-7822cbbeccf9f151b22e2208cea1a3f6.ctex"]
 
 [params]
 
