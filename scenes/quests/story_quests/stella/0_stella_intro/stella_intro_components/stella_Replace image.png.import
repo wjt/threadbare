@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://besttpllw6xlf"
-path="res://.godot/imported/template_Replace image.png-6d67f02632ddb2164fb614f6904d2cdd.ctex"
+path="res://.godot/imported/stella_Replace image.png-97fc67996387bd250ae43c80de8eab53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella/0_stella_intro/stella_intro_components/template_Replace image.png"
-dest_files=["res://.godot/imported/template_Replace image.png-6d67f02632ddb2164fb614f6904d2cdd.ctex"]
+source_file="res://scenes/quests/story_quests/stella/0_stella_intro/stella_intro_components/stella_Replace image.png"
+dest_files=["res://.godot/imported/stella_Replace image.png-97fc67996387bd250ae43c80de8eab53.ctex"]
 
 [params]
 
