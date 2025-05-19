@@ -19,10 +19,8 @@ class_name CollectibleItem extends Node2D
 
 ## [InventoryItem] provided by this collectible when interacted with.
 @export var item: InventoryItem:
-	set(new_value):
-		item = new_value
-		_update_interact_action()
-		update_configuration_warnings()
+	set = _set_item
+
 @export_category("Dialogue")
 
 ## If provided, this dialogue will be displayed after the player collects this item.
@@ -51,6 +49,12 @@ func _get_configuration_warnings() -> PackedStringArray:
 	if not item:
 		return ["item property must be set"]
 	return []
+
+
+func _set_item(new_value: InventoryItem) -> void:
+	item = new_value
+	_update_interact_action()
+	update_configuration_warnings()
 
 
 func _ready() -> void:
