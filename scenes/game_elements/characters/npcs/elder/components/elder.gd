@@ -61,7 +61,7 @@ func enter_quest() -> void:
 
 
 func _on_dialogue_ended(dialogue_resource: DialogueResource) -> void:
-	await super(dialogue_resource)
+	super(dialogue_resource)
 
 	if _enter_quest_on_dialogue_ended:
 		%InteractArea.disabled = true
