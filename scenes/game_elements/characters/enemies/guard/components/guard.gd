@@ -120,12 +120,12 @@ var state: State = State.PATROLLING:
 
 
 func _get_configuration_warnings() -> PackedStringArray:
-	var warnings = []
+	var warnings: PackedStringArray
 
 	if not sprite_frames:
 		warnings.push_back("sprite_frames must be set.")
 
-	for required_animation in ["alerted", "idle", "walk"]:
+	for required_animation: StringName in [&"alerted", &"idle", &"walk"]:
 		if sprite_frames and not sprite_frames.has_animation(required_animation):
 			warnings.push_back(
 				"sprite_frames is missing the following animation: %s" % required_animation
@@ -136,7 +136,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		var selection_changed = _editor_interface().get_selection().selection_changed
+		var selection_changed: Signal = _editor_interface().get_selection().selection_changed
 		if not selection_changed.is_connected(self.queue_redraw):
 			selection_changed.connect(self.queue_redraw)
 	else:
@@ -466,7 +466,7 @@ func edit_patrol_path() -> void:
 	if not Engine.is_editor_hint():
 		return
 
-	var editor_interface = _editor_interface()
+	var editor_interface := _editor_interface()
 
 	if patrol_path:
 		editor_interface.edit_node.call_deferred(patrol_path)
