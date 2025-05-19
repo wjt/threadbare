@@ -19,10 +19,8 @@ class_name CollectibleItem extends Node2D
 
 ## [InventoryItem] provided by this collectible when interacted with.
 @export var item: InventoryItem:
-	set(new_value):
-		item = new_value
-		_update_interact_action()
-		update_configuration_warnings()
+	set = _set_item
+
 @export_category("Dialogue")
 
 ## If provided, this dialogue will be displayed after the player collects this item.
@@ -53,21 +51,27 @@ func _get_configuration_warnings() -> PackedStringArray:
 	return []
 
 
+func _set_item(new_value: InventoryItem) -> void:
+	item = new_value
+
+	if sprite_2d:
+		sprite_2d.texture = item.get_world_texture() if item else null
+
+	if interact_area:
+		interact_area.action = "Collect " + item.type_name() if item else "Collect"
+
+	update_configuration_warnings()
+
+
 func _ready() -> void:
+	_set_item(item)
 	_update_based_on_revealed()
 	sprite_2d.modulate = Color.WHITE if revealed else Color.TRANSPARENT
-
-	_update_interact_action()
 
 	if Engine.is_editor_hint():
 		return
 
 	interact_area.interaction_started.connect(self._on_interacted)
-
-
-func _process(_delta: float) -> void:
-	if item:
-		sprite_2d.texture = item.get_world_texture()
 
 
 ## Make the collectible appear
@@ -103,8 +107,3 @@ func _update_based_on_revealed() -> void:
 		interact_area.disabled = not revealed
 	if sprite_2d:
 		sprite_2d.visible = revealed
-
-
-func _update_interact_action() -> void:
-	if interact_area and item:
-		interact_area.action = "Collect " + item.type_name()
