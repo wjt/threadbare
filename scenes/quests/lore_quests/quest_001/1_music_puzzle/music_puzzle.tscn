@@ -1484,7 +1484,7 @@ sequence = [NodePath("../../Rocks/G"), NodePath("../../Rocks/E"), NodePath("../.
 hint_sign = NodePath("../../Bonfires/BonfireSign4")
 
 [node name="CollectibleItem" parent="OnTheGround/SequencePuzzle" instance=ExtResource("14_src2c")]
-position = Vector2(-525, 40)
+position = Vector2(-726, 43)
 revealed = false
 next_scene = "uid://c764br4tplkb2"
 item = SubResource("Resource_dp3eg")
