@@ -4,10 +4,10 @@
 class_name Elder
 extends Talker
 
-## The first scene of a quest that this NPC offers to the player when they interact with them.
-@export var quest_scene: PackedScene:
+## The quest that this NPC offers to the player when they interact with them.
+@export var quest: Quest:
 	set(new_value):
-		quest_scene = new_value
+		quest = new_value
 		update_configuration_warnings()
 
 ## A reference to the loom, so that this Elder can determine whether you have
@@ -22,7 +22,7 @@ extends Talker
 @export var idle_sound_stream: AudioStream = preload("uid://dxbxx6x5h7d8p"):
 	set = _set_idle_sound_stream
 
-## Whether to enter [member quest_scene] when the current dialogue ends
+## Whether to enter [member quest] when the current dialogue ends
 var _enter_quest_on_dialogue_ended: bool = false
 
 @onready var _book_sound: AudioStreamPlayer2D = %BookSound
@@ -36,8 +36,8 @@ func _ready() -> void:
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings: Array[String] = []
 
-	if not quest_scene:
-		warnings.append("Quest Scene property should be set")
+	if not quest:
+		warnings.append("Quest property should be set")
 
 	if not eternal_loom:
 		warnings.append("Eternal Loom property must be set")
@@ -54,7 +54,7 @@ func _on_interaction_started(player: Player, _from_right: bool) -> void:
 	DialogueManager.show_dialogue_balloon(dialogue, title, [self, player])
 
 
-## At the end of the current interaction, enter [member quest_scene]. This is intended to be called
+## At the end of the current interaction, enter [member quest]. This is intended to be called
 ## from dialogue.
 func enter_quest() -> void:
 	_enter_quest_on_dialogue_ended = true
@@ -66,8 +66,8 @@ func _on_dialogue_ended(dialogue_resource: DialogueResource) -> void:
 	if _enter_quest_on_dialogue_ended:
 		%InteractArea.disabled = true
 		GameState.start_quest()
-		SceneSwitcher.change_to_packed_with_transition(
-			quest_scene, ^"", Transition.Effect.FADE, Transition.Effect.FADE
+		SceneSwitcher.change_to_file_with_transition(
+			quest.first_scene, ^"", Transition.Effect.FADE, Transition.Effect.FADE
 		)
 		_enter_quest_on_dialogue_ended = false
 
