@@ -19,12 +19,8 @@ extends Resource
 ## Leave blank if not needed.
 @export var affiliation: String
 
-@export_group("Advanced")
-
 ## The path to the first scene of the quest.
-## The path can be absolute (beginning with [code]res://[/code])
-## or relative to the folder where this quest resource is saved.
-@export_file("*.tscn") var first_scene: String = "0_intro_template/intro_template.tscn"
+@export_file("*.tscn") var first_scene: String
 
 
 func _to_string() -> String:
@@ -37,11 +33,3 @@ func get_title() -> String:
 		return title
 
 	return resource_path.get_base_dir().get_file()
-
-
-## Resolves [member first_scene] relative to the directory this Quest is stored in, if necessary.
-func get_first_scene_path() -> String:
-	if first_scene.is_absolute_path():
-		return first_scene
-
-	return resource_path.get_base_dir().path_join(first_scene)
