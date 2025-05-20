@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
+@tool
 class_name Quest
 extends Resource
 ## Information that defines a playable quest
@@ -19,6 +20,28 @@ extends Resource
 
 ## The path to the first scene of the quest.
 @export_file("*.tscn") var first_scene: String
+
+@export_group("Animation")
+
+## An optional sprite frame library to show in the storybook page for this quest.
+## This could be the main character, an NPC, or an important item in the quest.
+@export var sprite_frames: SpriteFrames:
+	set(new_value):
+		sprite_frames = new_value
+		notify_property_list_changed()
+
+## The animation in [member sprite_frames] to display. This should typically be a looping animation.
+@export var animation_name: StringName = &""
+
+
+func _validate_property(property: Dictionary) -> void:
+	match property["name"]:
+		"animation_name":
+			if sprite_frames:
+				property.hint = PROPERTY_HINT_ENUM
+				property.hint_string = ",".join(sprite_frames.get_animation_names())
+			else:
+				property.usage |= PROPERTY_USAGE_READ_ONLY
 
 
 func _to_string() -> String:

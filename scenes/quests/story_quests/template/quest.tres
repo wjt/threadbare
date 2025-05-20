@@ -9,4 +9,5 @@ description = ""
 authors = Array[String]([])
 affiliation = ""
 first_scene = "uid://c1gdct760l86h"
+animation_name = &""
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
