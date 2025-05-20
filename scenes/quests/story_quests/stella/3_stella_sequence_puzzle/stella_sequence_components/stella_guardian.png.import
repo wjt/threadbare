@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctmlh77r4xi0l"
-path="res://.godot/imported/stella_sign.png-63c0d4d5f4014a0b2931464b05c887fc.ctex"
+uid="uid://cneypwcfp3hj3"
+path="res://.godot/imported/stella_guardian.png-4c86786e1eaab5d3ba54ac2670cce30d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sign.png"
-dest_files=["res://.godot/imported/stella_sign.png-63c0d4d5f4014a0b2931464b05c887fc.ctex"]
+source_file="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.png"
+dest_files=["res://.godot/imported/stella_guardian.png-4c86786e1eaab5d3ba54ac2670cce30d.ctex"]
 
 [params]
 
