@@ -9,6 +9,12 @@ signal play(quest: Quest)
 ## Template quest, which is expected to be blank and so is treated specially.
 const STORY_QUEST_TEMPLATE := preload("uid://ddxn14xw66ud8")
 
+## Sprite frames for the template quest
+const TEMPLATE_PLAYER_FRAMES: SpriteFrames = preload("uid://vwf8e1v8brdp")
+
+## Animation for the template quest
+const TEMPLATE_ANIMATION_NAME: StringName = &"idle"
+
 const QUEST_RESOURCE_NAME := "quest.tres"
 
 ## Directory to scan for quests. This directory should have 1 or more subdirectories, each of which
@@ -21,6 +27,7 @@ var _selected_quest: Quest
 @onready var title: Label = %Title
 @onready var description: Label = %Description
 @onready var authors: Label = %Authors
+@onready var animation: AnimatedTextureRect = %Animation
 @onready var play_button: Button = %PlayButton
 
 
@@ -76,6 +83,9 @@ func _on_button_focused(button: Button, quest: Quest) -> void:
 		title.text = "StoryQuest Template"
 		description.text = "This is the template for your own StoryQuests."
 		authors.text = "A story by the Threadbare Authors"
+		animation.sprite_frames = TEMPLATE_PLAYER_FRAMES
+		animation.animation_name = TEMPLATE_ANIMATION_NAME
+
 		return
 
 	title.text = quest.title.strip_edges()
