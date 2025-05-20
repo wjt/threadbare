@@ -5,9 +5,7 @@ extends Resource
 ## Information that defines a playable quest
 
 ## The quest's title. This should be short, like the title of a novel.
-@export var title: String:
-	set(new_value):
-		title = new_value.strip_edges()
+@export var title: String
 
 ## A short description of the quest. This should be a single paragraph of around 2–3 sentences.
 @export_multiline var description: String

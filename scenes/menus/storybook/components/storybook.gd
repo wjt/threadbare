@@ -78,7 +78,7 @@ func _on_button_focused(button: Button, quest: Quest) -> void:
 		authors.text = "A story by the Threadbare Authors"
 		return
 
-	title.text = quest.title
+	title.text = quest.title.strip_edges()
 
 	if quest.description:
 		description.text = quest.description
