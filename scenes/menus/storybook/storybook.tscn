@@ -42,9 +42,21 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="QuestList" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/LeftPage"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/LeftPage"]
+layout_mode = 2
+
+[node name="QuestList" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/LeftPage/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="MarginContainer/PanelContainer/HBoxContainer/LeftPage/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_next = NodePath("../../../RightPage/VBoxContainer/PlayButton")
+theme_type_variation = &"FlatButton"
+text = "< back"
+flat = true
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -99,7 +111,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath(".")
 focus_neighbor_bottom = NodePath(".")
+focus_previous = NodePath("../../../LeftPage/VBoxContainer/BackButton")
 theme_type_variation = &"FlatButton"
 text = "Play"
 
+[connection signal="pressed" from="MarginContainer/PanelContainer/HBoxContainer/LeftPage/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/HBoxContainer/RightPage/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

@@ -1,10 +1,12 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
+class_name Storybook
 extends Control
 ## Offers a choice of quests by scanning a given [member quest_directory].
 
-## Emitted when the player chooses to play the given quest
-signal play(quest: Quest)
+## Emitted when the player chooses a quest; or leaves the storybook without choosing a quest, in
+## which case [code]quest[/code] is [code]null[/code].
+signal selected(quest: Quest)
 
 ## Template quest, which is expected to be blank and so is treated specially.
 const STORY_QUEST_TEMPLATE := preload("uid://ddxn14xw66ud8")
@@ -29,6 +31,7 @@ var _selected_quest: Quest
 @onready var authors: Label = %Authors
 @onready var animation: AnimatedTextureRect = %Animation
 @onready var play_button: Button = %PlayButton
+@onready var back_button: Button = %BackButton
 
 
 func _enumerate_quests() -> Array[Quest]:
@@ -59,23 +62,31 @@ func _ready() -> void:
 		quest_list.add_child(button)
 
 		button.focus_entered.connect(_on_button_focused.bind(button, quest))
-		button.focus_next = play_button.get_path()
+		button.focus_next = back_button.get_path()
 		button.focus_previous = play_button.get_path()
 
 		if previous_button:
 			button.focus_neighbor_top = previous_button.get_path()
 			previous_button.focus_neighbor_bottom = button.get_path()
-		else:
-			button.grab_focus()
 
 		previous_button = button
 
-	previous_button.focus_neighbor_bottom = previous_button.get_path()
+	previous_button.focus_neighbor_bottom = back_button.get_path()
+	back_button.focus_neighbor_top = previous_button.get_path()
+
+	reset_focus()
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		# Go back
+		get_viewport().set_input_as_handled()
+		selected.emit(null)
 
 
 func _on_button_focused(button: Button, quest: Quest) -> void:
+	back_button.focus_previous = button.get_path()
 	play_button.focus_next = button.get_path()
-	play_button.focus_previous = button.get_path()
 	play_button.focus_neighbor_left = button.get_path()
 	_selected_quest = quest
 
@@ -116,6 +127,18 @@ func _on_button_focused(button: Button, quest: Quest) -> void:
 	if quest.affiliation:
 		authors.text += " of " + quest.affiliation
 
+	animation.sprite_frames = quest.sprite_frames
+	animation.animation_name = quest.animation_name
+
 
 func _on_play_button_pressed() -> void:
-	play.emit(_selected_quest)
+	selected.emit(_selected_quest)
+
+
+func _on_back_button_pressed() -> void:
+	selected.emit(null)
+
+
+func reset_focus() -> void:
+	if quest_list and quest_list.get_child_count() > 0:
+		quest_list.get_child(0).grab_focus()
