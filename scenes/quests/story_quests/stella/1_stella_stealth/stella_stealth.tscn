@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://hb6ekertaof8"]
+[gd_scene load_steps=47 format=4 uid="uid://hb6ekertaof8"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_hmya5"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_gylsq"]
@@ -6,13 +6,14 @@
 [ext_resource type="SpriteFrames" uid="uid://bkb0lid80r1uc" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="4_jwuax"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="4_qcfi2"]
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://scenes/game_elements/props/checkpoint/checkpoint.tscn" id="5_8y4yf"]
-[ext_resource type="Resource" uid="uid://cppk2qynt485b" path="res://scenes/quests/story_quests/template/1_template_stealth/template_stealth_components/template_checkpoint.dialogue" id="6_kgjk6"]
 [ext_resource type="SpriteFrames" uid="uid://dkldbyul3gceg" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_guard_enemy.tres" id="6_wgqmn"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="7_n4o8u"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_jobnx"]
+[ext_resource type="Resource" uid="uid://c025q6p1owbcu" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_checkpoint.dialogue" id="8_wgqmn"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_h858g"]
-[ext_resource type="Resource" uid="uid://dpv4wurvaamhb" path="res://scenes/quests/story_quests/template/1_template_stealth/template_stealth_components/template_collected.dialogue" id="10_0360t"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="11_mehsu"]
+[ext_resource type="Resource" uid="uid://d3gr543f34pwh" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_collected.dialogue" id="12_rlkm0"]
+[ext_resource type="Texture2D" uid="uid://8ujtwgp8fb1v" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_stealth_fire.png" id="13_rlkm0"]
 [ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="14_ek8qn"]
 [ext_resource type="Resource" uid="uid://75hhoesrge3c" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_stealth.dialogue" id="14_wgqmn"]
 [ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/game_elements/characters/npcs/talker/talker.tscn" id="15_wgqmn"]
@@ -130,6 +131,63 @@ name = ""
 type = 0
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ownb"]
+atlas = ExtResource("13_rlkm0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_446rl"]
+atlas = ExtResource("13_rlkm0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpmmr"]
+atlas = ExtResource("13_rlkm0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcgc7"]
+atlas = ExtResource("13_rlkm0")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3kdm"]
+atlas = ExtResource("13_rlkm0")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqom2"]
+atlas = ExtResource("13_rlkm0")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nlig"]
+atlas = ExtResource("13_rlkm0")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24u5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ownb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_446rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpmmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcgc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3kdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqom2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nlig")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="StealthTemplateLevel" type="Node2D"]
 y_sort_enabled = true
 
@@ -164,7 +222,7 @@ tile_map_data = PackedByteArray("AAAmABUAAQADAAMAAAAmABYAAQAMAAAAAAAmABgAAQADAAM
 tile_set = ExtResource("2_gylsq")
 
 [node name="Player" parent="." instance=ExtResource("3_qvtgt")]
-position = Vector2(289, 1318)
+position = Vector2(108, 369)
 player_name = "Stella"
 sprite_frames = ExtResource("4_jwuax")
 
@@ -420,7 +478,7 @@ y_sort_enabled = true
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource("5_8y4yf")]
 position = Vector2(1704, 451)
-dialogue = ExtResource("6_kgjk6")
+dialogue = ExtResource("8_wgqmn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint"]
 position = Vector2(1, -2)
@@ -429,7 +487,7 @@ debug_color = Color(0, 0, 0, 0.42)
 
 [node name="Checkpoint2" parent="Checkpoints" instance=ExtResource("5_8y4yf")]
 position = Vector2(2323, 2446)
-dialogue = ExtResource("6_kgjk6")
+dialogue = ExtResource("8_wgqmn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint2"]
 position = Vector2(0, 1)
@@ -441,21 +499,21 @@ debug_color = Color(0, 0, 0, 0.42)
 [node name="HUD" parent="." instance=ExtResource("7_n4o8u")]
 
 [node name="CollectibleItem" parent="." instance=ExtResource("8_jobnx")]
-position = Vector2(447, 670)
-next_scene = "uid://thwcu5akkqp5"
+position = Vector2(445, 735)
+next_scene = "uid://bfr7svwx5hqkf"
 item = SubResource("Resource_idy4y")
-collected_dialogue = ExtResource("10_0360t")
+collected_dialogue = ExtResource("12_rlkm0")
+
+[node name="Flame" type="AnimatedSprite2D" parent="."]
+position = Vector2(446, 644)
+scale = Vector2(1.10156, 1.10156)
+sprite_frames = SubResource("SpriteFrames_24u5l")
+autoplay = "default"
 
 [node name="Cinematic" type="Node2D" parent="."]
 script = ExtResource("11_mehsu")
 dialogue = ExtResource("14_wgqmn")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
-
-[node name="Talker" parent="." instance=ExtResource("15_wgqmn")]
-position = Vector2(171, 585)
-npc_name = "Firekeeper"
-dialogue = ExtResource("16_rlkm0")
-sprite_frames = ExtResource("17_0ownb")
 
 [node name="Rocks" type="Node2D" parent="."]
 
@@ -463,7 +521,7 @@ sprite_frames = ExtResource("17_0ownb")
 position = Vector2(151, 607)
 
 [node name="Rock2" parent="Rocks" instance=ExtResource("14_ek8qn")]
-position = Vector2(188, 616)
+position = Vector2(187, 621)
 
 [node name="Rock3" parent="Rocks" instance=ExtResource("14_ek8qn")]
 position = Vector2(213, 613)
@@ -472,7 +530,7 @@ position = Vector2(213, 613)
 position = Vector2(233, 589)
 
 [node name="Rock5" parent="Rocks" instance=ExtResource("14_ek8qn")]
-position = Vector2(160, 624)
+position = Vector2(163, 618)
 
 [node name="Rock6" parent="Rocks" instance=ExtResource("14_ek8qn")]
 position = Vector2(249, 611)
@@ -482,3 +540,9 @@ position = Vector2(131, 600)
 
 [node name="Rock8" parent="Rocks" instance=ExtResource("14_ek8qn")]
 position = Vector2(239, 569)
+
+[node name="Firekeeper" parent="." instance=ExtResource("15_wgqmn")]
+position = Vector2(168, 576)
+npc_name = "Firekeeper"
+dialogue = ExtResource("16_rlkm0")
+sprite_frames = ExtResource("17_0ownb")
