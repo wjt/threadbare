@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b7j5em2h1m2j7"]
+[gd_scene load_steps=27 format=4 uid="uid://b7j5em2h1m2j7"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_t0r7n"]
 [ext_resource type="Texture2D" uid="uid://c6khhgic6yboq" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_tortoise.png" id="2_iwkby"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://cg57q82pb243w" path="res://assets/third_party/xylophone-sampler-pack/xylophone-c3.ogg" id="5_5dvt4"]
 [ext_resource type="AudioStream" uid="uid://b83x8h0ob5mpq" path="res://assets/third_party/xylophone-sampler-pack/xylophone-d3.ogg" id="6_hpvon"]
 [ext_resource type="AudioStream" uid="uid://cmtiwg2cylmts" path="res://assets/third_party/xylophone-sampler-pack/xylophone-e3.ogg" id="7_7j3ho"]
+[ext_resource type="SpriteFrames" uid="uid://bbspuljcecijr" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_object.tres" id="7_tvr0v"]
 [ext_resource type="AudioStream" uid="uid://8k1hyi4gjae4" path="res://assets/third_party/xylophone-sampler-pack/xylophone-f3.ogg" id="8_3wcwk"]
 [ext_resource type="AudioStream" uid="uid://6oahn2ucxxjv" path="res://assets/third_party/xylophone-sampler-pack/xylophone-g3.ogg" id="9_j0pu7"]
 [ext_resource type="AudioStream" uid="uid://bdboi4ndapqec" path="res://assets/third_party/xylophone-sampler-pack/xylophone-a3.ogg" id="10_6pn5k"]
@@ -23,6 +24,9 @@
 [ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/game_elements/characters/npcs/talker/talker.tscn" id="19_iwkby"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="19_mt5a1"]
 [ext_resource type="SpriteFrames" uid="uid://c8xb6t6eq3xn5" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.tres" id="20_tvr0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvr0v"]
+size = Vector2(15.6667, 14.6667)
 
 [sub_resource type="Resource" id="Resource_u8qfb"]
 script = ExtResource("15_2p35u")
@@ -65,15 +69,30 @@ metadata/_custom_type_script = "uid://c68oh8dtr21ti"
 y_sort_enabled = true
 position = Vector2(356, 453)
 
+[node name="Pink" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
+position = Vector2(466, -43)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("7_tvr0v")
+audio_stream = ExtResource("6_hpvon")
+
+[node name="AnimatedSprite2D" parent="OnTheGround/SequencePuzzle/Objects/Pink" index="0"]
+sprite_frames = ExtResource("7_tvr0v")
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Pink" index="1"]
+position = Vector2(-19, 5)
+rotation = -6.28319
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Pink/InteractArea" index="0"]
+position = Vector2(-21.8333, 4.66667)
+shape = SubResource("RectangleShape2D_tvr0v")
+
+[node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Pink" index="3"]
+stream = ExtResource("6_hpvon")
+
 [node name="Blue" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
 modulate = Color(0, 0.4, 0.6, 1)
 position = Vector2(254, -34)
 audio_stream = ExtResource("5_5dvt4")
-
-[node name="Pink" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-modulate = Color(0.89, 0.2937, 0.804817, 1)
-position = Vector2(304, -27)
-audio_stream = ExtResource("6_hpvon")
 
 [node name="Yellow" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
 modulate = Color(0.89, 0.804817, 0.2937, 1)
@@ -150,3 +169,5 @@ dialogue = ExtResource("16_fk71d")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [connection signal="solved" from="OnTheGround/SequencePuzzle" to="OnTheGround/CollectibleItem" method="reveal"]
+
+[editable path="OnTheGround/SequencePuzzle/Objects/Pink"]
