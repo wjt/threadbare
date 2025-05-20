@@ -97,7 +97,7 @@ func _on_button_focused(button: Button, quest: Quest) -> void:
 
 	match quest.authors.size():
 		0:
-			authors.text = "An anonymous story"
+			authors.text = ""
 		1:
 			authors.text = "A story by " + quest.authors[0]
 		_:
