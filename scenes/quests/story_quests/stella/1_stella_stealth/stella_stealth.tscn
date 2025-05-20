@@ -13,8 +13,8 @@
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_h858g"]
 [ext_resource type="Resource" uid="uid://dpv4wurvaamhb" path="res://scenes/quests/story_quests/template/1_template_stealth/template_stealth_components/template_collected.dialogue" id="10_0360t"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="11_mehsu"]
-[ext_resource type="Resource" uid="uid://cggywn8t6s4le" path="res://scenes/quests/story_quests/template/1_template_stealth/template_stealth_components/template_stealth.dialogue" id="12_2kp3n"]
 [ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="14_ek8qn"]
+[ext_resource type="Resource" uid="uid://75hhoesrge3c" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_stealth.dialogue" id="14_wgqmn"]
 [ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/game_elements/characters/npcs/talker/talker.tscn" id="15_wgqmn"]
 [ext_resource type="Resource" uid="uid://fgepu5pdp6wu" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_firekeeper.dialogue" id="16_rlkm0"]
 [ext_resource type="SpriteFrames" uid="uid://dktcbyom7px88" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_firekeeper.tres" id="17_0ownb"]
@@ -131,7 +131,7 @@ collected_dialogue = ExtResource("10_0360t")
 
 [node name="Cinematic" type="Node2D" parent="."]
 script = ExtResource("11_mehsu")
-dialogue = ExtResource("12_2kp3n")
+dialogue = ExtResource("14_wgqmn")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="Talker" parent="." instance=ExtResource("15_wgqmn")]
