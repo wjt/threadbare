@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ckxt65npysv"
-path="res://.godot/imported/stella_object.png-12ef301f70e3cf433412e7190b211d72.ctex"
+uid="uid://cvqv5e38phymk"
+path="res://.godot/imported/stella_tortoise_gem7.png-d8d88861d0a1efbd486078f4d94d5eb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_object.png"
-dest_files=["res://.godot/imported/stella_object.png-12ef301f70e3cf433412e7190b211d72.ctex"]
+source_file="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_tortoise_gem7.png"
+dest_files=["res://.godot/imported/stella_tortoise_gem7.png-d8d88861d0a1efbd486078f4d94d5eb5.ctex"]
 
 [params]
 
