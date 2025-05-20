@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bfr7svwx5hqkf"]
+[gd_scene load_steps=17 format=4 uid="uid://bfr7svwx5hqkf"]
 
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_xf1x3"]
 [ext_resource type="Resource" uid="uid://bx08jgaq2ruin" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_combat.dialogue" id="2_awu4o"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_chxci"]
 [ext_resource type="SpriteFrames" uid="uid://b5gr3lhfmqib5" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_target_spriteframes.tres" id="9_rijdm"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="10_xeai8"]
+[ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/game_elements/characters/npcs/talker/talker.tscn" id="14_asncp"]
 [ext_resource type="SpriteFrames" uid="uid://b8ib21ye5xvwb" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_fisherman.tres" id="14_e46so"]
 
 [sub_resource type="Resource" id="Resource_a51xm"]
@@ -95,11 +96,6 @@ item = SubResource("Resource_a51xm")
 collected_dialogue = ExtResource("2_awu4o")
 dialogue_title = &"well_done"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="OnTheGround"]
-position = Vector2(1324, 243)
-sprite_frames = ExtResource("14_e46so")
-frame_progress = 0.346757
-
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="." instance=ExtResource("10_xeai8")]
@@ -112,5 +108,11 @@ limit_right = 2048
 limit_bottom = 2048
 position_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="Talker" parent="." instance=ExtResource("14_asncp")]
+position = Vector2(1319, 275)
+npc_name = "Fisherman"
+dialogue = ExtResource("2_awu4o")
+sprite_frames = ExtResource("14_e46so")
 
 [connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]
