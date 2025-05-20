@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxaeol0i60lm3"
-path="res://.godot/imported/template_guard_enemy_walk.png-658777ebe8a37afd0c1e01421c48fd62.ctex"
+uid="uid://8ujtwgp8fb1v"
+path="res://.godot/imported/stella_stealth_fire.png-8279a3b3954a286a92136b4d006a7240.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/template_guard_enemy_walk.png"
-dest_files=["res://.godot/imported/template_guard_enemy_walk.png-658777ebe8a37afd0c1e01421c48fd62.ctex"]
+source_file="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_stealth_fire.png"
+dest_files=["res://.godot/imported/stella_stealth_fire.png-8279a3b3954a286a92136b4d006a7240.ctex"]
 
 [params]
 
