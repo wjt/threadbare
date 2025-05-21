@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_hmya5"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_gylsq"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_qvtgt"]
-[ext_resource type="SpriteFrames" uid="uid://bkb0lid80r1uc" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="4_jwuax"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="4_qcfi2"]
+[ext_resource type="SpriteFrames" uid="uid://dn0ivusgamrg3" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="4_rlkm0"]
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://scenes/game_elements/props/checkpoint/checkpoint.tscn" id="5_8y4yf"]
 [ext_resource type="SpriteFrames" uid="uid://dkldbyul3gceg" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_guard_enemy.tres" id="6_wgqmn"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="7_n4o8u"]
@@ -224,7 +224,7 @@ tile_set = ExtResource("2_gylsq")
 [node name="Player" parent="." instance=ExtResource("3_qvtgt")]
 position = Vector2(108, 369)
 player_name = "Stella"
-sprite_frames = ExtResource("4_jwuax")
+sprite_frames = ExtResource("4_rlkm0")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_mode = 3

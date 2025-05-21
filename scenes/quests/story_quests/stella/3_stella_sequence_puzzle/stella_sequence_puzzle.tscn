@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c6khhgic6yboq" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_tortoise.png" id="2_iwkby"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="2_sl1lr"]
 [ext_resource type="Script" uid="uid://c68oh8dtr21ti" path="res://scenes/game_logic/sequence_puzzle.gd" id="3_an7xq"]
-[ext_resource type="SpriteFrames" uid="uid://bkb0lid80r1uc" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="3_r0gok"]
+[ext_resource type="SpriteFrames" uid="uid://dn0ivusgamrg3" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="3_r0gok"]
 [ext_resource type="PackedScene" uid="uid://b8sok264erfoc" path="res://scenes/game_elements/props/sequence_puzzle_object/sequence_puzzle_object.tscn" id="4_0jvpl"]
 [ext_resource type="AudioStream" uid="uid://cg57q82pb243w" path="res://assets/third_party/xylophone-sampler-pack/xylophone-c3.ogg" id="5_5dvt4"]
 [ext_resource type="AudioStream" uid="uid://b83x8h0ob5mpq" path="res://assets/third_party/xylophone-sampler-pack/xylophone-d3.ogg" id="6_hpvon"]

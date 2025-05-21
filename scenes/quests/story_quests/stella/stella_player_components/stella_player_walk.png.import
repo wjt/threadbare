@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7lcvud3g7udj"
-path="res://.godot/imported/stella_idle.png-e7e1b48b6037130b7f0435ae49f9d3d3.ctex"
+uid="uid://dkkq0lfjandks"
+path="res://.godot/imported/stella_player_walk.png-bba3b8b325c080c0458371f90ce2720f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella/stella_player_components/stella_idle.png"
-dest_files=["res://.godot/imported/stella_idle.png-e7e1b48b6037130b7f0435ae49f9d3d3.ctex"]
+source_file="res://scenes/quests/story_quests/stella/stella_player_components/stella_player_walk.png"
+dest_files=["res://.godot/imported/stella_player_walk.png-bba3b8b325c080c0458371f90ce2720f.ctex"]
 
 [params]
 

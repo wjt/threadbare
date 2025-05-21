@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="3_oj7ex"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="4_kirjo"]
 [ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="5_1o8f3"]
-[ext_resource type="SpriteFrames" uid="uid://bkb0lid80r1uc" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="5_8sqbo"]
+[ext_resource type="SpriteFrames" uid="uid://dn0ivusgamrg3" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="5_e46so"]
 [ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="6_vbrx3"]
 [ext_resource type="SpriteFrames" uid="uid://b1eumg5kx32g1" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_throwing_enemy.tres" id="7_awu4o"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_2svos"]
@@ -73,7 +73,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="OnTheGround" instance=ExtResource("4_kirjo")]
 position = Vector2(1209, 283)
-sprite_frames = ExtResource("5_8sqbo")
+sprite_frames = ExtResource("5_e46so")
 
 [node name="ThrowingNPC" parent="OnTheGround" instance=ExtResource("5_1o8f3")]
 position = Vector2(1286, 652)

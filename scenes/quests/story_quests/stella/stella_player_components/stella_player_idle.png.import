@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsd6vfndmraq7"
-path="res://.godot/imported/stella_player_attack_02.png-aaaa4afb270a185813e6fbb1c5358d54.ctex"
+uid="uid://b5b3f8rk5ctfk"
+path="res://.godot/imported/stella_player_idle.png-b3649a44a1f3f06f4e4e02a71dea78d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella/stella_player_components/stella_player_attack_02.png"
-dest_files=["res://.godot/imported/stella_player_attack_02.png-aaaa4afb270a185813e6fbb1c5358d54.ctex"]
+source_file="res://scenes/quests/story_quests/stella/stella_player_components/stella_player_idle.png"
+dest_files=["res://.godot/imported/stella_player_idle.png-b3649a44a1f3f06f4e4e02a71dea78d5.ctex"]
 
 [params]
 
