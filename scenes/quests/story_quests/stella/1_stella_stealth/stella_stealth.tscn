@@ -244,7 +244,7 @@ patrol_path = NodePath("../Guard1-PatrolPath")
 wait_time = 0.2
 move_speed = 200.0
 time_to_detect_player = 0.5
-detection_area_scale = 1.3
+detection_area_scale = 0.7
 
 [node name="Guard1-PatrolPath" type="Path2D" parent="EnemyGuards"]
 top_level = true
