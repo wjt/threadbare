@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-[gd_scene load_steps=39 format=4 uid="uid://b7j5em2h1m2j7"]
-=======
 [gd_scene load_steps=41 format=4 uid="uid://b7j5em2h1m2j7"]
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
-=======
-[gd_scene load_steps=41 format=4 uid="uid://b7j5em2h1m2j7"]
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_t0r7n"]
 [ext_resource type="Texture2D" uid="uid://c6khhgic6yboq" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_tortoise.png" id="2_iwkby"]
@@ -37,21 +29,11 @@
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="19_mt5a1"]
 [ext_resource type="AudioStream" uid="uid://b8367d1jxgctw" path="res://assets/third_party/xylophone-sampler-pack/xylophone-b3.ogg" id="20_koksn"]
 [ext_resource type="SpriteFrames" uid="uid://c8xb6t6eq3xn5" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.tres" id="20_tvr0v"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 [ext_resource type="SpriteFrames" uid="uid://brwlr6mvbciwv" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_hint_rock1.tres" id="22_koksn"]
 [ext_resource type="SpriteFrames" uid="uid://bgchi1dh8jy7r" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_hint_rock2.tres" id="23_g4uwj"]
+[ext_resource type="Resource" uid="uid://chajuw8jt4mm8" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.dialogue" id="29_g4uwj"]
+[ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="31_xd6u5"]
 [ext_resource type="Resource" uid="uid://wpifv4dfofm2" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_sequence_puzzle.dialogue" id="33_g4uwj"]
-=======
-[ext_resource type="Resource" uid="uid://chajuw8jt4mm8" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.dialogue" id="29_g4uwj"]
-[ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="31_xd6u5"]
-[ext_resource type="Resource" uid="uid://wpifv4dfofm2" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_sequence_puzzle.dialogue" id="33_xd6u5"]
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
-=======
-[ext_resource type="Resource" uid="uid://chajuw8jt4mm8" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.dialogue" id="29_g4uwj"]
-[ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="31_xd6u5"]
-[ext_resource type="Resource" uid="uid://wpifv4dfofm2" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_sequence_puzzle.dialogue" id="33_xd6u5"]
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgt7i"]
 atlas = ExtResource("9_r0gok")
@@ -298,15 +280,7 @@ sprite_frames = ExtResource("23_g4uwj")
 
 [node name="SequencePuzzleStep1" type="Node2D" parent="OnTheGround/SequencePuzzle/Steps" node_paths=PackedStringArray("sequence", "hint_sign")]
 script = ExtResource("13_cyoxr")
-<<<<<<< HEAD
-<<<<<<< HEAD
-sequence = [NodePath("../../Objects/Gem 2"), NodePath("../../Objects/Gem 4"), NodePath("../../Objects/Gem 6")]
-=======
 sequence = [NodePath("../../Objects/Gem 2"), NodePath("../../Objects/Gem 4"), NodePath("../../Objects/Gem 1")]
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
-=======
-sequence = [NodePath("../../Objects/Gem 2"), NodePath("../../Objects/Gem 4"), NodePath("../../Objects/Gem 1")]
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
 hint_sign = NodePath("../../Signs/HintSign1")
 
 [node name="SequencePuzzleStep2" type="Node2D" parent="OnTheGround/SequencePuzzle/Steps" node_paths=PackedStringArray("sequence", "hint_sign")]
@@ -322,14 +296,6 @@ item = SubResource("Resource_u8qfb")
 collected_dialogue = ExtResource("16_fk71d")
 dialogue_title = &"well_done"
 
-<<<<<<< HEAD
-=======
-[node name="Sign" parent="OnTheGround" instance=ExtResource("17_gcx3r")]
-position = Vector2(148, 290)
-direction = 1
-text = "First melody: yellow, green, blue."
-
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
 [node name="Guardian" parent="OnTheGround" instance=ExtResource("19_iwkby")]
 position = Vector2(506, 188)
 scale = Vector2(1.5, 1.5)
@@ -352,15 +318,7 @@ position_smoothing_enabled = true
 
 [node name="Cinematic" type="Node2D" parent="."]
 script = ExtResource("19_mt5a1")
-<<<<<<< HEAD
-<<<<<<< HEAD
 dialogue = ExtResource("33_g4uwj")
-=======
-dialogue = ExtResource("33_xd6u5")
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
-=======
-dialogue = ExtResource("33_xd6u5")
->>>>>>> 9b3a9c56b94b4805dadbb687c540bf500187eb4e
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [connection signal="solved" from="OnTheGround/SequencePuzzle" to="OnTheGround/CollectibleItem" method="reveal"]
