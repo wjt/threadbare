@@ -19,7 +19,6 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	interact_area.interaction_started.connect(_on_interaction_started)
-	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	if npc_name:
 		interact_area.action = "Talk to %s" % npc_name
 
@@ -28,6 +27,7 @@ func _on_interaction_started(player: Player, from_right: bool) -> void:
 	_previous_look_at_side = look_at_side
 	if look_at_side != Enums.LookAtSide.UNSPECIFIED:
 		look_at_side = Enums.LookAtSide.RIGHT if from_right else Enums.LookAtSide.LEFT
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended, CONNECT_ONE_SHOT)
 	DialogueManager.show_dialogue_balloon(dialogue, "", [self, player])
 
 
