@@ -100,11 +100,7 @@ func _on_button_focused(button: Button, quest: Quest) -> void:
 		return
 
 	title.text = quest.title.strip_edges()
-
-	if quest.description:
-		description.text = quest.description
-	else:
-		description.text = "It is a mystery"
+	description.text = quest.description.strip_edges()
 
 	match quest.authors.size():
 		0:
