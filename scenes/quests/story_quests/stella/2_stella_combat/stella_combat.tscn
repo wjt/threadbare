@@ -76,9 +76,19 @@ position = Vector2(1209, 283)
 sprite_frames = ExtResource("5_8sqbo")
 
 [node name="ThrowingNPC" parent="OnTheGround" instance=ExtResource("5_1o8f3")]
-position = Vector2(1231, 720)
+position = Vector2(1286, 652)
 sprite_frames = ExtResource("7_awu4o")
+projectile_duration = 6.0
 projectile_sprite_frames = ExtResource("8_tbbw3")
+walking_time = 5.0
+
+[node name="ThrowingNPC2" parent="OnTheGround" instance=ExtResource("5_1o8f3")]
+position = Vector2(958, 695)
+odd_shoot = true
+sprite_frames = ExtResource("7_awu4o")
+projectile_duration = 6.0
+projectile_sprite_frames = ExtResource("8_tbbw3")
+walking_time = 5.0
 
 [node name="Target" parent="OnTheGround" instance=ExtResource("6_vbrx3")]
 position = Vector2(239, 389)
@@ -86,6 +96,13 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("9_rijdm")
 label = ""
 color = Color(1, 1, 1, 1)
+
+[node name="Target2" parent="OnTheGround" instance=ExtResource("6_vbrx3")]
+position = Vector2(-374, 253)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("9_rijdm")
+label = "target2"
+color = Color(10, 0, 0, 1)
 
 [node name="CollectibleItem" parent="OnTheGround" instance=ExtResource("8_2svos")]
 unique_name_in_owner = true

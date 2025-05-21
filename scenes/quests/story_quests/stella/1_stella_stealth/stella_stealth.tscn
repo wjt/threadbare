@@ -28,9 +28,9 @@ point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_hejm3"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 488, -91, 0, 0, 0, 0, 480, 106, 0, 0, 0, 0, 356, 208, 0, 0, 0, 0, 239, 131, 0, 0, 0, 0, 166, 26, 0, 0, 0, 0, 169, -97, 0, 0, 0, 0, 354, -101, 0, 0, 0, 0, 488, -91, 0, 0, 0, 0, -1418, -29)
+"points": PackedVector2Array(0, 0, 0, 0, 488, -91, 0, 0, 0, 0, 480, 106, 0, 0, 0, 0, 356, 208, 0, 0, 0, 0, 239, 131, 0, 0, 0, 0, 166, 26, 0, 0, 0, 0, 169, -97, 0, 0, 0, 0, 354, -101, 0, 0, 0, 0, 488, -91)
 }
-point_count = 9
+point_count = 8
 
 [sub_resource type="Curve2D" id="Curve2D_wgqmn"]
 _data = {
@@ -542,7 +542,7 @@ position = Vector2(131, 600)
 position = Vector2(239, 569)
 
 [node name="Firekeeper" parent="." instance=ExtResource("15_wgqmn")]
-position = Vector2(168, 576)
+position = Vector2(150, 575)
 npc_name = "Firekeeper"
 dialogue = ExtResource("16_rlkm0")
 sprite_frames = ExtResource("17_0ownb")
