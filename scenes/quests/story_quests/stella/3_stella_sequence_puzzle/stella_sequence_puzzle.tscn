@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://b7j5em2h1m2j7"]
+[gd_scene load_steps=43 format=4 uid="uid://b7j5em2h1m2j7"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_t0r7n"]
 [ext_resource type="Texture2D" uid="uid://c6khhgic6yboq" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_tortoise.png" id="2_iwkby"]
@@ -131,8 +131,12 @@ animation = &"default"
 position = Vector2(-17, -16)
 rotation = -6.28319
 
-[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 1/InteractArea" index="0"]
+[node name="InteractArea" parent="OnTheGround/SequencePuzzle/Objects/Gem 1" index="2"]
 position = Vector2(-16, -16)
+interact_label_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 1/InteractArea" index="0"]
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 1" index="3"]
@@ -153,8 +157,12 @@ animation = &"default"
 position = Vector2(13.6667, -16.6667)
 rotation = -6.28319
 
-[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 2/InteractArea" index="0"]
+[node name="InteractArea" parent="OnTheGround/SequencePuzzle/Objects/Gem 2" index="2"]
 position = Vector2(15, -17.6667)
+interact_label_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 2/InteractArea" index="0"]
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 2" index="3"]
@@ -177,6 +185,12 @@ rotation = -6.28319
 
 [node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 3/InteractArea" index="0"]
 position = Vector2(21, 4.33333)
+[node name="InteractArea" parent="OnTheGround/SequencePuzzle/Objects/Gem 3" index="2"]
+position = Vector2(18.6667, 4.33333)
+interact_label_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 3/InteractArea" index="0"]
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 3" index="3"]
@@ -197,8 +211,12 @@ animation = &"default"
 position = Vector2(12.6667, 26)
 rotation = -6.28319
 
-[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 4/InteractArea" index="0"]
+[node name="InteractArea" parent="OnTheGround/SequencePuzzle/Objects/Gem 4" index="2"]
 position = Vector2(15, 27)
+interact_label_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 4/InteractArea" index="0"]
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 4" index="3"]
@@ -219,8 +237,12 @@ animation = &"default"
 position = Vector2(-13.6667, 26)
 rotation = -6.28319
 
+[node name="InteractArea" parent="OnTheGround/SequencePuzzle/Objects/Gem 5" index="2"]
+position = Vector2(-16.6667, 27)
+interact_label_position = Vector2(0, 0)
+
 [node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 5/InteractArea" index="0"]
-position = Vector2(-18.3333, 29)
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 5" index="3"]
@@ -241,6 +263,12 @@ rotation = -6.28319
 
 [node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 6/InteractArea" index="0"]
 position = Vector2(-23.6667, 4.33333)
+[node name="InteractArea" parent="OnTheGround/SequencePuzzle/Objects/Gem 6" index="2"]
+position = Vector2(-20.3333, 4.33334)
+interact_label_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 6/InteractArea" index="0"]
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 6" index="3"]
@@ -259,8 +287,12 @@ sprite_frames = ExtResource("19_jtkwe")
 position = Vector2(-1.33333, 4)
 rotation = -6.28319
 
-[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 7/InteractArea" index="0"]
+[node name="InteractArea" parent="OnTheGround/SequencePuzzle/Objects/Gem 7" index="2"]
 position = Vector2(-0.666673, 4)
+interact_label_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 7/InteractArea" index="0"]
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 7" index="3"]
