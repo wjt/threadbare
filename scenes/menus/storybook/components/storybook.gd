@@ -9,7 +9,10 @@ extends Control
 signal selected(quest: Quest)
 
 ## Template quest, which is expected to be blank and so is treated specially.
-const STORY_QUEST_TEMPLATE := preload("uid://ddxn14xw66ud8")
+const STORY_QUEST_TEMPLATE: Quest = preload("uid://ddxn14xw66ud8")
+
+## Replacement metadata for the template's blank metadata
+const TEMPLATE_QUEST_METADATA: Quest = preload("uid://dwl8letaanhhi")
 
 ## Sprite frames for the template quest
 const TEMPLATE_PLAYER_FRAMES: SpriteFrames = preload("uid://vwf8e1v8brdp")
@@ -48,7 +51,7 @@ func _enumerate_quests() -> Array[Quest]:
 				quests.append(quest)
 
 	if has_template:
-		quests.append(STORY_QUEST_TEMPLATE)
+		quests.append(TEMPLATE_QUEST_METADATA)
 
 	return quests
 
@@ -89,15 +92,6 @@ func _on_button_focused(button: Button, quest: Quest) -> void:
 	play_button.focus_next = button.get_path()
 	play_button.focus_neighbor_left = button.get_path()
 	_selected_quest = quest
-
-	if quest == STORY_QUEST_TEMPLATE:
-		title.text = "StoryQuest Template"
-		description.text = "This is the template for your own StoryQuests."
-		authors.text = "A story by the Threadbare Authors"
-		animation.sprite_frames = TEMPLATE_PLAYER_FRAMES
-		animation.animation_name = TEMPLATE_ANIMATION_NAME
-
-		return
 
 	title.text = quest.title.strip_edges()
 	description.text = quest.description.strip_edges()
