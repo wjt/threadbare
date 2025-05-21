@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://b7j5em2h1m2j7"]
+[gd_scene load_steps=41 format=4 uid="uid://b7j5em2h1m2j7"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_t0r7n"]
 [ext_resource type="Texture2D" uid="uid://c6khhgic6yboq" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_tortoise.png" id="2_iwkby"]
@@ -31,6 +31,9 @@
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="19_mt5a1"]
 [ext_resource type="AudioStream" uid="uid://b8367d1jxgctw" path="res://assets/third_party/xylophone-sampler-pack/xylophone-b3.ogg" id="20_koksn"]
 [ext_resource type="SpriteFrames" uid="uid://c8xb6t6eq3xn5" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.tres" id="20_tvr0v"]
+[ext_resource type="Resource" uid="uid://chajuw8jt4mm8" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.dialogue" id="29_g4uwj"]
+[ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="31_xd6u5"]
+[ext_resource type="Resource" uid="uid://wpifv4dfofm2" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_sequence_puzzle.dialogue" id="33_xd6u5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgt7i"]
 atlas = ExtResource("9_r0gok")
@@ -80,27 +83,25 @@ metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 [node name="TileMapLayers" type="Node2D" parent="."]
 
 [node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
+modulate = Color(0.417257, 0.417257, 0.417257, 1)
 tile_map_data = PackedByteArray("AAD//wcAAQAGAAEAAAAAAAcAAQAGAAEAAAABAAcAAQAGAAEAAAACAAcAAQAGAAEAAAADAAcAAQAGAAEAAAADAAYAAQAGAAEAAAADAAUAAQAGAAEAAAAEAAUAAQAGAAEAAAAFAAUAAQAGAAEAAAAGAAUAAQAGAAEAAAAHAAUAAQAGAAEAAAAIAAUAAQAGAAEAAAAJAAUAAQAGAAEAAAAKAAUAAQAGAAEAAAALAAUAAQAGAAEAAAALAAQAAQAGAAEAAAAMAAQAAQAGAAEAAAANAAQAAQAGAAEAAAAOAAQAAQAGAAEAAAAPAAQAAQAHAAEAAAD//wAAAQAGAAEAAAAAAAAAAQAGAAEAAAABAAAAAQAGAAEAAAACAAAAAQAGAAEAAAADAAAAAQAGAAEAAAAEAAAAAQAGAAEAAAAFAAAAAQAGAAEAAAAFAAEAAQAGAAEAAAAEAAEAAQAGAAEAAAAAAAEAAQAGAAEAAAD//wEAAQAGAAEAAAD//wIAAQAGAAEAAAD//wQAAQAGAAEAAAD//wUAAQAGAAEAAAD//wYAAQAGAAEAAAAAAAYAAQAGAAEAAAABAAYAAQAGAAEAAAACAAYAAQAGAAEAAAACAAUAAQAGAAEAAAACAAQAAQAGAAEAAAABAAQAAQAGAAEAAAABAAUAAQAGAAEAAAAAAAUAAQAGAAEAAAAAAAQAAQAGAAEAAAAAAAIAAQAGAAEAAAACAAMAAQAGAAEAAAACAAIAAQAGAAEAAAADAAIAAQAGAAEAAAADAAMAAQAGAAEAAAADAAQAAQAGAAEAAAAEAAQAAQAGAAEAAAAEAAMAAQAGAAEAAAAEAAIAAQAGAAEAAAAFAAIAAQAGAAEAAAAFAAMAAQAGAAEAAAAFAAQAAQAGAAEAAAAGAAQAAQAGAAEAAAAHAAQAAQAGAAEAAAAHAAMAAQAGAAEAAAAGAAMAAQAGAAEAAAAGAAIAAQAGAAEAAAAGAAEAAQAGAAEAAAAGAAAAAQAGAAEAAAAHAAAAAQAGAAEAAAAIAAAAAQAGAAEAAAAJAAAAAQAGAAEAAAAIAAEAAQAGAAEAAAAIAAIAAQAGAAEAAAAHAAIAAQAGAAEAAAAHAAEAAQAGAAEAAAAJAAEAAQAGAAEAAAAJAAIAAQAGAAEAAAAJAAMAAQAGAAEAAAAIAAMAAQAGAAEAAAAIAAQAAQAGAAEAAAAJAAQAAQAGAAEAAAAKAAQAAQAGAAEAAAALAAMAAQAGAAEAAAALAAIAAQAGAAEAAAALAAEAAQAGAAEAAAAKAAIAAQAGAAEAAAAKAAMAAQAGAAEAAAAKAAEAAQAGAAEAAAAKAAAAAQAGAAEAAAALAAAAAQAGAAEAAAAMAAAAAQAGAAEAAAANAAAAAQAGAAEAAAANAAEAAQAGAAEAAAAMAAEAAQAGAAEAAAAMAAIAAQAGAAEAAAAMAAMAAQAGAAEAAAANAAMAAQAGAAEAAAAOAAMAAQAGAAEAAAAPAAMAAQAHAAEAAAAPAAIAAQAHAAEAAAAOAAIAAQAGAAEAAAAOAAEAAQAGAAEAAAANAAIAAQAGAAEAAAAOAAAAAQAGAAEAAAAPAAAAAQAHAAEAAAAPAAEAAQAHAAEAAAD+////AQAFAAAAAAD/////AQAGAAAAAAABAP//AQAGAAAAAAACAP//AQAGAAAAAAAAAP//AQAGAAAAAAD+/wAAAQAFAAEAAAD+/wEAAQAFAAEAAAD+/wIAAQAFAAEAAAD+/wQAAQAFAAEAAAD+/wUAAQAFAAEAAAD+/wYAAQAFAAEAAAD+/wcAAQAFAAEAAAD//wgAAQAGAAIAAAD+/wgAAQAFAAIAAAAAAAgAAQAGAAIAAAABAAgAAQAGAAIAAAACAAgAAQAGAAIAAAADAAgAAQAGAAIAAAAEAAgAAQAGAAIAAAAFAAgAAQAGAAIAAAAGAAgAAQAGAAIAAAAHAAgAAQAGAAIAAAAIAAgAAQAGAAIAAAAJAAgAAQAGAAIAAAAKAAgAAQAGAAIAAAALAAgAAQAGAAIAAAAMAAgAAQAGAAIAAAANAAgAAQAGAAIAAAAOAAgAAQAGAAIAAAAOAAcAAQAGAAEAAAAOAAYAAQAGAAEAAAAOAAUAAQAGAAEAAAAPAAUAAQAHAAEAAAAPAAYAAQAHAAEAAAAPAAcAAQAHAAEAAAAPAAgAAQAHAAIAAAAEAAcAAQAGAAEAAAAEAAYAAQAGAAEAAAAFAAYAAQAGAAEAAAAFAAcAAQAGAAEAAAAGAAYAAQAGAAEAAAAGAAcAAQAGAAEAAAAHAAYAAQAGAAEAAAAHAAcAAQAGAAEAAAAIAAYAAQAGAAEAAAAIAAcAAQAGAAEAAAAJAAYAAQAGAAEAAAAJAAcAAQAGAAEAAAAKAAYAAQAGAAEAAAAKAAcAAQAGAAEAAAALAAYAAQAGAAEAAAALAAcAAQAGAAEAAAAMAAYAAQAGAAEAAAAMAAUAAQAGAAEAAAAMAAcAAQAGAAEAAAANAAcAAQAGAAEAAAANAAYAAQAGAAEAAAANAAUAAQAGAAEAAAADAP//AQAGAAAAAAAEAP//AQAGAAAAAAAFAP//AQAGAAAAAAAGAP//AQAGAAAAAAAHAP//AQAGAAAAAAAIAP//AQAGAAAAAAAJAP//AQAGAAAAAAAKAP//AQAGAAAAAAALAP//AQAGAAAAAAAMAP//AQAGAAAAAAANAP//AQAGAAAAAAAOAP//AQAGAAAAAAAPAP//AQAHAAAAAAD+/wMAAQAFAAEAAAD//wMAAQAGAAEAAAAAAAMAAQAGAAEAAAABAAMAAQAGAAEAAAABAAIAAQAGAAEAAAABAAEAAQAGAAEAAAACAAEAAQAGAAEAAAADAAEAAQAGAAEAAAA=")
 tile_set = ExtResource("1_t0r7n")
 
 [node name="Dirt" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray("AAAEAAEABgAAAAAAAAAFAAEABgABAAAAAAAGAAEABgABAAAAAAAHAAEABgACAAAAAAAHAAIABgACAAEAAAAHAAMABgACAAEAAAAHAAQABgABAAEAAAAHAAUABgAAAAIAAAAIAAUABgABAAIAAAAJAAUABgABAAMAAAAKAAUABgABAAEAAAAKAAYABgAAAAEAAAAKAAcABgABAAEAAAAKAAgABgABAAIAAAALAAgABgABAAIAAAAMAAgABgABAAIAAAANAAgABgABAAIAAAAOAAgABgABAAIAAAAPAAgABgACAAIAAAAPAAcABgACAAEAAAAPAAYABgACAAEAAAAPAAUABgACAAEAAAAOAAUABgABAAEAAAANAAUABgABAAEAAAAMAAUABgABAAEAAAALAAUABgABAAEAAAALAAYABgABAAEAAAALAAcABgABAAEAAAAMAAYABgABAAEAAAAMAAcABgABAAEAAAANAAcABgABAAEAAAANAAYABgABAAEAAAAOAAYABgABAAEAAAAOAAcABgABAAEAAAAKAAQABgAAAAAAAAALAAQABgABAAAAAAAMAAQABgABAAAAAAANAAQABgABAAEAAAAOAAQABgABAAEAAAAPAAQABgACAAEAAAD+/wYABgAAAAAAAAD//wYABgABAAAAAAAAAAYABgABAAAAAAABAAYABgABAAEAAAACAAYABgABAAIAAAACAAUABgABAAEAAAACAAQABgAAAAEAAAACAAMABgAAAAAAAAADAAMABgABAAAAAAAEAAMABgABAAEAAAAEAAIABgAAAAEAAAAFAAIABgABAAEAAAAGAAIABgABAAEAAAAGAAMABgABAAEAAAAFAAMABgABAAIAAAAGAAQABgAAAAIAAAADAAQABgABAAEAAAAEAAQABgACAAIAAAADAAYABgACAAIAAAADAAUABgACAAEAAAABAAUABgAAAAAAAAABAAcABgACAAIAAAAAAAcABgABAAIAAAD//wcABgABAAIAAAD+/wcABgAAAAIAAAAIAAQABgACAAAAAAAJAAcABgAAAAAAAAAJAAgABgAAAAIAAAANAAMABgAAAAAAAAAOAAMABgABAAAAAAAPAAMABgACAAEAAAAPAAIABgADAAAAAAA=")
-tile_set = ExtResource("1_t0r7n")
-
-[node name="Dirt2" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray("AAAEAAEABgAAAAAAAAAFAAEABgABAAAAAAAGAAEABgABAAAAAAAHAAEABgACAAAAAAAHAAIABgACAAEAAAAHAAMABgACAAEAAAAHAAQABgABAAEAAAAHAAUABgAAAAIAAAAIAAUABgABAAIAAAAJAAUABgABAAMAAAAKAAUABgABAAEAAAAKAAYABgAAAAEAAAAKAAcABgABAAEAAAAKAAgABgABAAIAAAALAAgABgABAAIAAAAMAAgABgABAAIAAAANAAgABgABAAIAAAAOAAgABgABAAIAAAAPAAgABgACAAIAAAAPAAcABgACAAEAAAAPAAYABgACAAEAAAAPAAUABgACAAEAAAAOAAUABgABAAEAAAANAAUABgABAAEAAAAMAAUABgABAAEAAAALAAUABgABAAEAAAALAAYABgABAAEAAAALAAcABgABAAEAAAAMAAYABgABAAEAAAAMAAcABgABAAEAAAANAAcABgABAAEAAAANAAYABgABAAEAAAAOAAYABgABAAEAAAAOAAcABgABAAEAAAAKAAQABgAAAAAAAAALAAQABgABAAAAAAAMAAQABgABAAAAAAANAAQABgABAAEAAAAOAAQABgABAAEAAAAPAAQABgACAAEAAAD+/wYABgAAAAAAAAD//wYABgABAAAAAAAAAAYABgABAAAAAAABAAYABgABAAEAAAACAAYABgABAAIAAAACAAUABgABAAEAAAACAAQABgAAAAEAAAACAAMABgAAAAAAAAADAAMABgABAAAAAAAEAAMABgABAAEAAAAEAAIABgAAAAEAAAAFAAIABgABAAEAAAAGAAIABgABAAEAAAAGAAMABgABAAEAAAAFAAMABgABAAIAAAAGAAQABgAAAAIAAAADAAQABgABAAEAAAAEAAQABgACAAIAAAADAAYABgACAAIAAAADAAUABgACAAEAAAABAAUABgAAAAAAAAABAAcABgACAAIAAAAAAAcABgABAAIAAAD//wcABgABAAIAAAD+/wcABgAAAAIAAAAIAAQABgACAAAAAAAJAAcABgAAAAAAAAAJAAgABgAAAAIAAAANAAMABgAAAAAAAAAOAAMABgABAAAAAAAPAAMABgACAAEAAAAPAAIABgADAAAAAAA=")
+modulate = Color(0.4, 0.4, 0.4, 1)
+tile_map_data = PackedByteArray("AAAHAAIABgABAAAAAAAHAAMABgABAAEAAAAHAAQABgABAAIAAAAJAAUABgAAAAIAAAAKAAUABgABAAEAAAAKAAYABgAAAAEAAAAKAAcABgABAAEAAAAKAAgABgABAAIAAAALAAgABgABAAIAAAAMAAgABgABAAIAAAANAAgABgABAAIAAAAOAAgABgABAAIAAAAPAAgABgACAAIAAAAPAAcABgACAAEAAAAPAAYABgACAAEAAAAPAAUABgACAAEAAAAOAAUABgABAAEAAAANAAUABgABAAEAAAAMAAUABgABAAEAAAALAAUABgABAAEAAAALAAYABgABAAEAAAALAAcABgABAAEAAAAMAAYABgABAAEAAAAMAAcABgABAAEAAAANAAcABgABAAEAAAANAAYABgABAAEAAAAOAAYABgABAAEAAAAOAAcABgABAAEAAAAKAAQABgABAAAAAAALAAQABgABAAEAAAAMAAQABgABAAEAAAANAAQABgABAAEAAAAOAAQABgABAAEAAAAPAAQABgACAAEAAAD+/wYABgAAAAMAAAD//wYABgABAAMAAAACAAYABgABAAIAAAAEAAMABgAAAAAAAAAGAAIABgAAAAAAAAAGAAMABgABAAEAAAAFAAMABgABAAAAAAAGAAQABgABAAIAAAADAAQABgAAAAAAAAAEAAQABgABAAEAAAADAAYABgACAAIAAAADAAUABgABAAEAAAAIAAQABgABAAIAAAAJAAcABgAAAAAAAAANAAMABgABAAEAAAAOAAMABgABAAEAAAAPAAMABgACAAEAAAAPAAIABgACAAEAAAABAAYABgABAAMAAAAAAAYABgABAAMAAAAEAAUABgACAAIAAAAFAAQABgABAAIAAAAJAAgABgABAAIAAAAIAAgABgABAAMAAAAHAAgABgAAAAMAAAAIAAIABgACAAAAAAAIAAMABgACAAEAAAAJAAQABgABAAAAAAACAAUABgAAAAAAAAAMAAMABgABAAAAAAALAAMABgAAAAAAAAANAAIABgAAAAAAAAAOAAIABgABAAEAAAAOAAEABgAAAAAAAAAPAAEABgACAAAAAAA=")
 tile_set = ExtResource("1_t0r7n")
 
 [node name="OnTheGround" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Tortoise" type="Sprite2D" parent="OnTheGround"]
-position = Vector2(821, 409)
+position = Vector2(786, 384)
 scale = Vector2(2.1, 2.1)
 texture = ExtResource("2_iwkby")
 
 [node name="Player" parent="OnTheGround" instance=ExtResource("2_sl1lr")]
-position = Vector2(60, 471)
+position = Vector2(67, 420)
 sprite_frames = ExtResource("3_r0gok")
 
 [node name="SequencePuzzle" type="Node2D" parent="OnTheGround" node_paths=PackedStringArray("steps")]
@@ -115,7 +116,7 @@ y_sort_enabled = true
 position = Vector2(356, 453)
 
 [node name="Gem 1" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-position = Vector2(466, -43)
+position = Vector2(431, -69)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tvr0v")
 audio_stream = ExtResource("5_5dvt4")
@@ -137,7 +138,7 @@ shape = SubResource("RectangleShape2D_tvr0v")
 stream = ExtResource("5_5dvt4")
 
 [node name="Gem 2" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-position = Vector2(466, -43)
+position = Vector2(431, -69)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("11_iwkby")
 audio_stream = ExtResource("6_hpvon")
@@ -159,7 +160,7 @@ shape = SubResource("RectangleShape2D_tvr0v")
 stream = ExtResource("6_hpvon")
 
 [node name="Gem 3" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-position = Vector2(466, -43)
+position = Vector2(431, -69)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("13_tvr0v")
 audio_stream = ExtResource("14_3lthg")
@@ -181,7 +182,7 @@ shape = SubResource("RectangleShape2D_tvr0v")
 stream = ExtResource("14_3lthg")
 
 [node name="Gem 4" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-position = Vector2(466, -43)
+position = Vector2(431, -69)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("15_0m0kb")
 audio_stream = ExtResource("16_ggydk")
@@ -203,7 +204,7 @@ shape = SubResource("RectangleShape2D_tvr0v")
 stream = ExtResource("16_ggydk")
 
 [node name="Gem 5" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-position = Vector2(466, -43)
+position = Vector2(431, -69)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("15_7g0fx")
 audio_stream = ExtResource("16_k6by3")
@@ -222,10 +223,10 @@ position = Vector2(-18.3333, 29)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 5" index="3"]
-stream = ExtResource("16_ggydk")
+stream = ExtResource("16_k6by3")
 
 [node name="Gem 6" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-position = Vector2(466, -43)
+position = Vector2(431, -69)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("7_tvr0v")
 audio_stream = ExtResource("10_6pn5k")
@@ -245,7 +246,7 @@ shape = SubResource("RectangleShape2D_tvr0v")
 stream = ExtResource("10_6pn5k")
 
 [node name="Gem 7" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("4_0jvpl")]
-position = Vector2(466, -43)
+position = Vector2(431, -69)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("19_jtkwe")
 audio_stream = ExtResource("20_koksn")
@@ -262,7 +263,7 @@ position = Vector2(-0.666673, 4)
 shape = SubResource("RectangleShape2D_tvr0v")
 
 [node name="AudioStreamPlayer2D" parent="OnTheGround/SequencePuzzle/Objects/Gem 7" index="3"]
-stream = ExtResource("10_6pn5k")
+stream = ExtResource("20_koksn")
 
 [node name="Signs" type="Node2D" parent="OnTheGround/SequencePuzzle"]
 y_sort_enabled = true
@@ -278,7 +279,7 @@ sprite_frames = ExtResource("12_84peh")
 
 [node name="SequencePuzzleStep1" type="Node2D" parent="OnTheGround/SequencePuzzle/Steps" node_paths=PackedStringArray("sequence", "hint_sign")]
 script = ExtResource("13_cyoxr")
-sequence = [null, null, null]
+sequence = [NodePath("../../Objects/Gem 2"), NodePath("../../Objects/Gem 4"), NodePath("../../Objects/Gem 1")]
 hint_sign = NodePath("../../Signs/HintSign1")
 
 [node name="SequencePuzzleStep2" type="Node2D" parent="OnTheGround/SequencePuzzle/Steps" node_paths=PackedStringArray("sequence", "hint_sign")]
@@ -287,7 +288,7 @@ sequence = [null, null, null, null]
 hint_sign = NodePath("../../Signs/HintSign2")
 
 [node name="CollectibleItem" parent="OnTheGround" instance=ExtResource("14_edmpl")]
-position = Vector2(892, 265)
+position = Vector2(618, 492)
 revealed = false
 next_scene = "uid://cqjdjcwwfg0xi"
 item = SubResource("Resource_u8qfb")
@@ -295,14 +296,20 @@ collected_dialogue = ExtResource("16_fk71d")
 dialogue_title = &"well_done"
 
 [node name="Sign" parent="OnTheGround" instance=ExtResource("17_gcx3r")]
-position = Vector2(285, 341)
+position = Vector2(148, 290)
 direction = 1
 text = "First melody: yellow, green, blue."
 
 [node name="Guardian" parent="OnTheGround" instance=ExtResource("19_iwkby")]
-position = Vector2(465, 132)
+position = Vector2(506, 188)
 scale = Vector2(1.5, 1.5)
+dialogue = ExtResource("29_g4uwj")
 sprite_frames = ExtResource("20_tvr0v")
+
+[node name="Tree" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(897, 155)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("31_xd6u5")
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
@@ -315,7 +322,7 @@ position_smoothing_enabled = true
 
 [node name="Cinematic" type="Node2D" parent="."]
 script = ExtResource("19_mt5a1")
-dialogue = ExtResource("16_fk71d")
+dialogue = ExtResource("33_xd6u5")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [connection signal="solved" from="OnTheGround/SequencePuzzle" to="OnTheGround/CollectibleItem" method="reveal"]
