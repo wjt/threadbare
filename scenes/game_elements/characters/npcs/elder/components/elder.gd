@@ -58,6 +58,7 @@ func _on_interaction_started(player: Player, _from_right: bool) -> void:
 	var title: String = ""
 	if eternal_loom and eternal_loom.is_item_offering_possible():
 		title = "go_to_loom"
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended, CONNECT_ONE_SHOT)
 	_dialogue_balloon = DialogueManager.show_dialogue_balloon(dialogue, title, [self, player])
 
 
