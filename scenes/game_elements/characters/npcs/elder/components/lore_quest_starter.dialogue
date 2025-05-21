@@ -3,15 +3,13 @@
 ~ start
 LoreQuest Elder: [[Hi|Hello|Greetings]], StoryWeaver. We've been waiting for you. Our world is unraveling!
 LoreQuest Elder: We need you to recover the Sacred Elements: the threads of Memory, Imagination, and Spirit! Will you help us?
-- No.
-	StoryWeaver: I don't know where I am, and I don't know what you are asking me to do.
+do show_storybook()
+if chosen_quest == null:
 	% LoreQuest Elder: Please stay. Our world will perish without your help!
 	% LoreQuest Elder: I hope to see you again. We really need you!
 	% LoreQuest Elder: The people of Threadbare are counting on you. I hope you change your mind!
-- Yes.
-	StoryWeaver: OK...I'm not sure how, but I'll do my best!
+else:
 	LoreQuest Elder: We believe in you, StoryWeaver.
-	do enter_quest()
 => END
 ~ go_to_loom
 LoreQuest Elder: Go on, StoryWeaver: take the threads to the Eternal Loom.

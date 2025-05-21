@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://cufkthb25mpxy"]
+[gd_scene load_steps=45 format=4 uid="uid://cufkthb25mpxy"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_4evgk"]
 [ext_resource type="Script" uid="uid://8div00rgvsds" path="res://scenes/world_map/components/frays_end.gd" id="1_4gse6"]
@@ -13,13 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://c8xgl7dcju5h7" path="res://scenes/game_elements/props/buildings/house/components/House_Patch_Blue_03.png" id="6_ojp30"]
 [ext_resource type="Texture2D" uid="uid://cvm2x4fhekowd" path="res://scenes/game_elements/props/buildings/house/components/House_Wool_Blue_03.png" id="6_uhynt"]
 [ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="7_7v00g"]
-[ext_resource type="PackedScene" uid="uid://7hoy2p14t6kc" path="res://scenes/quests/lore_quests/quest_001/1_music_puzzle/music_puzzle.tscn" id="11_0a1i7"]
 [ext_resource type="PackedScene" uid="uid://bbsc3wssndtfe" path="res://scenes/game_elements/props/decoration/hiding_mushroom/hiding_mushroom.tscn" id="11_jqkod"]
 [ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/game_elements/characters/npcs/talker/talker.tscn" id="11_mr2ek"]
 [ext_resource type="PackedScene" uid="uid://ccp4ayow34e7g" path="res://scenes/game_elements/props/decoration/books/books.tscn" id="12_06x6x"]
 [ext_resource type="Resource" uid="uid://c1baepfbbcd4s" path="res://scenes/game_elements/characters/npcs/elder/components/lore_quest_starter.dialogue" id="12_yntpr"]
 [ext_resource type="Texture2D" uid="uid://cyvi71ryavsld" path="res://scenes/game_elements/props/decoration/books/components/Books_2.png" id="13_xt3dw"]
-[ext_resource type="PackedScene" uid="uid://c1gdct760l86h" path="res://scenes/quests/story_quests/template/0_template_intro/template_intro.tscn" id="14_xa7wa"]
 [ext_resource type="SpriteFrames" uid="uid://cqe47tmqq3mu4" path="res://scenes/game_elements/characters/shared_components/sprite_frames/elder2.tres" id="15_iwt5r"]
 [ext_resource type="PackedScene" uid="uid://bp20cjimwi8l0" path="res://scenes/game_elements/props/buildings/house/house_2.tscn" id="15_uhynt"]
 [ext_resource type="PackedScene" uid="uid://712saqgof3kf" path="res://scenes/game_elements/props/eternal_loom/eternal_loom.tscn" id="16_ojp30"]
@@ -269,14 +267,14 @@ sprite_frames = ExtResource("22_e453w")
 
 [node name="LoreQuestElder" parent="NPCs" node_paths=PackedStringArray("eternal_loom") instance=ExtResource("20_xt3dw")]
 position = Vector2(690, 600)
-quest_scene = ExtResource("11_0a1i7")
+quest_directory = "res://scenes/quests/lore_quests/"
 eternal_loom = NodePath("../../EternalLoom")
 npc_name = "LoreQuest Elder"
 dialogue = ExtResource("12_yntpr")
 
 [node name="StoryQuestElder" parent="NPCs" node_paths=PackedStringArray("eternal_loom") instance=ExtResource("20_xt3dw")]
 position = Vector2(1310, 598)
-quest_scene = ExtResource("14_xa7wa")
+quest_directory = "res://scenes/quests/story_quests/"
 eternal_loom = NodePath("../../EternalLoom")
 npc_name = "StoryQuest Elder"
 sprite_frames = ExtResource("15_iwt5r")
