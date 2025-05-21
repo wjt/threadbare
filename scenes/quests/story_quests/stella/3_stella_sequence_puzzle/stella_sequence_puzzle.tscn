@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://b7j5em2h1m2j7"]
+[gd_scene load_steps=42 format=4 uid="uid://b7j5em2h1m2j7"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_t0r7n"]
 [ext_resource type="Texture2D" uid="uid://c6khhgic6yboq" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_tortoise.png" id="2_iwkby"]
@@ -33,6 +33,7 @@
 [ext_resource type="SpriteFrames" uid="uid://b546kg0eddoxo" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_hint_rock3.tres" id="24_7w21t"]
 [ext_resource type="Resource" uid="uid://chajuw8jt4mm8" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.dialogue" id="29_g4uwj"]
 [ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="31_xd6u5"]
+[ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="32_7w21t"]
 [ext_resource type="Resource" uid="uid://wpifv4dfofm2" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_sequence_puzzle.dialogue" id="33_g4uwj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgt7i"]
@@ -311,9 +312,9 @@ scale = Vector2(1.5, 1.5)
 dialogue = ExtResource("29_g4uwj")
 sprite_frames = ExtResource("20_tvr0v")
 
-[node name="Tree" type="AnimatedSprite2D" parent="OnTheGround"]
-position = Vector2(76, 132)
-scale = Vector2(1.2, 1.2)
+[node name="Tree" parent="OnTheGround" instance=ExtResource("32_7w21t")]
+position = Vector2(77, 229)
+scale = Vector2(1.2, 1.095)
 sprite_frames = ExtResource("31_xd6u5")
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
