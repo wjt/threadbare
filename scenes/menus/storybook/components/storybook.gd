@@ -26,14 +26,8 @@ const QUEST_RESOURCE_NAME := "quest.tres"
 ## have a [code]quest.tres[/code] file within.
 @export_dir var quest_directory: String = "res://scenes/quests/story_quests"
 
-var _selected_quest: Quest
-
 @onready var quest_list: VBoxContainer = %QuestList
-@onready var title: Label = %Title
-@onready var description: Label = %Description
-@onready var authors: Label = %Authors
-@onready var animation: AnimatedTextureRect = %Animation
-@onready var play_button: Button = %PlayButton
+@onready var storybook_page: StorybookPage = %StorybookPage
 @onready var back_button: Button = %BackButton
 
 
@@ -66,7 +60,7 @@ func _ready() -> void:
 
 		button.focus_entered.connect(_on_button_focused.bind(button, quest))
 		button.focus_next = back_button.get_path()
-		button.focus_previous = play_button.get_path()
+		button.focus_previous = storybook_page.play_button.get_path()
 
 		if previous_button:
 			button.focus_neighbor_top = previous_button.get_path()
@@ -89,40 +83,13 @@ func _input(event: InputEvent) -> void:
 
 func _on_button_focused(button: Button, quest: Quest) -> void:
 	back_button.focus_previous = button.get_path()
-	play_button.focus_next = button.get_path()
-	play_button.focus_neighbor_left = button.get_path()
-	_selected_quest = quest
-
-	title.text = quest.title.strip_edges()
-	description.text = quest.description.strip_edges()
-
-	match quest.authors.size():
-		0:
-			authors.text = ""
-		1:
-			authors.text = "A story by " + quest.authors[0]
-		_:
-			authors.text = (
-				" "
-				. join(
-					[
-						"A story by",
-						", ".join(quest.authors.slice(0, -1)),
-						"and",
-						quest.authors[-1],
-					]
-				)
-			)
-
-	if quest.affiliation:
-		authors.text += " of " + quest.affiliation
-
-	animation.sprite_frames = quest.sprite_frames
-	animation.animation_name = quest.animation_name
+	storybook_page.play_button.focus_next = button.get_path()
+	storybook_page.play_button.focus_neighbor_left = button.get_path()
+	storybook_page.quest = quest
 
 
-func _on_play_button_pressed() -> void:
-	selected.emit(_selected_quest)
+func _on_storybook_page_selected(quest: Quest) -> void:
+	selected.emit(quest)
 
 
 func _on_back_button_pressed() -> void:
