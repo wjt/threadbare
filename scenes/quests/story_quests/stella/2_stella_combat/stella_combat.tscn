@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="6_vbrx3"]
 [ext_resource type="SpriteFrames" uid="uid://b1eumg5kx32g1" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_throwing_enemy.tres" id="7_awu4o"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_2svos"]
-[ext_resource type="SpriteFrames" uid="uid://bj1ic15slii3s" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_projectile_spriteframes.tres" id="8_tbbw3"]
+[ext_resource type="SpriteFrames" uid="uid://bj1ic15slii3s" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_projectile_starfish_spriteframes.tres" id="8_tbbw3"]
 [ext_resource type="SpriteFrames" uid="uid://vpduogia2wr0" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_projectile2_spriteframes.tres" id="9_asncp"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_chxci"]
 [ext_resource type="SpriteFrames" uid="uid://b5gr3lhfmqib5" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_target_spriteframes.tres" id="9_rijdm"]
