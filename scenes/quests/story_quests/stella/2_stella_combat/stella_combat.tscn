@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bfr7svwx5hqkf"]
+[gd_scene load_steps=27 format=4 uid="uid://bfr7svwx5hqkf"]
 
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_xf1x3"]
 [ext_resource type="Resource" uid="uid://bx08jgaq2ruin" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_combat.dialogue" id="2_awu4o"]
@@ -13,9 +13,51 @@
 [ext_resource type="SpriteFrames" uid="uid://vpduogia2wr0" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_projectile2_spriteframes.tres" id="9_asncp"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_chxci"]
 [ext_resource type="SpriteFrames" uid="uid://b5gr3lhfmqib5" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_target_spriteframes.tres" id="9_rijdm"]
+[ext_resource type="SpriteFrames" uid="uid://ckl2gxpkr57gx" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_projectile3_spriteframes.tres" id="10_mi6gk"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="10_xeai8"]
+[ext_resource type="SpriteFrames" uid="uid://dvoy614vtess8" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_projectile4_spriteframes.tres" id="11_ndyje"]
+[ext_resource type="Texture2D" uid="uid://cpqvaoatvjc2d" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_target.png" id="13_ndyje"]
 [ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/game_elements/characters/npcs/talker/talker.tscn" id="14_asncp"]
 [ext_resource type="SpriteFrames" uid="uid://b8ib21ye5xvwb" path="res://scenes/quests/story_quests/stella/2_stella_combat/stella_combat_components/stella_fisherman.tres" id="14_e46so"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btmjw"]
+atlas = ExtResource("13_ndyje")
+region = Rect2(0, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0rt0"]
+atlas = ExtResource("13_ndyje")
+region = Rect2(128, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy4wj"]
+atlas = ExtResource("13_ndyje")
+region = Rect2(0, 192, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujwnm"]
+atlas = ExtResource("13_ndyje")
+region = Rect2(128, 192, 128, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmfr1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btmjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0rt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy4wj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujwnm")
+}],
+"loop": true,
+"name": &"filling",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndyje"]
+size = Vector2(101, 91.5)
 
 [sub_resource type="Resource" id="Resource_a51xm"]
 script = ExtResource("9_chxci")
@@ -84,25 +126,75 @@ projectile_sprite_frames = ExtResource("8_tbbw3")
 walking_time = 5.0
 
 [node name="ThrowingNPC2" parent="OnTheGround" instance=ExtResource("5_1o8f3")]
-position = Vector2(958, 695)
+position = Vector2(1010, 523)
+collision_layer = 4
+collision_mask = 128
+throwing_period = 7.5
 odd_shoot = true
 sprite_frames = ExtResource("7_awu4o")
 projectile_duration = 6.0
 projectile_sprite_frames = ExtResource("9_asncp")
 walking_time = 5.0
 
+[node name="AnimatedSprite2D" parent="OnTheGround/ThrowingNPC2" index="0"]
+sprite_frames = ExtResource("7_awu4o")
+
+[node name="ThrowingNPC3" parent="OnTheGround" instance=ExtResource("5_1o8f3")]
+position = Vector2(1230, 498)
+collision_layer = 4
+collision_mask = 128
+throwing_period = 7.5
+odd_shoot = true
+sprite_frames = ExtResource("7_awu4o")
+projectile_duration = 6.0
+projectile_sprite_frames = ExtResource("10_mi6gk")
+walking_time = 5.0
+
+[node name="ThrowingNPC4" parent="OnTheGround" instance=ExtResource("5_1o8f3")]
+position = Vector2(838, 724)
+collision_layer = 4
+collision_mask = 128
+throwing_period = 7.5
+odd_shoot = true
+sprite_frames = ExtResource("7_awu4o")
+projectile_duration = 6.0
+projectile_sprite_frames = ExtResource("11_ndyje")
+walking_time = 5.0
+
 [node name="Target" parent="OnTheGround" instance=ExtResource("6_vbrx3")]
-position = Vector2(239, 389)
+position = Vector2(241, 370)
 scale = Vector2(1.5, 1.5)
-sprite_frames = ExtResource("9_rijdm")
+sprite_frames = SubResource("SpriteFrames_qmfr1")
 label = ""
 color = Color(1, 1, 1, 1)
+
+[node name="AnimatedSprite2D" parent="OnTheGround/Target" index="0"]
+sprite_frames = SubResource("SpriteFrames_qmfr1")
+
+[node name="CollisionShape2D" parent="OnTheGround/Target/HitBox" index="0"]
+position = Vector2(-6.99999, 19.6667)
+shape = SubResource("RectangleShape2D_ndyje")
 
 [node name="Target2" parent="OnTheGround" instance=ExtResource("6_vbrx3")]
 position = Vector2(-374, 253)
 scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("9_rijdm")
 label = "target2"
+color = Color(1, 1, 0.996078, 1)
+
+[node name="Target3" parent="OnTheGround" instance=ExtResource("6_vbrx3")]
+position = Vector2(-374, 253)
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("9_rijdm")
+label = "target3"
+color = Color(1, 1, 0.996078, 1)
+
+[node name="Target4" parent="OnTheGround" instance=ExtResource("6_vbrx3")]
+position = Vector2(-374, 257)
+scale = Vector2(1.5, 1.5)
+collision_mask = 128
+sprite_frames = ExtResource("9_rijdm")
+label = "target4"
 color = Color(1, 1, 0.996078, 1)
 
 [node name="CollectibleItem" parent="OnTheGround" instance=ExtResource("8_2svos")]
@@ -134,3 +226,6 @@ dialogue = ExtResource("2_awu4o")
 sprite_frames = ExtResource("14_e46so")
 
 [connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]
+
+[editable path="OnTheGround/ThrowingNPC2"]
+[editable path="OnTheGround/Target"]
