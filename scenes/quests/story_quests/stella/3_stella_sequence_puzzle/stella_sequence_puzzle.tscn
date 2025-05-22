@@ -28,7 +28,7 @@
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="19_mt5a1"]
 [ext_resource type="AudioStream" uid="uid://b8367d1jxgctw" path="res://assets/third_party/xylophone-sampler-pack/xylophone-b3.ogg" id="20_koksn"]
 [ext_resource type="SpriteFrames" uid="uid://c8xb6t6eq3xn5" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.tres" id="20_tvr0v"]
-[ext_resource type="SpriteFrames" uid="uid://brwlr6mvbciwv" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_hint_rock.tres" id="22_koksn"]
+[ext_resource type="SpriteFrames" uid="uid://hc634wlsdm4p" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_hint_rock.tres" id="22_koksn"]
 [ext_resource type="Resource" uid="uid://chajuw8jt4mm8" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_guardian.dialogue" id="29_g4uwj"]
 [ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="31_xd6u5"]
 [ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="32_7w21t"]

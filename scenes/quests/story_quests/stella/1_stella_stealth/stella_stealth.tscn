@@ -222,7 +222,7 @@ tile_map_data = PackedByteArray("AAAmABUAAQADAAMAAAAmABYAAQAMAAAAAAAmABgAAQADAAM
 tile_set = ExtResource("2_gylsq")
 
 [node name="Player" parent="." instance=ExtResource("3_qvtgt")]
-position = Vector2(480, 703)
+position = Vector2(102, 381)
 player_name = "Stella"
 sprite_frames = ExtResource("4_rlkm0")
 
@@ -508,7 +508,7 @@ item = SubResource("Resource_idy4y")
 collected_dialogue = ExtResource("12_rlkm0")
 
 [node name="Flame" type="AnimatedSprite2D" parent="."]
-position = Vector2(450, 670)
+position = Vector2(447, 644)
 scale = Vector2(1.10156, 1.10156)
 sprite_frames = SubResource("SpriteFrames_24u5l")
 autoplay = "default"
@@ -545,7 +545,7 @@ position = Vector2(131, 600)
 position = Vector2(239, 569)
 
 [node name="Firekeeper" parent="." instance=ExtResource("15_wgqmn")]
-position = Vector2(150, 575)
+position = Vector2(181, 579)
 npc_name = "Firekeeper"
 dialogue = ExtResource("16_rlkm0")
 sprite_frames = ExtResource("17_0ownb")
