@@ -15,7 +15,7 @@ StoryWeaver: What happened here?
 Musician: Songs stopped being sung. And when a song is forgotten... the world forgets itself.
 if puzzle.get_progress() >= 1:
 	Musician: Oh! Have you been playing with the stones over there?
-	StoryWeaver: I kicked them and something strange happened...
+	StoryWeaver: I tapped them and something strange happened...
 	Musician: They can be used to create music...
 else:
 	Musician: See those stones over there? They can be used to create music...
@@ -23,7 +23,7 @@ Musician: The songs can make wonderful things happen... make items or creatures 
 Musician: Those altars? They hold the memory of each song in the ashes of their fires.
 Musician: Now, if I remember correctly, there's a song that used to open the portal to the Ink Well, where songwriters found the ink to write all the songs of the world.
 Musician: Let's see if I can remember how it works...
-Musician: Try kicking the first, and second stones, then check the first altar above. If you see flames, we're on to the right melody.
+Musician: Try tapping the first, and second stones, then check the first altar above. If you see flames, we're on to the right melody.
 => END
 
 ~ hello_again
@@ -47,12 +47,12 @@ Musician: Hello again, StoryWeaver. Would you like a hint?
 ~ hint_melody_0
 match get_hint_level()
 	when 0
-		Musician: Hmmm... Try kicking the first, second, and third stones in that order.
+		Musician: Hmmm... Try tapping the first, second, and third stones in that order.
 	when 1
 		Musician: Even I'm forgetting in this torn world, let's see...
-		Musician: OK, I remember kicking the first, second, third, and fifth stones.
+		Musician: OK, I remember tapping the first, second, third, and fifth stones.
 	else
-		Musician: I remember kicking the first, second, third, and fifth stones.
+		Musician: I remember tapping the first, second, third, and fifth stones.
 => END
 
 ~ hint_melody_1

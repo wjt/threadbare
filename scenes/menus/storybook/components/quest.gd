@@ -1,13 +1,12 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
+@tool
 class_name Quest
 extends Resource
 ## Information that defines a playable quest
 
 ## The quest's title. This should be short, like the title of a novel.
-@export var title: String:
-	set(new_value):
-		title = new_value.strip_edges()
+@export var title: String
 
 ## A short description of the quest. This should be a single paragraph of around 2–3 sentences.
 @export_multiline var description: String
@@ -19,12 +18,30 @@ extends Resource
 ## Leave blank if not needed.
 @export var affiliation: String
 
-@export_group("Advanced")
-
 ## The path to the first scene of the quest.
-## The path can be absolute (beginning with [code]res://[/code])
-## or relative to the folder where this quest resource is saved.
-@export_file("*.tscn") var first_scene: String = "0_intro_template/intro_template.tscn"
+@export_file("*.tscn") var first_scene: String
+
+@export_group("Animation")
+
+## An optional sprite frame library to show in the storybook page for this quest.
+## This could be the main character, an NPC, or an important item in the quest.
+@export var sprite_frames: SpriteFrames:
+	set(new_value):
+		sprite_frames = new_value
+		notify_property_list_changed()
+
+## The animation in [member sprite_frames] to display. This should typically be a looping animation.
+@export var animation_name: StringName = &""
+
+
+func _validate_property(property: Dictionary) -> void:
+	match property["name"]:
+		"animation_name":
+			if sprite_frames:
+				property.hint = PROPERTY_HINT_ENUM
+				property.hint_string = ",".join(sprite_frames.get_animation_names())
+			else:
+				property.usage |= PROPERTY_USAGE_READ_ONLY
 
 
 func _to_string() -> String:
@@ -37,11 +54,3 @@ func get_title() -> String:
 		return title
 
 	return resource_path.get_base_dir().get_file()
-
-
-## Resolves [member first_scene] relative to the directory this Quest is stored in, if necessary.
-func get_first_scene_path() -> String:
-	if first_scene.is_absolute_path():
-		return first_scene
-
-	return resource_path.get_base_dir().path_join(first_scene)

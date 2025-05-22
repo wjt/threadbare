@@ -54,3 +54,6 @@ pitch_scale = 2.0
 max_distance = 1500.0
 attenuation = 3.0
 bus = &"SFX"
+
+[node name="StorybookLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
