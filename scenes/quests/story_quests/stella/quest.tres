@@ -8,5 +8,6 @@ title = "Stella and the Missing Star"
 description = "Stella and the Missing Star follows a young girl named Stella as she journeys across the globe to restore a missing star from her favorite constellation. Guided by curiosity and gratitude, Stella travels to Guatemala, Northern Australia, and the Kalahari Desert, where she meets cultural guardians who each interpret the missing star through their own perspectives – a Mayan firekeeper, a Yolngu fisherman, and a Khoisan nature guardian. Each encounter introduces a unique gameplay challenge - stealth, precision, and memory - that reflects the cultural story and deepens Stella's understanding of the world. The game blends exploration, mythology, and personal growth to show how stories shape the way we see the stars - and ourselves."
 authors = Array[String](["Heather Drolet", "Joana Filizola", "Justin Bourque", "Stephen Reid", "Will Thompson", "Manuel Quiñones"])
 affiliation = "Endless"
-first_scene = "0_intro_template/intro_template.tscn"
+first_scene = "uid://d1fkvy1cmjcao"
+animation_name = &""
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
