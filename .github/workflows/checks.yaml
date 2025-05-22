@@ -15,6 +15,7 @@ concurrency:
 jobs:
   pre-commit:
     name: Linting and Formatting
+    if: ${{ !github.event.repository.fork }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -22,6 +23,7 @@ jobs:
 
   reuse:
     name: Licensing information
+    if: ${{ !github.event.repository.fork }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
