@@ -136,9 +136,6 @@ projectile_duration = 6.0
 projectile_sprite_frames = ExtResource("9_asncp")
 walking_time = 5.0
 
-[node name="AnimatedSprite2D" parent="OnTheGround/ThrowingNPC2" index="0"]
-sprite_frames = ExtResource("7_awu4o")
-
 [node name="ThrowingNPC3" parent="OnTheGround" instance=ExtResource("5_1o8f3")]
 position = Vector2(1230, 498)
 collision_layer = 4
@@ -227,5 +224,4 @@ sprite_frames = ExtResource("14_e46so")
 
 [connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]
 
-[editable path="OnTheGround/ThrowingNPC2"]
 [editable path="OnTheGround/Target"]
