@@ -14,7 +14,11 @@ concurrency:
 jobs:
   flatpak:
     name: Build Flatpak
-    if: ${{ github.event.workflow_run.conclusion == 'success' && (github.ref == 'refs/heads/main' || github.event_name == 'release') }}
+    if: ${{
+          github.event.workflow_run.conclusion == 'success' &&
+          !github.event.repository.fork &&
+          (github.ref == 'refs/heads/main' || github.event_name == 'release')
+        }}
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-24.08
