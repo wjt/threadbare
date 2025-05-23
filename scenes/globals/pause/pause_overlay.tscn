@@ -58,13 +58,6 @@ theme_type_variation = &"PlayerRibbon"
 layout_mode = 2
 text = "Game Paused"
 
-[node name="OptionsButton" type="Button" parent="TabContainer/PauseMenu/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-theme_type_variation = &"FlatButton"
-text = "Options"
-
 [node name="ResumeButton" type="Button" parent="TabContainer/PauseMenu/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -72,12 +65,27 @@ size_flags_horizontal = 4
 theme_type_variation = &"FlatButton"
 text = "Resume"
 
+[node name="OptionsButton" type="Button" parent="TabContainer/PauseMenu/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"FlatButton"
+text = "Options"
+
+[node name="TitleScreenButton" type="Button" parent="TabContainer/PauseMenu/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"FlatButton"
+text = "Exit to Title"
+
 [node name="Options" parent="TabContainer" instance=ExtResource("3_sd5t1")]
 unique_name_in_owner = true
 process_mode = 2
 visible = false
 layout_mode = 2
 
-[connection signal="pressed" from="TabContainer/PauseMenu/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="TabContainer/PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="TabContainer/PauseMenu/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="TabContainer/PauseMenu/VBoxContainer/TitleScreenButton" to="." method="_on_title_screen_button_pressed"]
 [connection signal="back" from="TabContainer/Options" to="." method="_on_options_back"]
