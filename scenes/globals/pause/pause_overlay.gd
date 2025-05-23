@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: MPL-2.0
 extends CanvasLayer
 
+const TITLE_SCENE: PackedScene = preload("uid://stdqc6ttomff")
+
 @onready var pause_menu: Control = %PauseMenu
 @onready var resume_button: Button = %ResumeButton
 @onready var options: Control = %Options
@@ -38,3 +40,10 @@ func _on_options_back() -> void:
 
 func _on_resume_button_pressed() -> void:
 	toggle_pause()
+
+
+func _on_title_screen_button_pressed() -> void:
+	toggle_pause()
+	SceneSwitcher.change_to_packed_with_transition(
+		TITLE_SCENE, ^"", Transition.Effect.FADE, Transition.Effect.FADE
+	)
