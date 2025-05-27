@@ -17,7 +17,7 @@ signal collected_items_changed(updated_items: Array[InventoryItem])
 
 ## Global inventory, used to track the items the player obtains and that
 ## can be added to the loom.
-@export var inventory: Inventory = Inventory.new()
+@export var inventory: Array[InventoryItem] = []
 @export var current_spawn_point: NodePath
 
 ## Set when the loom transports the player to a trio of Sokoban puzzles, so that
@@ -32,18 +32,19 @@ func start_quest() -> void:
 
 ## Add the [InventoryItem] to the [member inventory].
 func add_collected_item(item: InventoryItem) -> void:
-	inventory.add_item(item)
+	if not item in inventory:
+		inventory.append(item)
 	item_collected.emit(item)
 	collected_items_changed.emit(items_collected())
 
 
 ## Remove the [InventoryItem] from the [member inventory].
 func remove_consumed_item(item: InventoryItem) -> void:
-	inventory.remove_item(item)
+	inventory.erase(item)
 	item_consumed.emit(item)
 	collected_items_changed.emit(items_collected())
 
 
 ## Return all the items collected so far in the [member inventory].
 func items_collected() -> Array[InventoryItem]:
-	return inventory.get_items()
+	return inventory.duplicate()
