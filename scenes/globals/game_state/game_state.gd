@@ -17,6 +17,10 @@ signal collected_items_changed(updated_items: Array[InventoryItem])
 const GAME_STATE_PATH := "user://game_state.cfg"
 const INVENTORY_SECTION := "inventory"
 const INVENTORY_ITEMS_AMOUNT_KEY := "amount_of_items_collected"
+const QUEST_SECTION := "quest"
+const QUEST_PATH_KEY := "resource_path"
+const QUEST_CURRENTSCENE_KEY := "current_scene"
+const QUEST_SPAWNPOINT_KEY := "current_spawn_point"
 
 ## Global inventory, used to track the items the player obtains and that
 ## can be added to the loom.
@@ -37,8 +41,25 @@ func _ready() -> void:
 	_restore()
 
 
-func start_quest() -> void:
-	clear_inventory()
+func start_quest(quest: Quest) -> void:
+	_do_clear_inventory()
+	_update_inventory_state()
+	_state.set_value(QUEST_SECTION, QUEST_PATH_KEY, quest.resource_path)
+	_do_set_scene(quest.first_scene, ^"")
+	_save()
+
+
+## Set the scene path and [member current_spawn_point].
+func set_scene(scene_path: String, spawn_point: NodePath = ^"") -> void:
+	_do_set_scene(scene_path, spawn_point)
+	_save()
+
+
+## Set the scene path and [member current_spawn_point] without triggering a save.
+func _do_set_scene(scene_path: String, spawn_point: NodePath = ^"") -> void:
+	current_spawn_point = spawn_point
+	_state.set_value(QUEST_SECTION, QUEST_CURRENTSCENE_KEY, scene_path)
+	_state.set_value(QUEST_SECTION, QUEST_SPAWNPOINT_KEY, current_spawn_point)
 
 
 ## Add the [InventoryItem] to the [member inventory].
@@ -52,12 +73,17 @@ func add_collected_item(item: InventoryItem) -> void:
 
 ## Remove all [InventoryItem] from the [member inventory].
 func clear_inventory() -> void:
+	_do_clear_inventory()
+	_update_inventory_state()
+	_save()
+
+
+## Remove all [InventoryItem] from the [member inventory] without triggering a save.
+func _do_clear_inventory() -> void:
 	for item: InventoryItem in inventory.duplicate():
 		inventory.erase(item)
 		item_consumed.emit(item)
 	collected_items_changed.emit(items_collected())
-	_update_inventory_state()
-	_save()
 
 
 ## Return all the items collected so far in the [member inventory].
@@ -76,6 +102,10 @@ func _restore() -> void:
 	for index in range(amount):
 		var item := InventoryItem.with_type(index)
 		inventory.append(item)
+	var scene_path: String = _state.get_value(QUEST_SECTION, QUEST_CURRENTSCENE_KEY, "")
+	current_spawn_point = _state.get_value(QUEST_SECTION, QUEST_SPAWNPOINT_KEY, ^"")
+	if scene_path:
+		SceneSwitcher.change_to_file(scene_path)
 
 
 func _save() -> void:
