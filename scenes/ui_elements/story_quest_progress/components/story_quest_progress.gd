@@ -4,7 +4,6 @@ extends PanelContainer
 
 const ITEM_SLOT: PackedScene = preload("uid://1mjm4atk2j6e")
 
-@export var amount_of_items_to_collect: int = 3
 @onready var items_container: HBoxContainer = %ItemsContainer
 
 
