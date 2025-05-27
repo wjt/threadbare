@@ -39,7 +39,7 @@ func fill(inventory_item: InventoryItem) -> void:
 
 
 func is_filled_with_same_item_type_as(inventory_item: InventoryItem) -> bool:
-	return is_filled() and filled_with_item.same_type_as(inventory_item)
+	return is_filled() and filled_with_item.type == inventory_item.type
 
 
 func free_slot() -> void:
