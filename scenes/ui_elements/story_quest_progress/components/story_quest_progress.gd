@@ -10,7 +10,7 @@ const ITEM_SLOT: PackedScene = preload("uid://1mjm4atk2j6e")
 func _ready() -> void:
 	# On ready, the HUD is populated with the items that were collected so
 	# far in the quest.
-	var items_collected := GameState.items_collected_within_current_quest()
+	var items_collected := GameState.items_collected()
 	for i: int in items_collected.size():
 		items_container.get_child(i).start_as_filled(items_collected[i])
 	# Then, when each new item is collected, it is added to the progress UI

@@ -20,50 +20,30 @@ signal collected_items_changed(updated_items: Array[InventoryItem])
 @export var inventory: Inventory = Inventory.new()
 @export var current_spawn_point: NodePath
 
-## Quest's items. Used to track the progress withing a story quest.
-var story_quest_inventory: Inventory = Inventory.new()
-
 ## Set when the loom transports the player to a trio of Sokoban puzzles, so that
 ## when the player returns to Fray's End the loom can trigger a brief cutscene.
 var incorporating_threads: bool = false
 
 
-## Resets the [member story_quest_inventory]. This needs to be called when
-## a new story quest starts.
+## Reset the [member inventory] when a quest starts.
 func start_quest() -> void:
-	story_quest_inventory.clear()
+	inventory.clear()
 
 
-## Adds the [InventoryItem] to the [member inventory] and the
-## [member story_quest_inventory], provided it wasn't already there.
+## Add the [InventoryItem] to the [member inventory].
 func add_collected_item(item: InventoryItem) -> void:
 	inventory.add_item(item)
-	story_quest_inventory.add_item(item)
 	item_collected.emit(item)
 	collected_items_changed.emit(items_collected())
 
 
-## Removes the [InventoryItem] from the [member inventory] and the
-## [member story_quest_inventory] if it is there.
+## Remove the [InventoryItem] from the [member inventory].
 func remove_consumed_item(item: InventoryItem) -> void:
 	inventory.remove_item(item)
-	story_quest_inventory.remove_item(item)
 	item_consumed.emit(item)
 	collected_items_changed.emit(items_collected())
 
 
-## Returns all the items collected so far in the [member inventory].
+## Return all the items collected so far in the [member inventory].
 func items_collected() -> Array[InventoryItem]:
 	return inventory.get_items()
-
-
-## Returns the items in the [member story_quest_inventory].[br]
-## Instead of returning a reference to the inventory or its internals, it
-## returns a new array.
-func items_collected_within_current_quest() -> Array[InventoryItem]:
-	return story_quest_inventory.get_items()
-
-
-## Returns the amount of items in the [member story_quest_inventory].
-func amount_of_items_within_current_quest() -> int:
-	return story_quest_inventory.amount_of_items()
