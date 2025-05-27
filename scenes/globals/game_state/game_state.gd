@@ -1,6 +1,5 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
-@tool
 extends Node
 
 ## Emitted when a new item is collected, even if it wasn't added to the
