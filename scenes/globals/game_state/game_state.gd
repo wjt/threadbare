@@ -37,11 +37,8 @@ func _ready() -> void:
 	_restore()
 
 
-## Reset the [member inventory] when a quest starts.
 func start_quest() -> void:
-	inventory.clear()
-	_update_inventory_state()
-	_save()
+	clear_inventory()
 
 
 ## Add the [InventoryItem] to the [member inventory].
@@ -53,10 +50,11 @@ func add_collected_item(item: InventoryItem) -> void:
 	_save()
 
 
-## Remove the [InventoryItem] from the [member inventory].
-func remove_consumed_item(item: InventoryItem) -> void:
-	inventory.erase(item)
-	item_consumed.emit(item)
+## Remove all [InventoryItem] from the [member inventory].
+func clear_inventory() -> void:
+	for item: InventoryItem in inventory.duplicate():
+		inventory.erase(item)
+		item_consumed.emit(item)
 	collected_items_changed.emit(items_collected())
 	_update_inventory_state()
 	_save()
