@@ -27,7 +27,6 @@ func _restore_volumes() -> void:
 		var volume_db: float = _settings.get_value(
 			VOLUME_SECTION, bus, DEFAULT_VOLUMES.get(bus, 0.0)
 		)
-		print("Restored", [bus_idx, bus, volume_db])
 		_set_volume(bus_idx, volume_db)
 
 
