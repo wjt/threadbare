@@ -31,4 +31,3 @@ func _on_item_consumed(item: InventoryItem) -> void:
 		var item_slot := child as ItemSlot
 		if item_slot.is_filled_with_same_item_type_as(item):
 			item_slot.free_slot()
-			return
