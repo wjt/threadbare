@@ -24,6 +24,12 @@ const QUEST_SPAWNPOINT_KEY := "current_spawn_point"
 const GLOBAL_SECTION := "global"
 const GLOBAL_INCORPORATING_THREADS_KEY := "incorporating_threads"
 
+## Scenes to skip from saving.
+const TRANSIENT_SCENES := [
+	"res://scenes/menus/title/title_screen.tscn",
+	"res://scenes/menus/intro/intro.tscn",
+]
+
 ## Global inventory, used to track the items the player obtains and that
 ## can be added to the loom.
 @export var inventory: Array[InventoryItem] = []
@@ -40,7 +46,6 @@ func _ready() -> void:
 	var err := _state.load(GAME_STATE_PATH)
 	if err != OK and err != ERR_FILE_NOT_FOUND:
 		push_error("Failed to load %s: %s" % [GAME_STATE_PATH, err])
-	_restore()
 
 
 ## Set the [member incorporating_threads] flag.
@@ -50,6 +55,7 @@ func set_incorporating_threads(new_incorporating_threads: bool) -> void:
 	_save()
 
 
+## Set the [Quest] and clear the [member inventory].
 func start_quest(quest: Quest) -> void:
 	_do_clear_inventory()
 	_update_inventory_state()
@@ -60,6 +66,8 @@ func start_quest(quest: Quest) -> void:
 
 ## Set the scene path and [member current_spawn_point].
 func set_scene(scene_path: String, spawn_point: NodePath = ^"") -> void:
+	if scene_path in TRANSIENT_SCENES:
+		return
 	_do_set_scene(scene_path, spawn_point)
 	_save()
 
@@ -105,9 +113,22 @@ func _update_inventory_state() -> void:
 	_state.set_value(INVENTORY_SECTION, INVENTORY_ITEMS_AMOUNT_KEY, amount)
 
 
-func _restore() -> void:
+## Clear the persisted state.
+func clear() -> void:
+	_state.clear()
+	_save()
+
+
+## Check if there is persisted state.
+func can_restore() -> bool:
+	return _state.get_sections().size()
+
+
+## Restore the persisted state.
+func restore() -> Dictionary:
 	var amount_in_state: int = _state.get_value(INVENTORY_SECTION, INVENTORY_ITEMS_AMOUNT_KEY, 0)
 	var amount: int = clamp(amount_in_state, 0, InventoryItem.ItemType.size())
+	inventory.clear()
 	for index in range(amount):
 		var item := InventoryItem.with_type(index)
 		inventory.append(item)
@@ -116,8 +137,7 @@ func _restore() -> void:
 	incorporating_threads = _state.get_value(
 		GLOBAL_SECTION, GLOBAL_INCORPORATING_THREADS_KEY, false
 	)
-	if scene_path:
-		SceneSwitcher.change_to_file(scene_path)
+	return {"scene_path": scene_path, "spawn_point": current_spawn_point}
 
 
 func _save() -> void:
