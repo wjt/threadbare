@@ -28,7 +28,7 @@ func _ready() -> void:
 			ETERNAL_LOOM_INTERACTION, "threads_incorporated", [self]
 		)
 		await DialogueManager.dialogue_ended
-		GameState.incorporating_threads = false
+		GameState.set_incorporating_threads(false)
 
 
 func _on_interacted(player: Player, _from_right: bool) -> void:
@@ -44,7 +44,7 @@ func _on_interacted(player: Player, _from_right: bool) -> void:
 		# Hide interact label during scene transition
 		interact_area.disabled = true
 
-		GameState.incorporating_threads = true
+		GameState.set_incorporating_threads(true)
 		SceneSwitcher.change_to_file_with_transition(SOKOBANS.pick_random())
 
 

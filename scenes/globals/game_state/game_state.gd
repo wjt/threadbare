@@ -21,6 +21,8 @@ const QUEST_SECTION := "quest"
 const QUEST_PATH_KEY := "resource_path"
 const QUEST_CURRENTSCENE_KEY := "current_scene"
 const QUEST_SPAWNPOINT_KEY := "current_spawn_point"
+const GLOBAL_SECTION := "global"
+const GLOBAL_INCORPORATING_THREADS_KEY := "incorporating_threads"
 
 ## Global inventory, used to track the items the player obtains and that
 ## can be added to the loom.
@@ -39,6 +41,13 @@ func _ready() -> void:
 	if err != OK and err != ERR_FILE_NOT_FOUND:
 		push_error("Failed to load %s: %s" % [GAME_STATE_PATH, err])
 	_restore()
+
+
+## Set the [member incorporating_threads] flag.
+func set_incorporating_threads(new_incorporating_threads: bool) -> void:
+	incorporating_threads = new_incorporating_threads
+	_state.set_value(GLOBAL_SECTION, GLOBAL_INCORPORATING_THREADS_KEY, incorporating_threads)
+	_save()
 
 
 func start_quest(quest: Quest) -> void:
@@ -104,6 +113,9 @@ func _restore() -> void:
 		inventory.append(item)
 	var scene_path: String = _state.get_value(QUEST_SECTION, QUEST_CURRENTSCENE_KEY, "")
 	current_spawn_point = _state.get_value(QUEST_SECTION, QUEST_SPAWNPOINT_KEY, ^"")
+	incorporating_threads = _state.get_value(
+		GLOBAL_SECTION, GLOBAL_INCORPORATING_THREADS_KEY, false
+	)
 	if scene_path:
 		SceneSwitcher.change_to_file(scene_path)
 
