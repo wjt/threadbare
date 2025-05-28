@@ -72,6 +72,13 @@ func set_scene(scene_path: String, spawn_point: NodePath = ^"") -> void:
 	_save()
 
 
+## Set the [member current_spawn_point].
+func set_current_spawn_point(spawn_point: NodePath = ^"") -> void:
+	current_spawn_point = spawn_point
+	_state.set_value(QUEST_SECTION, QUEST_SPAWNPOINT_KEY, current_spawn_point)
+	_save()
+
+
 ## Set the scene path and [member current_spawn_point] without triggering a save.
 func _do_set_scene(scene_path: String, spawn_point: NodePath = ^"") -> void:
 	current_spawn_point = spawn_point
