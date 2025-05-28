@@ -39,10 +39,20 @@ const TRANSIENT_SCENES := [
 ## when the player returns to Fray's End the loom can trigger a brief cutscene.
 var incorporating_threads: bool = false
 
+var persist_progress: bool
 var _state := ConfigFile.new()
 
 
 func _ready() -> void:
+	var initial_scene_uid := ResourceLoader.get_resource_uid(
+		get_tree().current_scene.scene_file_path
+	)
+	var main_scene_uid := ResourceLoader.get_resource_uid(
+		ProjectSettings.get_setting("application/run/main_scene")
+	)
+	persist_progress = initial_scene_uid == main_scene_uid
+	if not persist_progress:
+		return
 	var err := _state.load(GAME_STATE_PATH)
 	if err != OK and err != ERR_FILE_NOT_FOUND:
 		push_error("Failed to load %s: %s" % [GAME_STATE_PATH, err])
@@ -131,6 +141,11 @@ func can_restore() -> bool:
 	return _state.get_sections().size()
 
 
+## If there is a scene to restore, return it.
+func get_scene_to_restore() -> String:
+	return _state.get_value(QUEST_SECTION, QUEST_CURRENTSCENE_KEY, "")
+
+
 ## Restore the persisted state.
 func restore() -> Dictionary:
 	var amount_in_state: int = _state.get_value(INVENTORY_SECTION, INVENTORY_ITEMS_AMOUNT_KEY, 0)
@@ -148,6 +163,8 @@ func restore() -> Dictionary:
 
 
 func _save() -> void:
+	if not persist_progress:
+		return
 	var err := _state.save(GAME_STATE_PATH)
 	if err != OK:
 		push_error("Failed to save settings to %s: %s" % [GAME_STATE_PATH, err])
