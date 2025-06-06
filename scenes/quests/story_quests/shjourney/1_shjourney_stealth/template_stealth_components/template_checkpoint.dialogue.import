@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://2dlu1h1o0n1p"
+path="res://.godot/imported/template_checkpoint.dialogue-17de5a86b7a1535fcfa5a25a789addc9.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shjourney/1_shjourney_stealth/template_stealth_components/template_checkpoint.dialogue"
+dest_files=["res://.godot/imported/template_checkpoint.dialogue-17de5a86b7a1535fcfa5a25a789addc9.tres"]
+
+[params]
+
+defaults=true

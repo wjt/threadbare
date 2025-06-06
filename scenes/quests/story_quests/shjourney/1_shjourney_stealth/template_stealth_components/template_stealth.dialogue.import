@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://3wjyiumfu4mp"
+path="res://.godot/imported/template_stealth.dialogue-90036b5c340bddf30573cccacc32f506.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shjourney/1_shjourney_stealth/template_stealth_components/template_stealth.dialogue"
+dest_files=["res://.godot/imported/template_stealth.dialogue-90036b5c340bddf30573cccacc32f506.tres"]
+
+[params]
+
+defaults=true
