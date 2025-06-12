@@ -2,6 +2,21 @@
 
 [Play it here!](https://endlessm.github.io/threadbare/)
 
+## Help us build Threadbare
+
+* Join our [forum](https://github.com/endlessm/threadbare/discussions) and give
+  us [playtesting
+  feedback](https://github.com/endlessm/threadbare/discussions/categories/playtest-feedback);
+* Join [`#threadbare-development` on our Discord](https://discord.gg/mNtzvvaFXF)
+  to discuss the project with the team in real-time.
+
+Threadbare's code, comments, and development discussion are written in English.
+If English is not your first language, don't worry: it's not the first language
+for about half of the core team at Endless Access either, and we will be happy
+to hear from you.
+
+(We hope to add translations for the game itself in the medium term.)
+
 ## License
 
 Threadbare's original source code in Threadbare itself is covered by [Mozilla
