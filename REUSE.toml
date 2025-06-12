@@ -16,7 +16,7 @@ SPDX-License-Identifier = "CC0-1.0"
 [[annotations]]
 path = [
     "addons/git_lfs_checker/plugin.cfg",
-    "addons/sprite_frames_exported_textures/**",
+    "addons/sprite_frames_exported_textures/plugin.cfg",
     "scenes/*.tscn",
     "scenes/**/*.tscn",
     "scenes/**/*.tres",
