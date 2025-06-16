@@ -23,7 +23,9 @@ const SPAWN_POINT_GROUP_NAME: String = "spawn_point"
 ## Transition to use when the player leaves this teleport.
 @export var exit_transition: Transition.Effect = Transition.Effect.RIGHT_TO_LEFT_WIPE
 
-var spawn_point_path: NodePath:
+## Which SpawnPoint in [member next_scene] the player character should start at;
+## or blank/NONE to start at the default position in the scene.
+@export var spawn_point_path: NodePath:
 	set(new_val):
 		if new_val == ^"NONE":
 			spawn_point_path = ^""
@@ -115,24 +117,12 @@ func _update_available_spawn_points() -> void:
 		_available_spawn_points = paths
 
 
-func _get_property_list() -> Array[Dictionary]:
-	var property_list: Array[Dictionary] = []
-
-	property_list.push_back(
-		{
-			"name": "spawn_point_path",
-			"type": TYPE_STRING,
-			"hint": PROPERTY_HINT_ENUM,
-			"hint_string": ",".join(["NONE"] + _available_spawn_points),
-			"usage": PROPERTY_USAGE_DEFAULT
-		}
-	)
-
-	return property_list
-
-
 func _validate_property(property: Dictionary) -> void:
 	match property.name:
+		"spawn_point_path":
+			property.type = TYPE_STRING
+			property.hint = PROPERTY_HINT_ENUM
+			property.hint_string = ",".join(["NONE"] + _available_spawn_points)
 		"enter_transition":
 			if not use_transition:
 				property.usage |= PROPERTY_USAGE_READ_ONLY
