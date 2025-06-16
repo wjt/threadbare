@@ -6,12 +6,27 @@ extends Area2D
 
 const SPAWN_POINT_GROUP_NAME: String = "spawn_point"
 
+## Scene to switch to when the player enters this teleport. If empty, the player
+## will teleport within the current scene, to the position specified by [member
+## spawn_point_path].
 @export_file("*.tscn") var next_scene: String:
 	set(new_value):
 		next_scene = new_value
 		_update_available_spawn_points()
 		notify_property_list_changed()
 
+## Which SpawnPoint in [member next_scene] the player character should start at;
+## or blank/NONE to start at the default position in the scene.
+@export var spawn_point_path: NodePath:
+	set(new_val):
+		if new_val == ^"NONE":
+			spawn_point_path = ^""
+		else:
+			spawn_point_path = new_val
+
+@export_group("Transition")
+
+## Whether to use a visual transition effect when the player enters the teleporter.
 @export var use_transition: bool = true:
 	set(new_val):
 		use_transition = new_val
@@ -22,15 +37,6 @@ const SPAWN_POINT_GROUP_NAME: String = "spawn_point"
 
 ## Transition to use when the player leaves this teleport.
 @export var exit_transition: Transition.Effect = Transition.Effect.RIGHT_TO_LEFT_WIPE
-
-## Which SpawnPoint in [member next_scene] the player character should start at;
-## or blank/NONE to start at the default position in the scene.
-@export var spawn_point_path: NodePath:
-	set(new_val):
-		if new_val == ^"NONE":
-			spawn_point_path = ^""
-		else:
-			spawn_point_path = new_val
 
 var _available_spawn_points: Array[NodePath] = []
 
