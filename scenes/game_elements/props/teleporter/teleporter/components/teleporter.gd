@@ -102,8 +102,13 @@ func _update_available_spawn_points() -> void:
 		var scene_state: SceneState = packed_scene.get_state()
 
 		for i: int in scene_state.get_node_count():
-			if SPAWN_POINT_GROUP_NAME in scene_state.get_node_groups(i):
-				var node_path_as_string: String = String(scene_state.get_node_path(i))
+			var path := scene_state.get_node_path(i)
+			var node_groups := scene_state.get_node_groups(i)
+			var instance := scene_state.get_node_instance(i)
+			if instance:
+				node_groups.append_array(instance.get_state().get_node_groups(0))
+			if SPAWN_POINT_GROUP_NAME in node_groups:
+				var node_path_as_string := String(path)
 
 				paths.push_back(NodePath(node_path_as_string.replace("./", "")))
 
