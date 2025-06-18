@@ -3,7 +3,7 @@
 # Each line is a file pattern followed by one or more users or teams. Order is
 # important; the last matching pattern takes the most precedence. When someone
 # opens a pull request that only modifies files matching a pattern farther down,
-# only the last-matching owner(s) and not the global owner(s) will be requested 
+# only the last-matching owner(s) and not the global owner(s) will be requested
 # for a review.
 #
 # Prefer listing teams instead of individual users whenever possible for easier
