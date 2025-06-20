@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkh0jfr33ss23"
-path="res://.godot/imported/Bush_05.png-d5de09277572b4555269e3c9b664fb59.ctex"
+path="res://.godot/imported/Bussgh.png-3fdf0fd4c6b4a29f092a7a7e5ddcc00a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/shjourney/AssetsShJourney/Bush_05.png"
-dest_files=["res://.godot/imported/Bush_05.png-d5de09277572b4555269e3c9b664fb59.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/AssetsShJourney/Bussgh.png"
+dest_files=["res://.godot/imported/Bussgh.png-3fdf0fd4c6b4a29f092a7a7e5ddcc00a.ctex"]
 
 [params]
 
