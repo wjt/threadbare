@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bqatpvnvfd5xh"
+path="res://.godot/imported/template_stealth.dialogue-4bf6b94186f67594b7c87a873b8531dd.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/Prueba2/1_Laberinto/template_stealth_components/template_stealth.dialogue"
+dest_files=["res://.godot/imported/template_stealth.dialogue-4bf6b94186f67594b7c87a873b8531dd.tres"]
+
+[params]
+
+defaults=true
