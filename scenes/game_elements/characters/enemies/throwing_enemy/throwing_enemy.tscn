@@ -246,6 +246,7 @@ script = ExtResource("1_ffq0m")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -30)
+scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_cvpou")
 animation = &"walk"
 autoplay = "idle"

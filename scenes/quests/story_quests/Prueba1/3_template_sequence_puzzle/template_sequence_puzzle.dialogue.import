@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://1bp4dkm24mnb"
+path="res://.godot/imported/template_sequence_puzzle.dialogue-3e208807e90753c22b873f07a793f85e.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/Prueba1/3_template_sequence_puzzle/template_sequence_puzzle.dialogue"
+dest_files=["res://.godot/imported/template_sequence_puzzle.dialogue-3e208807e90753c22b873f07a793f85e.tres"]
+
+[params]
+
+defaults=true

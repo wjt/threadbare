@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://lh8wtraobp06"
+path="res://.godot/imported/template_combat.dialogue-d6652f34261b40e5e5caecbc4581c5b8.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/Prueba1/2_combate/template_combat_components/template_combat.dialogue"
+dest_files=["res://.godot/imported/template_combat.dialogue-d6652f34261b40e5e5caecbc4581c5b8.tres"]
+
+[params]
+
+defaults=true
