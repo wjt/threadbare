@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5yh0w1h6haab"
-path="res://.godot/imported/CampFire.png-6fb8d5c245c6ef3d083cd5eb7c79d507.ctex"
+path="res://.godot/imported/CampFireee.png-e2624590d51d68f35a468ed43eec3de2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/shjourney/AssetsShJourney/CampFire.png"
-dest_files=["res://.godot/imported/CampFire.png-6fb8d5c245c6ef3d083cd5eb7c79d507.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/AssetsShJourney/CampFireee.png"
+dest_files=["res://.godot/imported/CampFireee.png-e2624590d51d68f35a468ed43eec3de2.ctex"]
 
 [params]
 
