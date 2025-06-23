@@ -144,3 +144,19 @@ jobs:
         run: |
           mv threadbare.flatpak 'threadbare-${{ github.ref_name }}-x86_64.flatpak'
           gh release upload '${{ github.ref_name }}' 'threadbare-${{ github.ref_name }}-x86_64.flatpak' --repo '${{ github.repository }}'
+
+      - name: Download web bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: web
+          path: web
+
+      - name: Attach web bundle to release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          pushd web
+          zip -r "../threadbare-${{ github.ref_name }}-web.zip" .
+          popd
+
+          gh release upload '${{ github.ref_name }}' 'threadbare-${{ github.ref_name }}-web.zip' --repo '${{ github.repository }}'
