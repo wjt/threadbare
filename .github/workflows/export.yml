@@ -45,13 +45,13 @@ jobs:
           mkdir -p build && cd build
 
           # Download Godot Engine itself
-          wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip && \
+          wget --progress=dot:giga https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip && \
           unzip Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip && \
           mv Godot_v${GODOT_VERSION}-stable_linux.x86_64 godot
 
           # Download export templates
           mkdir -p editor_data/export_templates
-          wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz && \
+          wget --progress=dot:giga https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz && \
           unzip Godot_v${GODOT_VERSION}-stable_export_templates.tpz && \
           mv templates editor_data/export_templates/${GODOT_VERSION}.stable
 
