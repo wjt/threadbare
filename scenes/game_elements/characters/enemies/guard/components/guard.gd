@@ -95,10 +95,6 @@ var state: State = State.PATROLLING:
 ## Progress bar that indicates how aware the guard is of the player, if it
 ## is completely filled, [signal player_detected] is triggered.
 @onready var player_awareness: TextureProgressBar = %PlayerAwareness
-## Smaller detection area that only detectes when the player is really
-## close to the guard. If it detects a player, [signal player_detected] is
-## triggered.
-@onready var instant_detection_area: Area2D = %InstantDetectionArea
 ## RayCast used to detect if the sight to a position is blocked.
 @onready var sight_ray_cast: RayCast2D = %SightRayCast
 ## Control to hold debug info that can be toggled on or off.
@@ -219,12 +215,9 @@ func _detect_player(player_in_sight: Node2D) -> void:
 
 	last_seen_position = player_in_sight.global_position
 
-	if (
-		instant_detection_area.has_overlapping_bodies()
-		or player_awareness.ratio >= 1.0
-		or player_instantly_detected_on_sight
-	):
+	if player_awareness.ratio >= 1.0 or player_instantly_detected_on_sight:
 		_change_state(State.ALERTED)
+		player_detected.emit(player_in_sight)
 	else:
 		_change_state(State.DETECTING)
 
@@ -275,7 +268,6 @@ func _on_enter_state(new_state: State) -> void:
 		State.ALERTED:
 			if not _alert_sound.playing:
 				_alert_sound.play()
-			player_detected.emit(_player_in_sight())
 			animation_player.play(&"alerted")
 		State.INVESTIGATING:
 			guard_movement.start_moving_now()
@@ -386,9 +378,6 @@ func _is_sight_to_point_blocked(point_position: Vector2) -> bool:
 ## Returns a Player if it is in sight and there isn't any wall blocking it.
 ## Otherwise, it returns null.
 func _player_in_sight() -> Node2D:
-	if instant_detection_area.has_overlapping_bodies():
-		return instant_detection_area.get_overlapping_bodies().front()
-
 	if not detection_area.has_overlapping_bodies():
 		return null
 
@@ -538,3 +527,8 @@ func _set_alert_other_sound_stream(new_value: AudioStream) -> void:
 	if not is_node_ready():
 		await ready
 	_torch_hit_sound.stream = new_value
+
+
+func _on_instant_detection_area_body_entered(body: Node2D) -> void:
+	state = State.ALERTED
+	player_detected.emit(body)
