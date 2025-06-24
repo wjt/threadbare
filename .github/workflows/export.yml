@@ -3,6 +3,10 @@
 name: "Build and Export Game"
 on:
   workflow_dispatch:
+    inputs:
+      build_flatpak:
+        description: 'Also build a Flatpak bundle'
+        type: boolean
   pull_request:
   release:
     types:
@@ -90,10 +94,7 @@ jobs:
   flatpak:
     name: Build Flatpak
     needs: build
-    if: ${{
-      !github.event.repository.fork &&
-      (github.ref == 'refs/heads/main' || github.event_name == 'release')
-      }}
+    if: ${{ inputs.build_flatpak || github.event_name == 'release' }}
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-24.08
