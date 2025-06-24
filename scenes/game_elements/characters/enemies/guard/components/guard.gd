@@ -88,6 +88,9 @@ var breadcrumbs: Array[Vector2] = []
 var state: State = State.PATROLLING:
 	set = _change_state
 
+# The player that's being detected.
+var _player: Node2D
+
 ## Area that represents the sight of the guard. If a player is in this area
 ## and there are no walls in between detected by [member sight_ray_cast], it
 ## means the player is in sight.
@@ -161,9 +164,8 @@ func _process(delta: float) -> void:
 
 	_update_direction(delta)
 
-	var player_in_sight: Node2D = _player_in_sight()
-	_detect_player(player_in_sight)
-	_update_player_awareness(player_in_sight, delta)
+	if state != State.ALERTED:
+		_update_player_awareness(delta)
 
 	_update_animation()
 
@@ -179,10 +181,6 @@ func _process_state() -> void:
 				guard_movement.stop_moving()
 		State.INVESTIGATING:
 			guard_movement.set_destination(last_seen_position)
-		State.DETECTING:
-			guard_movement.stop_moving()
-			if not _player_in_sight():
-				_change_state(State.INVESTIGATING)
 		State.RETURNING:
 			if not breadcrumbs.is_empty():
 				var target_position: Vector2 = breadcrumbs.back()
@@ -207,33 +205,20 @@ func _update_direction(delta: float) -> void:
 		animated_sprite_2d.flip_h = velocity.x < 0
 
 
-## Tries to detect the player in sight and changes state accordingly if player
-## is spotted. If player_in_sight is null it means it isn't in sight.
-func _detect_player(player_in_sight: Node2D) -> void:
-	if not player_in_sight:
-		return
-
-	last_seen_position = player_in_sight.global_position
-
-	if player_awareness.ratio >= 1.0 or player_instantly_detected_on_sight:
-		_change_state(State.ALERTED)
-		player_detected.emit(player_in_sight)
-	else:
-		_change_state(State.DETECTING)
-
-
 ## Changes how PlayerAwareness looks to reflect how close is the player to
 ## being detected
-func _update_player_awareness(player_in_sight: Node2D, delta: float) -> void:
-	if State.ALERTED == state:
-		player_awareness.ratio = 1.0
-		player_awareness.tint_progress = Color.RED
-	else:
-		player_awareness.value = move_toward(
-			player_awareness.value, player_awareness.max_value if player_in_sight else 0.0, delta
-		)
+func _update_player_awareness(delta: float) -> void:
+	var player_in_sight := _player and not _is_sight_to_point_blocked(_player.global_position)
+
+	player_awareness.value = move_toward(
+		player_awareness.value, player_awareness.max_value if player_in_sight else 0.0, delta
+	)
 	player_awareness.visible = player_awareness.ratio > 0.0
 	player_awareness.modulate.a = clamp(player_awareness.ratio, 0.5, 1.0)
+
+	if player_awareness.ratio >= 1.0:
+		state = State.ALERTED
+		player_detected.emit(_player)
 
 
 func _update_animation() -> void:
@@ -269,6 +254,9 @@ func _on_enter_state(new_state: State) -> void:
 			if not _alert_sound.playing:
 				_alert_sound.play()
 			animation_player.play(&"alerted")
+			player_awareness.ratio = 1.0
+			player_awareness.tint_progress = Color.RED
+			player_awareness.visible = true
 		State.INVESTIGATING:
 			guard_movement.start_moving_now()
 			breadcrumbs.push_back(global_position)
@@ -373,20 +361,6 @@ func _is_sight_to_point_blocked(point_position: Vector2) -> bool:
 	sight_ray_cast.target_position = sight_ray_cast.to_local(point_position)
 	sight_ray_cast.force_raycast_update()
 	return sight_ray_cast.is_colliding()
-
-
-## Returns a Player if it is in sight and there isn't any wall blocking it.
-## Otherwise, it returns null.
-func _player_in_sight() -> Node2D:
-	if not detection_area.has_overlapping_bodies():
-		return null
-
-	var player: Node2D = detection_area.get_overlapping_bodies().front()
-
-	if _is_sight_to_point_blocked(player.global_position):
-		return null
-
-	return player
 
 
 ## Patrol point index to global position
@@ -532,3 +506,22 @@ func _set_alert_other_sound_stream(new_value: AudioStream) -> void:
 func _on_instant_detection_area_body_entered(body: Node2D) -> void:
 	state = State.ALERTED
 	player_detected.emit(body)
+
+
+func _on_detection_area_body_entered(body: Node2D) -> void:
+	_player = body
+	if _is_sight_to_point_blocked(body.global_position):
+		return
+	if player_instantly_detected_on_sight:
+		state = State.ALERTED
+		player_detected.emit(body)
+	else:
+		state = State.DETECTING
+
+
+func _on_detection_area_body_exited(body: Node2D) -> void:
+	_player = null
+	last_seen_position = body.global_position
+	if state == State.DETECTING:
+		guard_movement.stop_moving()
+		state = State.INVESTIGATING
