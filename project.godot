@@ -51,6 +51,14 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/git_lfs_checker/plugin.cfg", "res://addons/sprite_frames_exported_textures/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://scenes/quests/lore_quests/": "purple",
+"res://scenes/quests/story_quests/": "green",
+"res://scenes/quests/story_quests/template/": "yellow"
+}
+
 [global_group]
 
 spawn_point=""
