@@ -13,3 +13,7 @@ build/
 .DS_Store
 ._*
 __MACOSX
+
+# Archive formats
+*.zip
+*.rar
