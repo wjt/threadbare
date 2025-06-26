@@ -208,5 +208,4 @@ animations = [{
 texture_filter = 1
 scale = Vector2(1.48, 1.48)
 sprite_frames = SubResource("SpriteFrames_l7s8b")
-animation = &"sprint"
-frame_progress = 0.740343
+animation = &"Iddle"
