@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cymvc6g2rbx12"]
+
+[ext_resource type="VideoStream" uid="uid://b88hkpe17wfy" path="res://scenes/quests/story_quests/shjourney/0_IntroVideo/INTRO-SHADOWJOURNEY.ogv" id="1_ukt3l"]
+[ext_resource type="Script" uid="uid://sbvl6k0qu5k0" path="res://scenes/ui_elements/cinematic/cinematicVideo.gd" id="2_bvg2l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_ukt3l")
+autoplay = true
+expand = true
+
+[node name="CinematicaVideos" type="Node2D" parent="." node_paths=PackedStringArray("video_player")]
+script = ExtResource("2_bvg2l")
+video_player = NodePath("../VideoStreamPlayer")
+next_scene = "uid://b8sewsfnsdw4u"

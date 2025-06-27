@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c7akulqhhwnhf"
+path="res://.godot/imported/template_outro.dialogue-9f973be1bbb063e04d07b98a94aef991.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shjourney/7_shjourney_outro/template_outro_components/template_outro.dialogue"
+dest_files=["res://.godot/imported/template_outro.dialogue-9f973be1bbb063e04d07b98a94aef991.tres"]
+
+[params]
+
+defaults=true

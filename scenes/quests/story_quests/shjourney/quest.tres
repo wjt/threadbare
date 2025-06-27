@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource("1_ssubp")
-title = ""
-description = ""
+title = "Sueños nocturnos"
+description = "“Sueños Nocturnos ”, trata de un niño llamado Tim que recorre el mundo de las pesadillas para rescatar a su hermana atrapada en un terror nocturno. Guiado por su curiosidad y valentía, Tim se embarca a una épica aventura del Laberinto Encantado, Mazmorra de Fantasmas y un Mausoleos Olvidados, donde conoce a guardianes (un guardián elfo del bosque, un detective Esqueletum y un dios del inframundo Supay) que interpretan el significado de desafiar a sus pesadillas y buscar pistas de su hermana perdida desde su propia perspectiva"
 authors = Array[String]([])
 affiliation = ""
-first_scene = "uid://c1gdct760l86h"
+first_scene = "uid://cymvc6g2rbx12"
 animation_name = &""
 metadata/_custom_type_script = "uid://dts1hwdy3phin"

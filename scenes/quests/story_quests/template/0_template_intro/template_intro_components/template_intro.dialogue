@@ -4,11 +4,14 @@
 ~ start
 do animation_player.play(&"walk_on")
 do animation_player.animation_finished
-Welcome to the StoryQuest template, where you'll learn how to mod elements of each scene and create your own StoryQuest! Let's start with the intro.
-In the Godot FileSystem, find the intro folder and double-click on the intro dialogue file to edit the text.
-Press enter to add a new line. Each line becomes a new dialogue box in-game.
-Select Cinematic node; drag your StoryQuest dialogue to the "Dialogue" field in the Inspector.
-Set the next scene using the "Next Scene" field in the Inspector.
+El frío le pegó en la nuca antes de que Tim entendiera dónde estaba.
+ A su alrededor, los árboles respiraban, sus troncos crujiendo como huesos viejos.
+ Un olor dulzón (a manzanas podridas y cera derretida) lo guió hasta el claro
+donde el Elfo del Bosque lo esperaba.
+do animation_player.play(&"talk_elfo")
+do animation_player.animation_finished
+Elfo Oscuro del bosque: ¿Perdiste algo, niño? Susurró, mostrando dientes afilados. El bosque se comió tus recuerdos... 
+Elfo Oscuro del bosque: ¿Podrás encontrarlos?
 do animation_player.play(&"walk_off")
 Explore other elements to mod, like the placeholder image, tile map, and animation options for this scene!
 => END
