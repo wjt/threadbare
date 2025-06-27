@@ -134,6 +134,7 @@ region = Rect2(384, 0, 64, 64)
 atlas = ExtResource("5_qxir4")
 region = Rect2(448, 0, 64, 64)
 
+
 [resource]
 animations = [{
 "frames": [{
@@ -196,6 +197,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_gjf71")
 }, {
 "duration": 1.0,
+
 "texture": SubResource("AtlasTexture_eyp3i")
 }, {
 "duration": 1.0,
@@ -250,6 +252,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kaewf")
+
 }],
 "loop": true,
 "name": &"sprint",
@@ -257,6 +260,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+
 "texture": SubResource("AtlasTexture_3iva5")
 }, {
 "duration": 1.0,
@@ -279,6 +283,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s1n7w")
+
 }],
 "loop": true,
 "name": &"walk",
