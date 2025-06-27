@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dl26i18gks2li" path="res://scenes/quests/story_quests/shjourney/AssetsShJourney/Tileset.png" id="9_pyg04"]
 [ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/third_party/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="10_0dxsh"]
 [ext_resource type="Texture2D" uid="uid://cn2j018vohdap" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level1.png" id="10_kbenk"]
-[ext_resource type="Texture2D" uid="uid://dv2pn30s2y5ep" path="res://assets/third_party/tiny-swords/Terrain/Ground/TX Tileset Grass.png" id="11_ijxhw"]
+[ext_resource type="Texture2D" uid="uid://dv2pn30s2y5ep" path="res://scenes/quests/story_quests/shjourney/AssetsShJourney/TX Tileset Grass.png" id="11_ijxhw"]
 [ext_resource type="Texture2D" uid="uid://cc8otsdo2v73u" path="res://assets/third_party/tiny-swords/Terrain/Ground/TX Plant.png" id="13_p4x88"]
 [ext_resource type="Texture2D" uid="uid://ckobr37gj4fvi" path="res://scenes/quests/story_quests/shjourney/AssetsShJourney/TX Plant with Shadow.png" id="14_4o4qi"]
 [ext_resource type="Texture2D" uid="uid://ddp2xwtx7p8te" path="res://scenes/quests/story_quests/shjourney/AssetsShJourney/Freedecorations.png" id="15_1gptm"]
