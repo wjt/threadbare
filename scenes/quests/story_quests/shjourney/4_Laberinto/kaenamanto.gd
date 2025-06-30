@@ -36,6 +36,7 @@ func _physics_process(_delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		player = body
+		get_tree().reload_current_scene()
 
 func _on_body_exited(body: Node2D) -> void:
 	if body == player:
