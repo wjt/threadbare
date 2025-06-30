@@ -1,11 +1,11 @@
 [gd_scene load_steps=109 format=3 uid="uid://b8sewsfnsdw4u"]
 
-[ext_resource type="Texture2D" uid="uid://dbsjs5bpkvckp" path="res://scenes/quests/story_quests/shjourney/0_shjourney_intro/template_intro_components/videoIntro/tim y su hermana durmiendo-Sheet.png" id="1_5qws3"]
+[ext_resource type="Texture2D" uid="uid://dbsjs5bpkvckp" path="res://scenes/quests/story_quests/shjourney/1_IntroAnimacion/tim y su hermana durmiendo-Sheet.png" id="1_5qws3"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="2_shlmy"]
-[ext_resource type="AudioStream" uid="uid://dlgyoxuwm5cgw" path="res://scenes/quests/story_quests/shjourney/0_shjourney_intro/template_intro_components/EffectSounds/slow-cinematic-clock-ticking-357979.mp3" id="3_5qskq"]
-[ext_resource type="AudioStream" uid="uid://bay2wj6mqr0kc" path="res://scenes/quests/story_quests/shjourney/0_shjourney_intro/template_intro_components/EffectSounds/foot-switch-166326.mp3" id="3_fcqpt"]
-[ext_resource type="AudioStream" uid="uid://dtk1p0fhfhrp2" path="res://scenes/quests/story_quests/shjourney/0_shjourney_intro/template_intro_components/EffectSounds/surprise-scared-girl-gasp-149490.mp3" id="3_n5boy"]
-[ext_resource type="AudioStream" uid="uid://cds2aynqmovst" path="res://scenes/quests/story_quests/shjourney/0_shjourney_intro/template_intro_components/EffectSounds/atmospheric-metallic-swipe-17-196791.mp3" id="4_0y5ta"]
+[ext_resource type="AudioStream" uid="uid://dlgyoxuwm5cgw" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/slow-cinematic-clock-ticking-357979.mp3" id="3_5qskq"]
+[ext_resource type="AudioStream" uid="uid://bay2wj6mqr0kc" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/foot-switch-166326.mp3" id="3_fcqpt"]
+[ext_resource type="AudioStream" uid="uid://dtk1p0fhfhrp2" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/surprise-scared-girl-gasp-149490.mp3" id="3_n5boy"]
+[ext_resource type="AudioStream" uid="uid://cds2aynqmovst" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/atmospheric-metallic-swipe-17-196791.mp3" id="4_0y5ta"]
 [ext_resource type="Script" uid="uid://c4kul7suvbojc" path="res://scenes/ui_elements/cinematic/cinematicSprite.gd" id="5_5qskq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_shlmy"]
