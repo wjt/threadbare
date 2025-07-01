@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://yfpfno276rol"]
 
-[ext_resource type="Theme" uid="uid://coxcra1002kil" path="res://scenes/ui_elements/shared_components/theme.tres" id="1_ah0mj"]
+[ext_resource type="Theme" uid="uid://cvitou84ni7qe" path="res://scenes/ui_elements/shared_components/theme.tres" id="1_ah0mj"]
 [ext_resource type="Script" uid="uid://b681aqqkiwo3k" path="res://scenes/game_elements/props/fixed_size_label/components/fixed_size_label.gd" id="1_k3ae5"]
 
 [node name="FixedSizeLabel" type="Control"]
