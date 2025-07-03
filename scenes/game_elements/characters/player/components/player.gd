@@ -4,7 +4,19 @@
 class_name Player
 extends CharacterBody2D
 
+var llaves : int = 0
+@export var llaves_maximas : int = 3
+
+var puerta
+
 signal mode_changed(mode: Mode)
+
+func ActualizarLlaves():
+	if llaves >= llaves_maximas:
+		AbrirSalida()
+
+func AbrirSalida():
+	puerta.queue_free()
 
 ## Controls how the player can interact with the world around them.
 enum Mode {
@@ -27,7 +39,7 @@ const DEFAULT_SPRITE_FRAME: SpriteFrames = preload("uid://vwf8e1v8brdp")
 
 ## The character's name. This is used to highlight when the player's character
 ## is speaking during dialogue.
-@export var player_name: String = "Tim"
+@export var player_name: String = "Player Name"
 
 ## Controls how the player can interact with the world around them.
 @export var mode: Mode = Mode.COZY:
@@ -113,6 +125,8 @@ func _get_configuration_warnings() -> PackedStringArray:
 func _ready() -> void:
 	_set_mode(mode)
 	_set_sprite_frames(sprite_frames)
+	
+	puerta = get_parent().get_node("Puerta")
 
 
 func _unhandled_input(_event: InputEvent) -> void:

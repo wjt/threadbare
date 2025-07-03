@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://4he12enp34x8"
+path="res://.godot/imported/template_intro.dialogue-b7a569808393d6a471d3f281cf0e08d7.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/Prueba2/0_template_intro/template_intro_components/template_intro.dialogue"
+dest_files=["res://.godot/imported/template_intro.dialogue-b7a569808393d6a471d3f281cf0e08d7.tres"]
+
+[params]
+
+defaults=true
