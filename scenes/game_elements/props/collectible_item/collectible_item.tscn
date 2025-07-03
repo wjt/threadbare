@@ -272,7 +272,6 @@ _data = {
 }
 
 [node name="CollectibleItem" type="Node2D"]
-z_index = 1
 script = ExtResource("1_7ff3m")
 
 [node name="InteractArea" parent="." instance=ExtResource("6_j0enh")]
