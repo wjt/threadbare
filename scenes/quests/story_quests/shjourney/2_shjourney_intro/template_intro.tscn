@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=4 uid="uid://bb1mgn8l00yo7"]
+[gd_scene load_steps=20 format=4 uid="uid://bb1mgn8l00yo7"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_510kx"]
+[ext_resource type="Shader" uid="uid://bvb4l5wskqwhf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/intro0.2.gdshader" id="3_0bl5u"]
 [ext_resource type="SpriteFrames" uid="uid://vwf8e1v8brdp" path="res://scenes/quests/story_quests/template/template_player_components/template_player.tres" id="3_ens4f"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_ug0ds"]
 [ext_resource type="Resource" uid="uid://cqjngitoc5yx7" path="res://scenes/quests/story_quests/template/0_template_intro/template_intro_components/template_intro.dialogue" id="5_13cgc"]
@@ -12,6 +13,9 @@
 [ext_resource type="AudioStream" uid="uid://tjog7m8qdm7b" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/Project_1 (1).wav" id="10_khe72"]
 [ext_resource type="Script" uid="uid://hs14yse0u0uh" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/music.gd" id="11_ecyos"]
 [ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="12_6jtbm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u7gwd"]
+shader = ExtResource("3_0bl5u")
 
 [sub_resource type="Animation" id="Animation_ld06i"]
 length = 5.0
@@ -238,6 +242,7 @@ tile_map_data = PackedByteArray("AAALAAYAFwADAAAAAAANAAAAFgAAAAAAAAAMAAAAFgAAAAA
 tile_set = ExtResource("1_510kx")
 
 [node name="Ground" type="TileMapLayer" parent="TileMapLayers/Sand"]
+material = SubResource("ShaderMaterial_u7gwd")
 position = Vector2(-28, 58)
 scale = Vector2(1.625, 1.625)
 tile_map_data = PackedByteArray("AAACAAEAFgAAAAAAAAACAAIAFgAAAAAAAAABAAIAFgAAAAAAAAABAAMAFgAFAAAAAAACAAQAFgAFAAAAAAABAAUAFgAFAAAAAAABAAYAFgAFAAAAAAADAAYAFgAFAAAAAAACAAUAFgAFAAAAAAACAAcAFgAFAAAAAAAIAAQAFgAJAAAAAAAJAAMAFgAJAAAAAAAIAAIAFgAJAAAAAAAJAAIAFgAJAAAAAAAHAAMAFgAFAAAAAAAIAAMAFgAFAAAAAAAHAAEAFgAFAAAAAAAJAAEAFgAFAAAAAAAIAAEAFgAFAAAAAAAIAAUAFgAFAAAAAAAJAAUAFgAFAAAAAAAHAAUAFgAFAAAAAAAJAAcAFgAFAAAAAAAHAAYAFgAFAAAAAAAIAAcAFgADAAYAAAAIAAYAFgADAAYAAAAHAAcAFgADAAYAAAAFAAIAEwAAAAMAADAFAAMAEwABAAMAAAAFAAUAEwACAAMAAAAEAAYAEwACAAMAAAAFAAcAEwACAAMAAAAFAAYAEwADAAIAAFAFAAgAEwADAAIAAFACAAMAFQAKAAYAAAAEAAIAFQAKAAYAAAA=")
