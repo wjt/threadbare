@@ -112,6 +112,33 @@ example, [CC0 1.0 Universal](../LICENSES/CC0-1.0) is okay, while
 International](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) is
 not.
 
+It is common for collections of free game assets to have licensing terms which
+allow the assets to be used in free or commercial games, but do not allow
+redistribution of the assets themselves. Unfortunately, assets under such
+licenses cannot be used in Threadbare, because including the assets in the
+(public) Threadbare Git repository constitutes redistribution. Some examples of
+such unsuitable license terms:
+
+- The [Pixabay Content License](https://pixabay.com/service/license-summary/),
+  which states:
+
+  > You cannot sell or distribute Content (either in digital or physical form)
+  > on a Standalone basis. Standalone means where no creative effort has been
+  > applied to the Content and it remains in substantially the same form as it
+  > exists on our website.
+
+- The current license for [Tiny
+  Swords](https://pixelfrog-assets.itch.io/tiny-swords), which states:
+
+  > You can share these assets as part of tutorials or educational content, as
+  > long as you provide a link to Tiny Swords project page. However, you may not
+  > redistribute, resell, or repackage the assets, even if the files are
+  > modified.
+
+  (The version of Tiny Swords included in `assets/third_party/tiny-swords` in
+  this repository is an older version which was published under the
+  [CC0-1.0](../LICENSES/CC0-1.0.txt) license.)
+
 Source code and assets added to the project should have their copyright owner
 and license described in machine-readable form following the
 [REUSE](https://reuse.software/) specification. For source code, include a
