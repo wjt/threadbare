@@ -1,16 +1,17 @@
-[gd_scene load_steps=17 format=4 uid="uid://bb1mgn8l00yo7"]
+[gd_scene load_steps=18 format=4 uid="uid://bb1mgn8l00yo7"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_510kx"]
 [ext_resource type="SpriteFrames" uid="uid://vwf8e1v8brdp" path="res://scenes/quests/story_quests/template/template_player_components/template_player.tres" id="3_ens4f"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_ug0ds"]
 [ext_resource type="Resource" uid="uid://cqjngitoc5yx7" path="res://scenes/quests/story_quests/template/0_template_intro/template_intro_components/template_intro.dialogue" id="5_13cgc"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="5_gilgp"]
-[ext_resource type="Texture2D" uid="uid://ceplpkp27hls8" path="res://scenes/quests/story_quests/shjourney/AssetsShJourney/rock_2.png" id="6_hv65c"]
-[ext_resource type="PackedScene" uid="uid://bmih4w66b6t36" path="res://scenes/quests/story_quests/shjourney/elfo_del_bosque_ojos_iluminados.tscn" id="6_iu8xy"]
+[ext_resource type="Texture2D" uid="uid://ceplpkp27hls8" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/rock_2.png" id="6_hv65c"]
+[ext_resource type="PackedScene" uid="uid://bmih4w66b6t36" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/Personajes/elfo_del_bosque_ojos_iluminados.tscn" id="6_iu8xy"]
 [ext_resource type="AudioStream" uid="uid://dggqjf1ectyqc" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/bosque-66633.mp3" id="8_24bgd"]
 [ext_resource type="Script" uid="uid://bwoen7e8503tp" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/audio_stream_player_2d.gd" id="9_jw5ur"]
 [ext_resource type="AudioStream" uid="uid://tjog7m8qdm7b" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/Project_1 (1).wav" id="10_khe72"]
 [ext_resource type="Script" uid="uid://hs14yse0u0uh" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/music.gd" id="11_ecyos"]
+[ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="12_6jtbm"]
 
 [sub_resource type="Animation" id="Animation_ld06i"]
 length = 5.0
@@ -213,16 +214,16 @@ position = Vector2(-35, -208)
 tile_map_data = PackedByteArray("AAAAAAMAEwAAAAAAAAAAAAQAEwAAAAAAAAAAAAUAEwAAAAAAAAAAAAYAEwAAAAAAAAAAAAcAEwAAAAAAAAABAAMAEwAAAAAAAAABAAQAEwAAAAAAAAABAAUAEwAAAAAAAAABAAYAEwAAAAAAAAABAAcAEwAAAAAAAAACAAMAEwAAAAAAAAACAAQAEwAAAAAAAAACAAUAEwAAAAAAAAACAAYAEwAAAAAAAAACAAcAEwAAAAAAAAADAAMAEwAAAAAAAAADAAQAEwAAAAAAAAADAAUAEwAAAAAAAAADAAYAEwAAAAAAAAADAAcAEwAAAAAAAAAEAAMAEwAAAAAAAAAEAAQAEwAAAAAAAAAEAAUAEwAAAAAAAAAEAAYAEwACAAEAAAAEAAcAEwAAAAAAAAAFAAMAEwACAAEAAAAFAAQAEwAAAAEAAAAFAAUAEwAAAAAAAAAFAAYAEwAAAAAAAAAFAAcAEwAAAAAAAAAGAAMAEwAAAAEAAAAGAAQAEwAAAAAAAAAGAAYAEwAAAAAAAAAGAAcAEwAAAAAAAAAHAAMAEwAAAAEAAAAHAAQAEwAAAAAAAAAHAAYAEwAAAAAAAAAHAAcAEwAAAAEAAAAIAAMAEwAAAAAAAAAIAAQAEwAAAAAAAAAIAAUAEwAAAAAAAAAIAAYAEwAAAAAAAAAIAAcAEwAAAAAAAAAJAAMAEwAAAAAAAAAJAAQAEwAAAAAAAAAJAAYAEwAAAAAAAAAJAAcAEwACAAEAAAAKAAMAEwAAAAAAAAAKAAQAEwAAAAAAAAAKAAUAEwAAAAAAAAAKAAYAEwAAAAAAAAAKAAcAEwAAAAAAAAALAAMAEwAAAAAAAAALAAQAEwAAAAAAAAALAAUAEwAAAAAAAAALAAYAEwAAAAAAAAALAAcAEwAAAAAAAAAMAAMAEwAAAAAAAAAMAAQAEwAAAAAAAAAMAAUAEwAAAAAAAAAMAAYAEwAAAAAAAAAMAAcAEwAAAAAAAAANAAMAEwAAAAAAAAANAAQAEwAAAAAAAAANAAYAEwAAAAAAAAANAAcAEwAAAAAAAAAHAAUAEwAAAAAAAAAJAAUAEwAAAAAAAAANAAUAEwAAAAAAAAAGAAUAEwACAAEAAAAAAAgAEwAAAAAAAAAAAAkAEwAAAAAAAAAAAAoAEwAAAAAAAAAAAAsAEwAAAAAAAAAAAAwAEwAAAAAAAAAAAA0AEwAAAAAAAAAAAA4AEwAAAAAAAAABAAgAEwAAAAAAAAABAAkAEwAAAAAAAAABAAoAEwAAAAAAAAABAAsAEwAAAAAAAAABAAwAEwAAAAAAAAABAA0AEwAAAAAAAAABAA4AEwACAAEAAAACAAgAEwAAAAAAAAACAAkAEwAAAAAAAAACAAoAEwAAAAAAAAACAAsAEwAAAAAAAAACAAwAEwAAAAAAAAACAA0AEwAAAAAAAAACAA4AEwAAAAAAAAADAAgAEwAAAAAAAAADAAkAEwAAAAAAAAADAAoAEwAAAAAAAAADAAsAEwAAAAAAAAADAAwAEwAAAAAAAAADAA0AEwAAAAAAAAADAA4AEwAAAAAAAAAEAAgAEwAAAAAAAAAEAAkAEwAAAAAAAAAEAAoAEwAAAAAAAAAEAAsAEwAAAAAAAAAEAAwAEwAAAAAAAAAEAA0AEwAAAAAAAAAEAA4AEwAAAAAAAAAFAAgAEwAAAAAAAAAFAAkAEwADAAAAAAAFAAoAEwAAAAAAAAAFAAsAEwAAAAAAAAAFAAwAEwAAAAAAAAAFAA0AEwAAAAAAAAAFAA4AEwACAAEAAAAGAAgAEwAAAAEAAAAGAAkAEwAAAAEAAAAGAAoAEwAAAAAAAAAGAAsAEwAAAAAAAAAGAAwAEwAAAAAAAAAGAA0AEwAAAAAAAAAGAA4AEwAAAAAAAAAHAAgAEwAAAAAAAAAHAAkAEwAAAAAAAAAHAAoAEwAAAAAAAAAHAAsAEwAAAAAAAAAHAAwAEwAAAAAAAAAHAA0AEwAAAAAAAAAHAA4AEwAAAAAAAAAIAAgAEwAAAAAAAAAIAAkAEwAAAAAAAAAIAAoAEwAAAAAAAAAIAAsAEwAAAAAAAAAIAAwAEwAAAAAAAAAIAA0AEwAAAAAAAAAIAA4AEwAAAAAAAAAJAAgAEwAAAAEAAAAJAAkAEwAAAAAAAAAJAAoAEwAAAAAAAAAJAAsAEwAAAAAAAAAJAAwAEwAAAAAAAAAJAA0AEwAAAAAAAAAJAA4AEwAAAAAAAAAKAAgAEwAAAAAAAAAKAAkAEwAAAAAAAAAKAAoAEwAAAAAAAAAKAAsAEwAAAAAAAAAKAAwAEwAAAAAAAAAKAA0AEwAAAAAAAAAKAA4AEwAAAAAAAAALAAgAEwAAAAAAAAALAAkAEwAAAAAAAAALAAoAEwAAAAAAAAALAAsAEwAAAAAAAAALAAwAEwAAAAAAAAALAA0AEwAAAAAAAAALAA4AEwAAAAAAAAAMAAgAEwAAAAAAAAAMAAkAEwAAAAAAAAAMAAoAEwAAAAAAAAAMAAsAEwAAAAAAAAAMAAwAEwADAAEAAAAMAA0AEwAAAAAAAAAMAA4AEwADAAEAAAANAAgAEwACAAEAAAANAAkAEwAAAAAAAAANAAoAEwAAAAAAAAANAAsAEwAAAAAAAAANAAwAEwAAAAAAAAANAA0AEwAAAAAAAAANAA4AEwAAAAAAAAAOAAMAEwAAAAAAAAAOAAQAEwAAAAAAAAAOAAUAEwAAAAAAAAAOAAYAEwAAAAAAAAAOAAcAEwAAAAAAAAAOAAgAEwAAAAAAAAAOAAkAEwAAAAAAAAAOAAoAEwAAAAAAAAAOAAsAEwAAAAAAAAAOAAwAEwAAAAAAAAAOAA0AEwAAAAAAAAAOAA4AEwAAAAAAAAAPAAMAEwAAAAAAAAAPAAQAEwAAAAAAAAAPAAUAEwAAAAAAAAAPAAYAEwAAAAAAAAAPAAcAEwAAAAAAAAAPAAgAEwAAAAAAAAAPAAkAEwAAAAAAAAAPAAoAEwAAAAAAAAAPAAsAEwAAAAAAAAAPAAwAEwAAAAAAAAAPAA0AEwAAAAAAAAAPAA4AEwAAAAAAAAAQAAMAEwAAAAAAAAAQAAQAEwAAAAAAAAAQAAUAEwAAAAAAAAAQAAYAEwAAAAAAAAAQAAcAEwAAAAAAAAAQAAgAEwAAAAAAAAAQAAkAEwAAAAAAAAAQAAoAEwAAAAAAAAAQAAsAEwADAAEAAAAQAAwAEwAAAAAAAAAQAA0AEwAAAAAAAAAQAA4AEwAAAAAAAAA=")
 tile_set = ExtResource("1_510kx")
 
-[node name="ElfoDelBosque" parent="TileMapLayers/Sand" instance=ExtResource("6_iu8xy")]
-position = Vector2(279, 612)
-scale = Vector2(1.82, 1.82)
-frame_progress = 0.0
-
 [node name="Ground2" type="TileMapLayer" parent="TileMapLayers/Sand"]
 position = Vector2(-1065, -221)
 scale = Vector2(1.865, 1.865)
 tile_map_data = PackedByteArray("AAALAAYAFwADAAAAAAA=")
 tile_set = ExtResource("1_510kx")
+
+[node name="ElfoDelBosque" parent="TileMapLayers/Sand" instance=ExtResource("6_iu8xy")]
+position = Vector2(279, 612)
+scale = Vector2(1.82, 1.82)
+frame_progress = 0.0
 
 [node name="Ground3" type="TileMapLayer" parent="TileMapLayers/Sand"]
 position = Vector2(-712, -380)
@@ -231,7 +232,7 @@ tile_map_data = PackedByteArray("AAALAAYAFwADAAAAAAAKAAQAEwAAAAEAAAAJAAQAEwAAAAE
 tile_set = ExtResource("1_510kx")
 
 [node name="Ground4" type="TileMapLayer" parent="TileMapLayers/Sand"]
-position = Vector2(-920, 31)
+position = Vector2(-884, 43)
 scale = Vector2(1.865, 1.865)
 tile_map_data = PackedByteArray("AAALAAYAFwADAAAAAAANAAAAFgAAAAAAAAAMAAAAFgAAAAAAAAALAAAAFgAAAAAAAAAKAAAAFgAAAAAAAAAKAAEAFgAAAAAAAAAMAAEAFgAAAAAAAAA=")
 tile_set = ExtResource("1_510kx")
@@ -306,3 +307,7 @@ script = ExtResource("9_jw5ur")
 [node name="Music" type="AudioStreamPlayer2D" parent="SoundEffects"]
 stream = ExtResource("10_khe72")
 script = ExtResource("11_ecyos")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("12_6jtbm")]
+scale = Vector2(3.7, 3.7)
+transform = Transform2D(3.7, 0, 0, 3.7, 0, 0)
