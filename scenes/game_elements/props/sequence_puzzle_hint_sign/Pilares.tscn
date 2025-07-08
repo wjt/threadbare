@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://be4o3ythda4cu"]
+[gd_scene load_steps=6 format=3 uid="uid://blxp5u22aralt"]
 
-[ext_resource type="Script" uid="uid://dsowa7f2l478a" path="res://scenes/game_elements/props/sequence_puzzle_hint_sign/components/sequence_puzzle_hint_sign.gd" id="1_4621y"]
-[ext_resource type="SpriteFrames" uid="uid://b5pj1pt7r6hdg" path="res://scenes/quests/story_quests/template/3_template_sequence_puzzle/template_sign.tres" id="2_1po6h"]
-[ext_resource type="PackedScene" uid="uid://dutgnbiy7xalb" path="res://scenes/game_elements/props/interact_area/interact_area.tscn" id="5_1po6h"]
+[ext_resource type="Script" uid="uid://dsowa7f2l478a" path="res://scenes/game_elements/props/sequence_puzzle_hint_sign/components/sequence_puzzle_hint_sign.gd" id="1_xhu4u"]
+[ext_resource type="SpriteFrames" uid="uid://b5pj1pt7r6hdg" path="res://scenes/quests/story_quests/template/3_template_sequence_puzzle/template_sign.tres" id="2_xtv4t"]
+[ext_resource type="PackedScene" uid="uid://dutgnbiy7xalb" path="res://scenes/game_elements/props/interact_area/interact_area.tscn" id="3_ksdcy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkb0b"]
 radius = 7.85715
@@ -10,20 +10,20 @@ radius = 7.85715
 [sub_resource type="CircleShape2D" id="CircleShape2D_gye5d"]
 radius = 34.3657
 
-[node name="SequencePuzzleHintSign" type="StaticBody2D"]
+[node name="Pilares" type="StaticBody2D"]
 texture_filter = 1
 collision_layer = 16
 collision_mask = 0
-script = ExtResource("1_4621y")
-sprite_frames = ExtResource("2_1po6h")
+script = ExtResource("1_xhu4u")
+sprite_frames = ExtResource("2_xtv4t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -57)
-sprite_frames = ExtResource("2_1po6h")
+sprite_frames = ExtResource("2_xtv4t")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.305804
+frame_progress = 0.243459
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
@@ -32,7 +32,7 @@ scale = Vector2(1.4, 1)
 shape = SubResource("CapsuleShape2D_qkb0b")
 debug_color = Color(0.994024, 0, 0.22864, 0.42)
 
-[node name="InteractArea" parent="." instance=ExtResource("5_1po6h")]
+[node name="InteractArea" parent="." instance=ExtResource("3_ksdcy")]
 unique_name_in_owner = true
 position = Vector2(-2, 1)
 collision_layer = 0
