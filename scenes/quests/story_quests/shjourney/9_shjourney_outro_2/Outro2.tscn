@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bbycgeap2ue87"]
+[gd_scene load_steps=26 format=4 uid="uid://bbycgeap2ue87"]
 
 [ext_resource type="TileSet" uid="uid://birttlb0sk74i" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/tilesetOutro.tres" id="1_th25k"]
 [ext_resource type="Texture2D" uid="uid://bolr7wf3qumf1" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/template_intro_components/assets_utilizables/Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/Buildings/Black Buildings/House2.png" id="2_cmmwh"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="6_jbv37"]
 [ext_resource type="Script" uid="uid://dqt03qd2chv6n" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/cinematic_siguiente.gd" id="8_pkup3"]
 [ext_resource type="PackedScene" uid="uid://b3lldk3lo2mwl" path="res://scenes/game_elements/characters/npcs/sequence_puzzle_assistant/sequence_puzzle_assistant.tscn" id="10_j0a3a"]
+[ext_resource type="Resource" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/Dialogos/frag3.dialogue" id="11_nvq2p"]
 [ext_resource type="SpriteFrames" uid="uid://8xxbcslwu8ti" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/template_combat_components/ArbolFanstasma.tres" id="12_f0pqt"]
 [ext_resource type="Script" uid="uid://3tn8210agfwf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/area_2d.gd" id="12_gpc53"]
 [ext_resource type="AudioStream" uid="uid://chqrto7gxyuwo" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/dark-ambient-drone-258069.mp3" id="13_cpr3a"]
@@ -66,18 +67,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [&"walk"]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Darkness/CanvasModulate:color")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_cpr3a"]
 resource_name = "Tim_position"
@@ -130,18 +119,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [&"walk", &"walk", &"idle"]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Darkness/CanvasModulate:color")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.57),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0.800491, 0.800491, 0.800491, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_nvq2p"]
 resource_name = "primer_paso"
@@ -169,18 +146,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [&"walk", &"walk"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Darkness/CanvasModulate:color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_xlhyx"]
@@ -300,7 +265,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(3987, 575), Vector2(4632, 410)]
+"values": [Vector2(3987, 575), Vector2(4480, 437)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -401,6 +366,10 @@ _data = {
 &"ultimito": SubResource("Animation_45rex"),
 &"ultimo_paso": SubResource("Animation_1my3k")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkb0b"]
+radius = 140.114
+
 
 [node name="Outro" type="Node2D"]
 
@@ -525,9 +494,15 @@ position = Vector2(4085, 584)
 collision_layer = 68
 script = ExtResource("12_gpc53")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(397, -113)
+scale = Vector2(0.863669, 1)
+shape = SubResource("CircleShape2D_gkb0b")
+
 [node name="ArbolFantasma3" parent="." instance=ExtResource("10_j0a3a")]
 position = Vector2(1379.3, 1333.2)
 npc_name = "frag3"
+dialogue = ExtResource("11_nvq2p")
 sprite_frames = ExtResource("12_f0pqt")
 
 [node name="CinematicOutro2" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]

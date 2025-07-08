@@ -229,12 +229,11 @@ sprite_frames = SubResource("SpriteFrames_ofykn")
 
 [node name="Ambiente" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("16_xfafg")
-parameters/looping = true
 
 [node name="Musica" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("16_xfafg")
 autoplay = true
-parameters/looping = true
+
 
 [node name="Cinematic_siguiente" type="Node2D" parent="."]
 position = Vector2(1666, 1249)

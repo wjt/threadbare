@@ -31,6 +31,4 @@ do animation_player.play(&"tercer_paso")
 do animation_player.animation_finished
 do animation_player.play(&"ultimo_paso")
 do animation_player.animation_finished
-do animation_player.play(&"ultimito")
-do animation_player.animation_finished
 => END
