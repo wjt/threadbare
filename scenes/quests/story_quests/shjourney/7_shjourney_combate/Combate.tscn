@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://d4bfnn5upde7h" path="res://scenes/game_elements/props/hint/input_key/input_key.gd" id="16_khbdt"]
 [ext_resource type="Theme" uid="uid://coxcra1002kil" path="res://scenes/ui_elements/shared_components/theme.tres" id="17_5kk5x"]
 
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_he37w"]
 atlas = ExtResource("10_l82d5")
 region = Rect2(0, 0, 64, 64)

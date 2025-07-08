@@ -234,6 +234,7 @@ stream = ExtResource("16_xfafg")
 stream = ExtResource("16_xfafg")
 autoplay = true
 
+
 [node name="Cinematic_siguiente" type="Node2D" parent="."]
 position = Vector2(1666, 1249)
 scale = Vector2(0.895305, 0.975211)

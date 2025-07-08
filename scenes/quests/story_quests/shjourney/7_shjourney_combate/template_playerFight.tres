@@ -197,6 +197,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cu6lk")
+
 }],
 "loop": true,
 "name": &"defeated",
@@ -204,6 +205,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+
 "texture": SubResource("AtlasTexture_uo00m")
 }, {
 "duration": 1.0,
@@ -235,6 +237,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d3ug0")
+
 }],
 "loop": true,
 "name": &"idle",
@@ -242,6 +245,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+
 "texture": SubResource("AtlasTexture_dnk7a")
 }, {
 "duration": 1.0,
@@ -267,6 +271,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hxv85")
+
 }],
 "loop": true,
 "name": &"sprint",
@@ -274,6 +279,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+
 "texture": SubResource("AtlasTexture_qc4lu")
 }, {
 "duration": 1.0,
@@ -299,6 +305,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xsfi4")
+
 }],
 "loop": true,
 "name": &"walk",

@@ -346,6 +346,7 @@ tile_set = ExtResource("5_oectw")
 
 [node name="Player" parent="." instance=ExtResource("10_tm8dh")]
 position = Vector2(324, 111)
+player_name = "Tim"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_mode = 3
