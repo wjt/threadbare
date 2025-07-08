@@ -484,6 +484,7 @@ _data = {
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 531
 script = ExtResource("1_g2els")
+player_name = "Player Name"
 
 [node name="PlayerDustParticles" type="GPUParticles2D" parent="."]
 unique_name_in_owner = true
@@ -500,11 +501,9 @@ script = ExtResource("3_j0tly")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-
 texture_filter = 1
 position = Vector2(0, -25.97)
 scale = Vector2(1.34, 1.34)
-
 sprite_frames = ExtResource("2_blfj0")
 animation = &"idle"
 autoplay = "attack_01"
