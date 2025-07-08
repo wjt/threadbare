@@ -1,51 +1,33 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://ddbdbf11v4jo7"]
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://35xdxgrhgpk"]
 
-[ext_resource type="Texture2D" uid="uid://r4u1t4ej41s" path="res://scenes/quests/story_quests/template/3_template_sequence_puzzle/template_sign.png" id="1_00lb6"]
+[ext_resource type="Texture2D" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_Pillar.png" id="1_hfevf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kbib7"]
-atlas = ExtResource("1_00lb6")
-region = Rect2(128, 0, 128, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_khjk1"]
+atlas = ExtResource("1_hfevf")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gye5d"]
-atlas = ExtResource("1_00lb6")
-region = Rect2(0, 0, 128, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypy12"]
+atlas = ExtResource("1_hfevf")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p0tgm"]
-atlas = ExtResource("1_00lb6")
-region = Rect2(256, 0, 128, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j7cdm"]
-atlas = ExtResource("1_00lb6")
-region = Rect2(384, 0, 128, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ksfh"]
-atlas = ExtResource("1_00lb6")
-region = Rect2(512, 0, 128, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j0g8y"]
-atlas = ExtResource("1_00lb6")
-region = Rect2(640, 0, 128, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x47q"]
+atlas = ExtResource("1_hfevf")
+region = Rect2(0, 128, 128, 128)
 
 [resource]
 animations = [{
 "frames": [{
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_kbib7")
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khjk1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gye5d")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_p0tgm")
+"texture": SubResource("AtlasTexture_ypy12")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gye5d")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_j7cdm")
+"texture": SubResource("AtlasTexture_khjk1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gye5d")
+"texture": SubResource("AtlasTexture_ypy12")
 }],
 "loop": false,
 "name": &"hint",
@@ -53,7 +35,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gye5d")
+"texture": SubResource("AtlasTexture_ypy12")
 }],
 "loop": true,
 "name": &"idle",
@@ -61,10 +43,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6ksfh")
+"texture": SubResource("AtlasTexture_ypy12")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j0g8y")
+"texture": SubResource("AtlasTexture_5x47q")
 }],
 "loop": true,
 "name": &"solved",
