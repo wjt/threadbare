@@ -1,51 +1,16 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cpm5o35ede3qs"]
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://cpm5o35ede3qs"]
 
-[ext_resource type="Texture2D" uid="uid://caiam8drw20rr" path="res://assets/third_party/tiny-swords/Factions/Knights/Troops/Pawn/Purple/Pawn_Purple.png" id="1_ikcmy"]
+[ext_resource type="Texture2D" uid="uid://oh5m43w30wku" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/template_combat_components/arbol_ojos.png" id="1_r3eoe"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c5afb"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qbsk"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h3aan"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1kcob"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iq4va"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v3p35"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(960, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpyxp"]
+atlas = ExtResource("1_r3eoe")
+region = Rect2(0, 0, 149, 163)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c5afb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8qbsk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h3aan")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1kcob")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iq4va")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v3p35")
+"texture": SubResource("AtlasTexture_xpyxp")
 }],
 "loop": true,
 "name": &"idle",
