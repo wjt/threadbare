@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=43 format=3 uid="uid://blbgeo0jjttf4"]
+[gd_resource type="SpriteFrames" load_steps=45 format=3 uid="uid://blbgeo0jjttf4"]
 
 [ext_resource type="Texture2D" uid="uid://dutkjmhauvcxl" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/Personajes/PJ_attack.png" id="1_5nfxk"]
 [ext_resource type="Texture2D" uid="uid://dp2c5hcg44j3d" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/TimDefeated.png" id="2_iyy01"]
@@ -38,6 +38,14 @@ atlas = ExtResource("2_iyy01")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxjee"]
+atlas = ExtResource("2_iyy01")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yeg6"]
+atlas = ExtResource("2_iyy01")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mfkg"]
 atlas = ExtResource("2_iyy01")
 region = Rect2(64, 0, 64, 64)
 
@@ -191,6 +199,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oxjee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yeg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mfkg")
 }],
 "loop": true,
 "name": &"defeated",
