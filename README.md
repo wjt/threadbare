@@ -22,6 +22,13 @@ to hear from you.
 
 (We hope to add translations for the game itself in the medium term.)
 
+## Getting the Source Code
+
+Threadbare uses Git Large File Storage (LFS) to store large assets, such as
+music and artwork. You must [install and configure Git
+LFS](https://github.com/endlessm/threadbare/discussions/772) before you clone
+the Threadbare repository.
+
 ## License
 
 Threadbare's original source code in Threadbare itself is covered by [Mozilla
