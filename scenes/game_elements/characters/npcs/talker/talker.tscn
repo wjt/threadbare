@@ -36,4 +36,4 @@ interact_label_position = Vector2(0, -100)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2(0, -29)
 shape = SubResource("RectangleShape2D_3eksq")
-debug_color = Color(0.591123, 0.547358, 0, 0.42)
+debug_color = Color(0.600391, 0.54335, 0, 0.42)

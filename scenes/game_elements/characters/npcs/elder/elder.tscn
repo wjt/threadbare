@@ -42,7 +42,7 @@ script = ExtResource("4_81yrg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2(7.5, -40)
 shape = SubResource("RectangleShape2D_3eksq")
-debug_color = Color(0.591123, 0.547358, 0, 0.42)
+debug_color = Color(0.600391, 0.54335, 0, 0.42)
 
 [node name="Sounds" type="Node2D" parent="."]
 
