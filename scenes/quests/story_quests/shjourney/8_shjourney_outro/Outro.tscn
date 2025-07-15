@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://b4dotq384vljq"]
+[gd_scene load_steps=35 format=4 uid="uid://b4dotq384vljq"]
 
 [ext_resource type="TileSet" uid="uid://birttlb0sk74i" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/tilesetOutro.tres" id="1_0jcvd"]
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_0ue6j"]
@@ -22,6 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://shhqt44ngtx7" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/template_combat_components/mysterious-dark-background-310162.mp3" id="16_xfafg"]
 [ext_resource type="Script" uid="uid://s4feuaik0rq7" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/sequence_puzzle_assistant3.gd" id="17_kdw2l"]
 [ext_resource type="Resource" uid="uid://bxxikn23qbirm" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/Dialogos/frag3.dialogue" id="18_h42gs"]
+[ext_resource type="Script" uid="uid://blds02f7sdck1" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/Music/music.gd" id="20_h42gs"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="21_2i2nx"]
 [ext_resource type="Theme" uid="uid://coxcra1002kil" path="res://scenes/ui_elements/shared_components/theme.tres" id="23_a1kpq"]
 [ext_resource type="Texture2D" uid="uid://p8kty3uxifxu" path="res://assets/third_party/inputs/keyboard-and-mouse/Dark/Space_Key_Dark.png" id="24_gs4mb"]
@@ -229,11 +230,14 @@ sprite_frames = SubResource("SpriteFrames_ofykn")
 
 [node name="Ambiente" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("16_xfafg")
+parameters/looping = true
+script = ExtResource("20_h42gs")
 
 [node name="Musica" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("16_xfafg")
 autoplay = true
-
+parameters/looping = true
+script = ExtResource("20_h42gs")
 
 [node name="Cinematic_siguiente" type="Node2D" parent="."]
 position = Vector2(1666, 1249)

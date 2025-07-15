@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://b2e7wpdr7ebsp"]
+[gd_scene load_steps=37 format=4 uid="uid://b2e7wpdr7ebsp"]
 
 [ext_resource type="TileSet" uid="uid://c0bgp226varsk" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/tilesetMinijuego02.tres" id="1_3wc2e"]
 [ext_resource type="PackedScene" uid="uid://bkm7k4cqs6bbe" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Dragon.tscn" id="2_0x02o"]
@@ -34,6 +34,7 @@
 [ext_resource type="Resource" uid="uid://m3wugmcg8r6m" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_sequence_puzzle.dialogue" id="32_1fi4m"]
 [ext_resource type="AudioStream" uid="uid://dj1lv23nhs3gg" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_dungeon.mp3" id="33_1fi4m"]
 [ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="34_6073y"]
+[ext_resource type="Script" uid="uid://blds02f7sdck1" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/Music/music.gd" id="34_at0ry"]
 
 [sub_resource type="Resource" id="Resource_u8qfb"]
 script = ExtResource("15_daurq")
@@ -78,6 +79,7 @@ position = Vector2(773, 178)
 scale = Vector2(4.5, 4.5)
 
 [node name="Guardian" parent="TileMapLayers" instance=ExtResource("27_m0770")]
+z_index = 5
 position = Vector2(130, 456)
 dialogue = ExtResource("28_vpkld")
 look_at_side = 0
@@ -347,9 +349,10 @@ position = Vector2(132, 262)
 [node name="Musica" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("33_1fi4m")
 autoplay = true
+script = ExtResource("34_at0ry")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("34_6073y")]
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+scale = Vector2(3.7, 3.7)
+transform = Transform2D(3.7, 0, 0, 3.7, 0, 0)
 
 [connection signal="solved" from="OnTheGround/SequencePuzzle" to="OnTheGround/CollectibleItem" method="reveal"]

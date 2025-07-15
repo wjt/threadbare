@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=166 format=3 uid="uid://d30304ne3bph"]
+[gd_resource type="TileSet" load_steps=168 format=3 uid="uid://d30304ne3bph"]
 
 [ext_resource type="Texture2D" uid="uid://ceurnwf2yotow" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/Trees & Bushes/Bushes/Bush_16.png" id="1_56om7"]
 [ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="2_jmclm"]
@@ -69,6 +69,7 @@
 [ext_resource type="Texture2D" uid="uid://pp7ygedp7c4i" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/mapa3/mesapiedra1.png" id="64_ohwj8"]
 [ext_resource type="Texture2D" uid="uid://uhvq2472wxks" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/mapa3/alfombra1.png" id="65_va04e"]
 [ext_resource type="Texture2D" uid="uid://d3ym5s26iyfm1" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/mapa3/estatuaangel3.png" id="66_2jjvc"]
+[ext_resource type="Texture2D" uid="uid://ddp2xwtx7p8te" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Freedecorations.png" id="66_mtkdc"]
 [ext_resource type="Texture2D" uid="uid://ck6rhhyxj2ptw" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/mapa3/angel4.png" id="68_va04e"]
 [ext_resource type="Texture2D" uid="uid://b6xii0nqybhb1" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/mapa3/escombros1.png" id="69_mtkdc"]
 [ext_resource type="Texture2D" uid="uid://ddw0q0csw7iy1" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/mapa3/escombros5.png" id="70_yxleh"]
@@ -1905,6 +1906,14 @@ texture_region_size = Vector2i(64, 64)
 1:5/0 = 0
 2:5/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uixkx"]
+texture = ExtResource("66_mtkdc")
+texture_region_size = Vector2i(32, 32)
+1:0/0 = 0
+1:1/0 = 0
+3:0/size_in_atlas = Vector2i(1, 3)
+3:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mtkdc"]
 texture = ExtResource("66_2jjvc")
 texture_region_size = Vector2i(64, 64)
@@ -2372,6 +2381,7 @@ sources/70 = SubResource("TileSetAtlasSource_jgb42")
 sources/71 = SubResource("TileSetAtlasSource_vjuya")
 sources/72 = SubResource("TileSetAtlasSource_6moj5")
 sources/73 = SubResource("TileSetAtlasSource_kse23")
+sources/68 = SubResource("TileSetAtlasSource_uixkx")
 pattern_0 = SubResource("TileMapPattern_0wfyh")
 pattern_1 = SubResource("TileMapPattern_sugp2")
 pattern_2 = SubResource("TileMapPattern_jyhfs")
