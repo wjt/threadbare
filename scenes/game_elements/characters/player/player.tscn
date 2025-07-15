@@ -484,7 +484,6 @@ _data = {
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 531
 script = ExtResource("1_g2els")
-player_name = "Player Name"
 
 [node name="PlayerDustParticles" type="GPUParticles2D" parent="."]
 unique_name_in_owner = true

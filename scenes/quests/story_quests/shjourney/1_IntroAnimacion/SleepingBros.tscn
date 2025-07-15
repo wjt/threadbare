@@ -1,12 +1,16 @@
-[gd_scene load_steps=109 format=3 uid="uid://b8sewsfnsdw4u"]
+[gd_scene load_steps=113 format=3 uid="uid://b8sewsfnsdw4u"]
 
-[ext_resource type="Texture2D" uid="uid://dbsjs5bpkvckp" path="res://scenes/quests/story_quests/shjourney/1_IntroAnimacion/tim y su hermana durmiendo-Sheet.png" id="1_5qws3"]
+[ext_resource type="Texture2D" uid="uid://dbsjs5bpkvckp" path="res://scenes/quests/story_quests/shjourney/1_IntroAnimacion/timysuhermanadurmiendo-Sheet.png" id="1_5qws3"]
+[ext_resource type="Script" uid="uid://d013y37215by1" path="res://scenes/quests/story_quests/shjourney/1_IntroAnimacion/saltar_escena.gd" id="2_f6rwu"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="2_shlmy"]
 [ext_resource type="AudioStream" uid="uid://dlgyoxuwm5cgw" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/slow-cinematic-clock-ticking-357979.mp3" id="3_5qskq"]
 [ext_resource type="AudioStream" uid="uid://bay2wj6mqr0kc" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/foot-switch-166326.mp3" id="3_fcqpt"]
 [ext_resource type="AudioStream" uid="uid://dtk1p0fhfhrp2" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/surprise-scared-girl-gasp-149490.mp3" id="3_n5boy"]
 [ext_resource type="AudioStream" uid="uid://cds2aynqmovst" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/atmospheric-metallic-swipe-17-196791.mp3" id="4_0y5ta"]
-[ext_resource type="Script" uid="uid://c4kul7suvbojc" path="res://scenes/ui_elements/cinematic/cinematicSprite.gd" id="5_5qskq"]
+[ext_resource type="Script" uid="uid://dgfhfulwcprar" path="res://scenes/quests/story_quests/shjourney/1_IntroAnimacion/cinematicSprite.gd" id="8_f6rwu"]
+[ext_resource type="Texture2D" uid="uid://p8kty3uxifxu" path="res://assets/third_party/inputs/keyboard-and-mouse/Dark/Space_Key_Dark.png" id="9_u1rls"]
+[ext_resource type="Script" uid="uid://d4bfnn5upde7h" path="res://scenes/game_elements/props/hint/input_key/input_key.gd" id="10_rrck4"]
+[ext_resource type="Theme" uid="uid://coxcra1002kil" path="res://scenes/ui_elements/shared_components/theme.tres" id="11_su3c6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_shlmy"]
 atlas = ExtResource("1_5qws3")
@@ -836,6 +840,7 @@ position = Vector2(950.045, 536)
 scale = Vector2(13.115, 13.115)
 sprite_frames = SubResource("SpriteFrames_tsa12")
 autoplay = "default"
+script = ExtResource("2_f6rwu")
 
 [node name="Camera2D" type="Camera2D" parent="Sleeping"]
 zoom = Vector2(1.115, 1.035)
@@ -876,6 +881,37 @@ volume_db = -25.608
 stream = ExtResource("3_n5boy")
 
 [node name="CinematicSprite" type="Node2D" parent="."]
-script = ExtResource("5_5qskq")
+script = ExtResource("8_f6rwu")
 next_scene = "uid://bb1mgn8l00yo7"
 metadata/_custom_type_script = "uid://c4kul7suvbojc"
+
+[node name="ScreenOverlay" type="CanvasLayer" parent="."]
+
+[node name="InputHint" type="Control" parent="ScreenOverlay"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenOverlay/InputHint"]
+layout_mode = 0
+offset_left = 78.5
+offset_top = -110.0
+offset_right = 340.5
+offset_bottom = -10.0
+
+[node name="InteractInput" type="TextureRect" parent="ScreenOverlay/InputHint/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_u1rls")
+script = ExtResource("10_rrck4")
+action_name = &"ui_accept"
+
+[node name="Label" type="Label" parent="ScreenOverlay/InputHint/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("11_su3c6")
+theme_type_variation = &"HintLabel"
+text = "Saltar cinemática."

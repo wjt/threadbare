@@ -92,7 +92,6 @@ region = Rect2(0, 128, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-
 "texture": SubResource("AtlasTexture_ycgkp")
 }, {
 "duration": 1.0,
@@ -112,7 +111,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lnjoo")
-
 }],
 "loop": true,
 "name": &"alerted",
@@ -120,7 +118,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-
 "texture": SubResource("AtlasTexture_pr7mv")
 }, {
 "duration": 1.0,
@@ -140,7 +137,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pip3m")
-
 }],
 "loop": true,
 "name": &"idle",
@@ -148,7 +144,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-
 "texture": SubResource("AtlasTexture_fsex2")
 }, {
 "duration": 1.0,
@@ -168,7 +163,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yj432")
-
 }],
 "loop": true,
 "name": &"walk",

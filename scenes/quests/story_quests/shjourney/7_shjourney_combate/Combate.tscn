@@ -1,15 +1,17 @@
-[gd_scene load_steps=27 format=4 uid="uid://detarlsgchyx3"]
+[gd_scene load_steps=31 format=4 uid="uid://detarlsgchyx3"]
 
-[ext_resource type="Script" uid="uid://26ek2v5te65d" path="res://scenes/game_logic/fill_game_logic2.gd" id="1_ymgo3"]
+[ext_resource type="Script" uid="uid://26ek2v5te65d" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/fill_game_logic2.gd" id="1_ymgo3"]
 [ext_resource type="TileSet" uid="uid://cff3wffsnp02" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/tilesetMinijuego03.tres" id="2_l82d5"]
 [ext_resource type="Resource" uid="uid://dnhietnxc72ks" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/template_combat_components/CombateDialogo.dialogue" id="2_ymgo3"]
 [ext_resource type="SpriteFrames" uid="uid://blbgeo0jjttf4" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/template_playerFight.tres" id="4_l82d5"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="4_w4e0j"]
+[ext_resource type="Shader" uid="uid://bvb4l5wskqwhf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/intro0.2.gdshader" id="4_ydosg"]
 [ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="5_xtx35"]
 [ext_resource type="SpriteFrames" uid="uid://b10pyg6sbsut8" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/template_combat_components/template_projectile_spriteframes.tres" id="6_api73"]
 [ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="6_t000m"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_0st60"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_14l1t"]
+[ext_resource type="Script" uid="uid://bevtvy586jxuf" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/DemonioSupay/throwing_enemy/components/Supay_Throwing.gd" id="9_lpt11"]
 [ext_resource type="Texture2D" uid="uid://wftkywqu7g0k" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/heart_pixelart_64x64_clean_transparent-Sheet.png" id="10_l82d5"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="10_ol34f"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="11_inexp"]
@@ -17,7 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://p8kty3uxifxu" path="res://assets/third_party/inputs/keyboard-and-mouse/Dark/Space_Key_Dark.png" id="15_l82d5"]
 [ext_resource type="Script" uid="uid://d4bfnn5upde7h" path="res://scenes/game_elements/props/hint/input_key/input_key.gd" id="16_khbdt"]
 [ext_resource type="Theme" uid="uid://coxcra1002kil" path="res://scenes/ui_elements/shared_components/theme.tres" id="17_5kk5x"]
+[ext_resource type="Script" uid="uid://cm5hbvvpkiw7u" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/Music/music.gd" id="19_jqvha"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jqvha"]
+shader = ExtResource("4_ydosg")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_he37w"]
 atlas = ExtResource("10_l82d5")
@@ -85,13 +90,6 @@ metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 [node name="Combat" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(584, 32)
-zoom = Vector2(1.5, 1.5)
-limit_top = -256
-limit_bottom = 640
-position_smoothing_enabled = true
-
 [node name="FillGameLogic2" type="Node" parent="."]
 script = ExtResource("1_ymgo3")
 intro_dialogue = ExtResource("2_ymgo3")
@@ -104,6 +102,7 @@ tile_map_data = PackedByteArray("AAABAPv/KAACAAEAAAAAAPv/KAACAAEAAAABAPz/KAACAAE
 tile_set = ExtResource("2_l82d5")
 
 [node name="arboles" type="TileMapLayer" parent="TileMapLayers"]
+material = SubResource("ShaderMaterial_jqvha")
 position = Vector2(-192, 120)
 scale = Vector2(1.64, 1.64)
 tile_map_data = PackedByteArray("AAABAPz/KgAAAAAAAAAIAPz/KgAAAAAAAAANAPz/KgAAAAAAAAAKAPv/KgAAAAAAAAAKAPz/KgAAAAAAAAAHAPz/KgAAAAAAAAADAPz/KgAAAAAAAAAFAPz/KgAAAAAAAAACAPv/KgAAAAAAAAAGAPv/KgAAAAAAAAAJAPz/KgAAAAAAAAAMAPv/KgAAAAAAAAALAPz/KgAAAAAAAAAIAPv/KgAAAAAAAAAHAPv/KgAAAAAAAAAEAPv/KgAAAAAAAAA=")
@@ -138,16 +137,28 @@ position = Vector2(98, 103)
 scale = Vector2(1.31, 1.31)
 sprite_frames = ExtResource("4_l82d5")
 
-[node name="Node2D3" parent="OnTheGround/Player" instance=ExtResource("11_inexp")]
-modulate = Color(0.0591394, 0.129739, 1, 0.603922)
-self_modulate = Color(0.617401, 0.453089, 0.64528, 1)
-position = Vector2(2.29008, -17.5572)
-scale = Vector2(4.29389, 4.29389)
+[node name="Camera2D2" type="Camera2D" parent="OnTheGround/Player"]
+position = Vector2(370.992, -54.1985)
+scale = Vector2(0.763359, 0.763359)
+zoom = Vector2(1.5, 1.5)
+limit_left = -100
+limit_top = -328
+limit_right = 1224
+limit_bottom = 392
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Node2D" parent="OnTheGround/Player" instance=ExtResource("11_inexp")]
+modulate = Color(0, 0.0901961, 1, 1)
+self_modulate = Color(0, 0, 0.701961, 1)
+position = Vector2(5, -25)
+scale = Vector2(5.625, 5.625)
 
 [node name="ThrowingNPC3" parent="OnTheGround" instance=ExtResource("5_xtx35")]
 texture_filter = 1
 position = Vector2(925, 48)
 scale = Vector2(1.085, 1.085)
+script = ExtResource("9_lpt11")
 throwing_period = 3.5
 projectile_speed = 50.0
 projectile_sprite_frames = ExtResource("6_api73")
@@ -222,7 +233,7 @@ color = Color(0, 0, 0, 1)
 color = Color(0.43479, 0.194236, 0.271325, 1)
 
 [node name="Node2D" parent="Oscurecer" instance=ExtResource("11_inexp")]
-position = Vector2(349, -223)
+position = Vector2(352, -225)
 scale = Vector2(5.625, 5.625)
 
 [node name="Node2D2" parent="Oscurecer" instance=ExtResource("11_inexp")]
@@ -235,5 +246,7 @@ scale = Vector2(5.625, 5.625)
 stream = ExtResource("12_api73")
 volume_db = -6.275
 autoplay = true
+parameters/looping = true
+script = ExtResource("19_jqvha")
 
 [connection signal="goal_reached" from="FillGameLogic2" to="OnTheGround/CollectibleItem" method="reveal"]
