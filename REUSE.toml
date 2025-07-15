@@ -33,6 +33,11 @@ SPDX-FileCopyrightText = "2022-present Nathan Hoad and Dialogue Manager contribu
 SPDX-License-Identifier = "MIT"
 
 [[annotations]]
+path = "addons/git_describe/**"
+SPDX-FileCopyrightText = "Joseph Michael Ware (zibetnu)"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
 path = "assets/third_party/xylophone-sampler-pack/*.ogg"
 SPDX-FileCopyrightText = "2013 juancamiloorjuela"
 SPDX-License-Identifier = "CC0-1.0"

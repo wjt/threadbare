@@ -26,5 +26,6 @@ repos:
     exclude: script_templates/
 exclude: |
   (?x)^(
-    addons/dialogue_manager/(.*)
+    addons/dialogue_manager/(.*)|
+    addons/git_describe/(.*)
   )$
