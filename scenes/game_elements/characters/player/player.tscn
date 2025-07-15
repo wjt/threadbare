@@ -471,6 +471,7 @@ character = NodePath("../..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerInteraction/InteractZone"]
 position = Vector2(47, -30)
 shape = SubResource("RectangleShape2D_blfj0")
+debug_color = Color(0.600391, 0.54335, 0, 0.42)
 
 [node name="InteractMarker" type="Marker2D" parent="PlayerInteraction"]
 unique_name_in_owner = true
