@@ -5,6 +5,7 @@ extends AnimationPlayer
 const REPEL_ANTICIPATION_TIME: float = 0.3
 
 @onready var player: Player = owner
+@onready var player_sprite: AnimatedSprite2D = %PlayerSprite
 @onready var player_fighting: Node2D = %PlayerFighting
 @onready var original_speed_scale: float = speed_scale
 
@@ -24,6 +25,12 @@ func _process(_delta: float) -> void:
 	speed_scale = original_speed_scale * (2.0 if double_speed else 1.0)
 
 
+func _get_repel_animation() -> StringName:
+	if not player_sprite.sprite_frames.has_animation(&"attack_02"):
+		return &"repel_deprecated"
+	return &"repel"
+
+
 func _process_walk_idle(_delta: float) -> void:
 	if player.velocity.is_zero_approx():
 		play(&"idle")
@@ -32,19 +39,20 @@ func _process_walk_idle(_delta: float) -> void:
 
 
 func _process_fighting(delta: float) -> void:
+	var repel: StringName = _get_repel_animation()
 	if not player_fighting.is_fighting:
 		# If the current animation is repel and it has passed the anticipation
 		# phase, it plays until the end.
 		if not (
-			current_animation == &"repel" and current_animation_position > REPEL_ANTICIPATION_TIME
+			current_animation == repel and current_animation_position > REPEL_ANTICIPATION_TIME
 		):
 			_process_walk_idle(delta)
 		return
 
-	if current_animation != &"repel":
+	if current_animation != repel:
 		# Fighting animation is being played for the first time. So skip the anticipation and go
 		# directly to the action.
-		play(&"repel")
+		play(repel)
 		seek(REPEL_ANTICIPATION_TIME, false, false)
 
 
