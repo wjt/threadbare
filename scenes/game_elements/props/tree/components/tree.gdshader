@@ -12,8 +12,8 @@ uniform float animation_frames : hint_range(1.0, 10.0, 1.0) = 6.0;
 varying vec2 world_pos;
 
 void vertex() {
-   // Transform it into world coordinates
-   world_pos = (MODEL_MATRIX * vec4(1.0, 1.0, 0.0, 1.0)).xy;
+	// Transform it into world coordinates
+	world_pos = (MODEL_MATRIX * vec4(1.0, 1.0, 0.0, 1.0)).xy;
 }
 
 void fragment() {
