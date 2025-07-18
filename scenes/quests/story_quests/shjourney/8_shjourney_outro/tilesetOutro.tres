@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=81 format=3 uid="uid://birttlb0sk74i"]
+[gd_resource type="TileSet" load_steps=80 format=3 uid="uid://birttlb0sk74i"]
 
 [ext_resource type="Texture2D" uid="uid://doc4qg7e3kgs" path="res://assets/third_party/tiny-swords/Terrain/Water/Water.png" id="1_oyjxv"]
 [ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="2_i8bqj"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://ddp2xwtx7p8te" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Freedecorations.png" id="16_vaxxn"]
 [ext_resource type="Texture2D" uid="uid://bwycwmhn0d3oe" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/estructuras(decoracion)/puertagrande1.png" id="17_uvq5o"]
 [ext_resource type="Texture2D" uid="uid://d0yyk0dikkltr" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/estructuras(decoracion)/puertagrande2.png" id="18_wptox"]
-[ext_resource type="Texture2D" uid="uid://cv4rwmf2hiv84" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/template_intro_components/assets_utilizables/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset/Tiled_files/Doors_windows_animation.png" id="19_uoph7"]
 [ext_resource type="Texture2D" uid="uid://c0k3tk7neh2c0" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/bloquelaberinto2.png" id="20_yjqkn"]
 [ext_resource type="Texture2D" uid="uid://cnmmh3uq7rkla" path="res://assets/third_party/tiny-swords/Terrain/Bridge/Bridge_All.png" id="21_3s4vp"]
 [ext_resource type="Texture2D" uid="uid://dkqm7p88upvap" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/bloquedemadera.png" id="22_sth7t"]
@@ -940,7 +939,6 @@ texture_region_size = Vector2i(64, 64)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3bju"]
-texture = ExtResource("19_uoph7")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0

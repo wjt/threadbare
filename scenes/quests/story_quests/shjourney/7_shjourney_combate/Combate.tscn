@@ -248,5 +248,3 @@ volume_db = -6.275
 autoplay = true
 parameters/looping = true
 script = ExtResource("19_jqvha")
-
-[connection signal="goal_reached" from="FillGameLogic2" to="OnTheGround/CollectibleItem" method="reveal"]

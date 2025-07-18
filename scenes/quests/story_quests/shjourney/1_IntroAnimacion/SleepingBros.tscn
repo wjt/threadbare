@@ -883,7 +883,6 @@ stream = ExtResource("3_n5boy")
 [node name="CinematicSprite" type="Node2D" parent="."]
 script = ExtResource("8_f6rwu")
 next_scene = "uid://bb1mgn8l00yo7"
-metadata/_custom_type_script = "uid://c4kul7suvbojc"
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
