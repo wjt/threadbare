@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cge1dbtk1p6ma"
-path="res://.godot/imported/magenmader1.png-8b59c2003965148d0d3d3ace2bb73481.ctex"
+uid="uid://46jkpd7hjxbp"
+path="res://.godot/imported/64502.png-c4cb8c18caa8c89e421c5cf82def98e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/magenmader1.png"
-dest_files=["res://.godot/imported/magenmader1.png-8b59c2003965148d0d3d3ace2bb73481.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/64502.png"
+dest_files=["res://.godot/imported/64502.png-c4cb8c18caa8c89e421c5cf82def98e8.ctex"]
 
 [params]
 

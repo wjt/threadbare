@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnablicm83kp5"
-path="res://.godot/imported/cesped2.png-396bf9183c4231e55776e3e23d776a95.ctex"
+uid="uid://cmcg2hej7gyw3"
+path="res://.godot/imported/AnimationSheet_Character.png-409a8fc8042205386f92acd7495605a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/cesped2.png"
-dest_files=["res://.godot/imported/cesped2.png-396bf9183c4231e55776e3e23d776a95.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/AnimationSheet_Character.png"
+dest_files=["res://.godot/imported/AnimationSheet_Character.png-409a8fc8042205386f92acd7495605a1.ctex"]
 
 [params]
 

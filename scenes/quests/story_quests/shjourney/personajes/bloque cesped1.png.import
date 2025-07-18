@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6oxk6aqe7t5i"
-path="res://.godot/imported/demonioboss1.png-afb1d387774dbe08bafcf51fba1bb07c.ctex"
+uid="uid://c0s56n45hral8"
+path="res://.godot/imported/bloque cesped1.png-8f96d6c4123042b596ac928d40beaf51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/demonioboss1.png"
-dest_files=["res://.godot/imported/demonioboss1.png-afb1d387774dbe08bafcf51fba1bb07c.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/bloque cesped1.png"
+dest_files=["res://.godot/imported/bloque cesped1.png-8f96d6c4123042b596ac928d40beaf51.ctex"]
 
 [params]
 

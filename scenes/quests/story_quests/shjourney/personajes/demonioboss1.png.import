@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmcg2hej7gyw3"
-path="res://.godot/imported/AnimationSheet_Character.png-abf8f72d3dc9bc95fbc5c119e0eb2794.ctex"
+uid="uid://6oxk6aqe7t5i"
+path="res://.godot/imported/demonioboss1.png-09bfefdca484c4004051a0cd80670fd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/AnimationSheet_Character.png"
-dest_files=["res://.godot/imported/AnimationSheet_Character.png-abf8f72d3dc9bc95fbc5c119e0eb2794.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/demonioboss1.png"
+dest_files=["res://.godot/imported/demonioboss1.png-09bfefdca484c4004051a0cd80670fd9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://difvf86lqb4qq"
-path="res://.godot/imported/fat_ghost_4_idle_(perfect).png-3cd1ded9e3ea9f119bb3f0124539ca7a.ctex"
+uid="uid://cge1dbtk1p6ma"
+path="res://.godot/imported/magenmader1.png-500da02c56fbbb677b3be4dcef4c5f19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/fat_ghost_4_idle_(perfect).png"
-dest_files=["res://.godot/imported/fat_ghost_4_idle_(perfect).png-3cd1ded9e3ea9f119bb3f0124539ca7a.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/magenmader1.png"
+dest_files=["res://.godot/imported/magenmader1.png-500da02c56fbbb677b3be4dcef4c5f19.ctex"]
 
 [params]
 

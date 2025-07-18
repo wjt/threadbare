@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0s56n45hral8"
-path="res://.godot/imported/bloque cesped1.png-baa8430e36c2969fb97f90a0b431058f.ctex"
+uid="uid://cbnp8ad50660l"
+path="res://.godot/imported/Modelo_PJ_running.png-7b6193e886bad7dcb415f7f726fa1a80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/bloque cesped1.png"
-dest_files=["res://.godot/imported/bloque cesped1.png-baa8430e36c2969fb97f90a0b431058f.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/Modelo_PJ_running.png"
+dest_files=["res://.godot/imported/Modelo_PJ_running.png-7b6193e886bad7dcb415f7f726fa1a80.ctex"]
 
 [params]
 

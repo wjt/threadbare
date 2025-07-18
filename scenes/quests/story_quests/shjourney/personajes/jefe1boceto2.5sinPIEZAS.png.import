@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d03dpfvsapp6u"
-path="res://.godot/imported/fat_ghost_1_angy_v3(perfect) 100.png-55ac4c4a9cde0d6c6a66a3729e3f65b4.ctex"
+uid="uid://cm4xinvxt5uh"
+path="res://.godot/imported/jefe1boceto2.5sinPIEZAS.png-b61d8d1e53ef3c3f77a52ff66576b984.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/fat_ghost_1_angy_v3(perfect) 100.png"
-dest_files=["res://.godot/imported/fat_ghost_1_angy_v3(perfect) 100.png-55ac4c4a9cde0d6c6a66a3729e3f65b4.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/jefe1boceto2.5sinPIEZAS.png"
+dest_files=["res://.godot/imported/jefe1boceto2.5sinPIEZAS.png-b61d8d1e53ef3c3f77a52ff66576b984.ctex"]
 
 [params]
 

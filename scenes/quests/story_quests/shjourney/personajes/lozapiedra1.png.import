@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm4xinvxt5uh"
-path="res://.godot/imported/jefe1boceto2.5sinPIEZAS.png-8bfc2961b0a09b1afb2fc3b50e17ee47.ctex"
+uid="uid://bb5m2qfarur4i"
+path="res://.godot/imported/lozapiedra1.png-11ca718eca3005b13de54163ca97ab77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/jefe1boceto2.5sinPIEZAS.png"
-dest_files=["res://.godot/imported/jefe1boceto2.5sinPIEZAS.png-8bfc2961b0a09b1afb2fc3b50e17ee47.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/lozapiedra1.png"
+dest_files=["res://.godot/imported/lozapiedra1.png-11ca718eca3005b13de54163ca97ab77.ctex"]
 
 [params]
 
