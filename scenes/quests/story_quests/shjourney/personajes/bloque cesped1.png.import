@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://difvf86lqb4qq"
-path="res://.godot/imported/fat_ghost_4_idle_(perfect).png-3cd1ded9e3ea9f119bb3f0124539ca7a.ctex"
+uid="uid://c0s56n45hral8"
+path="res://.godot/imported/bloque cesped1.png-8f96d6c4123042b596ac928d40beaf51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/fat_ghost_4_idle_(perfect).png"
-dest_files=["res://.godot/imported/fat_ghost_4_idle_(perfect).png-3cd1ded9e3ea9f119bb3f0124539ca7a.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/bloque cesped1.png"
+dest_files=["res://.godot/imported/bloque cesped1.png-8f96d6c4123042b596ac928d40beaf51.ctex"]
 
 [params]
 

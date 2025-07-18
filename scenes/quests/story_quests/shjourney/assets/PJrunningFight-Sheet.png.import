@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfdgh1xwp70op"
-path="res://.godot/imported/Modelo_PJ_Walking.png-6e479ab2a4128c4949f50d22eb9bd2c4.ctex"
+uid="uid://bou7wg3esfwel"
+path="res://.godot/imported/PJrunningFight-Sheet.png-82bc744c3d9c3c51ba992728b7a1699f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/Modelo_PJ_Walking.png"
-dest_files=["res://.godot/imported/Modelo_PJ_Walking.png-6e479ab2a4128c4949f50d22eb9bd2c4.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/assets/PJrunningFight-Sheet.png"
+dest_files=["res://.godot/imported/PJrunningFight-Sheet.png-82bc744c3d9c3c51ba992728b7a1699f.ctex"]
 
 [params]
 

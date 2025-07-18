@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnablicm83kp5"
-path="res://.godot/imported/cesped2.png-396bf9183c4231e55776e3e23d776a95.ctex"
+uid="uid://cge1dbtk1p6ma"
+path="res://.godot/imported/magenmader1.png-500da02c56fbbb677b3be4dcef4c5f19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/cesped2.png"
-dest_files=["res://.godot/imported/cesped2.png-396bf9183c4231e55776e3e23d776a95.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/magenmader1.png"
+dest_files=["res://.godot/imported/magenmader1.png-500da02c56fbbb677b3be4dcef4c5f19.ctex"]
 
 [params]
 

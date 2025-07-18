@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh12eo042ihu4"
-path="res://.godot/imported/PJ_IddleFight-Sheet.png-117f4cccf8d5a734609e1a333f00ecf7.ctex"
+uid="uid://d03dpfvsapp6u"
+path="res://.godot/imported/fat_ghost_1_angy_v3(perfect) 100.png-78743d36c3f11a2c900cd547cbed3527.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_elements/characters/player/components/PJ_IddleFight-Sheet.png"
-dest_files=["res://.godot/imported/PJ_IddleFight-Sheet.png-117f4cccf8d5a734609e1a333f00ecf7.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/fat_ghost_1_angy_v3(perfect) 100.png"
+dest_files=["res://.godot/imported/fat_ghost_1_angy_v3(perfect) 100.png-78743d36c3f11a2c900cd547cbed3527.ctex"]
 
 [params]
 

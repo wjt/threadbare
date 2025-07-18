@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nhwxqxbu8502"
-path="res://.godot/imported/demoniobosss2.png-9d57a33fc8f94fe919f6188a37854bf0.ctex"
+uid="uid://difvf86lqb4qq"
+path="res://.godot/imported/fat_ghost_4_idle_(perfect).png-ae64b19319a160a82082df81a1c6a53a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/demoniobosss2.png"
-dest_files=["res://.godot/imported/demoniobosss2.png-9d57a33fc8f94fe919f6188a37854bf0.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/fat_ghost_4_idle_(perfect).png"
+dest_files=["res://.godot/imported/fat_ghost_4_idle_(perfect).png-ae64b19319a160a82082df81a1c6a53a.ctex"]
 
 [params]
 

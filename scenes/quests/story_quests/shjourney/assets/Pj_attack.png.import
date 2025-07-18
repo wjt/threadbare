@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmcg2hej7gyw3"
-path="res://.godot/imported/AnimationSheet_Character.png-abf8f72d3dc9bc95fbc5c119e0eb2794.ctex"
+uid="uid://lv7qa2k534oi"
+path="res://.godot/imported/Pj_attack.png-d8eaf7b9688cbea8a0170a26e81775e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/AnimationSheet_Character.png"
-dest_files=["res://.godot/imported/AnimationSheet_Character.png-abf8f72d3dc9bc95fbc5c119e0eb2794.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/assets/Pj_attack.png"
+dest_files=["res://.godot/imported/Pj_attack.png-d8eaf7b9688cbea8a0170a26e81775e4.ctex"]
 
 [params]
 

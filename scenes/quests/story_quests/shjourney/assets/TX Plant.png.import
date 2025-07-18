@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3r00bba4f5ts"
-path="res://.godot/imported/TimDefeated.png-b9a64c7a63ea70a054b1b60539edfc4f.ctex"
+uid="uid://cc8otsdo2v73u"
+path="res://.godot/imported/TX Plant.png-0dcf91344645347a0d65b7a25145302d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_elements/characters/player/components/TimDefeated.png"
-dest_files=["res://.godot/imported/TimDefeated.png-b9a64c7a63ea70a054b1b60539edfc4f.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/assets/TX Plant.png"
+dest_files=["res://.godot/imported/TX Plant.png-0dcf91344645347a0d65b7a25145302d.ctex"]
 
 [params]
 

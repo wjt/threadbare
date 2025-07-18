@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0iqt8leqamnx"
-path="res://.godot/imported/fat_ghost_idle2_.png-56422770685bba9f1ec2f268a8eea40e.ctex"
+uid="uid://epiqik5i67ph"
+path="res://.godot/imported/bloquelaberintov4(80%)perfect.png-83799a37d0bdcae52da8187ce0f725b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/fat_ghost_idle2_.png"
-dest_files=["res://.godot/imported/fat_ghost_idle2_.png-56422770685bba9f1ec2f268a8eea40e.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/bloquelaberintov4(80%)perfect.png"
+dest_files=["res://.godot/imported/bloquelaberintov4(80%)perfect.png-83799a37d0bdcae52da8187ce0f725b2.ctex"]
 
 [params]
 

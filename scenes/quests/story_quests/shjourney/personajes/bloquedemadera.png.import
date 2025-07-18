@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cge1dbtk1p6ma"
-path="res://.godot/imported/magenmader1.png-8b59c2003965148d0d3d3ace2bb73481.ctex"
+uid="uid://dkqm7p88upvap"
+path="res://.godot/imported/bloquedemadera.png-3855e36df35f1799f664a9ba68789eb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/magenmader1.png"
-dest_files=["res://.godot/imported/magenmader1.png-8b59c2003965148d0d3d3ace2bb73481.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/bloquedemadera.png"
+dest_files=["res://.godot/imported/bloquedemadera.png-3855e36df35f1799f664a9ba68789eb4.ctex"]
 
 [params]
 

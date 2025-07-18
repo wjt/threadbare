@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0s56n45hral8"
-path="res://.godot/imported/bloque cesped1.png-baa8430e36c2969fb97f90a0b431058f.ctex"
+uid="uid://dh12eo042ihu4"
+path="res://.godot/imported/PJ_IddleFight-Sheet.png-1f1f50ae9b99f5c3d3ebb882738ac62e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/bloque cesped1.png"
-dest_files=["res://.godot/imported/bloque cesped1.png-baa8430e36c2969fb97f90a0b431058f.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/assets/PJ_IddleFight-Sheet.png"
+dest_files=["res://.godot/imported/PJ_IddleFight-Sheet.png-1f1f50ae9b99f5c3d3ebb882738ac62e.ctex"]
 
 [params]
 

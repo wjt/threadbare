@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6buk5lysopnd"
-path="res://.godot/imported/fantasma1(recolor)v5.png-bac4cc678f806dab072e0b3de35b772c.ctex"
+uid="uid://baqbghvs73s83"
+path="res://.godot/imported/cesped3.png-c860476851a88086eb7c48f4ca2c3053.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/fantasma1(recolor)v5.png"
-dest_files=["res://.godot/imported/fantasma1(recolor)v5.png-bac4cc678f806dab072e0b3de35b772c.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/cesped3.png"
+dest_files=["res://.godot/imported/cesped3.png-c860476851a88086eb7c48f4ca2c3053.ctex"]
 
 [params]
 

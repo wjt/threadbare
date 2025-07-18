@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6oxk6aqe7t5i"
-path="res://.godot/imported/demonioboss1.png-afb1d387774dbe08bafcf51fba1bb07c.ctex"
+uid="uid://cm4xinvxt5uh"
+path="res://.godot/imported/jefe1boceto2.5sinPIEZAS.png-b61d8d1e53ef3c3f77a52ff66576b984.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personajes/demonioboss1.png"
-dest_files=["res://.godot/imported/demonioboss1.png-afb1d387774dbe08bafcf51fba1bb07c.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/personajes/jefe1boceto2.5sinPIEZAS.png"
+dest_files=["res://.godot/imported/jefe1boceto2.5sinPIEZAS.png-b61d8d1e53ef3c3f77a52ff66576b984.ctex"]
 
 [params]
 
