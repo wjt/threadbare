@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cqy38s1ax41ih"]
 
 [ext_resource type="Script" uid="uid://dmf866kgfnp3c" path="res://scenes/game_elements/characters/enemies/guard/components/guard.gd" id="1_gnxyl"]
-[ext_resource type="SpriteFrames" uid="uid://dpapbnkovh2a1" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/Enemigos/templateFantamas.tres" id="2_ex3th"]
+[ext_resource type="SpriteFrames" uid="uid://dpapbnkovh2a1" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/Enemigos/fantasmas/components/templateFantamas.tres" id="2_ex3th"]
 [ext_resource type="Script" uid="uid://c477jgx4lwr86" path="res://scenes/game_elements/characters/enemies/guard/components/guard_movement.gd" id="3_l2kqk"]
 [ext_resource type="Texture2D" uid="uid://8t6ihmesvghq" path="res://scenes/game_elements/characters/enemies/guard/components/field_of_view.png" id="4_dqtv4"]
 [ext_resource type="Script" uid="uid://cxsi2xqcdyw7g" path="res://scenes/game_elements/characters/enemies/guard/components/light.gd" id="5_q845o"]

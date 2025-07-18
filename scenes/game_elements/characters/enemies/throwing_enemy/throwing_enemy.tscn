@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dfj3625owet5p" path="res://scenes/game_elements/characters/enemies/throwing_enemy/components/throwing_enemy.gd" id="1_ffq0m"]
 [ext_resource type="SpriteFrames" uid="uid://deosvk5k4su5f" path="res://scenes/quests/story_quests/template/2_template_combat/template_combat_components/template_throwing_enemy.tres" id="2_cvpou"]
-[ext_resource type="AudioStream" uid="uid://bsquiv06oyoom" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combat/assets/evil-laughs-demonic-echos-75496.mp3" id="3_yhlrh"]
-[ext_resource type="AudioStream" uid="uid://dxmnvlfevve1g" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combat/assets/fireball-whoosh-6-179130.mp3" id="4_cvpou"]
-[ext_resource type="AudioStream" uid="uid://b0qoutruh1utf" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combat/assets/demon-dying.mp3" id="5_starr"]
+[ext_resource type="AudioStream" uid="uid://bsquiv06oyoom" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/evil-laughs-demonic-echos-75496.mp3" id="3_yhlrh"]
+[ext_resource type="AudioStream" uid="uid://dxmnvlfevve1g" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/fireball-whoosh-6-179130.mp3" id="4_cvpou"]
+[ext_resource type="AudioStream" uid="uid://b0qoutruh1utf" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/demon-dying.mp3" id="5_starr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
 height = 42.0
