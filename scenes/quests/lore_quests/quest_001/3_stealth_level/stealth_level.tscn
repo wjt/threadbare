@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=4 uid="uid://db6vhi7s2f37c"]
+[gd_scene load_steps=81 format=4 uid="uid://db6vhi7s2f37c"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_f6lvl"]
 [ext_resource type="PackedScene" uid="uid://2rbpl811wlv1" path="res://scenes/game_elements/props/background_music/background_music.tscn" id="1_t8tj0"]
@@ -42,7 +42,6 @@
 [ext_resource type="SpriteFrames" uid="uid://clh0qxc8buapj" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_pink.tres" id="28_h5xg2"]
 [ext_resource type="SpriteFrames" uid="uid://bkxrywxf40i1u" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_brown.tres" id="29_5i2s8"]
 [ext_resource type="SpriteFrames" uid="uid://d000bjl2xdg0g" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_green.tres" id="30_8dune"]
-[ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="43_jvgy1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_foy1n"]
 atlas = ExtResource("22_wtfsj")
@@ -1168,6 +1167,3 @@ hint_node = NodePath("../ScreenOverlay/RunInputHint")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RunInputHint"]
 position = Vector2(-203.5, 10.5)
 shape = SubResource("RectangleShape2D_pfu1m")
-
-[node name="ThrowingEnemy" parent="." instance=ExtResource("43_jvgy1")]
-position = Vector2(794, 434)
