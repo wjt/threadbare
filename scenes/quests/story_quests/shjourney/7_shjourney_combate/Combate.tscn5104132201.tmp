@@ -91,6 +91,7 @@ y_sort_enabled = true
 
 [node name="FillGameLogic2" type="Node" parent="."]
 script = ExtResource("1_ymgo3")
+barrels_to_win = null
 intro_dialogue = ExtResource("2_ymgo3")
 metadata/_custom_type_script = "uid://cp54mgi54nywo"
 
