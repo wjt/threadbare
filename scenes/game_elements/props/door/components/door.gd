@@ -15,22 +15,27 @@ const PLAYER_COLLISION_LAYER = 1
 @onready var detector_jugador: Area2D = $DetectorJugador
 var jugador_cerca := false
 
+
 func _ready():
 	detector_jugador.body_entered.connect(_on_body_entered)
 	detector_jugador.body_exited.connect(_on_body_exited)
 
+
 func _process(delta):
-	if jugador_cerca and Input.is_action_just_pressed("attack"):
+	if jugador_cerca and Input.is_action_just_pressed(&"ui_accept"):
 		if not opened:
 			open()
+
 
 func _on_body_entered(body):
 	if body.name == "Player":
 		jugador_cerca = true
 
+
 func _on_body_exited(body):
 	if body.name == "Player":
 		jugador_cerca = false
+
 
 func open() -> void:
 	print("¡Golpe registrado!")
@@ -47,6 +52,7 @@ func open() -> void:
 
 func close() -> void:
 	set_toggled(false)
+
 
 func set_toggled(value: bool) -> void:
 	opened = value
