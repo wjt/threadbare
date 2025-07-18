@@ -2,8 +2,6 @@
 # SPDX-License-Identifier: MPL-2.0
 class_name FillGameLogic2
 extends Node
-const SupayThrowing = preload("res://scenes/quests/story_quests/shjourney/7_shjourney_combate/DemonioSupay/throwing_enemy/components/Supay_Throwing.gd")
-
 
 signal goal_reached
 
@@ -36,7 +34,6 @@ func _ready() -> void:
 func _update_allowed_colors() -> void:
 	var allowed_labels: Array[String] = []
 	var color_per_label: Dictionary[String, Color]
-
 	for filling_barrel: FillingBarrel in get_tree().get_nodes_in_group("filling_barrels"):
 		if filling_barrel.is_queued_for_deletion():
 			continue
@@ -45,13 +42,9 @@ func _update_allowed_colors() -> void:
 			if not filling_barrel.color:
 				continue
 			color_per_label[filling_barrel.label] = filling_barrel.color
-
-	for enemy in get_tree().get_nodes_in_group("throwing_enemy"):
-		if enemy.has_method("set_labels"):
-			enemy.set_labels(allowed_labels, color_per_label)
-
-
-
+	for enemy: ThrowingEnemy in get_tree().get_nodes_in_group("throwing_enemy"):
+		enemy.allowed_labels = allowed_labels
+		enemy.color_per_label = color_per_label
 
 
 func _on_barrel_completed() -> void:
