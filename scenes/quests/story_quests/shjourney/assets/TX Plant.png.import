@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0povlwvl6ycf"
-path="res://.godot/imported/TX Tileset Grass.png-c27ab9cf38dcc9afaac468f63e585c73.ctex"
+uid="uid://cc8otsdo2v73u"
+path="res://.godot/imported/TX Plant.png-0dcf91344645347a0d65b7a25145302d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/third_party/tiny-swords/Terrain/Ground/TX Tileset Grass.png"
-dest_files=["res://.godot/imported/TX Tileset Grass.png-c27ab9cf38dcc9afaac468f63e585c73.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/assets/TX Plant.png"
+dest_files=["res://.godot/imported/TX Plant.png-0dcf91344645347a0d65b7a25145302d.ctex"]
 
 [params]
 
