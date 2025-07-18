@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=47 format=3 uid="uid://dtoylirwywk0j"]
+[gd_resource type="SpriteFrames" load_steps=41 format=3 uid="uid://dtoylirwywk0j"]
 
 [ext_resource type="Texture2D" uid="uid://nwjrfnnav0lk" path="res://scenes/game_elements/characters/player/components/storyweaver_blue_attack_01.png" id="1_h7p10"]
 [ext_resource type="Texture2D" uid="uid://dgmobjvp2gcxu" path="res://scenes/game_elements/characters/player/components/storyweaver_blue_attack_02.png" id="2_bgej0"]
@@ -121,30 +121,6 @@ region = Rect2(1536, 0, 192, 192)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cnsyf"]
 atlas = ExtResource("3_lo7nh")
 region = Rect2(1728, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fmekh"]
-atlas = ExtResource("4_3nn5s")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kgewq"]
-atlas = ExtResource("4_3nn5s")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g4r0o"]
-atlas = ExtResource("4_3nn5s")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7yeu"]
-atlas = ExtResource("4_3nn5s")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d7n2g"]
-atlas = ExtResource("4_3nn5s")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sb01d"]
-atlas = ExtResource("4_3nn5s")
-region = Rect2(960, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uniwh"]
 atlas = ExtResource("4_3nn5s")
@@ -278,29 +254,6 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fmekh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kgewq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g4r0o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n7yeu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d7n2g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sb01d")
-}],
-"loop": true,
-"name": &"sprint",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
