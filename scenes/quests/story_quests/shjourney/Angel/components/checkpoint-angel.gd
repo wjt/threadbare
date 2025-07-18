@@ -10,7 +10,7 @@ extends Area2D
 ## a stealth challenge, for example), the player will respawn at the most recently activated
 ## checkpoint.
 
-const DEFAULT_SPRITE_FRAMES: SpriteFrames = preload("uid://dmg1egdoye3ns")
+const DEFAULT_SPRITE_FRAMES: SpriteFrames = preload("uid://bshou7t46r4nu")
 
 ## Animations that [member sprite_frames] must have.
 ##
@@ -27,7 +27,7 @@ const REQUIRED_ANIMATIONS := [&"idle", &"appear"]
 
 ## Dialogue to trigger when the player interacts with the checkpoint. If empty, the player will not
 ## be able to interact with the checkpoint.
-@export var dialogue: DialogueResource = preload("uid://bug2aqd47jgyu")
+@export var dialogue: DialogueResource = preload("uid://7g75vdxbo0nr")
 
 ## The point where the player will spawn.
 @onready var spawn_point: SpawnPoint = %SpawnPoint
