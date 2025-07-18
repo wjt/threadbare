@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3r00bba4f5ts"
-path="res://.godot/imported/TimDefeated.png-b9a64c7a63ea70a054b1b60539edfc4f.ctex"
+uid="uid://bou7wg3esfwel"
+path="res://.godot/imported/PJrunningFight-Sheet.png-82bc744c3d9c3c51ba992728b7a1699f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_elements/characters/player/components/TimDefeated.png"
-dest_files=["res://.godot/imported/TimDefeated.png-b9a64c7a63ea70a054b1b60539edfc4f.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/assets/PJrunningFight-Sheet.png"
+dest_files=["res://.godot/imported/PJrunningFight-Sheet.png-82bc744c3d9c3c51ba992728b7a1699f.ctex"]
 
 [params]
 

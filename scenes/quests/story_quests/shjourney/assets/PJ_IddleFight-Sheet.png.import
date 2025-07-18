@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh12eo042ihu4"
-path="res://.godot/imported/PJ_IddleFight-Sheet.png-117f4cccf8d5a734609e1a333f00ecf7.ctex"
+path="res://.godot/imported/PJ_IddleFight-Sheet.png-1f1f50ae9b99f5c3d3ebb882738ac62e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_elements/characters/player/components/PJ_IddleFight-Sheet.png"
-dest_files=["res://.godot/imported/PJ_IddleFight-Sheet.png-117f4cccf8d5a734609e1a333f00ecf7.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/assets/PJ_IddleFight-Sheet.png"
+dest_files=["res://.godot/imported/PJ_IddleFight-Sheet.png-1f1f50ae9b99f5c3d3ebb882738ac62e.ctex"]
 
 [params]
 
