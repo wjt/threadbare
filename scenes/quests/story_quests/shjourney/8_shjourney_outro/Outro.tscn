@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://b4dotq384vljq"]
+[gd_scene load_steps=36 format=4 uid="uid://b4dotq384vljq"]
 
 [ext_resource type="TileSet" uid="uid://birttlb0sk74i" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/tilesetOutro.tres" id="1_0jcvd"]
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_0ue6j"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b3lldk3lo2mwl" path="res://scenes/game_elements/characters/npcs/sequence_puzzle_assistant/sequence_puzzle_assistant.tscn" id="6_s07u0"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="9_3dk7l"]
 [ext_resource type="Script" uid="uid://dk3gd24r2xfxj" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/arboles_bloqueo.gd" id="9_hv40n"]
+[ext_resource type="SpriteFrames" uid="uid://vrthlt7kah8w" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/tim_sprite_frames.tres" id="9_kdw2l"]
 [ext_resource type="Script" uid="uid://c0u1k6kwf362s" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/arboles_bloqueo2.gd" id="10_rsyts"]
 [ext_resource type="Script" uid="uid://hpg2pfjbfajr" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/arboles_bloqueo3.gd" id="11_mpons"]
 [ext_resource type="Script" uid="uid://3tn8210agfwf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/area_2d.gd" id="12_3wbjo"]
@@ -159,6 +160,7 @@ z_index = 1
 position = Vector2(99, 5373)
 scale = Vector2(0.895305, 0.975211)
 player_name = "Tim"
+sprite_frames = ExtResource("9_kdw2l")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_mode = 3
@@ -294,7 +296,7 @@ offset_bottom = 4551.0
 theme = ExtResource("23_a1kpq")
 theme_type_variation = &"HintLabel"
 text = "
-A veces un buen 
+A veces un buen
 golpe resolvería "
 
 [node name="Label" type="Label" parent="."]
@@ -304,7 +306,7 @@ offset_right = 1486.0
 offset_bottom = 4506.0
 theme = ExtResource("23_a1kpq")
 theme_type_variation = &"HintLabel"
-text = "más que 
+text = "más que
 mil palabras.."
 
 [node name="InteractInput" type="TextureRect" parent="."]

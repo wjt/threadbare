@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://b2e7wpdr7ebsp"]
+[gd_scene load_steps=37 format=4 uid="uid://b2e7wpdr7ebsp"]
 
 [ext_resource type="TileSet" uid="uid://c0bgp226varsk" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/tilesetMinijuego02.tres" id="1_3wc2e"]
 [ext_resource type="PackedScene" uid="uid://bkm7k4cqs6bbe" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Dragon.tscn" id="2_0x02o"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b83x8h0ob5mpq" path="res://assets/third_party/xylophone-sampler-pack/xylophone-d3.ogg" id="6_kcywm"]
 [ext_resource type="SpriteFrames" uid="uid://bt7rx4p6q8dof" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Eye1.tres" id="6_m6vwj"]
 [ext_resource type="AudioStream" uid="uid://cmtiwg2cylmts" path="res://assets/third_party/xylophone-sampler-pack/xylophone-e3.ogg" id="7_kgawy"]
+[ext_resource type="SpriteFrames" uid="uid://vrthlt7kah8w" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/tim_sprite_frames.tres" id="8_at0ry"]
 [ext_resource type="AudioStream" uid="uid://8k1hyi4gjae4" path="res://assets/third_party/xylophone-sampler-pack/xylophone-f3.ogg" id="8_pm8wt"]
 [ext_resource type="SpriteFrames" uid="uid://fnv8rakr1qfd" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Eye2.tres" id="8_rijqc"]
 [ext_resource type="AudioStream" uid="uid://6oahn2ucxxjv" path="res://assets/third_party/xylophone-sampler-pack/xylophone-g3.ogg" id="9_u14ci"]
@@ -242,6 +243,7 @@ collision_mask = 513
 player_name = "Tim"
 walk_speed = 190.0
 run_speed = 200.0
+sprite_frames = ExtResource("8_at0ry")
 
 [node name="SequencePuzzle" type="Node2D" parent="OnTheGround" node_paths=PackedStringArray("steps")]
 y_sort_enabled = true

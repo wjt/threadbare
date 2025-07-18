@@ -1,10 +1,11 @@
-[gd_scene load_steps=42 format=4 uid="uid://djrxlfp43b7pt"]
+[gd_scene load_steps=43 format=4 uid="uid://djrxlfp43b7pt"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_mtosg"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="2_5gqe7"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="3_3t8fe"]
 [ext_resource type="TileSet" uid="uid://bpyv8qhmeyo6l" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/tilesetIntro.tres" id="5_oectw"]
 [ext_resource type="Shader" uid="uid://bvb4l5wskqwhf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/intro0.2.gdshader" id="6_4184i"]
+[ext_resource type="SpriteFrames" uid="uid://vrthlt7kah8w" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/tim_sprite_frames.tres" id="8_x6v85"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="9_8qtht"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="10_tm8dh"]
 [ext_resource type="Texture2D" uid="uid://ceplpkp27hls8" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/rock_2.png" id="11_o1c63"]
@@ -356,6 +357,7 @@ tile_set = ExtResource("5_oectw")
 [node name="Player" parent="." instance=ExtResource("10_tm8dh")]
 position = Vector2(324, 111)
 player_name = "Tim"
+sprite_frames = ExtResource("8_x6v85")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_mode = 3

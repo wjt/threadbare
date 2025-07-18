@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://dyx8toyemw2vx"]
+[gd_scene load_steps=75 format=4 uid="uid://dyx8toyemw2vx"]
 
 [ext_resource type="Script" uid="uid://bb15xji6f5syf" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/ScripBase.gd" id="1_f2sr3"]
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_wjmvn"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="8_w3xtx"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="9_q6p3d"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="10_r8s28"]
+[ext_resource type="SpriteFrames" uid="uid://vrthlt7kah8w" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/tim_sprite_frames.tres" id="11_38eo7"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="12_37aoh"]
 [ext_resource type="Texture2D" uid="uid://5wscjc8yqqts" path="res://assets/first_party/collectibles/world_memory.png" id="16_7ve7e"]
 [ext_resource type="SpriteFrames" uid="uid://bshou7t46r4nu" path="res://scenes/quests/story_quests/shjourney/Angel/components/angel.tres" id="16_656p3"]
@@ -1293,6 +1294,7 @@ position = Vector2(165, 3692)
 player_name = "Tim"
 walk_speed = 200.0
 run_speed = 350.0
+sprite_frames = ExtResource("11_38eo7")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_mode = 3
