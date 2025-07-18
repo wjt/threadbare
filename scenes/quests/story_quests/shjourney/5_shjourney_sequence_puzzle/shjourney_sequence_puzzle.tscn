@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://b2e7wpdr7ebsp"]
+[gd_scene load_steps=36 format=4 uid="uid://b2e7wpdr7ebsp"]
 
 [ext_resource type="TileSet" uid="uid://c0bgp226varsk" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/tilesetMinijuego02.tres" id="1_3wc2e"]
 [ext_resource type="PackedScene" uid="uid://bkm7k4cqs6bbe" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Dragon.tscn" id="2_0x02o"]
@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="14_fmuso"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="15_daurq"]
 [ext_resource type="SpriteFrames" uid="uid://b57jvrpdva2lg" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Eye6.tres" id="16_hvqie"]
-[ext_resource type="Resource" uid="uid://bb1g8ftnxjhvh" path="res://scenes/quests/story_quests/template/3_template_sequence_puzzle/template_sequence_puzzle.dialogue" id="16_lnbww"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="17_w086l"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="18_nj0xq"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="19_2uj8m"]
@@ -319,8 +318,6 @@ position = Vector2(993, 491)
 revealed = false
 next_scene = "uid://bc7mh0pmjqcmw"
 item = SubResource("Resource_u8qfb")
-collected_dialogue = ExtResource("16_lnbww")
-dialogue_title = &"well_done"
 
 [node name="Sign" parent="OnTheGround" instance=ExtResource("17_w086l")]
 modulate = Color(0.388235, 0.0313726, 0.160784, 1)
