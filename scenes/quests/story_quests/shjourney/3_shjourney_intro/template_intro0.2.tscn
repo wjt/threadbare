@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://djrxlfp43b7pt"]
+[gd_scene load_steps=43 format=4 uid="uid://djrxlfp43b7pt"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_mtosg"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="2_5gqe7"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://dqt03qd2chv6n" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/cinematic_siguiente.gd" id="13_s8exg"]
 [ext_resource type="AudioStream" uid="uid://tjog7m8qdm7b" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/template_intro_components/EffectSounds/Project_1 (1).wav" id="14_4184i"]
 [ext_resource type="Script" uid="uid://3tn8210agfwf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/area_2d.gd" id="14_u3mgm"]
+[ext_resource type="SpriteFrames" uid="uid://c63hg7u58lfak" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/angel_sprite_frames.tres" id="15_x6v85"]
 [ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="16_iptbp"]
 [ext_resource type="PackedScene" uid="uid://buuh0p3bjdpkv" path="res://scenes/game_elements/props/hint/input_key/input_key.tscn" id="17_u8380"]
 [ext_resource type="Texture2D" uid="uid://dwloomqbao5j1" path="res://assets/third_party/inputs/keyboard-and-mouse/Light/Arrow_Left_Key_Light.png" id="18_4ek3l"]
@@ -411,6 +412,7 @@ script = ExtResource("13_6ltfn")
 
 [node name="Checkpoint" parent="." instance=ExtResource("12_oectw")]
 position = Vector2(2542.59, 2073.06)
+sprite_frames = ExtResource("15_x6v85")
 dialogue = ExtResource("13_4184i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint"]
