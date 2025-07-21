@@ -246,7 +246,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_kaewf")
 }],
 "loop": true,
-"name": &"sprint",
+"name": &"run",
 "speed": 10.0
 }, {
 "frames": [{
