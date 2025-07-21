@@ -27,11 +27,8 @@ func _process(_delta: float) -> void:
 func _process_walk_idle(_delta: float) -> void:
 	if player.velocity.is_zero_approx():
 		play(&"idle")
-	elif player.is_running():
-		if has_animation("sprint"):
-			play(&"sprint")
-		else:
-			play(&"walk")
+	elif player_sprite.sprite_frames.has_animation(&"run") and player.is_running():
+		play(&"run")
 	else:
 		play(&"walk")
 
