@@ -34,6 +34,8 @@ func _get_repel_animation() -> StringName:
 func _process_walk_idle(_delta: float) -> void:
 	if player.velocity.is_zero_approx():
 		play(&"idle")
+	elif player_sprite.sprite_frames.has_animation(&"run") and player.is_running():
+		play(&"run")
 	else:
 		play(&"walk")
 
