@@ -1,8 +1,9 @@
-[gd_scene load_steps=43 format=4 uid="uid://djrxlfp43b7pt"]
+[gd_scene load_steps=44 format=4 uid="uid://djrxlfp43b7pt"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_mtosg"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="2_5gqe7"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="3_3t8fe"]
+[ext_resource type="AudioStream" uid="uid://msyjqs06jmy7" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/Musica/horror-orchestra-warning-338415 (1).mp3" id="4_0hk53"]
 [ext_resource type="TileSet" uid="uid://bpyv8qhmeyo6l" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/tilesetIntro.tres" id="5_oectw"]
 [ext_resource type="Shader" uid="uid://bvb4l5wskqwhf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/intro0.2.gdshader" id="6_4184i"]
 [ext_resource type="SpriteFrames" uid="uid://vrthlt7kah8w" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/tim_sprite_frames.tres" id="8_x6v85"]
@@ -162,16 +163,19 @@ curve = SubResource("Curve2D_j0lqv")
 
 [node name="Guard3-GoingBackAndForth12" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(2107, 4670)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath9")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth2" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
 [node name="Guard5-GoingBackAndForth6" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(257.002, 4931)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath5")
 move_speed = 200.0
 
@@ -182,16 +186,19 @@ curve = SubResource("Curve2D_wswht")
 
 [node name="Guard4-GoingBackAndForth4" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(1193, 3983)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath4")
 move_speed = 200.0
 
 [node name="Guard1-GoingBackAndForth" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(2733, 139)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath3")
 move_speed = 200.0
 
 [node name="Guard2-RunningInCircles" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(2861, 5200)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath")
 wait_time = 0.3
 move_speed = 1000.0
@@ -211,6 +218,7 @@ curve = SubResource("Curve2D_hejm3")
 
 [node name="Guard1-GoingBackAndForth3" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(4996, 3915.01)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath6")
 move_speed = 200.0
 
@@ -221,31 +229,37 @@ curve = SubResource("Curve2D_8iw62")
 
 [node name="Guard1-GoingBackAndForth2" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(5920, 4800.99)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath12")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth11" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth10" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth9" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(2223.99, 2931.01)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath11")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth8" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth7" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
@@ -256,26 +270,31 @@ curve = SubResource("Curve2D_j5akb")
 
 [node name="Guard3-GoingBackAndForth6" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(3538, 4474)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath10")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth5" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth15" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(2127, 756)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath14")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth4" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(1533, 2456)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath7")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth3" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
@@ -286,11 +305,13 @@ curve = SubResource("Curve2D_m4sje")
 
 [node name="Guard3-GoingBackAndForth13" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(3432.99, 1227)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath8")
 move_speed = 200.0
 
 [node name="Guard3-GoingBackAndForth14" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("3_3t8fe")]
 position = Vector2(292.999, 1924)
+alerted_sound_stream = ExtResource("4_0hk53")
 patrol_path = NodePath("../Guard2-RunningPath2")
 move_speed = 200.0
 
