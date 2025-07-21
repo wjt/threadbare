@@ -355,6 +355,7 @@ tile_set = ExtResource("5_oectw")
 
 [node name="Player" parent="." instance=ExtResource("10_tm8dh")]
 position = Vector2(324, 111)
+scale = Vector2(1.34, 1.34)
 player_name = "Tim"
 sprite_frames = ExtResource("8_x6v85")
 

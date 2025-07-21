@@ -1291,6 +1291,7 @@ position = Vector2(1797, 554)
 [node name="Player" parent="." instance=ExtResource("4_atgg6")]
 visibility_layer = 5
 position = Vector2(165, 3692)
+scale = Vector2(1.34, 1.34)
 player_name = "Tim"
 walk_speed = 200.0
 run_speed = 350.0

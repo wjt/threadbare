@@ -133,7 +133,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="OnTheGround" instance=ExtResource("4_w4e0j")]
 position = Vector2(98, 103)
-scale = Vector2(1.31, 1.31)
+scale = Vector2(1.755, 1.755)
 player_name = "Tim"
 sprite_frames = ExtResource("4_l82d5")
 
