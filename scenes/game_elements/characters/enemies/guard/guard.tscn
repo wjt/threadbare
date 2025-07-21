@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d37mebu7atru7"]
+[gd_scene load_steps=17 format=3 uid="uid://d37mebu7atru7"]
 
 [ext_resource type="Script" uid="uid://dmf866kgfnp3c" path="res://scenes/game_elements/characters/enemies/guard/components/guard.gd" id="1_g173s"]
 [ext_resource type="Script" uid="uid://c477jgx4lwr86" path="res://scenes/game_elements/characters/enemies/guard/components/guard_movement.gd" id="2_0hjcv"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://cxsi2xqcdyw7g" path="res://scenes/game_elements/characters/enemies/guard/components/light.gd" id="4_lptvm"]
 [ext_resource type="SpriteFrames" uid="uid://ovu5wqo15s5g" path="res://scenes/quests/story_quests/template/1_template_stealth/template_stealth_components/template_guard_enemy.tres" id="5_mswbt"]
 [ext_resource type="AudioStream" uid="uid://msyjqs06jmy7" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/Musica/horror-orchestra-warning-338415 (1).mp3" id="7_wckbf"]
-[ext_resource type="AudioStream" uid="uid://dw30n3jto4sxn" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/Musica/ghost-whispers-6030 (1).mp3" id="8_klpct"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g173s"]
 radius = 35.0
@@ -294,7 +293,3 @@ unique_name_in_owner = true
 volume_db = -2.0
 max_distance = 500.0
 bus = &"SFX"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("8_klpct")
-max_distance = 1000.0
