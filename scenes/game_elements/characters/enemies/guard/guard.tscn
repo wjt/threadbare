@@ -218,7 +218,7 @@ position = Vector2(0, -16)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("5_mswbt")
 animation = &"idle"
-autoplay = "alerted"
+autoplay = "idle"
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
