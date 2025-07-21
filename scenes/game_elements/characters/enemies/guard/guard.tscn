@@ -214,7 +214,6 @@ polygon = PackedVector2Array(302, 48, 283, 52, 279, 52, 101, 114, 98, 114, 79, 1
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -16)
-scale = Vector2(2, 2)
 sprite_frames = ExtResource("5_mswbt")
 animation = &"idle"
 autoplay = "idle"
