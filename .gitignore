@@ -8,6 +8,16 @@
 # Build & export artifacts
 build/
 
-# From Tiny Swords pack
+# macOS system files
+.AppleDouble
 .DS_Store
-.aseprite
+._*
+__MACOSX
+
+# Archive formats
+*.zip
+*.rar
+
+# Temporary files, created in particular by Godot on Windows if you modify and
+# save a scene in the editor while it is in use by the running game.
+*.tmp

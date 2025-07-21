@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://6s70kur03rjk"]
 
-[ext_resource type="Theme" uid="uid://cvitou84ni7qe" path="res://scenes/ui_elements/dialogue/components/theme.tres" id="1_gmidg"]
+[ext_resource type="Theme" uid="uid://cvitou84ni7qe" path="res://scenes/ui_elements/shared_components/theme.tres" id="1_gmidg"]
 [ext_resource type="Script" uid="uid://be1hcrmr5qtdu" path="res://scenes/menus/title/components/credits.gd" id="2_3tvx1"]
 
 [node name="Credits" type="Control"]
@@ -80,6 +80,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.72
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Art"]
 layout_mode = 2
@@ -101,7 +102,6 @@ layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 text = "Additional original art by [url=https://pixelfrog-assets.itch.io/]Pixel Frog[/url]
-
 Original music by John Wright"
 
 [node name="ThirdPartyComponents" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
@@ -129,8 +129,8 @@ layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 text = "Built with [url=https://godotengine.org/]Godot Engine[/url] ([url=https://godotengine.org/license/]MIT license[/url])
-
-Uses [url=https://dialogue.nathanhoad.net/]Godot Dialogue Manager[/url] by Nathan Hoad ([url=https://github.com/nathanhoad/godot_dialogue_manager/blob/main/LICENSE]MIT license[/url])"
+Uses [url=https://dialogue.nathanhoad.net/]Godot Dialogue Manager[/url] by Nathan Hoad ([url=https://github.com/nathanhoad/godot_dialogue_manager/blob/main/LICENSE]MIT license[/url])
+Uses [url=https://dialogue.nathanhoad.net/]Godot Git Describe[/url] by Joseph Michael Ware ([url=https://github.com/zibetnu/godot-git-describe/blob/main/LICENSE]MIT license[/url])"
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

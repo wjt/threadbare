@@ -26,6 +26,7 @@ const REQUIRED_ANIMATION_FRAMES: Dictionary[StringName, int] = {
 	&"idle": 10,
 	&"walk": 6,
 	&"attack_01": 4,
+	&"attack_02": 4,
 	&"defeated": 11,
 }
 const DEFAULT_SPRITE_FRAME: SpriteFrames = preload("uid://vwf8e1v8brdp")
