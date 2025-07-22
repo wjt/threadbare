@@ -39,7 +39,7 @@ const DEFAULT_SPRITE_FRAME: SpriteFrames = preload("uid://vwf8e1v8brdp")
 @export_range(10, 100000, 10) var moving_step: float = 4000.0
 
 ## The SpriteFrames must have specific animations with a certain amount of frames.
-## See [member REQUIRED_ANIMATION_FRAMES].
+## See [constant REQUIRED_ANIMATION_FRAMES].
 @export var sprite_frames: SpriteFrames = DEFAULT_SPRITE_FRAME:
 	set = _set_sprite_frames
 
