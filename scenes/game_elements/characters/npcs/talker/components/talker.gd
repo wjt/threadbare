@@ -3,6 +3,7 @@
 @tool
 class_name Talker
 extends NPC
+## @deprecated: Instead of instantiating this class, use a [TalkBehavior] node instead.
 
 @export var dialogue: DialogueResource = preload("uid://cc3paugq4mma4")
 
