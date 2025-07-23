@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://blduub8yuhb2h"]
+
+[sub_resource type="GDScript" id="GDScript_uc6ls"]
+script/source = "extends Node
+
+const SPLASH = preload(\"uid://huuo8mnwsphv\")
+const FRAYS_END = preload(\"uid://cufkthb25mpxy\")
+
+func _ready() -> void:
+	var initial_scene := FRAYS_END if OS.has_feature(\"editor\") else SPLASH
+	get_tree().call_deferred(\"change_scene_to_packed\", initial_scene)
+"
+
+[node name="Loader" type="Node"]
+script = SubResource("GDScript_uc6ls")
