@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://db6vhi7s2f37c"]
+[gd_scene load_steps=70 format=4 uid="uid://db6vhi7s2f37c"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_f6lvl"]
 [ext_resource type="PackedScene" uid="uid://2rbpl811wlv1" path="res://scenes/game_elements/props/background_music/background_music.tscn" id="1_t8tj0"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cw330muutqql7" path="res://assets/third_party/tiny-swords/Deco/05.png" id="15_7kcq2"]
 [ext_resource type="SpriteFrames" uid="uid://r0w8oerw0kga" path="res://scenes/game_elements/props/decoration/water_rock/components/water_rock_01.tres" id="16_pld6d"]
 [ext_resource type="Texture2D" uid="uid://b10hdfd5m5mj4" path="res://assets/third_party/tiny-swords/Deco/04.png" id="16_wtfsj"]
+[ext_resource type="PackedScene" uid="uid://dv4f232y8w8dv" path="res://scenes/game_elements/props/decoration/water_rock/water_rock.tscn" id="16_xddmm"]
 [ext_resource type="SpriteFrames" uid="uid://c5q1t8qd1h1pl" path="res://scenes/game_elements/props/decoration/water_rock/components/water_rock_02.tres" id="17_pld6d"]
 [ext_resource type="Texture2D" uid="uid://baelulw1inl6s" path="res://assets/third_party/tiny-swords/Deco/09.png" id="17_ulxtw"]
 [ext_resource type="Texture2D" uid="uid://bfqjvai7ajhw3" path="res://assets/third_party/tiny-swords/Deco/01.png" id="18_u5bfq"]
@@ -650,45 +651,33 @@ position = Vector2(4591, 1245)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("16_wtfsj")
 
-[node name="WaterRocks01" type="AnimatedSprite2D" parent="."]
+[node name="WaterRocks01" parent="." instance=ExtResource("16_xddmm")]
 position = Vector2(2247, 690)
 sprite_frames = ExtResource("16_pld6d")
-autoplay = "default"
-frame_progress = 0.856971
 
-[node name="WaterRocks02" type="AnimatedSprite2D" parent="."]
+[node name="WaterRocks02" parent="." instance=ExtResource("16_xddmm")]
 position = Vector2(2278, 673)
 sprite_frames = ExtResource("17_pld6d")
-autoplay = "default"
-frame_progress = 0.6075
 
-[node name="WaterRocks03" type="AnimatedSprite2D" parent="."]
+[node name="WaterRocks03" parent="." instance=ExtResource("16_xddmm")]
 position = Vector2(3618, 1113)
 scale = Vector2(1.1, 1.1)
 sprite_frames = ExtResource("17_pld6d")
-autoplay = "default"
-frame_progress = 0.6075
 
-[node name="WaterRocks05" type="AnimatedSprite2D" parent="."]
+[node name="WaterRocks05" parent="." instance=ExtResource("16_xddmm")]
 position = Vector2(5787, 1372)
 scale = Vector2(1.1, 1.1)
 sprite_frames = ExtResource("17_pld6d")
-autoplay = "default"
-frame_progress = 0.6075
 
-[node name="WaterRocks06" type="AnimatedSprite2D" parent="."]
+[node name="WaterRocks06" parent="." instance=ExtResource("16_xddmm")]
 position = Vector2(7500, 1238)
 scale = Vector2(1.1, 1.1)
 sprite_frames = ExtResource("17_pld6d")
-autoplay = "default"
-frame_progress = 0.6075
 
-[node name="WaterRocks04" type="AnimatedSprite2D" parent="."]
+[node name="WaterRocks04" parent="." instance=ExtResource("16_xddmm")]
 position = Vector2(3662.7, 1149.2)
 scale = Vector2(0.589062, 0.596875)
 sprite_frames = ExtResource("17_pld6d")
-autoplay = "default"
-frame_progress = 0.6075
 
 [node name="Mushroom1" type="Sprite2D" parent="."]
 position = Vector2(3988, 1093)
