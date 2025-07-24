@@ -19,9 +19,10 @@ extends Node
 
 @export var dialogue: DialogueResource = preload("uid://cc3paugq4mma4")
 @export var title: String = ""
-@export var before_dialogue: Callable
 @export var interact_area: InteractArea:
 	set = _set_interact_area
+
+var before_dialogue: Callable
 
 
 func _set_interact_area(new_interact_area: InteractArea) -> void:
@@ -42,7 +43,7 @@ func _ready() -> void:
 	interact_area.interaction_started.connect(_on_interaction_started)
 
 	if get_parent() is NPC:
-		var npc = get_parent() as NPC
+		var npc := get_parent() as NPC
 		if npc.npc_name:
 			interact_area.action = "Talk to %s" % npc.npc_name
 
