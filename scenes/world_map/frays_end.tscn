@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://cufkthb25mpxy"]
+[gd_scene load_steps=45 format=4 uid="uid://cufkthb25mpxy"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_4evgk"]
 [ext_resource type="Script" uid="uid://8div00rgvsds" path="res://scenes/world_map/components/frays_end.gd" id="1_4gse6"]
@@ -40,6 +40,7 @@
 [ext_resource type="Resource" uid="uid://byhqan5a7vkgg" path="res://scenes/world_map/components/tutorial_npc.dialogue" id="32_djq26"]
 [ext_resource type="PackedScene" uid="uid://d0c4l7ev6ca3c" path="res://scenes/game_elements/props/spawn_point/spawn_point.tscn" id="37_thm8h"]
 [ext_resource type="Script" uid="uid://bdhjixygupit1" path="res://scenes/game_elements/props/area_filler/area_filler.gd" id="38_cjmkx"]
+[ext_resource type="PackedScene" uid="uid://dv4f232y8w8dv" path="res://scenes/game_elements/props/decoration/water_rock/water_rock.tscn" id="38_jqkod"]
 [ext_resource type="PackedScene" uid="uid://c0104ickpm3ru" path="res://scenes/game_elements/props/decoration/flower/flower.tscn" id="45_cjmkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h30yx"]
@@ -981,6 +982,22 @@ scale = Vector2(1.1, 1.1)
 [node name="Rock8" parent="Rocks" instance=ExtResource("18_jbsab")]
 position = Vector2(1529, 828)
 scale = Vector2(1.05, 1.05)
+
+[node name="WaterRocks" type="Node2D" parent="."]
+editor_description = "Holds rocks that are in the water."
+y_sort_enabled = true
+
+[node name="WaterRock" parent="WaterRocks" instance=ExtResource("38_jqkod")]
+position = Vector2(931, 1378)
+
+[node name="WaterRock2" parent="WaterRocks" instance=ExtResource("38_jqkod")]
+position = Vector2(708, 1437)
+
+[node name="WaterRock3" parent="WaterRocks" instance=ExtResource("38_jqkod")]
+position = Vector2(1578, 1477)
+
+[node name="WaterRock4" parent="WaterRocks" instance=ExtResource("38_jqkod")]
+position = Vector2(1689, 1694)
 
 [node name="Tutorial" type="Node2D" parent="."]
 y_sort_enabled = true
