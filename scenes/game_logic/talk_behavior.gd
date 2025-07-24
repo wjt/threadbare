@@ -43,7 +43,7 @@ func _ready() -> void:
 	interact_area.interaction_started.connect(_on_interaction_started)
 
 	if get_parent() is NPC:
-		var npc = get_parent() as NPC
+		var npc := get_parent() as NPC
 		if npc.npc_name:
 			interact_area.action = "Talk to %s" % npc.npc_name
 
