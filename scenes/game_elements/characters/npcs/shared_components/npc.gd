@@ -6,6 +6,8 @@ extends CharacterBody2D
 
 const DEFAULT_SPRITE_FRAME: SpriteFrames = preload("uid://cpm5o35ede3qs")
 
+@export var npc_name: String
+
 @export var look_at_side: Enums.LookAtSide = Enums.LookAtSide.LEFT:
 	set = _set_look_at_side
 

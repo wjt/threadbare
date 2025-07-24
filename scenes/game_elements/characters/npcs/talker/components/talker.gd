@@ -6,7 +6,6 @@ extends NPC
 
 const DEFAULT_DIALOGUE: DialogueResource = preload("uid://cc3paugq4mma4")
 
-@export var npc_name: String
 @export var dialogue: DialogueResource = DEFAULT_DIALOGUE
 
 var _previous_look_at_side: Enums.LookAtSide = Enums.LookAtSide.UNSPECIFIED
@@ -19,8 +18,6 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	interact_area.interaction_started.connect(_on_interaction_started)
-	if npc_name:
-		interact_area.action = "Talk to %s" % npc_name
 
 
 func _on_interaction_started(player: Player, from_right: bool) -> void:
