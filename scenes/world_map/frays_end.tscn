@@ -298,10 +298,10 @@ sprite_frames = ExtResource("22_e453w")
 
 [node name="LoreQuestElder" parent="NPCs" node_paths=PackedStringArray("eternal_loom") instance=ExtResource("20_xt3dw")]
 position = Vector2(690, 600)
+dialogue = ExtResource("12_yntpr")
 quest_directory = "res://scenes/quests/lore_quests/"
 eternal_loom = NodePath("../../EternalLoom")
 npc_name = "LoreQuest Elder"
-dialogue = ExtResource("12_yntpr")
 
 [node name="StoryQuestElder" parent="NPCs" node_paths=PackedStringArray("eternal_loom") instance=ExtResource("20_xt3dw")]
 position = Vector2(1310, 598)
