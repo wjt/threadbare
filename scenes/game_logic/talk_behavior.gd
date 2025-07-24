@@ -19,9 +19,10 @@ extends Node
 
 @export var dialogue: DialogueResource = preload("uid://cc3paugq4mma4")
 @export var title: String = ""
-@export var before_dialogue: Callable
 @export var interact_area: InteractArea:
 	set = _set_interact_area
+
+var before_dialogue: Callable
 
 
 func _set_interact_area(new_interact_area: InteractArea) -> void:
