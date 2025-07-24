@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://blduub8yuhb2h"]
+
+[sub_resource type="GDScript" id="GDScript_uc6ls"]
+script/source = "@tool
+extends Node
+
+const SPLASH = preload(\"uid://huuo8mnwsphv\")
+const FRAYS_END = preload(\"uid://cufkthb25mpxy\")
+
+func _ready() -> void:
+	if OS.has_feature(&\"editor_hint\"):
+		# This scene has been opened in the editor. If it's the only open scene (as it will be when
+		# the project is first opened in the editor), open Fray's End too. Sadly we can't
+		# distinguish betwen the scene being opened due to opening the editor and the developer
+		# manually opening the scene.
+		if EditorInterface.get_open_scenes() == PackedStringArray([self.scene_file_path]):
+			# call_deferred is required to avoid an error during editor startup:
+			#   ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+			EditorInterface.open_scene_from_path.call_deferred(FRAYS_END.resource_path)
+	elif OS.has_feature(&\"editor_runtime\"):
+		# The game is being played from the editor.
+		get_tree().change_scene_to_packed.call_deferred(FRAYS_END)
+	else:
+		# Normal run of the game.
+		get_tree().change_scene_to_packed.call_deferred(SPLASH)
+"
+
+[node name="Loader" type="Node"]
+script = SubResource("GDScript_uc6ls")
