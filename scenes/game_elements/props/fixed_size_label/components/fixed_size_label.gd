@@ -18,6 +18,12 @@ extends Control
 ## Used to limit the rate at which [method Node._process] is called.
 var _update_time: float = 0
 
+## Used to distinguish the first update.
+var _first_update: bool = true
+
+## Tween to fade in the label container.
+var _fadein_tween: Tween
+
 @onready var label: Label = %Label
 ## The node that actually holds the label.
 @onready var label_container: PanelContainer = %LabelContainer
@@ -50,7 +56,22 @@ func _process(_delta: float) -> void:
 	# In other words, the label will jump from one screen position to the other faster if it's far,
 	# and will take more time to update if it's closer.
 	_update_time = clamp(2000.0 / distance_squared, 0.1, 2.0)
+	if _fadein_tween:
+		_fadein_tween.kill()
+	_fadein_tween = create_tween()
+	if label_container.visible and not _first_update:
+		# Duplicate the label node in the current position to fade out:
+		var old_label_container := label_container.duplicate()
+		label_container.get_parent().add_child(old_label_container)
+		var fadeout_tween := create_tween()
+		fadeout_tween.tween_property(
+			old_label_container, "modulate", Color.TRANSPARENT, _update_time
+		)
+		fadeout_tween.tween_callback(old_label_container.queue_free)
+	label_container.modulate = Color.TRANSPARENT
+	_fadein_tween.tween_property(label_container, "modulate", Color.WHITE, _update_time)
 	label_container.global_position = new_position
+	_first_update = false
 
 
 func _ready() -> void:
@@ -69,6 +90,7 @@ func _ready() -> void:
 
 func on_visibility_changed() -> void:
 	_update_time = 0
+	_first_update = true
 	label_container.visible = is_visible_in_tree()
 
 
