@@ -12,6 +12,9 @@ extends Control
 @export var label_text: String:
 	set = _set_label_text
 
+## Maximum offset allowed between the desired and existing screen position.
+@export var max_offset_allowed: float = 100.0
+
 ## Used to limit the rate at which [method Node._process] is called.
 var _update_time: float = 0
 
@@ -39,6 +42,9 @@ func _process(_delta: float) -> void:
 
 	var new_position := get_global_transform_with_canvas().origin - (label_container.size / 2.0)
 	var distance_squared := (label_container.global_position - new_position).length_squared()
+
+	if distance_squared < max_offset_allowed * max_offset_allowed:
+		return
 
 	# Next update is inversely proportional to the distance in the screen.
 	# In other words, the label will jump from one screen position to the other faster if it's far,
