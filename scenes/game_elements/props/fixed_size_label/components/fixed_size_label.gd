@@ -12,6 +12,9 @@ extends Control
 @export var label_text: String:
 	set = _set_label_text
 
+## Used to limit the rate at which [method Node._process] is called.
+var _update_time: float = 0
+
 @onready var label: Label = %Label
 ## The node that actually holds the label.
 @onready var label_container: PanelContainer = %LabelContainer
@@ -29,9 +32,19 @@ func _process(_delta: float) -> void:
 		label_container.global_position = global_position - (label_container.size / 2.0)
 		return
 
-	label_container.global_position = (
-		get_global_transform_with_canvas().origin - (label_container.size / 2.0)
-	)
+	_update_time -= _delta
+
+	if _update_time > 0.0:
+		return
+
+	var new_position := get_global_transform_with_canvas().origin - (label_container.size / 2.0)
+	var distance_squared := (label_container.global_position - new_position).length_squared()
+
+	# Next update is inversely proportional to the distance in the screen.
+	# In other words, the label will jump from one screen position to the other faster if it's far,
+	# and will take more time to update if it's closer.
+	_update_time = clamp(2000.0 / distance_squared, 0.1, 2.0)
+	label_container.global_position = new_position
 
 
 func _ready() -> void:
@@ -49,6 +62,7 @@ func _ready() -> void:
 
 
 func on_visibility_changed() -> void:
+	_update_time = 0
 	label_container.visible = is_visible_in_tree()
 
 
