@@ -33,3 +33,6 @@ README.md                 @endlessm/community
 issue_template.md         @endlessm/community
 docs/issue_template.md    @endlessm/community
 .github/issue_template.md @endlessm/community
+
+# Shared community + games team ownership
+.github/workflows/discord.yml @endlessm/community @endlessm/games
