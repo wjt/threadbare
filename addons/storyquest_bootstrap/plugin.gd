@@ -66,10 +66,12 @@ func validate_title(title: String) -> PackedStringArray:
 
 func validate_filename(filename: String) -> PackedStringArray:
 	var errors: PackedStringArray
-	if DirAccess.dir_exists_absolute(STORYQUESTS_PATH.path_join(filename)):
-		errors.append(
-			"⚠ The StoryQuest folder %s already exists." % STORYQUESTS_PATH.path_join(filename)
-		)
+	if not filename:
+		errors.append("⚠ The StoryQuest folder name cannot be empty.")
+	else:
+		var target := STORYQUESTS_PATH.path_join(filename)
+		if DirAccess.dir_exists_absolute(target):
+			errors.append("⚠ The StoryQuest folder %s already exists." % target)
 	return errors
 
 
