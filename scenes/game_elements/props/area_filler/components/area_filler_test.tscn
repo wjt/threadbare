@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://wrwe3x1ens4w"]
+[gd_scene load_steps=13 format=4 uid="uid://wrwe3x1ens4w"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_0gk0u"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_idsd5"]
@@ -8,9 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bbsc3wssndtfe" path="res://scenes/game_elements/props/decoration/hiding_mushroom/hiding_mushroom.tscn" id="6_86ofm"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="7_rciqa"]
 [ext_resource type="SpriteFrames" uid="uid://djwymcffy83" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_red.tres" id="8_2334v"]
+[ext_resource type="Script" uid="uid://eenl0b7aoxuq" path="res://scenes/game_elements/props/decoration/flower/components/flower.gd" id="9_cbbm0"]
+[ext_resource type="Script" uid="uid://dnb4ys8yvi1pj" path="res://scenes/game_elements/props/decoration/hiding_mushroom/hiding_mushroom.gd" id="9_ccj6l"]
 [ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="9_erlwp"]
 [ext_resource type="PackedScene" uid="uid://c0104ickpm3ru" path="res://scenes/game_elements/props/decoration/flower/flower.tscn" id="10_cbbm0"]
-[ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="10_ccj6l"]
 
 [node name="AreaFillerTest" type="Node2D"]
 
@@ -191,65 +192,89 @@ scenes = Array[PackedScene]([ExtResource("10_cbbm0"), ExtResource("6_86ofm")])
 minimum_separation = 128.0
 metadata/_custom_type_script = "uid://bdhjixygupit1"
 
-[node name="Rock" parent="OnTheGround/Flowerbed" instance=ExtResource("10_ccj6l")]
-position = Vector2(893.92, -37.0523)
+[node name="Flower" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(816.928, 202.694)
+script = ExtResource("9_cbbm0")
 
-[node name="Flower" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
-position = Vector2(769.077, 161.085)
+[node name="Flower2" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(1066.38, 210.062)
+script = ExtResource("9_cbbm0")
 
-[node name="Flower2" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
-position = Vector2(1061.72, 107.94)
+[node name="Flower3" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(702.267, 140.715)
+script = ExtResource("9_cbbm0")
 
-[node name="Rock2" parent="OnTheGround/Flowerbed" instance=ExtResource("10_ccj6l")]
-position = Vector2(931.998, 155.466)
+[node name="Flower4" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(806.782, 47.5946)
+script = ExtResource("9_cbbm0")
 
-[node name="HidingMushroom" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
-position = Vector2(1230.19, -15.9982)
+[node name="HidingMushroom" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
+position = Vector2(948.902, 117.208)
+script = ExtResource("9_ccj6l")
 
-[node name="HidingMushroom2" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
-position = Vector2(756.891, 0.99897)
+[node name="Flower5" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(589.042, -34.2899)
+script = ExtResource("9_cbbm0")
 
-[node name="Rock3" parent="OnTheGround/Flowerbed" instance=ExtResource("10_ccj6l")]
-position = Vector2(529.416, -6.15332)
+[node name="Flower6" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(1196.16, 127.975)
+script = ExtResource("9_cbbm0")
 
-[node name="Flower3" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
-position = Vector2(1255.39, 173.501)
+[node name="Flower7" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(1157.3, 5.00844)
+script = ExtResource("9_cbbm0")
 
-[node name="HidingMushroom3" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
-position = Vector2(639.334, 175.875)
+[node name="HidingMushroom2" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
+position = Vector2(1024.46, -2.36847)
+script = ExtResource("9_ccj6l")
 
-[node name="Rock4" parent="OnTheGround/Flowerbed" instance=ExtResource("10_ccj6l")]
-position = Vector2(1116.27, 225.017)
+[node name="HidingMushroom3" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
+position = Vector2(1009.1, 684.073)
+script = ExtResource("9_ccj6l")
 
-[node name="HidingMushroom4" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
-position = Vector2(1098.97, -21.7426)
+[node name="Flower8" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(1162.41, 496.511)
+script = ExtResource("9_cbbm0")
 
-[node name="Flower4" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
-position = Vector2(702.53, 680.423)
+[node name="Flower9" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(1029.54, 503.905)
+script = ExtResource("9_cbbm0")
 
-[node name="Rock5" parent="OnTheGround/Flowerbed" instance=ExtResource("10_ccj6l")]
-position = Vector2(690.533, 543.824)
+[node name="Flower10" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(878.909, 665.972)
+script = ExtResource("9_cbbm0")
 
-[node name="HidingMushroom5" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
-position = Vector2(844.071, 606.189)
+[node name="Flower11" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(735.607, 583.837)
+script = ExtResource("9_cbbm0")
 
-[node name="HidingMushroom6" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
-position = Vector2(662.341, 407.952)
+[node name="HidingMushroom4" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
+position = Vector2(889.863, 513.511)
+script = ExtResource("9_ccj6l")
 
-[node name="Flower5" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
-position = Vector2(1047.69, 451.69)
+[node name="Flower12" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(743.965, 432.988)
+script = ExtResource("9_cbbm0")
 
-[node name="HidingMushroom7" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
-position = Vector2(1114.2, 653.486)
+[node name="HidingMushroom5" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
+position = Vector2(609.304, 672.168)
+script = ExtResource("9_ccj6l")
 
-[node name="Rock6" parent="OnTheGround/Flowerbed" instance=ExtResource("10_ccj6l")]
-position = Vector2(1172.47, 485.156)
+[node name="Flower13" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(1128.81, 622.34)
+script = ExtResource("9_cbbm0")
 
-[node name="Flower6" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
-position = Vector2(986.105, 625.32)
+[node name="Flower14" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(601.397, 435.927)
+script = ExtResource("9_cbbm0")
 
-[node name="Rock7" parent="OnTheGround/Flowerbed" instance=ExtResource("10_ccj6l")]
-position = Vector2(1386.96, 482.866)
+[node name="HidingMushroom6" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("6_86ofm")]
+position = Vector2(1408.24, 454.371)
+script = ExtResource("9_ccj6l")
+
+[node name="Flower15" type="Node2D" parent="OnTheGround/Flowerbed" instance=ExtResource("10_cbbm0")]
+position = Vector2(1289.73, 532.109)
+script = ExtResource("9_cbbm0")
 
 [node name="ForestSign" parent="OnTheGround" instance=ExtResource("7_rciqa")]
 position = Vector2(1422, 305)
