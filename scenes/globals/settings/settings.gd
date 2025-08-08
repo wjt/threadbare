@@ -13,6 +13,14 @@ const DEFAULT_VOLUMES: Dictionary[String, float] = {
 const VIDEO_SECTION := "Video"
 const VIDEO_WINDOW_MODE_KEY := "Window Mode"
 
+## This is deliberately smaller than the base resolution of the game, so that the game is playable
+## on smaller screens even if it is not perfectly legible.
+##
+## If we later reduce the base resolution of the game, we should replace this constant with looking
+## up the base resolution from the project settings at runtime, so that the window cannot be smaller
+## than the base resolution.
+const MINIMUM_WINDOW_SIZE := Vector2i(1280, 720)
+
 var _settings := ConfigFile.new()
 
 
@@ -23,6 +31,7 @@ func _ready() -> void:
 
 	_restore_volumes()
 	_restore_video_settings()
+	_set_minimum_window_size()
 
 
 func _restore_volumes() -> void:
@@ -47,6 +56,10 @@ func _restore_video_settings() -> void:
 	if window_mode == DisplayServer.window_get_mode():
 		return
 	DisplayServer.window_set_mode(window_mode)
+
+
+func _set_minimum_window_size() -> void:
+	get_window().min_size = MINIMUM_WINDOW_SIZE
 
 
 func get_volume(bus: String) -> float:
