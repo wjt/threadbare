@@ -690,261 +690,264 @@ scale = Vector2(1.002, 1.002)
 position = Vector2(1173.52, 441.721)
 scale = Vector2(1.002, 1.002)
 
-[node name="Bush" parent="." instance=ExtResource("18_yntpr")]
+[node name="Bushes" type="Node2D" parent="."]
 y_sort_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Bush" parent="Bushes" instance=ExtResource("18_yntpr")]
 position = Vector2(720, 1111)
 
-[node name="Bush" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-18, 17)
+[node name="Bush2" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(702, 1128)
 scale = Vector2(0.4, 0.4)
 
-[node name="Bush2" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(1093, 86)
+[node name="Bush3" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1813, 1197)
 
-[node name="Bush3" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(1108, 114)
+[node name="Bush4" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1828, 1225)
 scale = Vector2(0.8, 0.8)
 
-[node name="Bush4" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(1083, 164)
+[node name="Bush5" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1803, 1275)
 scale = Vector2(0.6, 0.6)
 
-[node name="Bush5" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-495, -642)
+[node name="Bush6" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(225, 469)
 
-[node name="Bush6" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-478, -631)
+[node name="Bush7" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(242, 480)
 scale = Vector2(0.6, 0.6)
 
-[node name="Bush7" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-356, -631)
+[node name="Bush8" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(364, 480)
 scale = Vector2(0.6, 0.6)
 
-[node name="Bush8" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-528, -590)
+[node name="Bush9" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(192, 521)
 scale = Vector2(0.6, 0.6)
 
-[node name="Bush9" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-337, -626)
+[node name="Bush10" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(383, 485)
 scale = Vector2(0.6, 0.6)
 
-[node name="Bush11" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-127, -709)
+[node name="Bush11" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(593, 402)
 
-[node name="Bush12" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-102, -719)
+[node name="Bush12" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(618, 392)
 
-[node name="Bush13" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-17, -710)
+[node name="Bush13" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(703, 401)
 
-[node name="Bush14" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(118, -632)
+[node name="Bush14" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(838, 479)
 
-[node name="Bush15" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(57, -539)
+[node name="Bush15" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(777, 572)
 scale = Vector2(0.8, 0.8)
 
-[node name="Bush17" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-374, -59)
+[node name="Bush17" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(346, 1052)
 scale = Vector2(0.5, 0.5)
 
-[node name="Bush18" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-374, -45)
+[node name="Bush18" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(346, 1066)
 scale = Vector2(0.4, 0.4)
 
-[node name="Bush19" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-357, -54)
+[node name="Bush19" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(363, 1057)
 scale = Vector2(0.6, 0.6)
 
-[node name="Bush20" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-433, -61)
+[node name="Bush20" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(287, 1050)
 scale = Vector2(0.5, 0.5)
 
-[node name="Bush21" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-455, -64)
+[node name="Bush21" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(265, 1047)
 scale = Vector2(0.65, 0.65)
 
-[node name="Bush22" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-465, -78)
+[node name="Bush22" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(255, 1033)
 scale = Vector2(0.5, 0.5)
 
-[node name="Bush23" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-350, -76)
+[node name="Bush23" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(370, 1035)
 scale = Vector2(0.5, 0.5)
 
-[node name="Bush16" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-57, -672)
+[node name="Bush16" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(663, 439)
 scale = Vector2(0.3, 0.3)
 
-[node name="Bush10" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-422, -420)
+[node name="Bush24" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(298, 691)
 scale = Vector2(1.1, 1.1)
 
-[node name="Bush24" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-457, -120)
+[node name="Bush25" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(263, 991)
 scale = Vector2(1.1, 1.1)
 
-[node name="Bush25" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-593, 38)
+[node name="Bush26" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(127, 1149)
 scale = Vector2(1.1, 1.1)
 
-[node name="Bush26" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(334, 409)
+[node name="Bush27" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1054, 1520)
 scale = Vector2(1.1, 1.1)
 
-[node name="Bush30" parent="Bush" instance=ExtResource("18_yntpr")]
+[node name="Bush30" parent="Bushes" instance=ExtResource("18_yntpr")]
 y_sort_enabled = true
-position = Vector2(446, 44)
+position = Vector2(1166, 1155)
 scale = Vector2(1.1, 1.1)
 
-[node name="Bush31" parent="Bush" instance=ExtResource("18_yntpr")]
+[node name="Bush31" parent="Bushes" instance=ExtResource("18_yntpr")]
 y_sort_enabled = true
-position = Vector2(430, 9)
+position = Vector2(1150, 1120)
 scale = Vector2(0.9, 0.9)
 
-[node name="Bush32" parent="Bush" instance=ExtResource("18_yntpr")]
+[node name="Bush32" parent="Bushes" instance=ExtResource("18_yntpr")]
 y_sort_enabled = true
-position = Vector2(533, 23)
+position = Vector2(1253, 1134)
 scale = Vector2(1.1, 1.1)
 
-[node name="Bush33" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -687)
+[node name="Bush33" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 424)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush34" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -687)
+[node name="Bush34" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 424)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush35" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -687)
+[node name="Bush35" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 424)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush36" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -687)
+[node name="Bush36" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 424)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush37" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(975, -687)
+[node name="Bush37" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1695, 424)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush38" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(940, -688)
+[node name="Bush38" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1660, 423)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush39" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(906, -688)
+[node name="Bush39" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1626, 423)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush40" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(874, -687)
+[node name="Bush40" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1594, 424)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush41" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -656)
+[node name="Bush41" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 455)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush42" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -656)
+[node name="Bush42" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 455)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush43" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -656)
+[node name="Bush43" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 455)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush44" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(841, -656)
+[node name="Bush44" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1561, 455)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush57" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(852, -488)
+[node name="Bush57" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1572, 623)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush58" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-298, 85)
+[node name="Bush58" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(422, 1196)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush63" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-419, -300)
+[node name="Bush63" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(301, 811)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush64" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-372, -301)
+[node name="Bush64" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(348, 810)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush59" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-238, 85)
+[node name="Bush59" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(482, 1196)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush60" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-176, 85)
+[node name="Bush60" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(544, 1196)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush61" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-114, 85)
+[node name="Bush61" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(606, 1196)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush62" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-56, 85)
+[node name="Bush62" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(664, 1196)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush45" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(975, -656)
+[node name="Bush45" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1695, 455)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush46" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(940, -657)
+[node name="Bush46" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1660, 454)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush47" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(906, -657)
+[node name="Bush47" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1626, 454)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush48" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(874, -656)
+[node name="Bush48" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1594, 455)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush49" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(842, -621)
+[node name="Bush49" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1562, 490)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush50" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(842, -621)
+[node name="Bush50" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1562, 490)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush51" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(842, -621)
+[node name="Bush51" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1562, 490)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush52" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(842, -621)
+[node name="Bush52" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1562, 490)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush53" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(976, -621)
+[node name="Bush53" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1696, 490)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush54" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(941, -622)
+[node name="Bush54" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1661, 489)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush55" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(907, -622)
+[node name="Bush55" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1627, 489)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush56" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(875, -621)
+[node name="Bush56" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1595, 490)
 scale = Vector2(0.2, 0.3)
 
-[node name="Bush27" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(354, 437)
+[node name="Bush28" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(1074, 1548)
 scale = Vector2(0.8, 0.8)
 
-[node name="Bush28" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-440, 587)
+[node name="Bush29" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(280, 1698)
 scale = Vector2(1.1, 1.1)
 
-[node name="Bush29" parent="Bush" instance=ExtResource("18_yntpr")]
-position = Vector2(-450, 618)
+[node name="Bush65" parent="Bushes" instance=ExtResource("18_yntpr")]
+position = Vector2(270, 1729)
 scale = Vector2(0.8, 0.8)
 
 [node name="Rocks" type="Node2D" parent="."]
