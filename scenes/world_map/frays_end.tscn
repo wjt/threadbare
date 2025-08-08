@@ -334,6 +334,7 @@ sprite_frames = ExtResource("3_rti58")
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
 [node name="MovementInputHints" type="Control" parent="ScreenOverlay"]
+texture_filter = 2
 layout_mode = 3
 anchors_preset = 0
 offset_left = 324.0
@@ -377,6 +378,7 @@ script = ExtResource("21_i7vhm")
 action_name = &"ui_up"
 
 [node name="InteractionInputHint" type="Control" parent="ScreenOverlay"]
+texture_filter = 2
 layout_mode = 3
 anchors_preset = 0
 offset_left = 255.0

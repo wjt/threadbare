@@ -992,29 +992,25 @@ scale = Vector2(2, 2)
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="InteractInput" type="TextureRect" parent="ScreenOverlay/RunInputHint"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 81.5
-offset_top = -124.5
-offset_right = 181.5
-offset_bottom = -24.5
-grow_vertical = 0
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenOverlay/RunInputHint"]
+layout_mode = 0
+offset_left = 75.5
+offset_top = -112.5
+offset_right = 407.5
+offset_bottom = -12.5
+
+[node name="InteractInput" type="TextureRect" parent="ScreenOverlay/RunInputHint/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
 texture = ExtResource("7_r8dog")
 script = ExtResource("8_54evt")
 action_name = &"running"
 
-[node name="Label" type="Label" parent="ScreenOverlay/RunInputHint/InteractInput"]
-layout_mode = 0
-offset_left = -47.0
-offset_top = 30.5
-offset_right = 181.0
-offset_bottom = 66.5
+[node name="Label" type="Label" parent="ScreenOverlay/RunInputHint/HBoxContainer"]
+layout_mode = 2
 theme = ExtResource("9_54evt")
 theme_type_variation = &"HintLabel"
-text = "Hold          to run"
+text = "Run"
 
 [node name="HUD" parent="." instance=ExtResource("10_idy4y")]
 
