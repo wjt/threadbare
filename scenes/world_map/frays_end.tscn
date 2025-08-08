@@ -250,6 +250,10 @@ flip_h = true
 [node name="Books10" parent="Props" instance=ExtResource("12_06x6x")]
 position = Vector2(781, 614)
 
+[node name="Mushroom" type="Sprite2D" parent="Props"]
+position = Vector2(501, 679)
+texture = ExtResource("28_6r0j2")
+
 [node name="Buildings" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -327,10 +331,6 @@ look_at_side = 1
 [node name="fray_idle" parent="NPCs" instance=ExtResource("20_xa7wa")]
 position = Vector2(268, 894)
 sprite_frames = ExtResource("3_rti58")
-
-[node name="03" type="Sprite2D" parent="NPCs"]
-position = Vector2(501, 679)
-texture = ExtResource("28_6r0j2")
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
