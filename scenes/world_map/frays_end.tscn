@@ -297,10 +297,6 @@ texture = ExtResource("5_uhynt")
 [node name="NPCs" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="fray_idle2" parent="NPCs" instance=ExtResource("20_xa7wa")]
-position = Vector2(1617, 625)
-sprite_frames = ExtResource("22_e453w")
-
 [node name="LoreQuestElder" parent="NPCs" node_paths=PackedStringArray("eternal_loom") instance=ExtResource("20_xt3dw")]
 position = Vector2(690, 600)
 dialogue = ExtResource("12_yntpr")
@@ -315,20 +311,24 @@ eternal_loom = NodePath("../../EternalLoom")
 npc_name = "StoryQuest Elder"
 sprite_frames = ExtResource("15_iwt5r")
 
-[node name="fray_axeman" parent="NPCs" instance=ExtResource("17_0a1i7")]
+[node name="Axeman" parent="NPCs" instance=ExtResource("17_0a1i7")]
 position = Vector2(1506, 1263)
 
-[node name="fray_hammerman3" parent="NPCs" instance=ExtResource("19_yntpr")]
+[node name="Hammerman" parent="NPCs" instance=ExtResource("19_yntpr")]
 position = Vector2(1663, 1102)
 
-[node name="fray_idle_yellow" parent="NPCs" instance=ExtResource("20_xa7wa")]
+[node name="Farmer" parent="NPCs" instance=ExtResource("20_xa7wa")]
+position = Vector2(1617, 625)
+sprite_frames = ExtResource("22_e453w")
+
+[node name="FarmersPartner" parent="NPCs" instance=ExtResource("20_xa7wa")]
 position = Vector2(1638, 841)
 
-[node name="fray_idle_yellow2" parent="NPCs" instance=ExtResource("20_xa7wa")]
+[node name="GardenerA" parent="NPCs" instance=ExtResource("20_xa7wa")]
 position = Vector2(199, 899)
 look_at_side = 1
 
-[node name="fray_idle" parent="NPCs" instance=ExtResource("20_xa7wa")]
+[node name="GardenerB" parent="NPCs" instance=ExtResource("20_xa7wa")]
 position = Vector2(268, 894)
 sprite_frames = ExtResource("3_rti58")
 
