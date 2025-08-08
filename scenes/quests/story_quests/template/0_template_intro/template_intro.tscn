@@ -98,7 +98,6 @@ _data = {
 }
 
 [node name="Intro" type="Node2D"]
-texture_filter = 1
 
 [node name="TileMapLayers" type="Node2D" parent="."]
 

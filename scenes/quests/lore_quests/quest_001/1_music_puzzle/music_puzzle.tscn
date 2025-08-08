@@ -63,7 +63,6 @@ _data = {
 point_count = 4
 
 [node name="MusicPuzzle" type="Node2D"]
-texture_filter = 1
 
 [node name="TileMapLayers" type="Node2D" parent="."]
 

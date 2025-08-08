@@ -58,7 +58,6 @@ metadata/_edit_lock_ = true
 stream = ExtResource("2_epsnn")
 
 [node name="TileMapLayers" type="Node2D" parent="."]
-texture_filter = 1
 position = Vector2(0, 8)
 
 [node name="Water" type="TileMapLayer" parent="TileMapLayers"]
