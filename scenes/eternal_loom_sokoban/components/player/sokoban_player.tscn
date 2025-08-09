@@ -91,7 +91,6 @@ metadata/_custom_type_script = "uid://cgwu1infdhqxt"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
-texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_siuvm")
 animation = &"idle"
 frame_progress = 0.681816

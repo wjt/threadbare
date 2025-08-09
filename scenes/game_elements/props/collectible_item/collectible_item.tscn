@@ -294,7 +294,6 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
-texture_filter = 1
 texture = ExtResource("3_p8e5a")
 
 [node name="CollectedSound" type="AudioStreamPlayer" parent="."]

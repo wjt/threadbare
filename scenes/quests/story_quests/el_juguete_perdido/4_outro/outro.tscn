@@ -17,7 +17,6 @@
 [ext_resource type="SpriteFrames" uid="uid://ddpc5h6jtt6uq" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/apolo_components/apolo_toy.tres" id="13_j208y"]
 
 [node name="Outro" type="Node2D"]
-texture_filter = 1
 
 [node name="HUD" parent="." instance=ExtResource("1_wvc1n")]
 
