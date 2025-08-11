@@ -57,6 +57,8 @@ path = [
     "assets/first_party/**/*.aseprite",
     "assets/first_party/**/*.png",
     "assets/first_party/**/*.ogg",
+    "icon.aseprite",
+    "icon.png",
     "scenes/**/*.png",
     "scenes/**/*.svg",
     "scenes/**/*.aseprite",
