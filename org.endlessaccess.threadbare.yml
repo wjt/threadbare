@@ -31,6 +31,7 @@ modules:
   # The repo uses git-lfs for assets, so ensure any checkout is done using lfs;
   # otherwise, this icon will not be present
   - install -Dm644 icon.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
+  - install -Dm644 icon-256.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
 
   - install -Dm644 linux/launcher.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
   - install -Dm644 linux/metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
