@@ -25,8 +25,11 @@ SPDX-License-Identifier: CC-BY-4.0
     <content_attribute id="violence-cartoon">mild</content_attribute>
     <content_attribute id="violence-fantasy">mild</content_attribute>
   </content_rating>
-  <url type="homepage">https://endlessaccess.org</url>
+  <url type="homepage">https://access.endlessstudios.com/threadbare</url>
   <url type="bugtracker">https://github.com/endlessm/threadbare/issues</url>
+  <url type="contact">https://github.com/endlessm/threadbare/discussions/categories/q-a</url>
+  <url type="vcs-browser">https://github.com/endlessm/threadbare</url>
+  <url type="contribute">https://github.com/endlessm/threadbare/contribute</url>
   <screenshots>
     <screenshot type="default">
       <image>https://media.githubusercontent.com/media/endlessm/threadbare/8ce8a7333aab9add931c02f9f23c81058acbb243/docs/screenshot.png</image>
