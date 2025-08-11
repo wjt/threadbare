@@ -9,9 +9,11 @@ sdk: org.freedesktop.Sdk
 command: godot-runner
 finish-args:
 - --share=ipc
-- --socket=x11
+- --socket=wayland
+- --socket=fallback-x11
 - --socket=pulseaudio
 - --device=all
+- --talk-name=org.freedesktop.ScreenSaver
 modules:
 - name: threadbare
   buildsystem: simple
