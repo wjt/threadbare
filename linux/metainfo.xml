@@ -45,5 +45,6 @@ SPDX-License-Identifier: CC-BY-4.0
   <recommends>
     <control>keyboard</control>
     <control>gamepad</control>
+    <display_length side="shortest" compare="ge">1080</display_length>
   </recommends>
 </component>
