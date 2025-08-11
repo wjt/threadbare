@@ -56,5 +56,7 @@ SPDX-License-Identifier: CC-BY-4.0
   </recommends>
   <requires>
     <internet>offline-only</internet>
+    <display_length side="longest" compare="ge">1280</display_length>
+    <display_length side="shortest" compare="ge">720</display_length>
   </requires>
 </component>
