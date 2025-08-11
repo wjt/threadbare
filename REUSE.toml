@@ -24,6 +24,9 @@ path = [
     "scenes/**/*.tres",
     # .import files are largely machine-generated but developers can tweak their contents
     "**/*.import",
+    "default_bus_layout.tres",
+    "export_presets.cfg",
+    "project.godot",
 ]
 SPDX-FileCopyrightText = "The Threadbare Authors"
 SPDX-License-Identifier = "MPL-2.0"
