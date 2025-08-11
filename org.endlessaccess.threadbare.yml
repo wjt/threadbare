@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
-id: org.endlessos.threadbare
+id: org.endlessaccess.threadbare
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 base: org.godotengine.godot.BaseApp
