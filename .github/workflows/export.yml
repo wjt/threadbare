@@ -128,7 +128,8 @@ jobs:
             icon.png \
             icon-256.png \
             linux/launcher.desktop \
-            linux/metainfo.xml
+            linux/metainfo.xml \
+            linux/releases.xml
 
       - name: Upload Linux metadata bundle
         uses: actions/upload-artifact@v4
