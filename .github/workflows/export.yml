@@ -120,6 +120,22 @@ jobs:
           manifest-path: org.endlessaccess.threadbare.yml
           cache-key: "flatpak-builder-${{ github.sha }}"
 
+      - name: Create Linux metadata bundle
+        run: |
+          tar --create --gzip \
+            --file threadbare-linux-metadata.tar.gz \
+            --transform=s,^,threadbare-linux-metadata/, \
+            icon.png \
+            icon-256.png \
+            linux/launcher.desktop \
+            linux/metainfo.xml
+
+      - name: Upload Linux metadata bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: threadbare-linux-metadata
+          path: threadbare-linux-metadata.tar.gz
+
   release:
     name: Attach to release
     needs: [build, flatpak]
@@ -165,3 +181,15 @@ jobs:
           popd
 
           gh release upload '${{ github.ref_name }}' 'threadbare-${{ github.ref_name }}-web.zip' --repo '${{ github.repository }}'
+
+      - name: Download Linux metadata bundle
+        uses: actions/download-artifact@v5
+        with:
+          name: threadbare-linux-metadata
+
+      - name: Attach Linux metadata bundle to release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mv threadbare-linux-metadata.tar.gz 'threadbare-${{ github.ref_name }}-linux-metadata.tar.gz'
+          gh release upload '${{ github.ref_name }}' 'threadbare-${{ github.ref_name }}-linux-metadata.tar.gz' --repo '${{ github.repository }}'
