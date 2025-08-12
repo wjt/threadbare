@@ -35,3 +35,4 @@ modules:
 
   - install -Dm644 linux/launcher.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
   - install -Dm644 linux/metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+  - install -Dm644 linux/releases.xml ${FLATPAK_DEST}/share/metainfo/releases/${FLATPAK_ID}.releases.xml
