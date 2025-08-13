@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hhkhu7wtk8mu"
-path="res://.godot/imported/elder2_idle.png-cc9e123c8e50ec90d4ed4e1c698b5cd9.ctex"
+uid="uid://wp4gcho1a4bn"
+path="res://.godot/imported/elder_idle.png-b699cf53828e0a609bb9c2c9544aa4ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_elements/characters/shared_components/assets/elder2_idle.png"
-dest_files=["res://.godot/imported/elder2_idle.png-cc9e123c8e50ec90d4ed4e1c698b5cd9.ctex"]
+source_file="res://scenes/game_elements/characters/components/assets/elder_idle.png"
+dest_files=["res://.godot/imported/elder_idle.png-b699cf53828e0a609bb9c2c9544aa4ff.ctex"]
 
 [params]
 

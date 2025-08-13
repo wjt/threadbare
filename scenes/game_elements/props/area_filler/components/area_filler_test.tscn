@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_0gk0u"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_idsd5"]
-[ext_resource type="SpriteFrames" uid="uid://07di3updrwh0" path="res://scenes/game_elements/characters/shared_components/sprite_frames/storyweaver_purple.tres" id="4_5lqse"]
+[ext_resource type="SpriteFrames" uid="uid://07di3updrwh0" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_purple.tres" id="4_5lqse"]
 [ext_resource type="Script" uid="uid://bdhjixygupit1" path="res://scenes/game_elements/props/area_filler/area_filler.gd" id="4_wg5pe"]
 [ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="5_pymrf"]
 [ext_resource type="PackedScene" uid="uid://bbsc3wssndtfe" path="res://scenes/game_elements/props/decoration/hiding_mushroom/hiding_mushroom.tscn" id="6_86ofm"]
