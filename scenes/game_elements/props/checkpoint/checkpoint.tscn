@@ -38,4 +38,4 @@ action = "Checkpoint"
 [node name="CollisionShape" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2(1, -4)
 shape = SubResource("CircleShape2D_3xcwf")
-debug_color = Color(0, 0.606449, 0.661205, 0.42)
+debug_color = Color(0.600391, 0.54335, 0, 0.42)
