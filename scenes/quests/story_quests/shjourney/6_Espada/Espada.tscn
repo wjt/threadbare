@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://cff3wffsnp02" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/tilesetMinijuego03.tres" id="1_0v8au"]
 [ext_resource type="Script" uid="uid://duta00ge0v15u" path="res://scenes/quests/story_quests/shjourney/6_Espada/cinematic_espada.gd" id="2_jrrao"]
 [ext_resource type="Resource" uid="uid://crwo368o27j1a" path="res://scenes/quests/story_quests/shjourney/6_Espada/stella_outro_components/espadadialogo.dialogue" id="3_bx3fd"]
-[ext_resource type="SpriteFrames" uid="uid://vwf8e1v8brdp" path="res://scenes/quests/story_quests/template/template_player_components/template_player.tres" id="4_jrrao"]
+[ext_resource type="SpriteFrames" uid="uid://vrthlt7kah8w" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/tim_sprite_frames.tres" id="4_8vj3q"]
 [ext_resource type="SpriteFrames" uid="uid://ckmej3sbebfmq" path="res://scenes/quests/story_quests/shjourney/6_Espada/animacionEspada.tres" id="6_8vj3q"]
 [ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="6_64amr"]
 [ext_resource type="PackedScene" uid="uid://ipvcfv2g0oi1" path="res://scenes/game_elements/characters/npcs/talker/talker.tscn" id="7_8vj3q"]
@@ -275,7 +275,7 @@ z_index = 1
 position = Vector2(48, 232)
 scale = Vector2(1.7, 1.7)
 skew = -0.000253081
-sprite_frames = ExtResource("4_jrrao")
+sprite_frames = ExtResource("4_8vj3q")
 animation = &"walk"
 autoplay = "idle"
 speed_scale = 0.5
