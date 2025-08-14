@@ -21,6 +21,12 @@ const VIDEO_WINDOW_MODE_KEY := "Window Mode"
 ## than the base resolution.
 const MINIMUM_WINDOW_SIZE := Vector2i(1280, 720)
 
+## 5:4 ratio of 1280×1024, 1024×768, and other pre-widescreen monitors.
+const MINIMUM_ASPECT_RATIO := 1.25
+
+## An arbitrary wide ratio, lower than 21:9 ("ultrawide").
+const MAXIMUM_ASPECT_RATIO := 2.2
+
 var _settings := ConfigFile.new()
 
 
