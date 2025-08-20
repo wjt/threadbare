@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=4 uid="uid://bb1mgn8l00yo7"]
+[gd_scene load_steps=21 format=4 uid="uid://bb1mgn8l00yo7"]
 
 [ext_resource type="TileSet" uid="uid://bcx22clccr7qe" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/tilesetIntro02.tres" id="2_u7gwd"]
 [ext_resource type="Shader" uid="uid://bvb4l5wskqwhf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/intro0.2.gdshader" id="3_0bl5u"]
 [ext_resource type="SpriteFrames" uid="uid://bl21p5aynixwq" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/Personajes/Tim/template_playerTim.tres" id="4_0bl5u"]
+[ext_resource type="PackedScene" uid="uid://due8sqsrtdke1" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/fire_fly.tscn" id="4_u7gwd"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_ug0ds"]
 [ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="5_gilgp"]
 [ext_resource type="PackedScene" uid="uid://bmih4w66b6t36" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/Personajes/elfo_del_bosque_ojos_iluminados.tscn" id="6_iu8xy"]
@@ -275,7 +276,7 @@ offset = Vector2(0, 146.255)
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Character"]
 position = Vector2(3.03031, 144.697)
-zoom = Vector2(3.595, 3.595)
+zoom = Vector2(2.98, 2.98)
 limit_bottom = 730
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround"]
@@ -326,3 +327,50 @@ script = ExtResource("11_ecyos")
 [node name="ParallaxBackground" parent="." instance=ExtResource("12_6jtbm")]
 scale = Vector2(3.7, 3.7)
 transform = Transform2D(3.7, 0, 0, 3.7, 0, 0)
+
+[node name="Fireflies" type="Node2D" parent="."]
+position = Vector2(363, 229)
+
+[node name="FireFly" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+
+[node name="FireFly2" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(380, 138)
+
+[node name="FireFly3" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(46, 333)
+
+[node name="FireFly4" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(218, -46)
+
+[node name="FireFly5" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(87, 347)
+
+[node name="FireFly6" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(21, 359)
+
+[node name="FireFly7" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(71, 387)
+
+[node name="FireFly8" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(-34, 8)
+
+[node name="FireFly9" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(427, 167)
+
+[node name="FireFly10" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(362, 183)
+
+[node name="FireFly11" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(256, -110)
+
+[node name="FireFly12" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(290, -75)
+
+[node name="FireFly13" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(226, -85)
+
+[node name="FireFly14" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(-47, -39)
+
+[node name="FireFly15" parent="Fireflies" instance=ExtResource("4_u7gwd")]
+position = Vector2(17, -40)
