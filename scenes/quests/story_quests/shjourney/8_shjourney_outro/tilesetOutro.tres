@@ -1,27 +1,26 @@
-[gd_resource type="TileSet" load_steps=80 format=3 uid="uid://birttlb0sk74i"]
+[gd_resource type="TileSet" load_steps=79 format=3 uid="uid://birttlb0sk74i"]
 
 [ext_resource type="Texture2D" uid="uid://doc4qg7e3kgs" path="res://assets/third_party/tiny-swords/Terrain/Water/Water.png" id="1_oyjxv"]
 [ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="2_i8bqj"]
 [ext_resource type="Texture2D" uid="uid://calg7ty6q5ali" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level2.png" id="3_ytqyb"]
 [ext_resource type="Texture2D" uid="uid://td3y2vjom24f" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level3.png" id="4_lrku7"]
 [ext_resource type="Texture2D" uid="uid://brnsfo2pejt7i" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level4.png" id="5_25554"]
-[ext_resource type="Texture2D" uid="uid://epiqik5i67ph" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/bloquelaberintov4(80%)perfect.png" id="6_o4qnm"]
+[ext_resource type="Texture2D" uid="uid://epiqik5i67ph" path="res://scenes/quests/story_quests/shjourney/personajes/bloquelaberintov4(80%)perfect.png" id="6_o4qnm"]
 [ext_resource type="Texture2D" uid="uid://ccm3gmsmp7nwt" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Objects.png" id="7_b88de"]
-[ext_resource type="Texture2D" uid="uid://cumn518jmfp8j" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/GRASS+.png" id="8_mt0tc"]
 [ext_resource type="Texture2D" uid="uid://dl26i18gks2li" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Tileset.png" id="10_e1wly"]
 [ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/third_party/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="11_ghw4d"]
 [ext_resource type="Texture2D" uid="uid://dv2pn30s2y5ep" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Tileset Grass.png" id="12_og0tv"]
 [ext_resource type="Texture2D" uid="uid://cexg7otw5enpu" path="res://assets/third_party/tiny-swords/Terrain/Water/Foam/Foam.png" id="13_dxmlq"]
-[ext_resource type="Texture2D" uid="uid://cc8otsdo2v73u" path="res://assets/third_party/tiny-swords/Terrain/Ground/TX Plant.png" id="14_f5o1n"]
+[ext_resource type="Texture2D" uid="uid://cc8otsdo2v73u" path="res://scenes/quests/story_quests/shjourney/assets/TX Plant.png" id="14_f5o1n"]
 [ext_resource type="Texture2D" uid="uid://ckobr37gj4fvi" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Plant with Shadow.png" id="15_irmit"]
 [ext_resource type="Texture2D" uid="uid://ddp2xwtx7p8te" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Freedecorations.png" id="16_vaxxn"]
 [ext_resource type="Texture2D" uid="uid://bwycwmhn0d3oe" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/estructuras(decoracion)/puertagrande1.png" id="17_uvq5o"]
 [ext_resource type="Texture2D" uid="uid://d0yyk0dikkltr" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/estructuras(decoracion)/puertagrande2.png" id="18_wptox"]
-[ext_resource type="Texture2D" uid="uid://c0k3tk7neh2c0" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/bloquelaberinto2.png" id="20_yjqkn"]
+[ext_resource type="Texture2D" uid="uid://c0k3tk7neh2c0" path="res://scenes/quests/story_quests/shjourney/personajes/bloquelaberinto2.png" id="20_yjqkn"]
 [ext_resource type="Texture2D" uid="uid://cnmmh3uq7rkla" path="res://assets/third_party/tiny-swords/Terrain/Bridge/Bridge_All.png" id="21_3s4vp"]
-[ext_resource type="Texture2D" uid="uid://dkqm7p88upvap" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/bloquedemadera.png" id="22_sth7t"]
-[ext_resource type="Texture2D" uid="uid://c0s56n45hral8" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/bloque cesped1.png" id="23_6g4r4"]
-[ext_resource type="Texture2D" uid="uid://baqbghvs73s83" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/cesped3.png" id="24_dorxe"]
+[ext_resource type="Texture2D" uid="uid://dkqm7p88upvap" path="res://scenes/quests/story_quests/shjourney/personajes/bloquedemadera.png" id="22_sth7t"]
+[ext_resource type="Texture2D" uid="uid://c0s56n45hral8" path="res://scenes/quests/story_quests/shjourney/personajes/bloque cesped1.png" id="23_6g4r4"]
+[ext_resource type="Texture2D" uid="uid://baqbghvs73s83" path="res://scenes/quests/story_quests/shjourney/personajes/cesped3.png" id="24_dorxe"]
 [ext_resource type="Texture2D" uid="uid://c7oht7wudd8wa" path="res://assets/first_party/tiles/Cliff_Tiles.png" id="25_4fefm"]
 [ext_resource type="Texture2D" uid="uid://pkm6smjl8861" path="res://assets/first_party/tiles/Grass_Tiles_Light.png" id="26_tmpo0"]
 [ext_resource type="Texture2D" uid="uid://dcq6v7mx3h1fl" path="res://assets/first_party/tiles/Dirt_Tiles.png" id="27_em4p6"]
@@ -630,7 +629,6 @@ texture = ExtResource("7_b88de")
 5:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2w62b"]
-texture = ExtResource("8_mt0tc")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
