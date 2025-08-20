@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://qkedw0kou5j8" path="res://assets/third_party/inputs/keyboard-and-mouse/Light/Arrow_Down_Key_Light.png" id="21_x6v85"]
 [ext_resource type="Texture2D" uid="uid://nm4n8vqpggij" path="res://assets/third_party/inputs/keyboard-and-mouse/Light/Arrow_Up_Key_Light.png" id="22_0hk53"]
 [ext_resource type="Texture2D" uid="uid://hpwnbj0t3i1u" path="res://assets/third_party/inputs/keyboard-and-mouse/Light/Shift_Key_Light.png" id="22_03p8r"]
-[ext_resource type="Theme" uid="uid://coxcra1002kil" path="res://scenes/ui_elements/shared_components/theme.tres" id="23_4ek3l"]
+[ext_resource type="Theme" uid="uid://cvitou84ni7qe" path="res://scenes/ui_elements/shared_components/theme.tres" id="23_4ek3l"]
 
 [sub_resource type="Curve2D" id="Curve2D_s8exg"]
 _data = {

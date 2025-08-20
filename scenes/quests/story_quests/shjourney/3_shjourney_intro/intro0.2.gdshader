@@ -5,7 +5,7 @@ void vertex() {
 }
 
 void fragment() {
-	  float y_limit = 0.2; // valores entre 0.0 (abajo) y 1.0 (arriba)
+	  float y_limit = 0.4; // valores entre 0.0 (abajo) y 1.0 (arriba)
 
     // Si está por encima del límite, aplicar movimiento
     if (UV.y < y_limit) {
