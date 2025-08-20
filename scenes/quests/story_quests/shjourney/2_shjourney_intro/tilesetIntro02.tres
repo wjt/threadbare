@@ -1,27 +1,27 @@
 [gd_resource type="TileSet" load_steps=71 format=3 uid="uid://bcx22clccr7qe"]
 
-[ext_resource type="Texture2D" uid="uid://doc4qg7e3kgs" path="res://assets/third_party/tiny-swords/Terrain/Water/Water.png" id="1_eop2w"]
-[ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="2_phavg"]
-[ext_resource type="Texture2D" uid="uid://calg7ty6q5ali" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level2.png" id="3_h77x2"]
-[ext_resource type="Texture2D" uid="uid://td3y2vjom24f" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level3.png" id="4_26bto"]
-[ext_resource type="Texture2D" uid="uid://brnsfo2pejt7i" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level4.png" id="5_ge2dk"]
-[ext_resource type="Texture2D" uid="uid://d188e1afiloh3" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/GrassTileSH4Bigger.png" id="6_f1mjw"]
-[ext_resource type="Texture2D" uid="uid://ccm3gmsmp7nwt" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Objects.png" id="6_n8hw1"]
-[ext_resource type="Texture2D" uid="uid://dl26i18gks2li" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Tileset.png" id="9_wag4w"]
-[ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/third_party/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="10_abamx"]
-[ext_resource type="Texture2D" uid="uid://dv2pn30s2y5ep" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Tileset Grass.png" id="11_bh4kq"]
-[ext_resource type="Texture2D" uid="uid://cexg7otw5enpu" path="res://assets/third_party/tiny-swords/Terrain/Water/Foam/Foam.png" id="12_wps6d"]
-[ext_resource type="Texture2D" uid="uid://c2b6te1y5i26f" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/GrassTileSH.png" id="14_gwkxt"]
-[ext_resource type="Texture2D" uid="uid://ckobr37gj4fvi" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Plant with Shadow.png" id="14_mpds2"]
-[ext_resource type="Texture2D" uid="uid://ddp2xwtx7p8te" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Freedecorations.png" id="15_6ef08"]
-[ext_resource type="Texture2D" uid="uid://b62k2fbio8m0y" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/Tree.png" id="15_hbiky"]
-[ext_resource type="Texture2D" uid="uid://cnmmh3uq7rkla" path="res://assets/third_party/tiny-swords/Terrain/Bridge/Bridge_All.png" id="16_kcv86"]
-[ext_resource type="Texture2D" uid="uid://c7oht7wudd8wa" path="res://assets/first_party/tiles/Cliff_Tiles.png" id="17_1deug"]
-[ext_resource type="Texture2D" uid="uid://pkm6smjl8861" path="res://assets/first_party/tiles/Grass_Tiles_Light.png" id="18_kcmr5"]
-[ext_resource type="Texture2D" uid="uid://dcq6v7mx3h1fl" path="res://assets/first_party/tiles/Dirt_Tiles.png" id="19_oin88"]
-[ext_resource type="Texture2D" uid="uid://cledckq31klvq" path="res://assets/first_party/tiles/Cliff_Mines_Tiles.png" id="20_tprsb"]
-[ext_resource type="Texture2D" uid="uid://r7scukca5yro" path="res://assets/first_party/tiles/Void_Tiles_Empty.png" id="21_c0yry"]
-[ext_resource type="Texture2D" uid="uid://cn2j018vohdap" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level1.png" id="22_8wm3u"]
+[ext_resource type="Texture2D" uid="uid://doc4qg7e3kgs" path="res://assets/third_party/tiny-swords/Terrain/Water/Water.png" id="1_i7gkt"]
+[ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="2_w43el"]
+[ext_resource type="Texture2D" uid="uid://calg7ty6q5ali" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level2.png" id="3_38gup"]
+[ext_resource type="Texture2D" uid="uid://td3y2vjom24f" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level3.png" id="4_f026q"]
+[ext_resource type="Texture2D" uid="uid://brnsfo2pejt7i" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level4.png" id="5_aa73k"]
+[ext_resource type="Texture2D" uid="uid://d188e1afiloh3" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/GrassTileSH4Bigger.png" id="6_u8g0h"]
+[ext_resource type="Texture2D" uid="uid://ccm3gmsmp7nwt" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Objects.png" id="7_hy1w5"]
+[ext_resource type="Texture2D" uid="uid://dl26i18gks2li" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Tileset.png" id="8_0s8lb"]
+[ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/third_party/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="9_6t2is"]
+[ext_resource type="Texture2D" uid="uid://dv2pn30s2y5ep" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Tileset Grass.png" id="10_gdo3a"]
+[ext_resource type="Texture2D" uid="uid://cexg7otw5enpu" path="res://assets/third_party/tiny-swords/Terrain/Water/Foam/Foam.png" id="11_l6k78"]
+[ext_resource type="Texture2D" uid="uid://ckobr37gj4fvi" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Plant with Shadow.png" id="12_en3ih"]
+[ext_resource type="Texture2D" uid="uid://ddp2xwtx7p8te" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Freedecorations.png" id="13_8khyu"]
+[ext_resource type="Texture2D" uid="uid://c2b6te1y5i26f" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/GrassTileSH.png" id="14_ux0jm"]
+[ext_resource type="Texture2D" uid="uid://b62k2fbio8m0y" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/Tree.png" id="15_mp68a"]
+[ext_resource type="Texture2D" uid="uid://cnmmh3uq7rkla" path="res://assets/third_party/tiny-swords/Terrain/Bridge/Bridge_All.png" id="16_b5eo0"]
+[ext_resource type="Texture2D" uid="uid://c7oht7wudd8wa" path="res://assets/first_party/tiles/Cliff_Tiles.png" id="17_1cmhx"]
+[ext_resource type="Texture2D" uid="uid://pkm6smjl8861" path="res://assets/first_party/tiles/Grass_Tiles_Light.png" id="18_12a1a"]
+[ext_resource type="Texture2D" uid="uid://dcq6v7mx3h1fl" path="res://assets/first_party/tiles/Dirt_Tiles.png" id="19_kuajl"]
+[ext_resource type="Texture2D" uid="uid://cledckq31klvq" path="res://assets/first_party/tiles/Cliff_Mines_Tiles.png" id="20_gehyn"]
+[ext_resource type="Texture2D" uid="uid://r7scukca5yro" path="res://assets/first_party/tiles/Void_Tiles_Empty.png" id="21_pnbne"]
+[ext_resource type="Texture2D" uid="uid://cn2j018vohdap" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level1.png" id="22_higpb"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_0wfyh"]
 tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 2, 1, 65537, 0, 65537, 65537, 1, 131073, 65537, 2, 2, 131073, 0, 65538, 131073, 1, 131074, 131073, 2)
@@ -45,7 +45,7 @@ tile_data = PackedInt32Array(0, 327681, 3, 1, 393217, 3, 2, 458753, 3)
 tile_data = PackedInt32Array(0, 4, 7, 1, 65540, 7, 2, 131076, 7)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
-texture = ExtResource("1_eop2w")
+texture = ExtResource("1_i7gkt")
 texture_region_size = Vector2i(64, 64)
 0:0/next_alternative_id = 3
 0:0/0 = 0
@@ -58,7 +58,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/1/z_index = -1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
-texture = ExtResource("2_phavg")
+texture = ExtResource("2_w43el")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -230,7 +230,7 @@ texture_region_size = Vector2i(64, 64)
 3:1/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6jiih"]
-texture = ExtResource("3_h77x2")
+texture = ExtResource("3_38gup")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -330,7 +330,7 @@ texture_region_size = Vector2i(64, 64)
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpeek"]
-texture = ExtResource("4_26bto")
+texture = ExtResource("4_f026q")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -430,7 +430,7 @@ texture_region_size = Vector2i(64, 64)
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhdiu"]
-texture = ExtResource("5_ge2dk")
+texture = ExtResource("5_aa73k")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -530,11 +530,11 @@ texture_region_size = Vector2i(64, 64)
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sxt4w"]
-texture = ExtResource("6_f1mjw")
+texture = ExtResource("6_u8g0h")
 texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p23k4"]
-texture = ExtResource("6_n8hw1")
+texture = ExtResource("7_hy1w5")
 0:0/size_in_atlas = Vector2i(5, 10)
 0:0/0 = 0
 6:2/0 = 0
@@ -656,7 +656,7 @@ texture_region_size = Vector2i(64, 64)
 16:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1a6i"]
-texture = ExtResource("9_wag4w")
+texture = ExtResource("8_0s8lb")
 texture_region_size = Vector2i(64, 64)
 1:1/0 = 0
 2:1/0 = 0
@@ -738,7 +738,7 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4ill"]
-texture = ExtResource("10_abamx")
+texture = ExtResource("9_6t2is")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -776,7 +776,7 @@ texture_region_size = Vector2i(64, 64)
 9:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nf32"]
-texture = ExtResource("11_bh4kq")
+texture = ExtResource("10_gdo3a")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -796,7 +796,7 @@ texture_region_size = Vector2i(64, 64)
 3:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qml6a"]
-texture = ExtResource("12_wps6d")
+texture = ExtResource("11_l6k78")
 texture_region_size = Vector2i(64, 64)
 1:0/animation_columns = 8
 1:0/animation_separation = Vector2i(2, 0)
@@ -878,7 +878,7 @@ texture_region_size = Vector2i(64, 64)
 1:1/0/terrains_peering_bit/top_side = 3
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eakj6"]
-texture = ExtResource("11_bh4kq")
+texture = ExtResource("10_gdo3a")
 texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_df4b2"]
@@ -896,7 +896,7 @@ texture_region_size = Vector2i(32, 32)
 10:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ey83s"]
-texture = ExtResource("14_mpds2")
+texture = ExtResource("12_en3ih")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(5, 5)
 0:0/0 = 0
@@ -912,7 +912,7 @@ texture_region_size = Vector2i(32, 32)
 10:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gx6fh"]
-texture = ExtResource("15_6ef08")
+texture = ExtResource("13_8khyu")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -922,7 +922,7 @@ texture_region_size = Vector2i(32, 32)
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vwgx"]
-texture = ExtResource("14_gwkxt")
+texture = ExtResource("14_ux0jm")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -942,7 +942,7 @@ texture_region_size = Vector2i(64, 64)
 3:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ar1pm"]
-texture = ExtResource("6_f1mjw")
+texture = ExtResource("6_u8g0h")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:1/0 = 0
@@ -995,12 +995,12 @@ texture_region_size = Vector2i(64, 64)
 6:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlwgg"]
-texture = ExtResource("15_hbiky")
+texture = ExtResource("15_mp68a")
 0:0/size_in_atlas = Vector2i(5, 6)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmclm"]
-texture = ExtResource("16_kcv86")
+texture = ExtResource("16_b5eo0")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/terrain_set = 0
@@ -1073,7 +1073,7 @@ polygon = PackedVector2Array(-32, -32, 32, -32, 32, 11.2895, -32, 10.725)
 polygon = PackedVector2Array(-32, -0.385544, -26.6025, -16.9639, -19.1244, -25.2715, 0.385544, -28.1447, 19.2772, -23.5181, 25.4459, -17.735, 28.5302, -0.771088, 32, 17.3494, -32, 17.735)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yc5yt"]
-texture = ExtResource("17_1deug")
+texture = ExtResource("17_1cmhx")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/y_sort_origin = 10
@@ -1281,7 +1281,7 @@ texture_region_size = Vector2i(64, 64)
 3:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1srhd"]
-texture = ExtResource("18_kcmr5")
+texture = ExtResource("18_12a1a")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -1365,7 +1365,7 @@ texture_region_size = Vector2i(64, 64)
 0:1/0/terrains_peering_bit/top_side = 6
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l50s2"]
-texture = ExtResource("19_oin88")
+texture = ExtResource("19_kuajl")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -1452,7 +1452,7 @@ texture_region_size = Vector2i(64, 64)
 6:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqjx3"]
-texture = ExtResource("20_tprsb")
+texture = ExtResource("20_gehyn")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -27.5482, -27.5482, -26.9972, -27.5482, 32, -32, 32)
@@ -1505,7 +1505,7 @@ texture_region_size = Vector2i(64, 64)
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kbenk"]
-texture = ExtResource("21_c0yry")
+texture = ExtResource("21_pnbne")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -1605,7 +1605,7 @@ texture_region_size = Vector2i(64, 64)
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y1c8q"]
-texture = ExtResource("22_8wm3u")
+texture = ExtResource("22_higpb")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0

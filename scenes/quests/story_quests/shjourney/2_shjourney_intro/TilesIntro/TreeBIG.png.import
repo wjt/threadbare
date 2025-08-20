@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b62k2fbio8m0y"
-path="res://.godot/imported/Tree.png-8f429c71d1f6533bebf6cff1d96f6868.ctex"
+uid="uid://jecho3fall7h"
+path="res://.godot/imported/TreeBIG.png-219e2fc7efcc003c01697b9fd3b888fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/Tiles/Tree.png"
-dest_files=["res://.godot/imported/Tree.png-8f429c71d1f6533bebf6cff1d96f6868.ctex"]
+source_file="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/TreeBIG.png"
+dest_files=["res://.godot/imported/TreeBIG.png-219e2fc7efcc003c01697b9fd3b888fc.ctex"]
 
 [params]
 
