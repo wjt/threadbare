@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=77 format=3 uid="uid://bpyv8qhmeyo6l"]
+[gd_resource type="TileSet" load_steps=75 format=3 uid="uid://bpyv8qhmeyo6l"]
 
 [ext_resource type="Texture2D" uid="uid://doc4qg7e3kgs" path="res://assets/third_party/tiny-swords/Terrain/Water/Water.png" id="1_g43c7"]
 [ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="2_k480b"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://td3y2vjom24f" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level3.png" id="4_kcljf"]
 [ext_resource type="Texture2D" uid="uid://brnsfo2pejt7i" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level4.png" id="5_d57eg"]
 [ext_resource type="Texture2D" uid="uid://ccm3gmsmp7nwt" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Objects.png" id="7_bpxtt"]
-[ext_resource type="Texture2D" uid="uid://cumn518jmfp8j" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/GRASS+.png" id="8_gcrbe"]
-[ext_resource type="Texture2D" uid="uid://c4mfu0rbomlk1" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Dark-grass-tileset.png" id="9_tq5mi"]
 [ext_resource type="Texture2D" uid="uid://dl26i18gks2li" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Tileset.png" id="10_g5ssy"]
 [ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/third_party/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="11_frma6"]
 [ext_resource type="Texture2D" uid="uid://dv2pn30s2y5ep" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Tileset Grass.png" id="12_q5cdr"]
@@ -624,7 +622,6 @@ texture = ExtResource("7_bpxtt")
 5:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2w62b"]
-texture = ExtResource("8_gcrbe")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -646,7 +643,6 @@ texture_region_size = Vector2i(64, 64)
 5:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihs3d"]
-texture = ExtResource("9_tq5mi")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
