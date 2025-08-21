@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=79 format=3 uid="uid://birttlb0sk74i"]
+[gd_resource type="TileSet" load_steps=85 format=3 uid="uid://birttlb0sk74i"]
 
 [ext_resource type="Texture2D" uid="uid://doc4qg7e3kgs" path="res://assets/third_party/tiny-swords/Terrain/Water/Water.png" id="1_oyjxv"]
 [ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="2_i8bqj"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://brnsfo2pejt7i" path="res://assets/first_party/tiles/Void_Tiles_Stars_Level4.png" id="5_25554"]
 [ext_resource type="Texture2D" uid="uid://epiqik5i67ph" path="res://scenes/quests/story_quests/shjourney/personajes/bloquelaberintov4(80%)perfect.png" id="6_o4qnm"]
 [ext_resource type="Texture2D" uid="uid://ccm3gmsmp7nwt" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Objects.png" id="7_b88de"]
+[ext_resource type="Texture2D" uid="uid://d188e1afiloh3" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/GrassTileSH4Bigger.png" id="8_jep0c"]
 [ext_resource type="Texture2D" uid="uid://dl26i18gks2li" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Tileset.png" id="10_e1wly"]
 [ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/third_party/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="11_ghw4d"]
 [ext_resource type="Texture2D" uid="uid://dv2pn30s2y5ep" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Tileset Grass.png" id="12_og0tv"]
@@ -15,12 +16,14 @@
 [ext_resource type="Texture2D" uid="uid://ckobr37gj4fvi" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/TX Plant with Shadow.png" id="15_irmit"]
 [ext_resource type="Texture2D" uid="uid://ddp2xwtx7p8te" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/AssetsShJourney/Freedecorations.png" id="16_vaxxn"]
 [ext_resource type="Texture2D" uid="uid://bwycwmhn0d3oe" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/estructuras(decoracion)/puertagrande1.png" id="17_uvq5o"]
+[ext_resource type="Texture2D" uid="uid://c2b6te1y5i26f" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/GrassTileSH.png" id="18_05u02"]
 [ext_resource type="Texture2D" uid="uid://d0yyk0dikkltr" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/estructuras(decoracion)/puertagrande2.png" id="18_wptox"]
 [ext_resource type="Texture2D" uid="uid://c0k3tk7neh2c0" path="res://scenes/quests/story_quests/shjourney/personajes/bloquelaberinto2.png" id="20_yjqkn"]
 [ext_resource type="Texture2D" uid="uid://cnmmh3uq7rkla" path="res://assets/third_party/tiny-swords/Terrain/Bridge/Bridge_All.png" id="21_3s4vp"]
 [ext_resource type="Texture2D" uid="uid://dkqm7p88upvap" path="res://scenes/quests/story_quests/shjourney/personajes/bloquedemadera.png" id="22_sth7t"]
 [ext_resource type="Texture2D" uid="uid://c0s56n45hral8" path="res://scenes/quests/story_quests/shjourney/personajes/bloque cesped1.png" id="23_6g4r4"]
 [ext_resource type="Texture2D" uid="uid://baqbghvs73s83" path="res://scenes/quests/story_quests/shjourney/personajes/cesped3.png" id="24_dorxe"]
+[ext_resource type="Texture2D" uid="uid://b62k2fbio8m0y" path="res://scenes/quests/story_quests/shjourney/2_shjourney_intro/TilesIntro/Tree.png" id="24_ngagm"]
 [ext_resource type="Texture2D" uid="uid://c7oht7wudd8wa" path="res://assets/first_party/tiles/Cliff_Tiles.png" id="25_4fefm"]
 [ext_resource type="Texture2D" uid="uid://pkm6smjl8861" path="res://assets/first_party/tiles/Grass_Tiles_Light.png" id="26_tmpo0"]
 [ext_resource type="Texture2D" uid="uid://dcq6v7mx3h1fl" path="res://assets/first_party/tiles/Dirt_Tiles.png" id="27_em4p6"]
@@ -649,6 +652,59 @@ texture_region_size = Vector2i(64, 64)
 4:2/0 = 0
 5:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxlds"]
+texture = ExtResource("8_jep0c")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1a6i"]
 texture = ExtResource("10_e1wly")
 texture_region_size = Vector2i(64, 64)
@@ -951,6 +1007,26 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 3:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3k6c"]
+texture = ExtResource("18_05u02")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lvp7w"]
 texture = ExtResource("6_o4qnm")
 texture_region_size = Vector2i(64, 64)
@@ -1086,6 +1162,11 @@ texture_region_size = Vector2i(64, 64)
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llnx2"]
+texture = ExtResource("24_ngagm")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yc5yt"]
 polygon = PackedVector2Array(-32, -5.08027, -23.7079, -22.0145, -6.77369, -27.0947, 32, -27.0947, 32, 32, -32, 32)
@@ -1818,6 +1899,9 @@ sources/32 = SubResource("TileSetAtlasSource_lmy5r")
 sources/24 = SubResource("TileSetAtlasSource_8ptt7")
 sources/25 = SubResource("TileSetAtlasSource_y30qf")
 sources/26 = SubResource("TileSetAtlasSource_p3bju")
+sources/16 = SubResource("TileSetAtlasSource_wxlds")
+sources/27 = SubResource("TileSetAtlasSource_c3k6c")
+sources/33 = SubResource("TileSetAtlasSource_llnx2")
 pattern_0 = SubResource("TileMapPattern_0wfyh")
 pattern_1 = SubResource("TileMapPattern_sugp2")
 pattern_2 = SubResource("TileMapPattern_jyhfs")
