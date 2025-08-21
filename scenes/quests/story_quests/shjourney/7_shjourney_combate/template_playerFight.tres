@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://c71mojxxxxfvj" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/PJ_attack.png" id="1_5nfxk"]
 [ext_resource type="Texture2D" uid="uid://dp2c5hcg44j3d" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/personajes/TimDefeated.png" id="2_5nfxk"]
-[ext_resource type="Texture2D" uid="uid://dh12eo042ihu4" path="res://scenes/game_elements/characters/player/components/PJ_IddleFight-Sheet.png" id="3_k32gq"]
-[ext_resource type="Texture2D" uid="uid://bou7wg3esfwel" path="res://scenes/game_elements/characters/player/components/PJrunningFight-Sheet.png" id="4_r0ucd"]
+[ext_resource type="Texture2D" uid="uid://dh12eo042ihu4" path="res://scenes/quests/story_quests/shjourney/assets/PJ_IddleFight-Sheet.png" id="3_k32gq"]
+[ext_resource type="Texture2D" uid="uid://bou7wg3esfwel" path="res://scenes/quests/story_quests/shjourney/assets/PJrunningFight-Sheet.png" id="4_r0ucd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4gbc"]
 atlas = ExtResource("1_5nfxk")

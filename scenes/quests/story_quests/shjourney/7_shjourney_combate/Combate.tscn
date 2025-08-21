@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://b6bwvcgtqn31p" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/Pelea_final.mp3" id="12_api73"]
 [ext_resource type="Texture2D" uid="uid://p8kty3uxifxu" path="res://assets/third_party/inputs/keyboard-and-mouse/Dark/Space_Key_Dark.png" id="15_l82d5"]
 [ext_resource type="Script" uid="uid://d4bfnn5upde7h" path="res://scenes/game_elements/props/hint/input_key/input_key.gd" id="16_khbdt"]
-[ext_resource type="Theme" uid="uid://coxcra1002kil" path="res://scenes/ui_elements/shared_components/theme.tres" id="17_5kk5x"]
+[ext_resource type="Theme" uid="uid://cvitou84ni7qe" path="res://scenes/ui_elements/shared_components/theme.tres" id="17_5kk5x"]
 [ext_resource type="Script" uid="uid://cm5hbvvpkiw7u" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/Music/music.gd" id="19_jqvha"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jqvha"]

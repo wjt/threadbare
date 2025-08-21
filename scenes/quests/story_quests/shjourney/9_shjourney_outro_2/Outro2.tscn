@@ -12,7 +12,7 @@
 [ext_resource type="SpriteFrames" uid="uid://8xxbcslwu8ti" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/template_combat_components/ArbolFanstasma.tres" id="12_f0pqt"]
 [ext_resource type="Script" uid="uid://3tn8210agfwf" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/area_2d.gd" id="12_gpc53"]
 [ext_resource type="AudioStream" uid="uid://chqrto7gxyuwo" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/dark-ambient-drone-258069.mp3" id="13_cpr3a"]
-[ext_resource type="Script" uid="uid://uru8f5jj8nvo" path="res://scenes/ui_elements/cinematic/cinematicOutro2.gd" id="13_oxm0q"]
+[ext_resource type="Script" uid="uid://uru8f5jj8nvo" path="res://scenes/quests/story_quests/shjourney/8_shjourney_outro/cinematicOutro2.gd" id="13_oxm0q"]
 [ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="14_c0323"]
 [ext_resource type="Resource" uid="uid://x54tngxeume7" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/Dialogos/finaldiaalogo.dialogue" id="14_oxm0q"]
 [ext_resource type="Script" uid="uid://cm5hbvvpkiw7u" path="res://scenes/quests/story_quests/shjourney/4_Laberinto/Music/music.gd" id="15_f0pqt"]
