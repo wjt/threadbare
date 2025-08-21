@@ -480,7 +480,7 @@ script = ExtResource("5_nvq2p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/AnimationPlayer/Character2"]
 sprite_frames = ExtResource("4_j0a3a")
-animation = &"idle"
+animation = &"walk"
 
 [node name="House2" type="Sprite2D" parent="."]
 modulate = Color(0.419813, 0.419813, 0.419813, 1)
