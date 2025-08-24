@@ -6,11 +6,13 @@ do animation_player.animation_finished
 (Tim está de pie en medio del claro, mirando confundido
 a su alrededor. Todo parece tranquilo, demasiado tranquilo.)
 
-Repentinamente, unos arbustos se mueven lentamente y de ellos emerge Lily,
-su hermana, con una leve sonrisa.
+Repentinamente, alguien sale de los arbustos..
 
 do animation_player.play(&"Tim_position")
 do animation_player.animation_finished
+
+la oscuridad se disipa lentamente, revelando una luz cálida y tranquilizadora.
+
 
 Tim: ¿L-Lily? ¿Eres tú?
 Lily: Aquí estoy, Tim. Sabía que me encontrarías.
@@ -19,13 +21,12 @@ Lily: Nunca estuve lejos. Siempre estuve contigo, en tus recuerdos y en tu valor
 Tim: Pero dudé tanto, Lily… tuve miedo de no ser lo suficientemente fuerte.
 Lily: Fuiste valiente cuando importaba. El miedo no te hizo débil, te hizo humano. Es parte de crecer.
 Tim: Ahora lo entiendo, Lily. Las pesadillas pueden ser oscuras, pero mientras estemos juntos, siempre encontraremos la luz.
-Lily: Vamos a casa, Tim. Nuestro sueño ha terminado. Es hora de despertar juntos.
+Lily: Vamos a casa, Tim. Nuestro sueño ha terminado. Ya es hora de despertar.
 
 do animation_player.play(&"segundo_paso")
 do animation_player.animation_finished
 
-Luego, ambos se toman de la mano y se dirigen hacia la casa,
-la oscuridad se disipa lentamente, revelando una luz cálida y tranquilizadora.
+Luego, ambos se toman de la mano y se dirigen hacia la casa.
 
 do animation_player.play(&"tercer_paso")
 do animation_player.animation_finished
