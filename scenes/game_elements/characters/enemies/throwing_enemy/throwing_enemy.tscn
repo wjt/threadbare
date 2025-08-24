@@ -1,10 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://b82nsrh332syj"]
+[gd_scene load_steps=12 format=3 uid="uid://b82nsrh332syj"]
 
 [ext_resource type="Script" uid="uid://dfj3625owet5p" path="res://scenes/game_elements/characters/enemies/throwing_enemy/components/throwing_enemy.gd" id="1_ffq0m"]
 [ext_resource type="SpriteFrames" uid="uid://deosvk5k4su5f" path="res://scenes/quests/story_quests/template/2_template_combat/template_combat_components/template_throwing_enemy.tres" id="2_cvpou"]
-[ext_resource type="AudioStream" uid="uid://bsquiv06oyoom" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/evil-laughs-demonic-echos-75496.mp3" id="3_yhlrh"]
-[ext_resource type="AudioStream" uid="uid://dxmnvlfevve1g" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/fireball-whoosh-6-179130.mp3" id="4_cvpou"]
-[ext_resource type="AudioStream" uid="uid://b0qoutruh1utf" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/demon-dying.mp3" id="5_starr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
 height = 42.0
@@ -13,7 +10,7 @@ height = 42.0
 size = Vector2(78, 75)
 
 [sub_resource type="Animation" id="Animation_xcanh"]
-length = 0.5
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -69,18 +66,6 @@ tracks/4/path = NodePath("Sounds/AttackSound:playing")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sounds/dying:playing")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -169,18 +154,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [&"defeated"]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sounds/dying:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_ffq0m"]
 resource_name = "got hit"
@@ -234,7 +207,7 @@ tracks/2/path = NodePath("Sounds/IdleSound:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(-1.2),
+"times": PackedFloat32Array(0.15),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -272,9 +245,7 @@ script = ExtResource("1_ffq0m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-texture_filter = 1
 position = Vector2(0, -30)
-scale = Vector2(3.685, 3.685)
 sprite_frames = ExtResource("2_cvpou")
 animation = &"walk"
 autoplay = "idle"
@@ -313,19 +284,12 @@ libraries = {
 
 [node name="IdleSound" type="AudioStreamPlayer2D" parent="Sounds"]
 unique_name_in_owner = true
-stream = ExtResource("3_yhlrh")
 volume_db = 5.0
-autoplay = true
 max_distance = 1000.0
 bus = &"SFX"
 
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="Sounds"]
 unique_name_in_owner = true
-stream = ExtResource("4_cvpou")
 volume_db = 5.0
 max_distance = 1000.0
-bus = &"SFX"
-
-[node name="dying" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("5_starr")
 bus = &"SFX"
