@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Threadbare"
+config/tags=PackedStringArray("2d", "endless", "game", "tilemap", "top_down")
 run/main_scene="uid://huuo8mnwsphv"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://bc70phmq55dkf"
@@ -35,7 +36,7 @@ gdscript/warnings/untyped_declaration=1
 editor/new_file_template="# SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 ~ start
-{{npc_name}}: [[Hi|Hello|Greetings]], {{player_name}}
+[[Hi|Hello|Greetings]], {{player_name}}
 => END
 "
 runtime/balloon_path="uid://dhydhpp43urah"
@@ -46,10 +47,11 @@ editor/translations/update_pot_files_automatically=false
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/git_describe/plugin.cfg", "res://addons/git_lfs_checker/plugin.cfg", "res://addons/sprite_frames_exported_textures/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/git_describe/plugin.cfg", "res://addons/git_lfs_checker/plugin.cfg", "res://addons/sprite_frames_exported_textures/plugin.cfg", "res://addons/storyquest_bootstrap/plugin.cfg")
 
 [file_customization]
 
@@ -179,6 +181,6 @@ sokoban_skip={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-2d/snap/snap_2d_transforms_to_pixel=true

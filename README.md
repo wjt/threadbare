@@ -6,6 +6,10 @@ A story-driven, collaborative game where players don’t just explore a world—
 
 [Play the current pre-alpha release of Threadbare](https://endlessm.github.io/threadbare/), or [play development versions](https://endlessm.github.io/threadbare/branches/). New pre-alpha releases are published every 2–3 weeks.
 
+<a href="https://flathub.org/apps/org.endlessaccess.threadbare">
+  <img width="240" alt="Get it on Flathub" src="https://flathub.org/api/badge?locale=en"/>
+</a>
+
 ## Help Build Threadbare!
 
 Threadbare is open source! We invite interested learners, educators, or game developers to follow along with its development and get involved where possible. The core team determines the overall game design and direction (ensuring it serves both players and learners), but anyone can join the community to find a place to help out:
