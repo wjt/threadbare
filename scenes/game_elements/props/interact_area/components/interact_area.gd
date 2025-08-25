@@ -36,6 +36,21 @@ func get_global_interact_label_position() -> Vector2:
 	return to_global(interact_label_position)
 
 
+func _get_configuration_warnings() -> PackedStringArray:
+	var warnings: PackedStringArray
+	if not disabled and not get_collision_layer_value(INTERACTABLE_LAYER):
+		warnings.append(
+			"Consider enabling collision with the interactable layer: %d." % INTERACTABLE_LAYER
+		)
+	return warnings
+
+
+func _set(property: StringName, _value: Variant) -> bool:
+	if property == "collision_layer":
+		update_configuration_warnings()
+	return false
+
+
 func _draw() -> void:
 	if not Engine.is_editor_hint():
 		return

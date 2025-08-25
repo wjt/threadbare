@@ -17,11 +17,16 @@ SPDX-License-Identifier = "CC0-1.0"
 path = [
     "addons/git_lfs_checker/plugin.cfg",
     "addons/sprite_frames_exported_textures/plugin.cfg",
+    "addons/storyquest_bootstrap/plugin.cfg",
+    "addons/storyquest_bootstrap/*.tscn",
     "scenes/*.tscn",
     "scenes/**/*.tscn",
     "scenes/**/*.tres",
     # .import files are largely machine-generated but developers can tweak their contents
     "**/*.import",
+    "default_bus_layout.tres",
+    "export_presets.cfg",
+    "project.godot",
 ]
 SPDX-FileCopyrightText = "The Threadbare Authors"
 SPDX-License-Identifier = "MPL-2.0"
@@ -55,6 +60,10 @@ path = [
     "assets/first_party/**/*.aseprite",
     "assets/first_party/**/*.png",
     "assets/first_party/**/*.ogg",
+    "assets/first_party/**/*.mp3",
+    "icon-256.png",
+    "icon.aseprite",
+    "icon.png",
     "scenes/**/*.png",
     "scenes/**/*.svg",
     "scenes/**/*.aseprite",

@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://boc4ibh8o13d2" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees1.tscn" id="8_5dkvu"]
 [ext_resource type="PackedScene" uid="uid://bvpd7flewjkle" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/npcs_components/fray_idle.tscn" id="8_y05yi"]
 [ext_resource type="PackedScene" uid="uid://cf5a4ramrfe7y" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/npcs_components/sheep.tscn" id="9_nwk3t"]
-[ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/shared_components/sprite_frames/storyweaver_blue.tres" id="10_nf7lg"]
+[ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="10_nf7lg"]
 
 [sub_resource type="Animation" id="Animation_ld06i"]
 length = 0.001
@@ -104,7 +104,6 @@ _data = {
 }
 
 [node name="Intro" type="Node2D"]
-texture_filter = 1
 
 [node name="TileMapLayers" type="Node2D" parent="."]
 modulate = Color(0.783523, 0.783523, 0.783523, 1)
