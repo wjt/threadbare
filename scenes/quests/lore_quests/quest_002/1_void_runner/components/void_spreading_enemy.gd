@@ -3,6 +3,9 @@
 extends CharacterBody2D
 ## @experimental
 
+const VOID_PARTICLES = preload(
+	"res://scenes/quests/lore_quests/quest_002/1_void_runner/components/void_particles.tscn"
+)
 const TERRAIN_SET: int = 0
 const VOID_TERRAIN: int = 9
 const NEIGHBORS := [
@@ -23,19 +26,13 @@ var _moving: bool = false
 var _update_interval: float = 10.0 / 60.0
 var _next_update: float
 
-@onready var particles: GPUParticles2D = %GPUParticles2D
 @onready var navigation_agent: NavigationAgent2D = %NavigationAgent2D
-
-
-func _ready() -> void:
-	particles.emitting = false
 
 
 func start(detected_node: Node2D) -> void:
 	assert(detected_node is Player)
 	player = detected_node as Player
 	_moving = true
-	particles.emitting = true
 	navigation_agent.target_position = player.global_position
 
 
@@ -72,7 +69,13 @@ func _process(_delta: float) -> void:
 	for neighbor: int in NEIGHBORS:
 		coords.append(void_layer.get_neighbor_cell(coord, neighbor))
 
-	void_layer.consume_cells(coords)
+	var consumed := void_layer.consume_cells(coords)
+	if consumed:
+		var particles := VOID_PARTICLES.instantiate()
+		particles.emitting = true
+		add_child(particles)
+		await particles.finished
+		particles.queue_free()
 
 
 func _on_player_capture_area_body_entered(body: Node2D) -> void:
@@ -83,7 +86,6 @@ func _on_player_capture_area_body_entered(body: Node2D) -> void:
 		return
 
 	_moving = false
-	particles.emitting = false
 	player.mode = Player.Mode.DEFEATED
 	var tween := create_tween()
 	tween.tween_property(player, "scale", Vector2.ZERO, 2.0)
