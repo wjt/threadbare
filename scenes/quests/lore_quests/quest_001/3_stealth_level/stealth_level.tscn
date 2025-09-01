@@ -154,7 +154,6 @@ y_sort_enabled = true
 
 [node name="StealthGameLogic" type="Node" parent="."]
 script = ExtResource("1_f6lvl")
-zoom = 1.7
 
 [node name="BackgroundMusic" parent="." instance=ExtResource("1_t8tj0")]
 stream = ExtResource("2_p2u32")
