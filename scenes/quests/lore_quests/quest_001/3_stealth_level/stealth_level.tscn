@@ -706,7 +706,6 @@ sprite_frames = ExtResource("21_p2u32")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 unique_name_in_owner = true
 process_mode = 3
-zoom = Vector2(1.7, 1.7)
 limit_left = 0
 limit_top = 0
 position_smoothing_enabled = true
