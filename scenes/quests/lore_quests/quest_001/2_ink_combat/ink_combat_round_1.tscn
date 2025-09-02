@@ -238,7 +238,7 @@ text = "Repel"
 [node name="HUD" parent="." instance=ExtResource("9_na0be")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.333, 1.333)
 limit_left = 0
 limit_top = 0
 limit_right = 2048

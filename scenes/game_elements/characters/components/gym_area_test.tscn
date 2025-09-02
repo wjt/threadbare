@@ -41,7 +41,6 @@ position = Vector2(1312, 740)
 sprite_frames = ExtResource("3_6axvd")
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Player"]
-zoom = Vector2(2, 2)
 limit_left = -320
 limit_top = -640
 editor_draw_limits = true
