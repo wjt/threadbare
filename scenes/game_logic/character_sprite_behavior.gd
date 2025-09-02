@@ -3,6 +3,8 @@
 @tool
 class_name CharacterSpriteBehavior
 extends Node2D
+## @experimental
+##
 ## Flip horizontally and/or play animations in [member sprite] according
 ## to the velocity of [member character].
 
