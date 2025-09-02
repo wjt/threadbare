@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 @tool
 class_name PathWalkBehavior
-extends Node2D
+extends BaseCharacterBehavior
 ## @experimental
 ##
 ## Make the character walk along a path.
@@ -59,9 +59,6 @@ var direction: int = 1:
 # Offset of each point that the character will wait standing.
 var _standing_offsets: Array[float]
 
-## The controlled character.
-@onready var character: CharacterBody2D = get_parent()
-
 
 func _set_walking_path(new_walking_path: Path2D) -> void:
 	walking_path = new_walking_path
@@ -83,9 +80,10 @@ func _set_direction(new_direction: int) -> void:
 
 
 func _get_configuration_warnings() -> PackedStringArray:
+	var warnings := super._get_configuration_warnings()
 	if not walking_path:
-		return ["Walking Path property must be set."]
-	return []
+		warnings.append("Walking Path property must be set.")
+	return warnings
 
 
 func _ready() -> void:

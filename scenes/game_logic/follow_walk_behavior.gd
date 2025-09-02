@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 @tool
 class_name FollowWalkBehavior
-extends Node2D
+extends BaseCharacterBehavior
 ## @experimental
 ##
 ## Make the character follow a target.
@@ -49,9 +49,6 @@ var distance: float = 0
 var is_target_reached: bool:
 	set = _set_is_target_reached
 
-## The controlled character.
-@onready var character: CharacterBody2D = get_parent()
-
 
 func _set_target(new_target: Node2D) -> void:
 	target = new_target
@@ -66,7 +63,7 @@ func _set_is_target_reached(new_is_target_reached: bool) -> void:
 
 
 func _get_configuration_warnings() -> PackedStringArray:
-	var warnings: PackedStringArray
+	var warnings := super._get_configuration_warnings()
 	if not target:
 		warnings.append("Target property must be set.")
 	return warnings

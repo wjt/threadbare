@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 @tool
 class_name BounceWalkBehavior
-extends Node2D
+extends BaseCharacterBehavior
 ## @experimental
 ##
 ## Make the character move and bounce on walls.
@@ -28,9 +28,6 @@ signal direction_changed
 
 ## The current direction as a unit Vector2.
 var direction: Vector2
-
-## The controlled character.
-@onready var character: CharacterBody2D = get_parent()
 
 
 func _validate_property(property: Dictionary) -> void:
