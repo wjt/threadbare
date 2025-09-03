@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 @tool
 class_name InputWalkBehavior
-extends Node2D
+extends BaseCharacterBehavior
 ## @experimental
 ##
 ## Control the character with input actions to walk and run.
@@ -30,9 +30,6 @@ var input_vector: Vector2
 ## True if the character is running according to the input actions.
 var is_running: bool:
 	set = _set_is_running
-
-## The controlled character.
-@onready var character: CharacterBody2D = get_parent()
 
 
 func _set_is_running(new_is_running: bool) -> void:

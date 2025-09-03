@@ -167,15 +167,16 @@ position = Vector2(0, -37)
 sprite_frames = ExtResource("9_6nfeg")
 animation = &"idle"
 
-[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D/AnimatedSprite2D" node_paths=PackedStringArray("character")]
+[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D/AnimatedSprite2D" node_paths=PackedStringArray("character", "sprite")]
 script = ExtResource("15_utmd2")
 character = NodePath("../..")
+sprite = NodePath("..")
 metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
-[node name="ErraticWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D"]
+[node name="ErraticWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D" node_paths=PackedStringArray("character")]
 script = ExtResource("10_k43ew")
 travel_distance = 100.0
-metadata/_custom_type_script = "uid://cx0sk4uhvnii0"
+character = NodePath("..")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="OnTheGround"]
 position = Vector2(921, 621)
@@ -192,17 +193,18 @@ position = Vector2(0, -37)
 sprite_frames = ExtResource("13_wq1h3")
 animation = &"idle"
 
-[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D2/AnimatedSprite2D" node_paths=PackedStringArray("character")]
+[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D2/AnimatedSprite2D" node_paths=PackedStringArray("character", "sprite")]
 position = Vector2(0, 37)
 script = ExtResource("15_utmd2")
 character = NodePath("../..")
+sprite = NodePath("..")
 metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
-[node name="FollowWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D2" node_paths=PackedStringArray("target")]
+[node name="FollowWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D2" node_paths=PackedStringArray("target", "character")]
 script = ExtResource("12_w4jvh")
 walk_speed = 170.0
 target = NodePath("../../CharacterBody2D")
-metadata/_custom_type_script = "uid://cwoclmik3db2"
+character = NodePath("..")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="OnTheGround"]
 position = Vector2(1691, 621)
@@ -219,15 +221,16 @@ position = Vector2(0, -37)
 sprite_frames = ExtResource("12_wq1h3")
 animation = &"idle"
 
-[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D3/AnimatedSprite2D" node_paths=PackedStringArray("character")]
+[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D3/AnimatedSprite2D" node_paths=PackedStringArray("character", "sprite")]
 script = ExtResource("15_utmd2")
 character = NodePath("../..")
+sprite = NodePath("..")
 metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
-[node name="BounceWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D3"]
+[node name="BounceWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D3" node_paths=PackedStringArray("character")]
 script = ExtResource("11_utmd2")
 walk_speed = 50.0
-metadata/_custom_type_script = "uid://q4jj6ou7yonf"
+character = NodePath("..")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="OnTheGround" groups=["player"]]
 position = Vector2(1312, 760.076)
@@ -256,14 +259,15 @@ position = Vector2(0, -17)
 sprite_frames = ExtResource("3_6axvd")
 animation = &"idle"
 
-[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D4/AnimatedSprite2D" node_paths=PackedStringArray("character")]
+[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D4/AnimatedSprite2D" node_paths=PackedStringArray("character", "sprite")]
 script = ExtResource("15_utmd2")
 character = NodePath("../..")
+sprite = NodePath("..")
 metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
-[node name="InputWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D4"]
+[node name="InputWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D4" node_paths=PackedStringArray("character")]
 script = ExtResource("15_k43ew")
-metadata/_custom_type_script = "uid://c8xbryhknipab"
+character = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/CharacterBody2D4"]
 limit_left = -320
@@ -285,18 +289,19 @@ position = Vector2(0, -27)
 sprite_frames = ExtResource("17_w4jvh")
 animation = &"idle"
 
-[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D5/AnimatedSprite2D" node_paths=PackedStringArray("character")]
+[node name="CharacterSpriteBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D5/AnimatedSprite2D" node_paths=PackedStringArray("character", "sprite")]
 position = Vector2(0, 37)
 script = ExtResource("15_utmd2")
 character = NodePath("../..")
+sprite = NodePath("..")
 metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
-[node name="PathWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D5" node_paths=PackedStringArray("walking_path")]
+[node name="PathWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D5" node_paths=PackedStringArray("walking_path", "character")]
 script = ExtResource("18_wq1h3")
 walk_speed = 90.0
 stuck_speed = 20.0
 walking_path = NodePath("../../Path2D")
-metadata/_custom_type_script = "uid://id28maao3vdy"
+character = NodePath("..")
 
 [node name="Path2D" type="Path2D" parent="OnTheGround"]
 position = Vector2(839, 865)

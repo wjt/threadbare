@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 @tool
 class_name ErraticWalkBehavior
-extends Node2D
+extends BaseCharacterBehavior
 ## @experimental
 ##
 ## Make the character walk around erratically.
@@ -42,9 +42,6 @@ var direction: Vector2
 
 ## The current distance travelled since last turn.
 var distance: float = 0
-
-## The controlled character.
-@onready var character: CharacterBody2D = get_parent()
 
 
 func _update_direction() -> void:

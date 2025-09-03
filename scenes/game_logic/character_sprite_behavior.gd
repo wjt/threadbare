@@ -3,6 +3,8 @@
 @tool
 class_name CharacterSpriteBehavior
 extends Node2D
+## @experimental
+##
 ## Flip horizontally and/or play animations in [member sprite] according
 ## to the velocity of [member character].
 
@@ -14,10 +16,31 @@ extends Node2D
 ## Use this when using more advanced animation through an AnimationPlayer node.
 @export var play_animations: bool = true
 
+## The controlled sprite.[br][br]
+##
+## [b]Note:[/b] If the parent node is a AnimatedSprite2D and sprite isn't set,
+## the parent node will be automatically assigned to this variable.
+@export var sprite: AnimatedSprite2D:
+	set = _set_sprite
+
 var _is_character_running: bool = false
 
-## The controlled sprite.
-@onready var sprite: AnimatedSprite2D = get_parent()
+
+func _enter_tree() -> void:
+	if not sprite and get_parent() is AnimatedSprite2D:
+		sprite = get_parent()
+
+
+func _set_sprite(new_sprite: AnimatedSprite2D):
+	sprite = new_sprite
+	update_configuration_warnings()
+
+
+func _get_configuration_warnings() -> PackedStringArray:
+	var warnings: PackedStringArray
+	if sprite is not AnimatedSprite2D:
+		warnings.append("Sprite must be set.")
+	return warnings
 
 
 func _ready() -> void:
