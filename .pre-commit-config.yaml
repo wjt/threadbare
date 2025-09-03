@@ -24,7 +24,7 @@ repos:
   - id: editorconfig-checker
 
 - repo: https://github.com/Scony/godot-gdscript-toolkit
-  rev: 4.3.3
+  rev: 4.3.4
   hooks:
   - id: gdformat
   - id: gdlint
