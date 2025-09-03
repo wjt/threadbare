@@ -19,7 +19,7 @@ repos:
     exclude: \.svg$
 
 - repo: https://github.com/editorconfig-checker/editorconfig-checker
-  rev: v3.3.0
+  rev: v3.4.0
   hooks:
   - id: editorconfig-checker
 
