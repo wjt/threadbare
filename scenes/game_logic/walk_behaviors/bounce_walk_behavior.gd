@@ -10,8 +10,9 @@ extends BaseCharacterBehavior
 ## Emitted when [member direction] is updated.
 signal direction_changed
 
-## The character walking speed.
-@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var walk_speed: float = 300.0
+## Parameters controlling the speed at which this character walks. If unset, the default values of
+## [CharacterSpeeds] are used.
+@export var speeds: CharacterSpeeds
 
 ## The speed to consider that the character is stuck.
 ## If less than [member walk_speed], the character may slide on walls instead of bouncing.
@@ -51,6 +52,9 @@ func _ready() -> void:
 		set_physics_process(false)
 		return
 
+	if not speeds:
+		speeds = CharacterSpeeds.new()
+
 	_update_direction()
 
 
@@ -58,7 +62,7 @@ func _physics_process(_delta: float) -> void:
 	if not direction:
 		_update_direction()
 
-	character.velocity = direction * walk_speed
+	character.velocity = direction * speeds.walk_speed
 	var collided := character.move_and_slide()
 
 	if collided and character.is_on_wall():
