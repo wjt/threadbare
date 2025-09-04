@@ -6,18 +6,16 @@ extends BaseCharacterBehavior
 ## @experimental
 ##
 ## Make the character follow a target.
+##
+## The character retargets after traveling [member travel_distance],
+## or when it gets stuck colliding with something.
 
 ## Emitted when [member target] becomes reached or not.
 signal target_reached_changed(is_reached: bool)
 
-## The character walking speed.
-@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var walk_speed: float = 300.0
-
-## The speed to consider that the character is stuck.
-## If less than [member walk_speed], the character may slide on walls instead of emitting
-## the [signal got_stuck] signal.
-## If closer to zero, the character may not ever emit the [signal got_stuck] signal.
-@export_range(0, 1000, 10, "or_greater", "suffix:m/s") var stuck_speed: float = 300.0
+## Parameters controlling the speed at which this character walks. If unset, the default values of
+## [CharacterSpeeds] are used.
+@export var speeds: CharacterSpeeds
 
 ## The target to follow.
 @export var target: Node2D:
@@ -78,6 +76,9 @@ func _ready() -> void:
 		set_physics_process(false)
 		return
 
+	if not speeds:
+		speeds = CharacterSpeeds.new()
+
 	_update_direction()
 
 
@@ -85,14 +86,14 @@ func _physics_process(delta: float) -> void:
 	if not direction:
 		_update_direction()
 
-	character.velocity = character.velocity.lerp(direction * walk_speed, direction_weight)
+	character.velocity = character.velocity.lerp(direction * speeds.walk_speed, direction_weight)
 	var collided := character.move_and_slide()
 
 	if collided and character.is_on_wall():
-		if character.get_real_velocity().length_squared() <= stuck_speed * stuck_speed:
+		if speeds.is_stuck(character):
 			_update_direction()
 	else:
-		distance += walk_speed * delta
+		distance += speeds.walk_speed * delta
 		if distance > travel_distance:
 			_update_direction()
 			distance = 0.0

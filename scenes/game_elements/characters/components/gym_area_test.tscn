@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://ikgvi75j5dls"]
+[gd_scene load_steps=33 format=4 uid="uid://ikgvi75j5dls"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_5xpm5"]
 [ext_resource type="SpriteFrames" uid="uid://07di3updrwh0" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_purple.tres" id="3_6axvd"]
@@ -8,18 +8,37 @@
 [ext_resource type="PackedScene" uid="uid://bbsc3wssndtfe" path="res://scenes/game_elements/props/decoration/hiding_mushroom/hiding_mushroom.tscn" id="6_l45sp"]
 [ext_resource type="PackedScene" uid="uid://dv4f232y8w8dv" path="res://scenes/game_elements/props/decoration/water_rock/water_rock.tscn" id="7_1aydi"]
 [ext_resource type="SpriteFrames" uid="uid://b3r84ksew5djp" path="res://scenes/game_elements/characters/enemies/throwing_enemy/components/ink_drinker_frames_purple.tres" id="9_6nfeg"]
-[ext_resource type="Script" uid="uid://cx0sk4uhvnii0" path="res://scenes/game_logic/erratic_walk_behavior.gd" id="10_k43ew"]
-[ext_resource type="Script" uid="uid://q4jj6ou7yonf" path="res://scenes/game_logic/bounce_walk_behavior.gd" id="11_utmd2"]
-[ext_resource type="Script" uid="uid://cwoclmik3db2" path="res://scenes/game_logic/follow_walk_behavior.gd" id="12_w4jvh"]
+[ext_resource type="Script" uid="uid://cx0sk4uhvnii0" path="res://scenes/game_logic/walk_behaviors/erratic_walk_behavior.gd" id="10_k43ew"]
+[ext_resource type="Script" uid="uid://q4jj6ou7yonf" path="res://scenes/game_logic/walk_behaviors/bounce_walk_behavior.gd" id="11_utmd2"]
+[ext_resource type="Script" uid="uid://cwoclmik3db2" path="res://scenes/game_logic/walk_behaviors/follow_walk_behavior.gd" id="12_w4jvh"]
 [ext_resource type="SpriteFrames" uid="uid://qwlhm21ndgn2" path="res://scenes/game_elements/characters/enemies/guard/components/storyvore_frames_orange.tres" id="12_wq1h3"]
 [ext_resource type="SpriteFrames" uid="uid://3ujiuhj7wpm2" path="res://scenes/game_elements/characters/enemies/throwing_enemy/components/ink_drinker_frames_red.tres" id="13_wq1h3"]
-[ext_resource type="Script" uid="uid://c8xbryhknipab" path="res://scenes/game_logic/input_walk_behavior.gd" id="15_k43ew"]
+[ext_resource type="Script" uid="uid://c8xbryhknipab" path="res://scenes/game_logic/walk_behaviors/input_walk_behavior.gd" id="15_k43ew"]
 [ext_resource type="Script" uid="uid://dy68p7gf07pi3" path="res://scenes/game_logic/character_sprite_behavior.gd" id="15_utmd2"]
 [ext_resource type="Texture2D" uid="uid://dxaq5piwxqnht" path="res://scenes/game_elements/characters/player/components/dust.png" id="16_w4jvh"]
+[ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="17_itker"]
 [ext_resource type="SpriteFrames" uid="uid://r3dn5pxqk1sv" path="res://scenes/game_elements/characters/enemies/guard/components/storyvore_frames_gray.tres" id="17_w4jvh"]
-[ext_resource type="Script" uid="uid://id28maao3vdy" path="res://scenes/game_logic/path_walk_behavior.gd" id="18_wq1h3"]
+[ext_resource type="Script" uid="uid://id28maao3vdy" path="res://scenes/game_logic/walk_behaviors/path_walk_behavior.gd" id="18_wq1h3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oojqe"]
+
+[sub_resource type="Resource" id="Resource_itker"]
+script = ExtResource("17_itker")
+walk_speed = 170.0
+run_speed = 500.0
+stopping_step = 1500.0
+moving_step = 4000.0
+stuck_speed = 300.0
+metadata/_custom_type_script = "uid://csev4hv57utxv"
+
+[sub_resource type="Resource" id="Resource_oojqe"]
+script = ExtResource("17_itker")
+walk_speed = 50.0
+run_speed = 500.0
+stopping_step = 1500.0
+moving_step = 4000.0
+stuck_speed = 300.0
+metadata/_custom_type_script = "uid://csev4hv57utxv"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
 height = 42.0
@@ -67,6 +86,15 @@ func _on_input_walk_behavior_running_changed(is_running: bool) -> void:
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_itker"]
 radius = 13.0
 height = 66.0
+
+[sub_resource type="Resource" id="Resource_jdub8"]
+script = ExtResource("17_itker")
+walk_speed = 90.0
+run_speed = 500.0
+stopping_step = 1500.0
+moving_step = 4000.0
+stuck_speed = 20.0
+metadata/_custom_type_script = "uid://csev4hv57utxv"
 
 [sub_resource type="Curve2D" id="Curve2D_wq1h3"]
 _data = {
@@ -202,7 +230,7 @@ metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
 [node name="FollowWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D2" node_paths=PackedStringArray("target", "character")]
 script = ExtResource("12_w4jvh")
-walk_speed = 170.0
+speeds = SubResource("Resource_itker")
 target = NodePath("../../CharacterBody2D")
 character = NodePath("..")
 
@@ -229,7 +257,7 @@ metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
 [node name="BounceWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D3" node_paths=PackedStringArray("character")]
 script = ExtResource("11_utmd2")
-walk_speed = 50.0
+speeds = SubResource("Resource_oojqe")
 character = NodePath("..")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="OnTheGround" groups=["player"]]
@@ -298,8 +326,7 @@ metadata/_custom_type_script = "uid://dy68p7gf07pi3"
 
 [node name="PathWalkBehavior" type="Node2D" parent="OnTheGround/CharacterBody2D5" node_paths=PackedStringArray("walking_path", "character")]
 script = ExtResource("18_wq1h3")
-walk_speed = 90.0
-stuck_speed = 20.0
+speeds = SubResource("Resource_jdub8")
 walking_path = NodePath("../../Path2D")
 character = NodePath("..")
 
