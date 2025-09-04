@@ -6,6 +6,9 @@ extends BaseCharacterBehavior
 ## @experimental
 ##
 ## Make the character move and bounce on walls.
+##
+## The character bounces when it is colliding with a wall and moving slower than
+## the [member CharacterSpeeds.bounce_speed] configured in [member speeds].
 
 ## Emitted when [member direction] is updated.
 signal direction_changed
@@ -13,10 +16,6 @@ signal direction_changed
 ## Parameters controlling the speed at which this character walks. If unset, the default values of
 ## [CharacterSpeeds] are used.
 @export var speeds: CharacterSpeeds
-
-## The speed to consider that the character is stuck.
-## If less than [member walk_speed], the character may slide on walls instead of bouncing.
-@export_range(0, 1000, 10, "or_greater", "suffix:m/s") var stuck_speed: float = 300.0
 
 ## If set, ignore the [member initial_angle] and pick a random one instead.
 @export var pick_random_initial_angle: bool = false:
@@ -66,5 +65,5 @@ func _physics_process(_delta: float) -> void:
 	var collided := character.move_and_slide()
 
 	if collided and character.is_on_wall():
-		if character.get_real_velocity().length_squared() <= stuck_speed * stuck_speed:
+		if speeds.is_stuck(character):
 			_update_direction()

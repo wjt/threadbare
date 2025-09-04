@@ -23,3 +23,19 @@ extends Resource
 
 ## How fast does the player transition from stopped to walking/running.
 @export_range(10, 4000, 10, "or_greater", "suffix:m/s²") var moving_step: float = 4000.0
+
+## The speed below which the character is considered stuck.
+## [br][br]
+## What happens when the character is stuck depends on the behavior in use:
+## it may emit a signal, or cause the character to change direction.
+## [br][br]
+## If this is less than [member walk_speed], the character may slide on walls
+## when moving faster than this speed but below [member walk_speed].
+## If this is close to or less than zero, the character may never be considered
+## stuck.
+@export_range(0, 1000, 10, "or_greater", "suffix:m/s") var stuck_speed: float = 300.0
+
+
+## Check if the character's real velocity is below [member stuck_speed].
+func is_stuck(character: CharacterBody2D) -> bool:
+	return character.get_real_velocity().length_squared() < stuck_speed * stuck_speed
