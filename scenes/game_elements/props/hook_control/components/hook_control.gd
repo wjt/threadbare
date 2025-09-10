@@ -162,6 +162,7 @@ func _set_state(new_state: State) -> void:
 	if state == State.DISABLED:
 		rotation = 0
 		pressing_throw_action = false
+		throw_failed_while_pressing = false
 	if sprite_2d:
 		sprite_2d.visible = state != State.DISABLED
 	if ray_cast_2d:
