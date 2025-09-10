@@ -9,7 +9,7 @@ We welcome contributions to Threadbare!
 ## Language
 
 In-game text and dialogue for the main storyline should be written in English,
-for translation into other languages. Learner-contributed text and dialogue may
+for translation into other languages. Text and dialogue in StoryQuests may
 be written in another language if preferred.
 
 Prefer US English spellings for in-game text and dialogue, as well as source
