@@ -93,6 +93,27 @@ good commit message:
 - [Git (and how we Commit)](https://groengaard.dev/blog/git-and-how-we-commit)
   Christian Grøngaard
 
+### Multiple authors
+
+If multiple people have contributed to a single change, special care must be
+taken to make sure they each receive credit for their work. If a pull request is
+made up of several commits, with different authors, this is sufficient. But if
+all commits on a pull request are made by the same person, the other
+contributors must be identified with a specially-formatted tag in the commit
+message or pull request description, as described in GitHub's
+[Creating a commit with multiple authors][co-authored-by] guide. In brief, if
+Jane Doe submits a pull request to add a new enemy, with original art created by
+Alice Jones, the pull request description should end with:
+
+```
+Co-authored-by: Alice Jones <alice.jones@example.com>
+```
+
+If you're not sure how to do this, the Threadbare maintainers will be happy to
+help.
+
+[co-authored-by]: https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors
+
 ## Licensing
 
 Original source code (including GDScript source files, Godot scene files, and
