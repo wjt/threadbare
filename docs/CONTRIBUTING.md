@@ -4,7 +4,9 @@ SPDX-License-Identifier: MPL-2.0
 -->
 # Contributing to Threadbare
 
-We welcome contributions to Threadbare!
+We welcome contributions to Threadbare! This document lays out some of the
+requirements for a contribution to be expected. There is a corresponding
+document for [reviewing contributions](./REVIEWING.md).
 
 ## Language
 
