@@ -49,6 +49,12 @@ func _exit_tree() -> void:
 	update_configuration_warnings()
 
 
+func _ready() -> void:
+	if not Engine.is_editor_hint():
+		self.queue_free()
+		return
+
+
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings: PackedStringArray
 
