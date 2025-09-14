@@ -100,7 +100,8 @@ func _generate_points() -> PackedVector2Array:
 
 
 func _prepare_child(pos: Vector2) -> Node2D:
-	var child: Node2D = scenes.pick_random().instantiate()
+	var scene: PackedScene = scenes.pick_random()
+	var child: Node2D = scene.instantiate(PackedScene.GenEditState.GEN_EDIT_STATE_INSTANCE)
 	child.position = pos
 	if sprite_frames and "sprite_frames" in child:
 		child.sprite_frames = sprite_frames.pick_random()
