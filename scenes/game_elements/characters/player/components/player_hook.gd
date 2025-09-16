@@ -102,7 +102,7 @@ func _new_hook_string() -> Line2D:
 ## Called when the area was hooked.
 ## [br][br]
 ## Part of group hook_listener.
-func hooked(_new_hooked_to: HookableArea) -> void:
+func hooked(_new_hooked_to: HookableArea, is_loop: bool) -> void:
 	var p: Vector2 = _new_hooked_to.anchor_point.global_position
 	if not hook_string:
 		hook_string = _new_hook_string()
@@ -110,6 +110,19 @@ func hooked(_new_hooked_to: HookableArea) -> void:
 	areas_hooked.append(_new_hooked_to)
 	if not _new_hooked_to.hook_control:
 		pull_string()
+	if is_loop:
+		# Play a blink animation and then remove the string:
+		var tween: Tween = create_tween()
+		tween.tween_property(hook_string, "modulate:a", 0.0, 0.1).set_trans(
+			Tween.TransitionType.TRANS_LINEAR
+		)
+		tween.tween_property(hook_string, "modulate:a", 1.0, 0.1).set_trans(
+			Tween.TransitionType.TRANS_LINEAR
+		)
+		tween.set_loops(8)
+		tween.play()
+		await tween.finished
+		remove_string()
 
 
 ## Called when a throw has hit a wall.

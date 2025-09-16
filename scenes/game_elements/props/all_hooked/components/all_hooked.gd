@@ -47,9 +47,9 @@ func released(area: HookableArea) -> void:
 ## Called when the area was hooked.
 ## [br][br]
 ## Part of group hook_listener.
-func hooked(area: HookableArea) -> void:
+func hooked(area: HookableArea, is_loop: bool) -> void:
 	if area not in areas_to_hook:
 		return
 	areas_hooked.append(area)
-	if areas_hooked.size() >= areas_to_hook.size() + 1:
+	if is_loop and areas_hooked.size() >= areas_to_hook.size() + 1:
 		all_hooked.emit()

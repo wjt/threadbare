@@ -52,6 +52,14 @@ enum State {
 ## This will be used only until user input is pressed.
 @export_range(0, 360, 1, "radians_as_degrees") var initial_hook_angle: float
 
+## The area to which this control is attached, if any.
+@export var hook_area: HookableArea
+
+## Exclude these areas from connecting.
+## This is used for excluding the immediate previous area, preventing a string
+## that goes from A to B, and then immediately from B to A.
+@export var exclude_areas: Array[HookableArea]
+
 ## The are currently hooked by this control.
 var hooked_to: HookableArea
 
@@ -123,13 +131,18 @@ func _get_hook_angle() -> float:
 
 func _throw() -> void:
 	if ray_cast_2d.is_colliding():
-		if ray_cast_2d.get_collider() is HookableArea:
+		if _can_connect():
 			hooked_to = ray_cast_2d.get_collider() as HookableArea
+			var is_loop := false
 			if hooked_to.hook_control:
-				hooked_to.hook_control.state = State.AIMING
-				hooked_to.hook_control.initial_hook_angle = _get_hook_angle()
+				is_loop = is_instance_valid(hooked_to.hook_control.hooked_to)
+				if not is_loop:
+					hooked_to.hook_control.state = State.AIMING
+					hooked_to.hook_control.initial_hook_angle = _get_hook_angle()
+					if hook_area:
+						hooked_to.hook_control.exclude_areas.append(hook_area)
 				state = State.DISABLED
-			get_tree().call_group(&"hook_listener", &"hooked", hooked_to)
+			get_tree().call_group(&"hook_listener", &"hooked", hooked_to, is_loop)
 		else:
 			release()
 			var wall_point := ray_cast_2d.get_collision_point()
@@ -147,12 +160,19 @@ func _throw() -> void:
 ## If an area is hooked, disconnect it.
 func release() -> void:
 	if hooked_to:
+		if hooked_to.hook_control:
+			hooked_to.hook_control.exclude_areas.erase(hook_area)
 		get_tree().call_group(&"hook_listener", &"released", hooked_to)
 		hooked_to = null
 
 
 func _can_connect() -> bool:
-	return ray_cast_2d.is_colliding() and ray_cast_2d.get_collider() is HookableArea
+	if not ray_cast_2d.is_colliding():
+		return false
+	var area := ray_cast_2d.get_collider() as HookableArea
+	if not area:
+		return false
+	return area not in exclude_areas
 
 
 func _set_state(new_state: State) -> void:
@@ -180,6 +200,7 @@ func _process(_delta: float) -> void:
 	rotation = _get_hook_angle()
 	sprite_2d.modulate = Color.WHITE if _can_connect() else Color(Color.WHITE, 0.5)
 	if hooked_to:
+		# Currently the control can be hooked to a single area.
 		return
 	if state != State.AIMING_PAUSED and pressing_throw_action and not throw_failed_while_pressing:
 		_throw()

@@ -15,10 +15,6 @@ func _ready() -> void:
 
 
 func _award() -> void:
-	# Remove the loop:
-	var player: Player = get_tree().get_first_node_in_group("player")
-	player.get_node("%PlayerHook").remove_string()
-
 	# Show and enable the button items so the player can start picking them:
 	for c in award_buttons.get_children():
 		c.process_mode = Node.PROCESS_MODE_INHERIT

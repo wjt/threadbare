@@ -31,7 +31,8 @@ extends Area2D
 const HOOKABLE_LAYER = 13
 
 ## Optional control to make this area a connection.
-@export var hook_control: HookControl
+@export var hook_control: HookControl:
+	set = _set_hook_control
 
 ## The exact point to attach the string.
 @export var anchor_point: Marker2D
@@ -56,3 +57,8 @@ func _set(property: StringName, _value: Variant) -> bool:
 	if property == "collision_layer":
 		update_configuration_warnings()
 	return false
+
+
+func _set_hook_control(new_hook_control: HookControl) -> void:
+	hook_control = new_hook_control
+	hook_control.hook_area = self
