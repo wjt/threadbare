@@ -19,6 +19,13 @@ signal string_thrown
 
 const NON_WALKABLE_FLOOR_LAYER: int = 10
 
+## The character using the grapping hook tool.
+## [br][br]
+## [b]Note:[/b] If the parent node is a CharacterBody2D and character isn't set,
+## the parent node will be automatically assigned to this variable.
+@export var character: CharacterBody2D:
+	set = _set_character
+
 ## How far can the initial throw reach.
 @export_range(0.0, 500.0, 1.0, "or_greater") var string_throw_length: float = 200.0:
 	set(new_val):
@@ -58,7 +65,7 @@ const NON_WALKABLE_FLOOR_LAYER: int = 10
 ## be connections.
 ## [br][br]
 ## If the last area is not a connection, the player pulls it.
-## While pulling, the area owner and the player get closer and closer,
+## While pulling, the area controlled entity and the player get closer and closer,
 ## passing through all the connections in between, until the hook string
 ## is consumed.
 var areas_hooked: Array[HookableArea]
@@ -72,13 +79,27 @@ var pulling: bool = false
 ## The last point can also be in the air.
 var hook_string: Line2D
 
-## The character using the grapping hook tool.
-@onready var player: Player = self.owner as Player
-
 ## The primary control.
 ## [br][br]
 ## It is set to aiming when there is no [member hook_string].
 @onready var hook_control: HookControl = $HookControl
+
+
+func _enter_tree() -> void:
+	if not character and get_parent() is CharacterBody2D:
+		character = get_parent()
+
+
+func _set_character(new_character: CharacterBody2D) -> void:
+	character = new_character
+	update_configuration_warnings()
+
+
+func _get_configuration_warnings() -> PackedStringArray:
+	var warnings: PackedStringArray
+	if not character:
+		warnings.append("Character must be set.")
+	return warnings
 
 
 func _ready() -> void:
@@ -93,8 +114,8 @@ func _new_hook_string() -> Line2D:
 	new_hook_string.joint_mode = Line2D.LINE_JOINT_ROUND
 	new_hook_string.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	new_hook_string.add_point(global_position)
-	player.add_sibling(new_hook_string)
-	new_hook_string.owner = player.owner
+	character.add_sibling(new_hook_string)
+	new_hook_string.owner = character.owner
 	string_thrown.emit()
 	return new_hook_string
 
@@ -177,7 +198,7 @@ func remove_string() -> void:
 ## While pulling, the player is allowed to go through non-walkable floor.
 func pull_string() -> void:
 	pulling = true
-	player.set_collision_mask_value(NON_WALKABLE_FLOOR_LAYER, false)
+	character.set_collision_mask_value(NON_WALKABLE_FLOOR_LAYER, false)
 
 
 ## Stop pulling and remove the [member hook_string].
@@ -185,7 +206,7 @@ func pull_string() -> void:
 ## After pulling, the player is back to normal and not able to go through
 ## non-walkable floor.
 func stop_pulling() -> void:
-	player.set_collision_mask_value(NON_WALKABLE_FLOOR_LAYER, true)
+	character.set_collision_mask_value(NON_WALKABLE_FLOOR_LAYER, true)
 	pulling = false
 	remove_string()
 
@@ -234,7 +255,7 @@ func _process_hook_string(delta: float) -> void:
 	# TODO: Only updates the endings. Connections are assumed static for now.
 
 	# Move last point to the player position.
-	hook_string.points[-1] = player.position + position
+	hook_string.points[-1] = character.position + position
 
 	var ending_area := get_ending_area()
 	if ending_area:
@@ -265,7 +286,7 @@ func _process_pulling(_delta: float) -> void:
 		stop_pulling()
 		return
 
-	var target := ending_area.owner
+	var target := ending_area.controlled_entity
 	var weight := ending_area.weight if target is CharacterBody2D else 1.0
 
 	# Vector from player to first point:
@@ -299,11 +320,11 @@ func _process_pulling(_delta: float) -> void:
 			stop_pulling()
 			return
 
-	player.velocity = player_distance.normalized() * pull_velocity * weight
-	var player_collided := player.move_and_slide()
+	character.velocity = player_distance.normalized() * pull_velocity * weight
+	var player_collided := character.move_and_slide()
 
 	if player_collided:
-		if player.get_real_velocity().length_squared() <= stuck_speed * stuck_speed:
+		if character.get_real_velocity().length_squared() <= stuck_speed * stuck_speed:
 			stop_pulling()
 
 	if target is CharacterBody2D:
