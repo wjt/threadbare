@@ -18,7 +18,7 @@ func repel_void() -> void:
 
 	var tween := create_tween()
 	var original_zoom := camera.zoom
-	tween.tween_property(camera, "zoom", original_zoom / 4.0, 1.0).set_ease(Tween.EASE_OUT)
+	tween.tween_property(camera, "zoom", original_zoom / 3.0, 1.0).set_ease(Tween.EASE_OUT)
 	await tween.finished
 	await void_layer.uncover_all(3.0)
 
